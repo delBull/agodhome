@@ -19,7 +19,7 @@ interface HeaderCtaProps {
   isFree?: boolean;
   isFreeAnimationDuration?: number;
 }
-
+{/* 
 function ButtonContactMe() {
   return (
     <Link
@@ -27,20 +27,20 @@ function ButtonContactMe() {
       className={clsx('button button--solid min-w-[128px]', 'md:button--big')}
     >
       Get in Touch
-    </Link>
+  </Link> 
   );
 }
-
+*/}
 function ButtonResume() {
   return (
     <a
       target="_blank"
       rel="noreferrer nofollow"
-      href="https://www.figma.com/community/file/1176377524040948926"
+      href="https://agod-ecosystem.gitbook.io/agod-docs/v/transparencia"
       className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
     >
       <DocumentIcon className={clsx('h-5 w-5')} />
-      RESUME
+        WHITE PAPERS
     </a>
   );
 }
@@ -105,13 +105,13 @@ function HeaderCta({
 
   return (
     <m.div className={clsx('flex gap-2')} initial="hide" animate="show">
-      <m.div
+  {/*    <m.div
         className={clsx('relative z-20')}
         variants={animation}
         transition={{ delay: 0.4 }}
       >
-        <ButtonContactMe />
-      </m.div>
+        <ButtonContactMe /> 
+      </m.div> */}
       {isFree ? (
         <m.div
           variants={animation}

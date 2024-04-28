@@ -25,7 +25,22 @@ function HeaderTitle() {
         animate={animation.show}
         transition={{ delay: 0.1 }}
       >
-        hi!
+        <Image
+            className={clsx('w-7 md:w-10')}
+            alt="Love-you Gesture"
+            src="/assets/emojis/love-you-gesture.png"
+            width={48}
+            height={48}
+            onLoadingComplete={() => {
+              controls.start({
+                opacity: 1,
+                y: 0,
+                rotate: 0,
+              });
+            }}
+            priority
+          />
+        bienvenidos al mundo de
         <m.div
           initial={{
             opacity: 0,
@@ -41,21 +56,7 @@ function HeaderTitle() {
             duration: 0.7,
           }}
         >
-          <Image
-            className={clsx('w-7 md:w-10')}
-            alt="Love-you Gesture"
-            src="/assets/emojis/love-you-gesture.png"
-            width={48}
-            height={48}
-            onLoadingComplete={() => {
-              controls.start({
-                opacity: 1,
-                y: 0,
-                rotate: 0,
-              });
-            }}
-            priority
-          />
+          
         </m.div>
       </m.div>
       <span className={clsx('text-slate-700', 'dark:text-slate-300')}>
@@ -68,11 +69,10 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.2 }}
         >
-          I&apos;m{' '}
+          AGOD{' '}
           <strong className={clsx('text-accent-600', 'dark:text-accent-500')}>
-            Enji
+            Ecosystem
           </strong>{' '}
-          Kusnadi,{' '}
         </m.span>
         <m.h1
           className={clsx(
@@ -84,17 +84,16 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-          <span className={clsx('lowercase')}>A</span>{' '}
+          <span className={clsx('lowercase')}>desbloquea el potencial</span>{' '}
           <strong
             className={clsx(
               'font-bold lowercase text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            Front-End Developer
+            Blockchain,
           </strong>{' '}
-          who loves intuitive,{' '}
-          <span className={clsx('block')}>clean and modern UI design.</span>
+          <span className={clsx('block')}>un universo simple y accesible para todos.</span>
         </m.h1>
       </span>
     </div>
