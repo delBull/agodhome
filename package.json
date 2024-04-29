@@ -11,10 +11,12 @@
     "eslint": "^8.31.0",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
+    "prisma": "^5.14.0-dev.22",
     "turbo": "^1.13.3"
   },
   "packageManager": "pnpm@7.22.0",
   "dependencies": {
+    "@prisma/client": "^5.14.0-dev.22",
     "next": "^14.2.3",
     "node-fetch": "^3.3.2"
   }
