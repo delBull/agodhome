@@ -22,5 +22,6 @@
     "@prisma/client": "^5.14.0-dev.22",
     "next": "^14.2.3",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "packageManager": "pnpm@9.0.6"
 }
