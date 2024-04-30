@@ -269,8 +269,8 @@ importers:
         specifier: ^1.5.0
         version: 1.6.3
       unist-util-visit:
-        specifier: ^4.1.1
-        version: 4.1.2
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       eslint-config-typescript:
         specifier: workspace:*
@@ -4325,7 +4325,7 @@ snapshots:
 
   '@types/hast@3.0.4':
     dependencies:
-      '@types/unist': 2.0.10
+      '@types/unist': 3.0.2
 
   '@types/json-schema@7.0.15': {}
 
