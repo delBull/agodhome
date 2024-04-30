@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { m, useReducedMotion } from 'framer-motion';
-import Link from 'next/link';
 
 import { DocumentIcon } from '@/components/Icons';
 
@@ -19,18 +18,9 @@ interface HeaderCtaProps {
   isFree?: boolean;
   isFreeAnimationDuration?: number;
 }
-{/* 
-function ButtonContactMe() {
-  return (
-    <Link
-      href="/work/contact"
-      className={clsx('button button--solid min-w-[128px]', 'md:button--big')}
-    >
-      Get in Touch
-  </Link> 
-  );
-}
-*/}
+
+
+
 function ButtonResume() {
   return (
     <a

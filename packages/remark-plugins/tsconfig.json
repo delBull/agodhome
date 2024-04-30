@@ -1,8 +1,5 @@
 {
-  "extends": "./enji.dev/packages/tsconfig/base.json",
+  "extends": "tsconfig/base.json",
   "include": ["src"],
-  "exclude": ["dist", "node_modules"],
-  "compilerOptions": {
-    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
-  }
+  "exclude": ["dist", "node_modules"]
 }
