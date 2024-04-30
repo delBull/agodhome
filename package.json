@@ -5,7 +5,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "type-check": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
     "@neuledge/tsconfig": "^3.2.0",
@@ -20,7 +21,8 @@
     "prisma": "^5.13.0",
     "tsup": "^8.0.2",
     "turbo": "^1.13.3",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "./packages/tsconfig": "workspace:*"
   },
   "dependencies": {
     "next": "^14.2.3",
