@@ -13,7 +13,7 @@
     "@prisma/client": "^5.13.0",
     "@tsconfig/next": "^2.0.3",
     "@tsconfig/recommended": "^1.0.6",
-    "eslint": "^8.31.0",
+    "eslint": "^9.0.0",
     "i": "^0.3.7",
     "npm": "^10.6.0",
     "prettier": "^2.8.1",
