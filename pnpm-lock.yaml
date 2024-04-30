@@ -27,12 +27,6 @@ importers:
       '@tsconfig/recommended':
         specifier: ^1.0.6
         version: 1.0.6
-      AGOD:
-        specifier: link:/Users/Marco/Documents/Company/Crypto/AGOD
-        version: link:../../../AGOD
-      agodhome:
-        specifier: link:Ecosystem/Web/agodhome
-        version: link:Ecosystem/Web/agodhome
       eslint:
         specifier: ^8.31.0
         version: 8.57.0
