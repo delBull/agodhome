@@ -21,8 +21,7 @@
     "prisma": "^5.13.0",
     "tsup": "^8.0.2",
     "turbo": "^1.13.3",
-    "typescript": "^4.9.5",
-    "@typescript-config/tsconfig": "workspace:*"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "next": "^14.2.3",
