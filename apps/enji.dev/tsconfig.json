@@ -1,9 +1,6 @@
 {
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
-    "incremental": true,
-    "noUncheckedIndexedAccess": true,
-    "strict": true,
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]
