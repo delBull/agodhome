@@ -1,5 +1,5 @@
 {
-  "extends": "./packages/tsconfig/base.json",
+  "extends": "./enji.dev/packages/tsconfig/base.json",
   "include": ["src"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
