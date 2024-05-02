@@ -9,7 +9,7 @@ function Index() {
     <>
       <Head
         title="AGOD · Ecosystem"
-        description="An online portfolio featuring a showcase of my projects and some thoughts as a Front-End Developer who loves intuitive, clean and modern UI design."
+        description="Desbloquea el potencial de Blockchain"
         ogImage={`${getBaseUrl()}/assets/images/og-image.png`}
         overrideTitle
       />

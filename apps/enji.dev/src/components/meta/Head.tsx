@@ -21,7 +21,7 @@ function Head({
 
   const htmlTitle = overrideTitle
     ? title
-    : `${title} — Enji · Front-End Developer`;
+    : `${title} — AGDO Ecosystem · Ecosistema Blockchain`;
 
   return (
     <NextHead>

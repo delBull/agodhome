@@ -11,10 +11,10 @@ import NavLogo from '@/components/navigations/NavLogo';
 import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
-  { title: 'Skills & Tools', href: '/work/skills-and-tools' },
-  { title: 'Experience', href: '/work/experience' },
-  { title: 'Studio', href: '/work/studio' },
-  { title: 'Contact', href: '/work/contact' },
+  { title: 'Tokenización', href: '/work/skills-and-tools' },
+  { title: 'DACCESS', href: '/work/experience' },
+  { title: 'DDEX', href: '/work/studio' },
+  { title: 'RA Wallet', href: '/work/contact' },
 ];
 
 function Navbar() {
@@ -48,35 +48,35 @@ function Navbar() {
             <NavLogo href="/" title="Home" />
             <ul className={clsx('flex items-center', 'md:gap-1')}>
               <li>
-                <NavLink title="Projects" href="/projects" />
+                <NavLink title="Intro" href="/projects" />
               </li>
               <li>
                 <NavLink title="Blog" href="/blog" />
               </li>
               <li>
-                <NavLink title="T.I.L" href="/today-i-learned" />
+                <NavLink title="Roadmap" href="/today-i-learned" />
               </li>
               <li className={clsx('lg:hidden')} data-accent="blue">
-                <NavLinkDropdown title="Work" items={workLinks} />
+                <NavLinkDropdown title="Explora" items={workLinks} />
               </li>
               <li className={clsx('hidden lg:block')} data-accent="blue">
-                <NavLinkExpanded title="Work" items={workLinks} />
+                <NavLinkExpanded title="Explora" items={workLinks} />
               </li>
             </ul>
           </nav>
           <ul className={clsx('flex items-center')}>
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
-                href="https://twitter.com/enjidev"
+                href="https://twitter.com/agodecosystem"
                 icon={<TwitterIcon className={clsx('h-5 w-5')} />}
                 title="Twitter"
               />
             </li>
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
-                href="https://github.com/enjidev"
+                href="https://discord.gg/WVqQtqT7xa"
                 icon={<GitHubIcon className={clsx('h-5 w-5')} />}
-                title="GitHub"
+                title="Discord"
               />
             </li>
             <li className={clsx('hidden', 'sm:block')}>
