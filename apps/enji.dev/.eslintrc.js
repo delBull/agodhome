@@ -6,4 +6,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
+  rules: {
+    "react/self-closing-comp": "off"
+  }
 };
