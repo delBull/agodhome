@@ -12,7 +12,7 @@
 
   .background-grid {
     @apply relative z-0 bg-slate-100;
-    @apply dark:bg-[#0c1222];
+    @apply dark:bg-[#220c0c];
 
     &::before {
       @apply bg-grid-slate-200/80 absolute inset-0 z-[-1] content-[''];
@@ -23,7 +23,7 @@
 
     &--fade-in {
       @apply bg-transparent bg-gradient-to-t from-slate-100 via-slate-100;
-      @apply dark:bg-transparent dark:from-[#0c1222] dark:via-[#0c1222];
+      @apply dark:bg-transparent dark:from-[#0c1222] dark:via-[#050e29];
 
       &::before {
         @apply bg-left-bottom;
@@ -34,7 +34,7 @@
 
     &--fade-out {
       @apply bg-transparent bg-gradient-to-b from-slate-100 via-slate-100;
-      @apply dark:bg-transparent dark:from-[#0c1222] dark:via-[#0c1222];
+      @apply dark:bg-transparent dark:from-[#0c1222] dark:via-[#01040d];
 
       &::before {
         mask-image: linear-gradient(black, black, transparent);
