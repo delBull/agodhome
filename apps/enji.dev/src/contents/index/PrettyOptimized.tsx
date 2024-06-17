@@ -6,10 +6,11 @@ function PrettyOptimized() {
   return (
     <header className={clsx('mb-8')}>
       <SectionTitle
-        title="Comprehensible and Optimized Code."
-        caption="Pretty & Optimized"
-        description="Writing clean code is a top priority while keeping it as optimized as possible."
+        title="Obtén AGOD token"
+        caption="¡Toma Acción!"
+        description="¿Listo para embarcarte en un viaje hacia un futuro financiero sostenible?"
       />
+      
     </header>
   );
 }

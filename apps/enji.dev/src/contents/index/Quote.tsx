@@ -20,7 +20,7 @@ function Quote() {
       />
       <span className={clsx('flex flex-col')}>
         <span className={clsx('leading-[1.15]')}>
-          <em>Beautiful</em>{' '}
+          <em>En un mundo donde las finanzas se encuentran con la sostenibilidad, </em>{' '}
         </span>
         <span
           className={clsx('flex items-center gap-2 leading-[1.15]', 'lg:gap-4')}
@@ -39,17 +39,9 @@ function Quote() {
                 'dark:text-slate-300'
               )}
             >
-              inside
+              AGOD
             </strong>{' '}
-            and{' '}
-            <strong
-              className={clsx(
-                'font-extrabold text-slate-600',
-                'dark:text-slate-300'
-              )}
-            >
-              out{' '}
-            </strong>
+            se erige {' '}
           </span>
           <span
             className={clsx(
@@ -60,7 +52,7 @@ function Quote() {
           />
         </span>
         <span className={clsx('leading-[1.15]')}>
-          is a{' '}
+          como un faro{' '}
           <strong
             className={clsx(
               'relative font-extrabold text-slate-600',
@@ -74,7 +66,7 @@ function Quote() {
                 'dark:bg-slate-800'
               )}
             />
-            must.
+            de cambio.
           </strong>
         </span>
       </span>

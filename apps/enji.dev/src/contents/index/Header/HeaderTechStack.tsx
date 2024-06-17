@@ -2,13 +2,12 @@ import clsx from 'clsx';
 import { m } from 'framer-motion';
 
 import {
-  FigmaIcon,
-  FramerMotionIcon,
-  NextJsIcon,
-  ReactIcon,
-  TailwindCssIcon,
-  TypeScriptIcon,
-  VSCodeIcon,
+  DiscordIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TiktokIcon,
+  TwitterIcon,
+  YoutubeIcon,
 } from '@/components/Icons';
 
 const animation = {
@@ -28,7 +27,7 @@ function HeaderTechStack() {
         animate={animation.show}
         transition={{ delay: 0.6 }}
       >
-        current favorite tech stack/tools:
+        ReFi: Regenerando el mundo, una transacción a la vez.
       </m.p>
       <m.ul
         className={clsx(
@@ -41,22 +40,22 @@ function HeaderTechStack() {
       >
         <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#3178C6]')}>
-            <TypeScriptIcon className={clsx('h-6 w-6')} />
+            <TwitterIcon className={clsx('h-6 w-6')} />
           </div>
         </m.li>
         <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#61DAFB]')}>
-            <ReactIcon className={clsx('h-6 w-6')} />
+            <InstagramIcon className={clsx('h-8 w-8')}  />
           </div>
         </m.li>
         <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#06B6D4]')}>
-            <TailwindCssIcon className={clsx('h-6 w-6')} />
+            <TiktokIcon className={clsx('h-8 w-8')} />
           </div>
         </m.li>
         <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#0055FF]')}>
-            <FramerMotionIcon className={clsx('h-6 w-6')} />
+            <YoutubeIcon className={clsx('h-8 w-8')} />
           </div>
         </m.li>
         <m.li variants={animation}>
@@ -65,20 +64,15 @@ function HeaderTechStack() {
               'transition duration-200 hover:text-[#000000] dark:hover:text-[#FFFFFF]'
             )}
           >
-            <NextJsIcon className={clsx('h-6 w-6')} />
+            <LinkedinIcon className={clsx('h-8 w-8')} />
           </div>
         </m.li>
         <m.li variants={animation}>
           <div className={clsx('h-3 w-[1px] bg-slate-300 dark:bg-slate-700')} />
         </m.li>
         <m.li variants={animation}>
-          <div className={clsx('transition duration-200 hover:text-[#007ACC]')}>
-            <VSCodeIcon className={clsx('h-6 w-6')} />
-          </div>
-        </m.li>
-        <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#F24E1E]')}>
-            <FigmaIcon className={clsx('h-6 w-6')} />
+            <DiscordIcon className={clsx('h-8 w-8')} />
           </div>
         </m.li>
       </m.ul>

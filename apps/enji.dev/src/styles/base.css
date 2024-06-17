@@ -43,4 +43,11 @@
       display: none;
     }
   }
+
+  .extra_title {
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    left: 100 !important; 
+  }
 }

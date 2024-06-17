@@ -14,46 +14,119 @@ type Content = {
   shows: Array<TodoItemState>;
   title: string;
   description: string;
+  imagePaths: { [key in TodoItemState]: string }; // Add image paths to content
 };
 
 const content: Array<Content> = [
   {
-    state: 'typography',
-    shows: ['typography'],
-    title: 'Typography',
-    description: 'Selecting the font type, font size, and font weight.',
+    state: 'dreamhub',
+    shows: ['dreamhub'],
+    title: 'Dreamhub',
+    description: 'Donde la creatividad y el valor convergen en el mercado de NFTs.',
+    imagePaths: { // Add all image paths
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/onlybox.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
   },
   {
-    state: 'spacing',
-    shows: ['typography', 'spacing'],
-    title: 'Spacing',
-    description: 'Positioning and adding spacing between elements.',
+    state: 'pandoras',
+    shows: ['pandoras'],
+    title: 'Pandora\'s',
+    description: 'Empoderando ideas innovadoras con financiamiento respaldado por blockchain.',
+    imagePaths: { // Add all image paths
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/onlybox.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
   },
   {
-    state: 'colors',
-    shows: ['typography', 'spacing', 'colors'],
-    title: 'Colors',
-    description: 'Choosing a color scheme with sufficient contrast.',
+    state: 'daccess',
+    shows: ['daccess'],
+    title: 'DACCESS',
+    description: 'Redefiniendo el acceso con soluciones seguras impulsadas por blockchain.',
+    imagePaths: { // Add all image paths
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/onlybox.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
   },
   {
-    state: 'effects',
-    shows: ['typography', 'spacing', 'colors', 'effects'],
-    title: 'Effects',
-    description: 'Add effects like borders, shadows, rounded corners, etc.',
+    state: 'adex',
+    shows: ['adex'],
+    title: 'ADEX',
+    description: 'Conectando finanzas tradicionales con el futuro de DeFi.',
+    imagePaths: { // Add all image paths
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/onlybox.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
+  },
+  {
+    state: 'rabbitty',
+    shows: ['rabbitty'],
+    title: 'Rabbitty',
+    description: 'Integrando el mundo financiero tradicional con la vanguardia de DeFi.',
+    imagePaths: { // Add all image paths
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/onlybox.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
+  },
+  {
+    state: 'tokenizacion',
+    shows: ['tokenizacion'],
+    title: 'Tokenización',
+    description: 'Transformando activos inmobiliarios en oportunidades digitales',
+    imagePaths: { // Add all image paths
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/onlybox.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
   },
 ];
 
 function CleanIntuitive() {
-  const [currentState, setCurrentState] = useState<Content | null>(null);
+  const [currentState, setCurrentState] = useState<Content | null>({
+    state: 'dreamhub', // Seleccionar 'dreamhub' por defecto
+    shows: ['dreamhub'],
+    title: 'Dreamhub',
+    description: 'Donde la creatividad y el valor convergen en el mercado de NFTs.',
+    imagePaths: {
+      dreamhub: '/assets/images/dreamhub.png',
+      pandoras: '/assets/images/pandoras.png',
+      daccess: '/assets/images/daccess.png',
+      adex: '/assets/images/adex.png',
+      rabbitty: '/assets/images/rabbitty.png',
+      tokenizacion: '/assets/images/tokenizacion.png',
+    },
+  });
 
   return (
     <>
       <header className={clsx('mb-8')}>
         <SectionTitle
-          title="Eye Catching, Modern & Minimalist Design."
-          caption="Clean & Intuitive"
-          description="Keep the User Interface clean with a modern touch without
-            compromising the User Experience."
+          title="Construido sobre inversiones seguras en bienes raíces"
+          caption="Ecosistema Sostenible"
+          description="Nuestro ecosistema impulsa una economía circular donde cada decisión financiera contribuye a regenerar nuestros recursos. Nuestras plataformas están diseñadas para innovar y transformar"
         />
       </header>
       <SectionContent>
@@ -78,27 +151,16 @@ function CleanIntuitive() {
             <div
               className={clsx('-mt-8 flex gap-4', 'md:gap-6 lg:top-8 lg:mt-0')}
             >
-              <div>
-                <TodoItem
-                  state={
-                    currentState
-                      ? currentState.shows
-                      : ['typography', 'spacing', 'colors', 'effects']
-                  }
+              <div >
+              <TodoItem
+                  shows={currentState?.shows || ['pandoras', 'dreamhub', 'daccess', 'adex', 'rabbitty', 'tokenizacion']}
+                  imagePaths={content.find((item) => item.state === currentState?.state)?.imagePaths || { dreamhub: '', pandoras: '', daccess: '', adex: '', rabbitty: '', tokenizacion: '' }} // Ensure a complete object
                 />
               </div>
               <div className={clsx('hidden', 'sm:block lg:hidden')}>
-                <TodoItem
-                  state={
-                    currentState
-                      ? currentState.shows
-                      : ['typography', 'spacing', 'colors', 'effects']
-                  }
-                  title="UI Implementation"
-                  description="Start creating UI components using React and Tailwind CSS."
-                  date="10:00 AM · Tomorrow"
-                  tag1="Design"
-                  tag2="Components"
+              <TodoItem
+                  shows={currentState?.shows || ['pandoras', 'dreamhub', 'daccess', 'adex', 'rabbitty', 'tokenizacion']}
+                  imagePaths={content.find((item) => item.state === currentState?.state)?.imagePaths || { dreamhub: '', pandoras: '', daccess: '', adex: '', rabbitty: '', tokenizacion: '' }} // Ensure a complete object
                 />
               </div>
             </div>

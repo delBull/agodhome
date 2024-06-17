@@ -17,43 +17,43 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full bg-amber-300 p-3.5',
-                'dark:bg-amber-900'
+                'rounded-full bg-purple-700 p-3.5',
+                'dark:bg-purple-600'
               )}
             >
               <SparklesIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Clean & Intuitive"
-          desc="Keep the UI clean with a modern touch without compromising UX."
+          title="Descubre AGOD"
+          desc="Las Finanzas Regenerativas (ReFi) son nuestro núcleo. No solo buscamos sostenibilidad; buscamos regenerar. Esto significa que nuestras actividades financieras están diseñadas para tener un impacto positivo en la sociedad y el planeta."
         />
         <FeaturedCard
           icon={
             <div
               className={clsx(
-                'rounded-full bg-pink-300 p-3.5',
-                'dark:bg-pink-900'
+                'rounded-full bg-pink-800 p-3.5',
+                'dark:bg-pink-800'
               )}
             >
               <HeartIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Detail Oriented"
-          desc="Awareness to ease of access, UI consistency, and improved UX."
+          title="¿Nuestra visión?"
+          desc="Transformar las finanzas en una fuerza que no solo genere riqueza, sino que también revitalice nuestro planeta. A través de nuestras iniciativas de Finanzas Regenerativas (ReFi), cada transacción con AGOD apoya proyectos que benefician a la sociedad y al planeta."
         />
         <FeaturedCard
           icon={
             <div
               className={clsx(
-                'rounded-full bg-sky-300 p-3.5',
-                'dark:bg-sky-900'
+                'rounded-full bg-sky-500 p-3.5',
+                'dark:bg-sky-600'
               )}
             >
               <CodeIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Pretty & Optimized"
-          desc="Writing clean code is a top priority while keeping it as optimized as possible."
+          title="Nuestro BIG Why"
+          desc="Y no se trata solo de números. AGOD se compromete a proteger y mejorar toda forma de vida. Una parte de nuestras ganancias se destina a iniciativas que apoyan el bienestar animal, porque cuidar a las criaturas de nuestro planeta es fundamental para construir un mundo mejor."
         />
       </div>
     </div>

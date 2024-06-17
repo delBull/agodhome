@@ -27,13 +27,13 @@ function HeaderImageAnimation({
       viewBox="0 0 457 526"
       fill="none"
       initial="hide"
-      animate="show"
+      animate="hide"
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
       className={clsx(
-        'stroke-accent-500 h-[526px] w-[457px] opacity-60',
-        'dark:opacity-40'
+        'stroke-accent-500 h-[526px] w-[457px] opacity-0',
+        'dark:opacity-0'
       )}
       onAnimationComplete={onAnimationComplete}
     >

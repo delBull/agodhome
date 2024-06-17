@@ -91,9 +91,9 @@ function HeaderTitle() {
               'dark:text-slate-300'
             )}
           >
-            Blockchain,
+            Blockchain;
           </strong>{' '}
-          <span className={clsx('block')}>un universo simple y accesible para todos.</span>
+          <span className={clsx('block')}>Pioneros en una Revolución Financiera Sostenible.</span>
         </m.h1>
       </span>
     </div>
