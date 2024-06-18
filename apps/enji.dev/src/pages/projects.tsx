@@ -6,8 +6,8 @@ function Projects() {
   return (
     <Page
       frontMatter={{
-        title: 'Projects',
-        description: 'Showcase of my front-end related work.',
+        title: 'Redefiniendo el Futuro Financiero',
+        description: 'En AGOD, estamos construyendo un ecosistema financiero sostenible y revolucionario que integra lo mejor de la tecnología blockchain con un compromiso inquebrantable con la regeneración económica y ambiental.',
       }}
       headerImage={<HeaderImage />}
     >

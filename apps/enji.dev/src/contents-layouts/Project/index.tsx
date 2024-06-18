@@ -35,7 +35,7 @@ function ProjectLayout({
       <Head title={title} description={description} ogImage={image.default} />
       <PageHeader title={title} description={description} caption={caption} />
       <ProjectMeta githubUrl={githubUrl} npmUrl={npmUrl} />
-      <WithTableOfContents tableOfContents={tableOfContents}>
+      <WithTableOfContents tableOfContents={tableOfContents}>x
         {children}
         <ProjectFooter githubUrl={githubUrl} />
       </WithTableOfContents>

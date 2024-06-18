@@ -51,3 +51,7 @@
     left: 100 !important; 
   }
 }
+
+a.button.button--soft {
+  display: none;
+}
