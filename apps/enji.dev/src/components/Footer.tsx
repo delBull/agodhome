@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import Link from 'next/link';
 
 import {
+  DiscordIcon,
   ExternalLink,
-  FigmaIcon,
-  GitHubIcon,
+  InstagramIcon,
   TwitterIcon,
 } from '@/components/Icons';
 
@@ -13,12 +13,12 @@ import dayjs from '@/utils/dayjs';
 function LastUpdate() {
   return (
     <a
-      href="https://github.com/enjidev/enji.dev"
+      href="/privacy"
       target="_blank"
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
     >
-      <span>see the recent update on GitHub</span>
+      <span>Privacy Policy</span>
     </a>
   );
 }
@@ -109,52 +109,23 @@ function FooterDescription() {
           'dark:text-slate-400'
         )}
       >
-        Built on Fantom
+        Construyendo con Pasión
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-      Fully compatible with the Ethereum Virtual Machine (EVM).
-Web3JS API and RPC support.
-Smart contracts written in Solidity or Vyper.
-Complied and deployed in Ethereum, are fully compatible with
-the Opera Network
+      AGOD está construyendo un ecosistema financiero revolucionario que combina tecnología avanzada, 
+      sostenibilidad y oportunidades de inversión en activos del mundo real. Únete a nosotros en este viaje 
+      hacia un futuro financiero más justo y sostenible.
       </p>
-      <p><strong>Get AGOD</strong></p>
-      <ul className={clsx('-ml-2 flex gap-1')}>
+      <Link href="https://twitter.com/agodecosystem" target='_blank' rel='noopener noreferrer'><strong>Get AGOD</strong></Link>
+      <ul className={clsx('-ml-2 flex gap-1')} style={{ marginTop: '10px'}}>
         <li>
-          <a
-            href="https://twitter.com/agodecosystem"
-            target="_blank"
-            rel="noreferrer nofollow"
-            className={clsx('flex h-9 w-9 items-center justify-center')}
-            aria-label="My Twitter profile"
-            title="My Twitter profile"
-          >
-            <TwitterIcon className={clsx('h-5 w-5')} />
-          </a>
+            <TwitterIcon className={clsx('flex h-5 w-5 items-center justify-center')} style={{ marginLeft: '10px', marginTop: '5px'}} />
         </li>
         <li>
-          <a
-            href="https://github.com/enjidev"
-            target="_blank"
-            rel="noreferrer nofollow"
-            className={clsx('flex h-9 w-9 items-center justify-center')}
-            aria-label="My GitHub profile"
-            title="My GitHub profile"
-          >
-            <GitHubIcon className={clsx('h-5 w-5')} />
-          </a>
+            <InstagramIcon className={clsx('flex h-6 w-6 items-center justify-center')} style={{ marginLeft: '15px', marginTop: '5px'}} />
         </li>
         <li>
-          <a
-            href="https://figma.com/@enjidev"
-            target="_blank"
-            rel="noreferrer nofollow"
-            className={clsx('flex h-9 w-9 items-center justify-center')}
-            aria-label="My Figma profile"
-            title="My Figma profile"
-          >
-            <FigmaIcon className={clsx('h-5 w-5')} />
-          </a>
+            <DiscordIcon className={clsx('flex h-6 w-6 items-center justify-center')} style={{ marginLeft: '10px', marginTop: '5px'}} />
         </li>
       </ul>
     </div>
