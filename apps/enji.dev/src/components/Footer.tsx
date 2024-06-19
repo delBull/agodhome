@@ -2,10 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 
 import {
-  DiscordIcon,
   ExternalLink,
-  InstagramIcon,
-  TwitterIcon,
 } from '@/components/Icons';
 
 import dayjs from '@/utils/dayjs';
@@ -112,22 +109,18 @@ function FooterDescription() {
         Construyendo con Pasión
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-      AGOD está construyendo un ecosistema financiero revolucionario que combina tecnología avanzada, 
-      sostenibilidad y oportunidades de inversión en activos del mundo real. Únete a nosotros en este viaje 
-      hacia un futuro financiero más justo y sostenible.
+        AGOD está construyendo un ecosistema financiero revolucionario que
+        combina tecnología avanzada, sostenibilidad y oportunidades de inversión
+        en activos del mundo real. Únete a nosotros en este viaje hacia un
+        futuro financiero más justo y sostenible.
       </p>
-      <Link href="https://twitter.com/agodecosystem" target='_blank' rel='noopener noreferrer'><strong>Get AGOD</strong></Link>
-      <ul className={clsx('-ml-2 flex gap-1')} style={{ marginTop: '10px'}}>
-        <li>
-            <TwitterIcon className={clsx('flex h-5 w-5 items-center justify-center')} style={{ marginLeft: '10px', marginTop: '5px'}} />
-        </li>
-        <li>
-            <InstagramIcon className={clsx('flex h-6 w-6 items-center justify-center')} style={{ marginLeft: '15px', marginTop: '5px'}} />
-        </li>
-        <li>
-            <DiscordIcon className={clsx('flex h-6 w-6 items-center justify-center')} style={{ marginLeft: '10px', marginTop: '5px'}} />
-        </li>
-      </ul>
+      <Link
+        href="https://twitter.com/agodecosystem"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>¿Listo para el token AGOD?</strong>
+      </Link>
     </div>
   );
 }
@@ -154,36 +147,36 @@ function Footer() {
             >
               <div className={clsx('flex', 'sm:gap-16')}>
                 <FooterGroup
-                  title="Work"
+                  title="Explora"
                   links={[
-                    { title: 'Contact', href: '/work/contact' },
-                    { title: 'Experience', href: '/work/experience' },
+                    { title: 'Rabbitty', href: '/explora/rabbitty' },
+                    { title: 'DACCESS', href: '/explora/daccess' },
                     {
                       title: 'Services',
-                      href: '/work/services',
+                      href: '/explora/services',
                       label: 'soon',
                     },
                     {
-                      title: 'Skills and Tools',
-                      href: '/work/skills-and-tools',
+                      title: 'Tokenización',
+                      href: '/explora/tokenizacion',
                     },
-                    { title: 'Studio', href: '/work/studio' },
+                    { title: 'ADEX', href: '/explora/adex' },
                   ]}
                 />
                 <FooterGroup
                   title="Learn"
                   links={[
                     {
-                      title: 'Docs',
-                      href: '/docs',
+                      title: 'Intro',
+                      href: '/projects',
                     },
                     {
-                      title: 'Personal Blog',
+                      title: 'Blog',
                       href: '/blog',
                     },
                     {
-                      title: 'T.I.L',
-                      href: '/today-i-learned',
+                      title: 'Roadmap',
+                      href: '/roadmap',
                       label: 'new',
                     },
                   ]}
@@ -191,21 +184,24 @@ function Footer() {
               </div>
               <div className={clsx('flex', 'sm:gap-16')}>
                 <FooterGroup
-                  title="This Site"
+                  title="Ecosistema"
                   links={[
                     {
-                      title: 'Design Concept',
-                      href: 'https://www.figma.com/community/file/1176392613303840973',
+                      title: 'Dreamhub',
+                      href: 'https://dreamhub.art',
+                      isInternal: false,
+                      label: 'soon',
+                    },
+                    {
+                      title: 'Tokenization Agency',
+                      href: 'https://dreamhub.agency',
                       isInternal: false,
                     },
                     {
-                      title: 'Source Code',
-                      href: 'https://github.com/enjidev/enji.dev',
+                      title: 'Pandora\'s',
+                      href: '',
                       isInternal: false,
-                    },
-                    {
-                      title: 'Credits',
-                      href: '/credits',
+                      label: 'soon',
                     },
                   ]}
                 />
@@ -220,7 +216,8 @@ function Footer() {
           )}
         >
           <div className={clsx('font-semibold')}>
-            &copy; {dayjs().format('YYYY')}, AGOD Ecosystem by MXHUB Ecosistema Blockchain S.A. de C.V.
+            &copy; {dayjs().format('YYYY')}, AGOD Ecosystem by MXHUB Ecosistema
+            Blockchain S.A. de C.V.
           </div>
           <div className={clsx('text-slate-500', 'dark:text-slate-400')}>
             <LastUpdate />

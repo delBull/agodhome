@@ -1,105 +1,183 @@
 import TIL from '@/components/mdx/TIL';
 
-<TIL.Items date="2023-01-29">
+<TIL.Items date="Q1">
 
   <TIL.Item>
     
-    ## Tailwind CSS !important modifier
+    ## AGOD Prep 
 
-    <TIL.ItemTags>
-      <TIL.ItemTag>tailwindcss</TIL.ItemTag>
-      <TIL.ItemTag>css</TIL.ItemTag>
-    </TIL.ItemTags>
+    Preparar el ecosistema con las plataformas existentes para la salida al mercado.
 
-    Make any utility important by adding a `!` character to the beginning:
-
-    ```html
-    <p class="font-bold !font-medium">
-      This will be medium even though bold comes later in the CSS.
-    </p>
+    ```html {copy:false} {footer:false}
+    <dapp>
+      Dreamhub-ADEX-Tokenización.
+    </dapp>
     ```
 
-    [Official Docs](https://tailwindcss.com/docs/configuration#important-modifier)
+    [Official Docs](https://agod-ecosystem.gitbook.io/agod-docs/v/transparencia)
 
   </TIL.Item>
 
 </TIL.Items>
 
-<TIL.Items date="2023-01-18">
+<TIL.Items date='Q2'>
 
   <TIL.Item>
     
-    ## nested backdrop-filter
+    ## Planeación del IEO 
 
-    <TIL.ItemTags>
-      <TIL.ItemTag>css</TIL.ItemTag>
-    </TIL.ItemTags>
+    Estructura y planeación de un "Initial Ecosysytem Offering" por medio de un NFT Pass.
 
-    Backdrop filter tidak akan berhasil jika parent memiliki efek backdrop-filter juga.
-
-    [issue](https://bugs.chromium.org/p/chromium/issues/detail?id=993644) &mdash; [workaround](https://stackoverflow.com/questions/60997948/backdrop-filter-not-working-for-nested-elements-in-chrome)
+    ```html {copy:true} {footer:false}
+    <nft>
+      NFT Wrapped; tokens AGOD, beneficios exclusivos, accesos preferenciales, poder de votación,
+      entrada al grupo elite AGOD makers.
+    </nft>
+    ```
 
   </TIL.Item>
 
 </TIL.Items>
 
-<TIL.Items date="2023-01-17">
+<TIL.Items date={'\u2000para ' + '2024 Q3'}>
 
   <TIL.Item>
-
-    ## pre overflow: scroll inside flex
-
-    <TIL.ItemTags>
-      <TIL.ItemTag>css</TIL.ItemTag>
-      <TIL.ItemTag>pre</TIL.ItemTag>
-      <TIL.ItemTag>flex</TIL.ItemTag>
-    </TIL.ItemTags>
-
-    Pernah pake `overflow-x: scroll` pada `pre` element tapi ngga ngaruh, malah parent yang ada scrollnya?
-
-    Mungkin parentnya didalem `display: flex`. Kalau iya, coba tambahin `min-width: 0` pada parentnya.
-
-    [Credit](https://weblog.west-wind.com/posts/2016/feb/15/flexbox-containers-pre-tags-and-managing-overflow)
-
-  </TIL.Item>
-
-  <TIL.Item>
-
-    ## import mdx file sebagai component
+    
+    ## "nested" Benefits
 
     <TIL.ItemTags>
-      <TIL.ItemTag>react</TIL.ItemTag>
-      <TIL.ItemTag>mdx</TIL.ItemTag>
+      <TIL.ItemTag>initial offering</TIL.ItemTag>
     </TIL.ItemTags>
-
-    Import mdx file di component, caranya mirip seperti import component biasa:
-
-    ```ts {copy:false} {footer:false}
-    import Contents from '@/mdx/Contents.mdx';
-
-    // Penggunaan
-    <Contents />
-    ```
-
-    Ternyata ada di [dokumentasinya](https://mdxjs.com/docs/using-mdx/#mdx-content). Biasakan membaca dulu ya gais jangan kaya saya wkwk.
-
-  </TIL.Item>
-
-  <TIL.Item>
-
-    ## :not() pseudo-class
-
-    <TIL.ItemTags>
-      <TIL.ItemTag>css</TIL.ItemTag>
-      <TIL.ItemTag>selector</TIL.ItemTag>
-    </TIL.ItemTags>
-
-    Pake `:not()` ini emang agak tricky, salah penggunaan hasilnya juga bisa ngga sesuai harapan.
-
-    Contoh, styling inline `code` dimana bukan children dari `pre` ataupun `.code-block`. Penggunaannya:
 
     <TIL.DnD>
-      <TIL.Dont>
+      <TIL.Done>
+        ```css {copy:true} {footer:false}
+        Hasta el momento {
+        > dapp {
+          website para la oferta;
+          admin y base de datos;
+          AGOD token smart contracts;
+          NFT smart contracts;
+          }
+        > incentivos {
+          wrapped tokens;
+          beneficios exclusivos;
+          accesos futuros Prep;
+          acceso grupo elite Prep;
+          poder de votación Prep;
+          }
+        }
+        ```
+      </TIL.Done>
+      <TIL.Missing>
+        ```css {copy:false} {footer:false}
+        por concretar {
+          > code {
+            auditorías;
+            medidas de seguridad;
+          }
+          > mkt {
+            enlistar los beneficios en la web;
+            tipos de NFT Passes;
+            estrategía de mkt Prep;
+            redactar material académico;
+          }
+        }
+        ```
+      </TIL.Missing>
+    </TIL.DnD>
+
+  </TIL.Item>
+
+    <TIL.Item>
+
+    ## pre: Lanzamiento de Mkt
+
+    <TIL.ItemTags>
+      <TIL.ItemTag>IEO</TIL.ItemTag>
+      <TIL.ItemTag>blockchain</TIL.ItemTag>
+      <TIL.ItemTag>AGDO Ecosystem</TIL.ItemTag>
+    </TIL.ItemTags>
+
+    Qué va aquí de todo el prep de marketing , campaás, automatizaciones, implementación de gloria y la otra IA localmente, etc.
+
+  </TIL.Item>
+
+    <TIL.Item>
+    
+    ## implementación IA & dApps Prep
+
+    <TIL.DnD>
+      <TIL.Missing>
+        ```css {copy:true} {footer:false}
+        por implementar {
+        > IA {
+          gloria?;
+          ?:
+          ?;
+          }
+        > qué más? {
+          ?;
+          ?;
+          }
+        }
+        ```
+      </TIL.Missing>
+      <TIL.Missing>
+        ```css {copy:false} {footer:false}
+        por terminar {
+          > plataformas {
+            DACCESS??;
+            Pandora's?;
+            Rabbitty?;
+          }
+          > qué más? {
+            ?;
+            ?;
+          }
+        }
+        ```
+      </TIL.Missing>
+    </TIL.DnD>
+
+    Adéntrate en las plataformas [Pandora's Foundation](https://pandoras.finance). [Rabbitty](https://rabbitty.me).
+
+  </TIL.Item>
+
+</TIL.Items>
+
+<TIL.Items date={'\u2000para ' + '2024 Q4'}>
+
+  <TIL.Item>
+
+    ## Lanzamiento dApps
+
+    <TIL.ItemTags>
+      <TIL.ItemTag>ADEX</TIL.ItemTag>
+      <TIL.ItemTag>Rabbitty</TIL.ItemTag>
+    </TIL.ItemTags>
+
+    Coming soon:
+
+    ```ts {copy:false} {footer:false}
+    coming 'soon';
+
+    // Muy Pronto
+    <Plataforma />
+    ```
+
+    Link Oficial a [coming soon](https://coming.soon). La plataforma de tus sueños.
+
+  </TIL.Item>
+
+  <TIL.Item>
+
+    ## Por Definir
+
+    En construcción
+
+    {/* <TIL.DnD>
+      <TIL.Missing>
         ```css {copy:false} {footer:false}
         :not(pre), :not(.code-block) {
           > code {
@@ -107,8 +185,8 @@ import TIL from '@/components/mdx/TIL';
           }
         }
         ```
-      </TIL.Dont>
-      <TIL.Do>
+      </TIL.Missing>
+      <TIL.Done>
         ```css {copy:false} {footer:false}
         :not(pre, .code-block) {
           > code {
@@ -116,14 +194,14 @@ import TIL from '@/components/mdx/TIL';
           }
         }
         ```
-      </TIL.Do>
-    </TIL.DnD>
+      </TIL.Done>
+    </TIL.DnD> */}
 
   </TIL.Item>
 
 </TIL.Items>
 
-<TIL.Items date="2023-01-16">
+{/*<TIL.Items date={'\u2000para ' + '2025 Q1'}>
 
   <TIL.Item>
 
@@ -148,7 +226,7 @@ import TIL from '@/components/mdx/TIL';
 
 </TIL.Items>
 
-<TIL.Items date="2023-01-15">
+<TIL.Items date={'\u2000para ' + '2025 Q2'}>
 
   <TIL.Item>
     
@@ -163,4 +241,4 @@ import TIL from '@/components/mdx/TIL';
 
   </TIL.Item>
 
-</TIL.Items>
+</TIL.Items>*/}

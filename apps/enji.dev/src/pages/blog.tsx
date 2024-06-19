@@ -15,8 +15,8 @@ function Blog({ posts }: BlogProps) {
   return (
     <Page
       frontMatter={{
-        title: 'Personal Blog',
-        description: 'Web development thoughts and stories.',
+        title: 'Blog',
+        description: 'Adéntrate en el mundo Blockchain.',
       }}
       headerImage={<HeaderImage />}
     >

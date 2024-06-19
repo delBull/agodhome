@@ -6,7 +6,7 @@ import { formatDate } from '@/helpers/post';
 
 import type { PropsWithChildren, ReactElement } from 'react';
 
-export function Do({ children = null }: PropsWithChildren) {
+export function Done({ children = null }: PropsWithChildren) {
   return (
     <div className={clsx('mdx-do', 'md:min-w-0 md:flex-1')}>
       <div
@@ -26,14 +26,14 @@ export function Do({ children = null }: PropsWithChildren) {
             )}
           />
         </div>
-        Do
+        Done
       </div>
       <div className={clsx('')}>{children}</div>
     </div>
   );
 }
 
-export function Dont({ children = null }: PropsWithChildren) {
+export function Missing({ children = null }: PropsWithChildren) {
   return (
     <div className={clsx('mdx-dont', 'md:min-w-0 md:flex-1')}>
       <div
@@ -53,7 +53,7 @@ export function Dont({ children = null }: PropsWithChildren) {
             )}
           />
         </div>
-        Don&apos;t
+        Missing
       </div>
       <div className={clsx('')}>{children}</div>
     </div>
@@ -179,6 +179,6 @@ export default {
   ItemTags,
   ItemTag,
   DnD,
-  Do,
-  Dont,
+  Done,
+  Missing,
 };

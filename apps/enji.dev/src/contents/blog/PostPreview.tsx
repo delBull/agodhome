@@ -72,7 +72,7 @@ function PostPreview({
             )}
           >
             <PinIcon className={clsx('h-5 w-5')} />
-            Pinned Post
+            Destacado
           </div>
         )}
         <div
@@ -139,7 +139,7 @@ function PostPreview({
             pinned ? ['flex', 'sm:hidden'] : 'flex'
           )}
         >
-          read more{' '}
+          seguir leyendo{' '}
           <ChevronRightIcon className="group-hover:animate-bounce-x mt-1 h-3 w-3 transition" />
         </div>
       </Link>

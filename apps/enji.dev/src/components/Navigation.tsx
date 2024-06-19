@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { GitHubIcon, TwitterIcon } from '@/components/Icons';
+import { DiscordIcon, TwitterIcon } from '@/components/Icons';
 import NavIcon from '@/components/navigations/NavIcon';
 import NavIconQuickAccess from '@/components/navigations/NavIconQuickAccess';
 import NavLink from '@/components/navigations/NavLink';
@@ -11,10 +11,10 @@ import NavLogo from '@/components/navigations/NavLogo';
 import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
-  { title: 'Tokenización', href: '/work/skills-and-tools' },
-  { title: 'DACCESS', href: '/work/experience' },
-  { title: 'DDEX', href: '/work/studio' },
-  { title: 'RA Wallet', href: '/work/contact' },
+  { title: 'Tokenización', href: '/explora/tokenizacion' },
+  { title: 'DACCESS', href: '/explora/daccess' },
+  { title: 'ADEX', href: '/explora/adex' },
+  { title: 'Rabbitty', href: '/explora/rabbitty' },
 ];
 
 function Navbar() {
@@ -54,7 +54,7 @@ function Navbar() {
                 <NavLink title="Blog" href="/blog" />
               </li>
               <li>
-                <NavLink title="Roadmap" href="/today-i-learned" />
+                <NavLink title="Roadmap" href="/roadmap" />
               </li>
               <li className={clsx('lg:hidden')} data-accent="blue">
                 <NavLinkDropdown title="Explora" items={workLinks} />
@@ -68,14 +68,14 @@ function Navbar() {
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
                 href="https://twitter.com/agodecosystem"
-                icon={<TwitterIcon className={clsx('h-5 w-5')} />}
+                icon={<TwitterIcon className={clsx('h-4 w-4')} />}
                 title="Twitter"
               />
             </li>
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
                 href="https://discord.gg/WVqQtqT7xa"
-                icon={<GitHubIcon className={clsx('h-5 w-5')} />}
+                icon={<DiscordIcon className={clsx('h-5 w-5')} />}
                 title="Discord"
               />
             </li>
