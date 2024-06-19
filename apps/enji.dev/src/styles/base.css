@@ -55,3 +55,8 @@
 a.button.button--soft {
   display: none;
 }
+
+.icon-container {
+  cursor: pointer;
+  display: inline-block;
+}

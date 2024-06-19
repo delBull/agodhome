@@ -10,7 +10,7 @@ category: tailwindcss
 caption: Best Practices
 ---
 
-import { DnD, Dont, Do } from '@/components/mdx/TIL';
+import { DnD, Done, Missing } from '@/components/mdx/TIL';
 import { QuickView } from '@/components/mdx/Link';
 import CodeGroup from '@/components/mdx/CodeGroup';
 
@@ -228,20 +228,20 @@ Sebisa mungkin hindari! Sekali terjebak menggunakan, mungkin semua utility kita 
 
 {/* prettier-ignore-start */}
 
-<Dont>
+<Missing>
   ```tsx {copy:false} {footer:false}
   <div className={`text-black ${dark && 'text-white'}`}>
     Hello, World!
   </div>
   ```
-</Dont>
-<Do>
+</Missing>
+<Done>
   ```tsx {copy:false} {footer:false}
   <div className={dark ? 'text-white' : 'text-black'}>
     Hello, World!
   </div>
   ```
-</Do>
+</Done>
 
 {/* prettier-ignore-end */}
 

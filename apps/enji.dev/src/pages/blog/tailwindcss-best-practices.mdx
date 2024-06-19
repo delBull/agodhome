@@ -10,7 +10,7 @@ category: tailwindcss
 caption: Best Practices
 ---
 
-import { DnD, Dont, Do } from '@/components/mdx/TIL';
+import { DnD, Missing, Done } from '@/components/mdx/TIL';
 import CodeGroup from '@/components/mdx/CodeGroup';
 
 Hello! Have you tried or want to try **Tailwind CSS**? Perfect, I'll be sharing some important things about Tailwind CSS.
@@ -223,20 +223,20 @@ Try to avoid it as much as possible! Once trapped into using it, all your utilit
 
 {/* prettier-ignore-start */}
 
-<Dont>
+<Missing>
   ```tsx {copy:false} {footer:false}
   <div className={`text-black ${dark && 'text-white'}`}>
     Hello, World!
   </div>
   ```
-</Dont>
-<Do>
+</Missing>
+<Done>
   ```tsx {copy:false} {footer:false}
   <div className={dark ? 'text-white' : 'text-black'}>
     Hello, World!
   </div>
   ```
-</Do>
+</Done>
 
 {/* prettier-ignore-end */}
 

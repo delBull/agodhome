@@ -17,7 +17,7 @@ export function TwitterIcon(props: ComponentProps<'svg'>) {
       tabIndex={0}
       onClick={handleExternalLinkClick}
       onKeyDown={handleKeyDown}
-      style={{ cursor: 'pointer', display: 'inline-block' }}
+      className="icon-container"
       aria-label="Twitter"
     >
       <svg
@@ -34,99 +34,201 @@ export function TwitterIcon(props: ComponentProps<'svg'>) {
   );
 }
 
-export function InstagramIcon(props: ComponentProps<'svg'>) {
+export function DiscordIcon(props: ComponentProps<'svg'>) {
+  const handleExternalLinkClick = () => {
+    window.open('https://discord.gg/WVqQtqT7xa', '_blank', 'noopener noreferrer');
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleExternalLinkClick();
+    }
+  };
+
   return (
-    <a href="https://instagram.com/agodecosystem" target="_blank" rel="noopener noreferrer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      role="img"
-      fill="currentColor"
-      {...props}
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={handleExternalLinkClick}
+      onKeyDown={handleKeyDown}
+      className="icon-container"
+      aria-label="Discord"
     >
-      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-    </svg>
-    </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        role="img"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+      </svg>
+    </span>
   );
 }
 
-export function TiktokIcon(props: ComponentProps<'svg'>) {
+export function InstagramIcon(props: ComponentProps<'svg'>) {
+  const handleExternalLinkClick = () => {
+    window.open('https://instagram.com/agodecosystem', '_blank', 'noopener noreferrer');
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleExternalLinkClick();
+    }
+  };
+
   return (
-    <a href="https://tiktok.com/@agodecosystem" target="_blank" rel="noopener noreferrer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      role="img"
-      fill="currentColor"
-      {...props}
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={handleExternalLinkClick}
+      onKeyDown={handleKeyDown}
+      className="icon-container"
+      aria-label="Instagram"
     >
-      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-    </svg>
-    </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        role="img"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.275-.843.039-1.096.047-3.232.047-2.137 0-2.389-.008-3.232-.047-.78-.035-1.204-.166-1.485-.275a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.598-.92c-.11-.281-.24-.704-.275-1.485-.039-.843-.047-1.096-.047-3.232s.008-2.389.047-3.232c.035-.78.166-1.203.275-1.485a2.5 2.5 0 0 1 .598-.92c.28-.28.547-.453.921-.598.281-.11.705-.24 1.485-.275.843-.039 1.096-.046 3.232-.046zM8 3.906a4.094 4.094 0 1 0 0 8.188A4.094 4.094 0 0 0 8 3.906zm0 6.745a2.65 2.65 0 1 1 0-5.297 2.65 2.65 0 0 1 0 5.297zm5.308-6.923a.956.956 0 1 0 0 1.912.956.956 0 0 0 0-1.912z"/>
+      </svg>
+    </span>
   );
 }
 
 export function YoutubeIcon(props: ComponentProps<'svg'>) {
+  const handleExternalLinkClick = () => {
+    window.open('https://www.youtube.com/channel/UCW5c3tsFzZXJ99EpHEBqL-w', '_blank', 'noopener noreferrer');
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleExternalLinkClick();
+    }
+  };
+
   return (
-    <a href="https://www.youtube.com/@agodecosystem" target="_blank" rel="noopener noreferrer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      role="img"
-      fill="currentColor"
-      {...props}
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={handleExternalLinkClick}
+      onKeyDown={handleKeyDown}
+      className="icon-container"
+      aria-label="YouTube"
     >
-      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-    </svg>
-    </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        role="img"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M9.999 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.302 10.28s-.035 1.175-.446 1.692c-.413.51-.877.513-1.09.542-.902.065-2.256.065-2.256.065h-.003s-1.355 0-2.256-.065c-.213-.029-.677-.032-1.09-.542-.41-.517-.446-1.692-.446-1.692s-.036-1.175.446-1.692c.413-.51.96-.495 1.205-.542.875-.065 2.21-.065 2.21-.065s1.356 0 2.258.065c.213.029.677.032 1.09.542.41.517.446 1.692.446 1.692ZM8.557 9.109l2.415 1.393-2.415 1.393V9.109Z"/>
+      </svg>
+    </span>
+  );
+}
+
+export function TiktokIcon(props: ComponentProps<'svg'>) {
+  const handleExternalLinkClick = () => {
+    window.open('https://tiktok.com/@agodecosystem', '_blank', 'noopener noreferrer');
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleExternalLinkClick();
+    }
+  };
+
+  return (
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={handleExternalLinkClick}
+      onKeyDown={handleKeyDown}
+      className="icon-container"
+      aria-label="TikTok"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        role="img"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+      </svg>
+    </span>
   );
 }
 
 export function LinkedinIcon(props: ComponentProps<'svg'>) {
+  const handleExternalLinkClick = () => {
+    window.open('https://linkedin.com/company/agodecosystem', '_blank', 'noopener noreferrer');
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleExternalLinkClick();
+    }
+  };
+
   return (
-    <a href="https://linkedin.com/company/agodecosystem" target="_blank" rel="noopener noreferrer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      role="img"
-      fill="currentColor"
-      {...props}
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={handleExternalLinkClick}
+      onKeyDown={handleKeyDown}
+      className="icon-container"
+      aria-label="LinkedIn"
     >
-      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-    </svg>
-    </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        role="img"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+      </svg>
+    </span>
   );
 }
 
 export function MediumIcon(props: ComponentProps<'svg'>) {
-  return (
-    <a href="https://medium.com/@agodecosystem" target="_blank" rel="noopener noreferrer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      role="img"
-      fill="currentColor"
-      {...props}
-    >
-      <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795"/>
-    </svg>
-    </a>
-  );
-}
+  const handleExternalLinkClick = () => {
+    window.open('https://medium.com/@agodecosystem', '_blank', 'noopener noreferrer');
+  };
 
-export function DiscordIcon(props: ComponentProps<'svg'>) {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleExternalLinkClick();
+    }
+  };
+
   return (
-    <a href="https://discord.gg/WVqQtqT7xa" target="_blank" rel="noopener noreferrer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      role="img"
-      fill="currentColor"
-      {...props}
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={handleExternalLinkClick}
+      onKeyDown={handleKeyDown}
+      className="icon-container"
+      aria-label="Medium"
     >
-      <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-    </svg>
-    </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        role="img"
+        fill="currentColor"
+        {...props}
+      >
+        <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795"/>
+      </svg>
+    </span>
   );
 }
 

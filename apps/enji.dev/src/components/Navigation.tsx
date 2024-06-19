@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { DiscordIcon, TwitterIcon } from '@/components/Icons';
+import { DiscordIcon } from '@/components/Icons';
 import NavIcon from '@/components/navigations/NavIcon';
 import NavIconQuickAccess from '@/components/navigations/NavIconQuickAccess';
 import NavLink from '@/components/navigations/NavLink';
@@ -67,15 +67,8 @@ function Navbar() {
           <ul className={clsx('flex items-center')}>
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
-                href="https://twitter.com/agodecosystem"
-                icon={<TwitterIcon className={clsx('h-4 w-4')} />}
-                title="Twitter"
-              />
-            </li>
-            <li className={clsx('hidden', 'sm:block')}>
-              <NavIcon
                 href="https://discord.gg/WVqQtqT7xa"
-                icon={<DiscordIcon className={clsx('h-5 w-5')} />}
+                icon={<DiscordIcon className={clsx('h-7 w-7')} />}
                 title="Discord"
               />
             </li>
