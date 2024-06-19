@@ -40,8 +40,8 @@ function Head({
 
       {/* twitter card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@enjidev" />
-      <meta name="twitter:creator" content="@enjidev" />
+      <meta name="twitter:site" content="@agodecosystem" />
+      <meta name="twitter:creator" content="@agodecosystem" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
