@@ -93,7 +93,7 @@ function IndexContents() {
   return (
     <>
       <Header />
-      <div className={clsx('hidden', 'lg:-mt-16 lg:mb-24 lg:block')}>
+      <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>
         <FeaturedCardSection />
       </div>
       <div

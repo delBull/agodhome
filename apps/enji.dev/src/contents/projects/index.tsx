@@ -25,7 +25,7 @@ function ProjectsContents() {
       />
       <SectionContent>
         <div className={clsx('flex', 'lg:gap-12')}>
-          <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
+          <div className={clsx('flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
               <SectionButton
                 title="Oportnidades de Inversión RWA"
