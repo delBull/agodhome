@@ -40,7 +40,7 @@ function HeaderTitle() {
             }}
             priority
           />
-        bienvenidos al mundo de
+        desbloquea el potencial blockchain
         <m.div
           initial={{
             opacity: 0,
@@ -84,16 +84,16 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-          <span className={clsx('lowercase')}>desbloquea el potencial</span>{' '}
-          <strong
+          <span className={clsx('lowercase')}>¿Te gustaría ser parte de una industria que revolucionará las finanzas y el mundo digital?</span>{' '}
+          <p><strong
             className={clsx(
               'font-bold lowercase text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            Blockchain;
-          </strong>{' '}
-          <span className={clsx('block')}>Pioneros en una Revolución Financiera Sostenible.</span>
+            Un Ecosistema Sostenible Construido sobre inversiones seguras en bienes raíces;
+          </strong>{' '}</p>
+          <span className={clsx('block')}></span>
         </m.h1>
       </span>
     </div>

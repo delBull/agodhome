@@ -1,0 +1,17 @@
+/* Estilos CSS para la animación de floating */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar la animación a la imagen */
+.floating-image {
+  animation: floating 3s ease-in-out infinite;
+}

@@ -26,8 +26,9 @@ function HeaderTechStack() {
         initial={animation.hide}
         animate={animation.show}
         transition={{ delay: 0.6 }}
+        style={{ fontSize: '16px'}}
       >
-        ReFi: Regenerando el mundo, una transacción a la vez.
+        Nuestras plataformas están diseñadas para innovar y transformar.
       </m.p>
       <m.ul
         className={clsx(

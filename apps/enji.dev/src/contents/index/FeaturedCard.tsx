@@ -6,9 +6,10 @@ interface FeaturedCardProps {
   icon: ReactElement;
   title: string;
   desc: string;
+  additionalDesc: string; 
 }
 
-function FeaturedCard({ icon, title, desc }: FeaturedCardProps) {
+function FeaturedCard({ icon, title, desc, additionalDesc }: FeaturedCardProps) {
   return (
     <div
       className={clsx(
@@ -50,9 +51,17 @@ function FeaturedCard({ icon, title, desc }: FeaturedCardProps) {
         className={clsx(
           'p-4 pl-12 text-sm text-slate-600',
           'dark:text-slate-400'
-        )}
+        )} style={{ fontSize: '18px', lineHeight: '1.2'}}
       >
         {desc}
+      </div>
+          <div
+        className={clsx(
+          'p-4 pl-12 text-sm text-slate-600',
+          'dark:text-slate-400'
+        )} style={{ fontSize: '18px', lineHeight: '1.2'}}
+      >
+        {additionalDesc}
       </div>
     </div>
   );

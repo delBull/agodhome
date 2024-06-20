@@ -60,3 +60,37 @@ a.button.button--soft {
   cursor: pointer;
   display: inline-block;
 }
+
+/* Estilos en CSS Module */
+.imageContainer {
+  position: relative; /* Asegura que la imagen se mantenga dentro de su contenedor */
+  width: 100%;
+  height: auto;
+}
+
+.floatingImage {
+  width: 100%;
+  height: auto;
+  animation: floatAnimation 3s infinite ease-in-out alternate;
+}
+
+/* Define la animación */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tierraLateral {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  right: 0;
+  top: 0;
+}
