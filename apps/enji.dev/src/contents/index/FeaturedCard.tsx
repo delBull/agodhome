@@ -1,13 +1,12 @@
 import clsx from 'clsx';
+import React from 'react';
 
-import type { ReactElement } from 'react';
-
-interface FeaturedCardProps {
-  icon: ReactElement;
+type FeaturedCardProps = {
+  icon: React.ReactNode;
   title: string;
   desc: string;
-  additionalDesc: string; 
-}
+  additionalDesc: React.ReactNode; // Accepts JSX elements
+};
 
 function FeaturedCard({ icon, title, desc, additionalDesc }: FeaturedCardProps) {
   return (
@@ -50,15 +49,15 @@ function FeaturedCard({ icon, title, desc, additionalDesc }: FeaturedCardProps) 
       <div
         className={clsx(
           'p-4 pl-12 text-sm text-slate-600',
-          'dark:text-slate-400'
+          'dark:text-slate-300'
         )} style={{ fontSize: '18px', lineHeight: '1.2'}}
       >
         {desc}
       </div>
-          <div
+      <div
         className={clsx(
           'p-4 pl-12 text-sm text-slate-600',
-          'dark:text-slate-400'
+          'dark:text-slate-300'
         )} style={{ fontSize: '18px', lineHeight: '1.2'}}
       >
         {additionalDesc}

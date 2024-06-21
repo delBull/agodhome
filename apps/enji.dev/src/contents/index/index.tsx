@@ -23,16 +23,29 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full bg-sky-500 p-3.5',
-                'dark:bg-sky-600'
+                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
+                'dark:rgb(var(--tw-ta-accent-500)'
               )}
             >
               <HeartIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
           title="Nuestro BIG Why"
-          desc="Estamos a la vanguardia de la descentralización. ¿Por qué? Porque creemos en el poder de todos para hacer realidad sus aspiraciones digitales. Soñamos con un futuro donde las finanzas no solo sostienen, sino que regeneran la economía. ¿Te unes a la evolución o te quedas atrás?"
-          additionalDesc="Las finanzas tradicionales están rotas. Dependemos de intermediarios costosos, las transiciones son lentas y a menudo inseguras. Además, el sistema financiero actual contribuye a la desigualdad y no tiene en cuenta el impacto ambiental. A esto se suma la falta de transparencia, accesibilidad y adaptabilidad a las necesidades de diferentes nichos de mercado como estilo de vida, economía pay it forward y más."
+          desc="Estamos a la vanguardia de la descentralización. 
+          ¿Por qué? Porque creemos en el poder de todos para hacer realidad sus aspiraciones digitales. 
+          Soñamos con un futuro donde las finanzas no solo sostienen, sino que regeneran la economía. 
+          ¿Te unes a la evolución o te quedas atrás?"
+          additionalDesc={
+            <>
+              <span style={{ fontSize: '40px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)'}}>
+                LAS FINANZAS TRADICIONALES ESTÁN ROTAS.
+              </span>{' '}
+              En el mundo actual, la tecnología ha mejorado muchos aspectos de nuestras vidas, pero aún 
+              no ha encontrado una solución eficiente y accesible para los problemas financieros de la persona promedio. 
+              La mayoría de los sistemas financieros son complicados, costosos y poco accesibles para todos. 
+              Además, la economía global enfrenta problemas de sostenibilidad y falta de equidad.
+            </>
+          }
         />
 
         <div
@@ -58,20 +71,31 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full bg-purple-700 p-3.5',
-                'dark:bg-purple-600'
+                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
+                'dark:rgb(var(--tw-ta-accent-500)'
               )}
             >
               <CodeIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
           title="Descubre AGOD"
-          desc="AGOD Ecosystem utiliza la tecnología blockchain para ofrecer una alternativa descentralizada y sostenible que resuelve problemáticas en diversos nichos de mercado. Con transacciones rápidas, seguras y de bajo costo, AGOD no solo mejora la eficiencia financiera, sino que también promueve un impacto positivo en el medio ambiente y la sociedad. Nuestra plataforma es flexible y se adapta a las necesidades de sectores como el estilo de vida, iniciativas de economía colaborativa, y cualquier otra área donde la creatividad es el único límite."
-          additionalDesc=""
+          desc="AGOD Ecosystem es un tipo de centro donde podemos hacer de todo usando la tecnología. 
+          Imagina un juego donde cada vez que haces algo bueno, como ahorrar o invertir, te recompensan y 
+          además ayudas a que el mundo sea un lugar mejor. Usamos blockchain, que es como el internet donde 
+          lo usamos para muchas cosas en la red, pero en esta nueva red llamada blockchain, tienes control 
+          completo sobre lo que haces, es más segura y sobre todo muy eficiente. Además, cada acción que realizas 
+          ayuda a cuidar el planeta y a los animales."
+          additionalDesc={
+            <>
+            <p><span style={{ fontSize: '35px'}}>Es como usar tu dinero</span></p>
+          <span style={{ fontSize: '40px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)', lineHeight: '1.5' }}>
+           PARA HACER MAGIA
+              </span>{' '}
+              <p><span style={{ fontSize: '35px'}}>Positiva en el mundo.</span></p>
+            </>
+          }
         />
-        <div
-          style={{ position: 'absolute', justifyContent: 'center', left: '0' }}
-        >
+        <div style={{ position: 'absolute', left: '0', marginTop: '200px'}}>
           <Image src={theImage} alt="AGOD Ecosystem" width={500} height={300} />
         </div>
       </div>

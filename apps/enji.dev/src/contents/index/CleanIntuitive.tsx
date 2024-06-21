@@ -58,7 +58,11 @@ function CleanIntuitive() {
         <SectionTitle
           title="¿Por qué AGOD?"
           caption="Nuestra Visión de las Finazas Descentralizadas"
-          description="Es un sistema financiero accesible para todos, donde cada transacción es transparente, segura y contribuye al bienestar global. La tecnología blockchain es la clave para lograrlo, eliminando intermediarios y empoderando a las personas y negocios en diversas industrias. Desde mejorar el estilo de vida hasta fomentar economías colaborativas, AGOD es la herramienta que posibilita estas transformaciones."
+          description="Al utilizar blockchain, resuelve problemáticas en diversos nichos de mercado. 
+          Con transacciones rápidas, seguras y de bajo costo, AGOD no solo mejora la eficiencia financiera, 
+          sino que también promueve un impacto positivo en el medio ambiente y la sociedad. 
+          Nuestra plataforma es flexible y se adapta a las necesidades de sectores como el estilo de vida, 
+          iniciativas de economía colaborativa, y cualquier otra área donde la creatividad es el único límite"
         />
       </header>
       <SectionContent>

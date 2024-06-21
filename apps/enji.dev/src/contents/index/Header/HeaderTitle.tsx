@@ -84,16 +84,23 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-          <span className={clsx('lowercase')}>¿Te gustaría ser parte de una industria que revolucionará las finanzas y el mundo digital?</span>{' '}
-          <p><strong
+          <span className={clsx('block')}>¿Te gustaría ser parte de una industria que sacudirá el mundo?</span>{' '}
+          <p className={clsx('block')}>Un <span><strong
             className={clsx(
               'font-bold lowercase text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            Un Ecosistema Sostenible Construido sobre inversiones seguras en bienes raíces;
-          </strong>{' '}</p>
-          <span className={clsx('block')}></span>
+            Ecosistema Sostenible
+          </strong>{' '}</span></p>
+          <p className={clsx('block')}>Construido sobre inversiones seguras en <span><strong
+            className={clsx(
+              'font-bold text-slate-700',
+              'dark:text-slate-300'
+            )}
+          >
+            Activos Físicos y Digitales
+          </strong>{' '}</span></p>
         </m.h1>
       </span>
     </div>
