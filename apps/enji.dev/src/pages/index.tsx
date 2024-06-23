@@ -10,7 +10,7 @@ function Index() {
       <Head
         title="AGOD · Ecosystem"
         description="Desbloquea el potencial de Blockchain"
-        ogImage={`${getBaseUrl()}/assets/images/og-image.png`}
+        ogImage={`${getBaseUrl()}/assets/images/post2.png`}
         overrideTitle
       />
       <IndexContents />
