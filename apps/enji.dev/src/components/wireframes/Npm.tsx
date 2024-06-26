@@ -6,12 +6,14 @@ import { SkeletonSm } from '@/components/wireframes/Skeletons';
 interface NpmWireframeProps {
   packageName: string;
   description: string;
+  additionalDesc: React.ReactNode;
   isWithTypeScript?: boolean;
 }
 
 function NpmWireframe({
   packageName,
   description,
+  additionalDesc,
   isWithTypeScript = false,
 }: NpmWireframeProps) {
   return (
@@ -96,12 +98,20 @@ function NpmWireframe({
       <div className={clsx('mt-4')}>
         <div
           className={clsx(
-            'border-divider-light mt-8 border-l-4 bg-slate-200/40 p-2 px-4',
-            'dark:border-divider-dark dark:bg-slate-100/5'
-          )}
+            'p-4 pl-12 text-sm text-slate-600',
+            'dark:text-slate-300'
+          )} style={{ fontSize: '18px', lineHeight: '1.2'}}
         >
           <p>{description}</p>
         </div>
+        <div
+        className={clsx(
+          'p-4 pl-12 text-sm text-slate-600',
+          'dark:text-slate-300'
+        )} style={{ fontSize: '18px', lineHeight: '1.2'}}
+      >
+        {additionalDesc}
+      </div>
         <div
           className={clsx(
             'border-divider-light my-4 border-b',

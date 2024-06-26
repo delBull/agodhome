@@ -7,6 +7,7 @@ interface GithubWireframeProps {
   license?: string;
   repository: string;
   description: string;
+  additionalDesc: React.ReactNode;
 }
 
 function GitHubWireframe({
@@ -14,6 +15,7 @@ function GitHubWireframe({
   license = '',
   repository,
   description,
+  additionalDesc,
 }: GithubWireframeProps) {
   return (
     <div
@@ -48,11 +50,23 @@ function GitHubWireframe({
             'dark:border-divider-dark'
           )}
         >
-          public
+          
         </div>
       </div>
-      <div className={clsx('mt-2')}>
+      <div className={clsx(
+          'p-4 pl-12 text-sm text-slate-600',
+          'dark:text-slate-300'
+        )} style={{ fontSize: '18px', lineHeight: '1.2'}}
+      >
         <p>{description}</p>
+      </div>
+      <div
+        className={clsx(
+          'p-4 pl-12 text-sm text-slate-600',
+          'dark:text-slate-300'
+        )} style={{ fontSize: '18px', lineHeight: '1.2'}}
+      >
+        {additionalDesc}
       </div>
       <div className={clsx('mt-6 flex flex-col gap-3')}>
         <div className={clsx('flex items-center gap-2')}>

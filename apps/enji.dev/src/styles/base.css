@@ -104,6 +104,24 @@ a.button.button--soft {
 }
 }
 
+.introhd {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .introhd {
+    width: 100%;
+    top: 35vh;
+  }
+  button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
+    margin-bottom: 5px;
+}
+}
+
 footer.background-grid.background-grid--fade-in.border-divider-light.mt-24.pt-16.text-sm.text-slate-900.dark\:border-divider-dark.dark\:text-slate-200 {
   margin-top: 0px;
 }
