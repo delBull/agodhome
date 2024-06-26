@@ -134,7 +134,6 @@ a.button.button--soft {
   .redplanet {
     width: 100%;
     top: -15vh;
-    right: -15vh;
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;

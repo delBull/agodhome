@@ -115,7 +115,14 @@ function ProjectsContents() {
           'mb-40 mt-20'
         )}
       >
-        <div className={clsx('flex', 'lg:gap-3', 'z-10', 'mb-3')}>
+        <div className={clsx(
+  'flex',
+  'z-10',
+  'mb-3',
+  'lg:w-[100px]',
+  'lg:gap-3', // Gap en dispositivos grandes
+  'text-sm'     // Tamaño de texto para dispositivos móviles
+)}>
           <SectionButton
             title="Sustentabilidad"
             icon=""
