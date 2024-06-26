@@ -31,9 +31,9 @@ function PrettyOptimized() {
   return (
     <header >
       <SectionTitle
-        title="Obtén AGOD Pass"
-        caption="¡Toma Acción!"
-        description="¿Listo para embarcarte en un viaje hacia un futuro digital sin precedentes?"
+        title="¿Quieres ser parte?"
+        caption="¡Obtén AGOD Pass!"
+        description="Listo, vamos a embarcarte con nosotros en un viaje hacia un futuro digital sin precedentes. Dale click aquí abajito 👇 "
       />
       <SectionContent>
         <div className={clsx('flex', 'lg:gap-12')}>

@@ -115,14 +115,16 @@ function ProjectsContents() {
           'mb-40 mt-20'
         )}
       >
-        <div className={clsx(
-  'flex',
-  'z-10',
-  'mb-3',
-  'lg:w-[100px]',
-  'lg:gap-3', // Gap en dispositivos grandes
-  'text-sm'     // Tamaño de texto para dispositivos móviles
-)}>
+        <div
+          className={clsx(
+            'flex',
+            'z-10',
+            'mb-3',
+            'lg:w-[100px]',
+            'lg:gap-3', // Gap en dispositivos grandes
+            'text-sm' // Tamaño de texto para dispositivos móviles
+          )}
+        >
           <SectionButton
             title="Sustentabilidad"
             icon=""
@@ -222,23 +224,23 @@ function ProjectsContents() {
       </div>
 
       <SectionContent>
-          <div className={clsx('flex -mt-6 h-60')}>
-              <SectionButton
-                title="AGOD Ecosystem es un destino integral para todos los aspectos de la tecnología blockchain."
-                icon={<HeartIcon className={clsx('my-2 h-16 w-16')} />}
-                description=" Como centro de innovación, AGOD proporciona a los usuarios las herramientas y los 
+        <div className={clsx('-mt-6 flex h-60')}>
+          <SectionButton
+            title="AGOD Ecosystem es un destino integral para todos los aspectos de la tecnología blockchain."
+            icon={<HeartIcon className={clsx('my-2 h-16 w-16')} />}
+            description=" Como centro de innovación, AGOD proporciona a los usuarios las herramientas y los 
                 recursos necesarios para aprovechar al máximo el potencial de la tecnología blockchain y crear un 
                 futuro digital más empoderado y gratificante."
-              />
-          </div>
-          <Image
-                src={introhd}
-                alt="Intro HD"
-                width={600}
-                height={300}
-                className={clsx(styles['floating-image'], ['introhd'])}
-              />
-       </SectionContent>
+          />
+        </div>
+        <Image
+          src={introhd}
+          alt="Intro HD"
+          width={600}
+          height={300}
+          className={clsx(styles['floating-image'], ['introhd'])}
+        />
+      </SectionContent>
 
       {/*
       <SectionContent>
