@@ -11,10 +11,11 @@ import NavLogo from '@/components/navigations/NavLogo';
 import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
-  { title: 'Tokenización', href: '/explora/tokenizacion' },
-  { title: 'DACCESS', href: '/explora/daccess' },
-  { title: 'ADEX', href: '/explora/adex' },
   { title: 'Rabbitty', href: '/explora/rabbitty' },
+  { title: 'ADEX', href: '/explora/adex' },
+  { title: 'DACCESS', href: '/explora/daccess' },
+  { title: 'Tokenización', href: '/explora/tokenizacion' },
+  { title: 'Pandora\'s', href: '/explora/pandoras' },
 ];
 
 function Navbar() {
