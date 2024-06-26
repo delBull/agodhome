@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "rehype-prism-plus": "^1.5.0",
-    "unist-util-visit": "^4.1.1"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "eslint-config-typescript": "workspace:*",
