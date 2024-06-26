@@ -168,7 +168,7 @@ function Footer() {
                   links={[
                     {
                       title: 'Intro',
-                      href: '/projects',
+                      href: '/intro',
                     },
                     {
                       title: 'Blog',

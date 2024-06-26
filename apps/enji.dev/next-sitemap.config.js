@@ -21,7 +21,7 @@ module.exports = {
       return defaultValue(0.9);
     }
 
-    if (path === '/projects') {
+    if (path === '/intro') {
       return defaultValue(0.9);
     }
 
