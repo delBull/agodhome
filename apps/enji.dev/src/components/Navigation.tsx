@@ -48,7 +48,7 @@ function Navbar() {
             <NavLogo href="/" title="Home" />
             <ul className={clsx('flex items-center', 'md:gap-1')}>
               <li>
-                <NavLink title="Intro" href="/projects" />
+                <NavLink title="Intro" href="/intro" />
               </li>
               <li>
                 <NavLink title="Blog" href="/blog" />

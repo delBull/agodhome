@@ -18,9 +18,9 @@ import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 import AppWindow from '@/components/wireframes/AppWindow';
 import GitHubWireframe from '@/components/wireframes/GitHub';
-import NpmWireframe from '@/components/wireframes/Npm';
 
 import introhd from '@/assets/images/introhd.png';
+import redplanet from '@/assets/images/redplanet.png';
 
 import styles from '@/styles/FloatingImage.module.css';
 
@@ -79,11 +79,11 @@ function ProjectsContents() {
           <div className={clsx('w-full', 'lg:w-auto')}>
             <div className="styles.imageContainer">
               <Image
-                src={introhd}
-                alt="Intro HD"
+                src={redplanet}
+                alt="Red Planet"
                 width={600}
                 height={300}
-                className={clsx(styles['floating-image'], ['introhd'])}
+                className={clsx(styles['floating-image'], ['redplanet'])}
               />
             </div>
             <div className={clsx('-mt-[41px]')}>
@@ -215,6 +215,26 @@ function ProjectsContents() {
       </div>
 
       <SectionContent>
+          <div className={clsx('flex -mt-6 h-60')}>
+              <SectionButton
+                title="AGOD Ecosystem es un destino integral para todos los aspectos de la tecnología blockchain."
+                icon={<HeartIcon className={clsx('my-2 h-16 w-16')} />}
+                description=" Como centro de innovación, AGOD proporciona a los usuarios las herramientas y los 
+                recursos necesarios para aprovechar al máximo el potencial de la tecnología blockchain y crear un 
+                futuro digital más empoderado y gratificante."
+              />
+          </div>
+          <Image
+                src={introhd}
+                alt="Intro HD"
+                width={600}
+                height={300}
+                className={clsx(styles['floating-image'], ['introhd'])}
+              />
+       </SectionContent>
+
+      {/*
+      <SectionContent>
         <div className={clsx('flex', 'lg:gap-12')}>
           <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
@@ -337,6 +357,7 @@ function ProjectsContents() {
           </div>
         </div>
       </SectionContent>
+      */}
     </>
   );
 }
