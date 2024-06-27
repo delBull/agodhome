@@ -14,8 +14,8 @@ const workLinks = [
   { title: 'Rabbitty', href: '/explora/rabbitty' },
   { title: 'ADEX', href: '/explora/adex' },
   { title: 'DACCESS', href: '/explora/daccess' },
-  { title: 'Tokenización', href: '/explora/tokenizacion' },
   { title: 'Pandora\'s', href: '/explora/pandoras' },
+  { title: 'Tokenización', href: '/explora/tokenizacion' },
 ];
 
 function Navbar() {
