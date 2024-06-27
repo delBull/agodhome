@@ -30,7 +30,6 @@ function Header() {
               'lg:block'
             )}
           >
-          {/*  <HeaderImage />*/}  
           </div>
         </div>
       </div>
