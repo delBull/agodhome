@@ -12,7 +12,7 @@ function DetailOriented() {
         description={
           <>
             <span>
-              Es un ecosistema tecnológico integral que fusiona las capacidades de AGOD Ecosystem (centro tecnológico) y Rabbitty (plataforma de estilo de vida y recompensas).
+              Es la red que fusiona las capacidades de AGOD Ecosystem (centro tecnológico) y Rabbitty (plataforma de estilo de vida y recompensas).
             </span>
             <br />
             <a
