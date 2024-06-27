@@ -31,7 +31,7 @@ function Header() {
               'lg:block'
             )}
           >
-            <HeaderImage />
+          {/*  <HeaderImage />*/}  
           </div>
         </div>
       </div>

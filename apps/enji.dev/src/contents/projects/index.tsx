@@ -97,13 +97,9 @@ function ProjectsContents() {
       <SectionTitle
         title="Ecosistema de Plataformas Interconectadas"
         caption="AGOD Ecosystem + Rabbitty = Complemento Perfecto"
-        description="Es un sistema de recompensas que fomenta la participación y la interacción dentro del 
-        ecosistema “Verge”. Los usuarios pueden ganar bunz (moneda de cambio del ecosistema) por completar 
-        tareas, realizar transacciones y contribuir al crecimiento de la comunidad."
-        button={{
-          title: 'cuéntame más',
-          href: '/',
-        }}
+        description="Es un sistema de recompensas que fomenta la participación y la interacción dentro del ecosistema. 
+        Los usuarios pueden ganar bunz (moneda de cambio del ecosistema) por completar tareas, realizar transacciones y 
+        contribuir al crecimiento de la comunidad."
       />
       {/* Firts Winwdow */}
       <div
@@ -203,10 +199,9 @@ function ProjectsContents() {
               Los negocios pueden crear bunz para recompensar a los clientes por consumir sus productos o servicios. 
               A su vez, los negocios pueden crear bunz para ofertas dentro del ecosistema blockchain. Además, los bunz 
               se pueden utilizar como moneda de cambio para cualquier tipo de incentivo futuro y/o actual."
-              additionalDesc="El ecosistema bunz crece a través de las tarifas de transacción, que se convierten 
-              directamente en inventario. Esto hace que sea más económico para las empresas operar dentro del ecosistema 
-              y genera un inventario en constante crecimiento que puede ser utilizado, reinvertido o colectado de diversas 
-              maneras."
+              additionalDesc="Rabbitty y su economía bunz crece a través de las tarifas de transacción, que se convierten 
+              directamente en inventario. Esto hace que sea más económico para las empresas operar dentro del ecosistema y 
+              genera un inventario en constante crecimiento que puede ser utilizado, reinvertido o colectado de diversas maneras."
             />
           )}
           {currentState === 'interconexión' && (

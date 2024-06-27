@@ -41,7 +41,7 @@ function Quote() {
             >
               AGOD
             </strong>{' '}
-            se erige {' '}
+            emerge {' '}
           </span>
           <span
             className={clsx(

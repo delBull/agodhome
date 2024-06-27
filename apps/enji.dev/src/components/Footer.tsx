@@ -119,7 +119,7 @@ function FooterDescription() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <strong>¿Listo para el token AGOD?</strong>
+        <strong>AGOD Key ¡muy pronto!</strong>
       </Link>
     </div>
   );

@@ -12,6 +12,8 @@ import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
 
+import agodworld from '@/assets/images/agodworld.png';
+
 import styles from '@/styles/FloatingImage.module.css';
 
 function FeaturedCardSection() {
@@ -38,12 +40,12 @@ function FeaturedCardSection() {
           additionalDesc={
             <>
               <span style={{ fontSize: '40px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)'}}>
-                LAS FINANZAS TRADICIONALES ESTÁN ROTAS.
+                LAS FINANZAS TRADICIONALES ESTÁN OBSOLETAS.
               </span>{' '}
-              En el mundo actual, la tecnología ha mejorado muchos aspectos de nuestras vidas, pero aún 
+              <p>En el mundo actual, la tecnología ha mejorado muchos aspectos de nuestras vidas, pero aún 
               no ha encontrado una solución eficiente y accesible para los problemas financieros de la persona promedio. 
               La mayoría de los sistemas financieros son complicados, costosos y poco accesibles para todos. 
-              Además, la economía global enfrenta problemas de sostenibilidad y falta de equidad.
+              Además, la economía global enfrenta problemas de sostenibilidad y falta de equidad.</p>
             </>
           }
         />
@@ -117,6 +119,13 @@ function IndexContents() {
   return (
     <>
       <Header />
+      <Image
+          src={agodworld}
+          alt="Intro HD"
+          width={600}
+          height={300}
+          className={clsx(styles['floating-image'], ['agodworld'])}
+        />
       <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>
         <FeaturedCardSection />
       </div>
@@ -130,10 +139,10 @@ function IndexContents() {
         <CleanIntuitive />
       </section>
       <section className={clsx('mb-12', 'lg:mb-24')}>
-        <DetailOriented />
+        <PrettyOptimized />
       </section>
       <section className={clsx('mb-12', 'lg:mb-24')}>
-        <PrettyOptimized />
+        <DetailOriented />
       </section>
     </>
   );

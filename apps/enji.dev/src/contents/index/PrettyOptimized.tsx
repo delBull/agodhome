@@ -33,7 +33,7 @@ function PrettyOptimized() {
       <SectionTitle
         title="¿Quieres ser parte?"
         caption="¡Obtén AGOD Key!"
-        description="AGOD Key es la puerta de entrada a Neosfera, un ecosistema donde la tecnología blockchain y el estilo de vida se unen para crear un futuro sostenible y conectado. Con beneficios exclusivos, recompensas continuas, y un enfoque en la adopción y sostenibilidad, estamos construyendo la próxima generación de soluciones digitales. Dale click aquí abajito 👇 "
+        description="AGOD Key es la puerta de entrada a un ecosistema donde la tecnología blockchain y el estilo de vida se unen para crear un futuro sostenible y conectado. Con beneficios exclusivos, recompensas continuas, y un enfoque en la adopción y sostenibilidad, estamos construyendo la próxima generación de soluciones digitales. Dale click aquí abajito 👇 "
       />
       <SectionContent>
         <div className={clsx('flex', 'lg:gap-12')}>

@@ -1,4 +1,9 @@
-/* Estilos CSS para la animación de floating */
+/* Estilos CSS para la animación de floating y fade-in */
+.floating-image {
+  animation: floating 3s ease-in-out infinite, fadeIn 2s ease-in-out;
+}
+
+/* animación flotante de planetas */
 @keyframes floating {
   0% {
     transform: translateY(0);
@@ -11,7 +16,12 @@
   }
 }
 
-/* Aplicar la animación a la imagen */
-.floating-image {
-  animation: floating 3s ease-in-out infinite;
+/* animación fade-in planeta home */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

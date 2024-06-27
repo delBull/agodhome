@@ -68,25 +68,6 @@ a.button.button--soft {
   height: auto;
 }
 
-.floatingImage {
-  width: 100%;
-  height: auto;
-  animation: floatAnimation 3s infinite ease-in-out alternate;
-}
-
-/* Define la animación */
-@keyframes floating {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .tierraLateral {
   position: absolute;
   width: 100%;
@@ -122,6 +103,24 @@ a.button.button--soft {
 }
 }
 
+.agodworld {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .agodworld {
+    width: 100%;
+    z-index: -1;
+  }
+  button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
+    margin-bottom: 5px;
+}
+}
+
 .redplanet {
   position: absolute;
   width: 50%;
@@ -133,7 +132,8 @@ a.button.button--soft {
 @media screen and (max-width: 768px) {
   .redplanet {
     width: 100%;
-    top: -15vh;
+    top: 65vh;
+    opacity: 0.5;
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;
@@ -153,4 +153,10 @@ footer.background-grid.background-grid--fade-in.border-divider-light.mt-24.pt-16
 .fade-up-on-hover:hover {
   transform: translateY(-5px);
   opacity: 0.8;
+}
+
+.disabled-link {
+  pointer-events: none; /* Deshabilita la interactividad */
+  cursor: default; /* Cambia el cursor para indicar que no es clickeable */
+  color: grey; /* Opcional: Cambia el color para indicar que está deshabilitado */
 }

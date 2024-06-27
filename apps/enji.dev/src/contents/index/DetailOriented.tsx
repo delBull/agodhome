@@ -16,10 +16,10 @@ function DetailOriented() {
             </span>
             <br />
             <a
-              href="https://bunz.me"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
-              className={clsx('text-red-400 hover:underline flex items-center mt-2')}
+              className={clsx('text-red-400 hover:underline flex items-center mt-2 disabled-link')}
             >
               <HeartIcon className={clsx('h-5 w-5')} />
               Muy pronto podrás saber + de bunz
