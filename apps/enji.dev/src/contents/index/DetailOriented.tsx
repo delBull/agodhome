@@ -12,14 +12,18 @@ function DetailOriented() {
         description={
           <>
             <span>
-              Es la red que fusiona las capacidades de AGOD Ecosystem (centro tecnológico) y Rabbitty (plataforma de estilo de vida y recompensas).
+              Es la red que fusiona las capacidades de AGOD Ecosystem (centro
+              tecnológico) y Rabbitty (plataforma de estilo de vida y
+              recompensas).
             </span>
             <br />
             <a
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              className={clsx('text-red-400 hover:underline flex items-center mt-2 disabled-link')}
+              className={clsx(
+                'disabled-link mt-2 flex items-center text-red-400 hover:underline'
+              )}
             >
               <HeartIcon className={clsx('h-5 w-5')} />
               Muy pronto podrás saber + de bunz
