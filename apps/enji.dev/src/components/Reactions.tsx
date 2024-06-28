@@ -101,20 +101,20 @@ function Reactions({
     isLoading,
     data: {
       meta: {
-        views,
-        shares,
-        reactions,
-        reactionsDetail: { THINKING, CLAPPING, AMAZED },
-      },
-      metaUser: { reactionsDetail: user },
-    },
+        views = 0,
+        shares = 0,
+        reactions = 0,
+        reactionsDetail: { THINKING = 0, CLAPPING = 0, AMAZED = 0 } = {},
+      } = {},
+      metaUser: { reactionsDetail: userReactions = { THINKING: 0, CLAPPING: 0, AMAZED: 0 } } = {},
+    } = {},
     addShare,
     addReaction,
   } = useInsight({ slug, contentType, contentTitle, countView: withCountView });
 
-  const CLAPPING_QUOTA = MAX_REACTIONS_PER_SESSION - user.CLAPPING;
-  const THINKING_QUOTA = MAX_REACTIONS_PER_SESSION - user.THINKING;
-  const AMAZED_QUOTA = MAX_REACTIONS_PER_SESSION - user.AMAZED;
+  const CLAPPING_QUOTA = MAX_REACTIONS_PER_SESSION - (userReactions.CLAPPING ?? 0);
+  const THINKING_QUOTA = MAX_REACTIONS_PER_SESSION - (userReactions.THINKING ?? 0);
+  const AMAZED_QUOTA = MAX_REACTIONS_PER_SESSION - (userReactions.AMAZED ?? 0);
 
   const controls = useAnimationControls();
 
