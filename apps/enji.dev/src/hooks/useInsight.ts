@@ -1,5 +1,4 @@
 import { ContentType, ReactionType, ShareType } from '@prisma/client';
-import merge from 'lodash/merge';
 import { useEffect, useRef } from 'react';
 import useSWR from 'swr';
 
@@ -40,7 +39,6 @@ export default function useInsight({
   contentTitle: string;
   countView?: boolean;
 }) {
-  // #region handle for batch click
   const timer = useRef<Record<ReactionType, NodeJS.Timeout>>({
     CLAPPING: null,
     THINKING: null,
@@ -51,7 +49,6 @@ export default function useInsight({
     THINKING: 0,
     AMAZED: 0,
   });
-  // #endregion
 
   const { isLoading, data, mutate } = useSWR<TContentMetaDetail>(
     `/api/content/${slug}`,
@@ -61,61 +58,46 @@ export default function useInsight({
     }
   );
 
-  // post view count
   useEffect(() => {
     if (countView) {
       postView({ slug, contentType, contentTitle });
     }
   }, [slug, contentType, contentTitle, countView]);
 
-  const addShare = ({ type }: { type: ShareType }) => {
-    // optimistic update
+  const updateMeta = (newMeta: Partial<TContentMetaDetail['meta']>) => {
     mutate(
-      merge({}, data, {
+      {
+        ...data,
         meta: {
-          shares: data.meta.shares + 1,
+          ...data.meta,
+          ...newMeta,
         },
-      }),
+      },
       false
     );
+  };
 
-    postShare({
-      slug,
-      contentType,
-      contentTitle,
-      type,
-    });
+  const addShare = ({ type }: { type: ShareType }) => {
+    updateMeta({ shares: data.meta.shares + 1 });
+    postShare({ slug, contentType, contentTitle, type });
   };
 
   const addReaction = ({
     type,
-    section = undefined,
+    section,
   }: {
     type: ReactionType;
     section?: string;
   }) => {
-    // optimistic update
-    mutate(
-      merge({}, data, {
-        meta: {
-          reactions: data.meta.reactions + 1,
-          reactionsDetail: {
-            [type]: data.meta.reactionsDetail[type] + 1,
-          },
-        },
-        metaUser: {
-          reactionsDetail: {
-            [type]: data.metaUser.reactionsDetail[type] + 1,
-          },
-        },
-      }),
-      false
-    );
+    updateMeta({
+      reactions: data.meta.reactions + 1,
+      reactionsDetail: {
+        ...data.meta.reactionsDetail,
+        [type]: data.meta.reactionsDetail[type] + 1,
+      },
+    });
 
-    // increment the current batch click count
     count.current[type] += 1;
-
-    // debounce the batch click for sending the reaction data
     clearTimeout(timer.current[type]);
     timer.current[type] = setTimeout(() => {
       postReaction({
@@ -126,7 +108,6 @@ export default function useInsight({
         count: count.current[type],
         section,
       }).finally(() => {
-        // reset the batch click count to zero for the next batch
         count.current[type] = 0;
       });
     }, 500);
@@ -139,3 +120,4 @@ export default function useInsight({
     addReaction,
   };
 }
+
