@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { CodeIcon, HeartIcon } from '@/components/Icons';
 
+import agodworld from '@/assets/images/agodworld.png';
 import theImage from '@/assets/images/onlybox.png';
 import myImage from '@/assets/images/portal.png';
 import CleanIntuitive from '@/contents/index/CleanIntuitive';
@@ -11,8 +12,6 @@ import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
-
-import agodworld from '@/assets/images/agodworld.png';
 
 import styles from '@/styles/FloatingImage.module.css';
 

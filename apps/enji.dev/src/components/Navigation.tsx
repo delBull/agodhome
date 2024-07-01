@@ -15,7 +15,6 @@ const workLinks = [
   { title: 'ADEX', href: '/explora/adex' },
   { title: 'DACCESS', href: '/explora/daccess' },
   { title: 'Pandora\'s', href: '/explora/pandoras' },
-  { title: 'Tokenización', href: '/explora/tokenizacion' },
 ];
 
 function Navbar() {

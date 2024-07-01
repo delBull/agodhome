@@ -23,7 +23,7 @@ const content: Array<Content> = [
     title: 'AGOD Pass',
     description: 'Incluye beneficios exclusivos, bunz, AGOD token y más',
     image: AGODPass,
-    link: '/agod-pass',
+    link: '/agod-key',
   },
 ];
 
