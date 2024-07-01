@@ -11,7 +11,7 @@ import NavLogo from '@/components/navigations/NavLogo';
 import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
-  { title: 'Rabbitty', href: '/explora/rabbitty' },
+  { title: 'Ra Wallet', href: '/explora/rawallet' },
   { title: 'ADEX', href: '/explora/adex' },
   { title: 'DACCESS', href: '/explora/daccess' },
   { title: 'Pandora\'s', href: '/explora/pandoras' },
