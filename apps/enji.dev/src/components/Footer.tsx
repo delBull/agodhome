@@ -114,13 +114,6 @@ function FooterDescription() {
         en activos del mundo real. Únete a nosotros en este viaje hacia un
         futuro financiero más justo y sostenible.
       </p>
-      <Link
-        href="https://twitter.com/agodecosystem"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <strong>AGOD Key ¡muy pronto!</strong>
-      </Link>
     </div>
   );
 }
@@ -149,18 +142,16 @@ function Footer() {
                 <FooterGroup
                   title="Explora"
                   links={[
-                    { title: 'Rabbitty', href: '/explora/rabbitty' },
-                    { title: 'DACCESS', href: '/explora/daccess' },
                     {
-                      title: 'Services',
-                      href: '/explora/services',
+                      title: 'Servicios',
+                      href: '/servicios',
                       label: 'soon',
                     },
                     {
-                      title: 'Tokenización',
-                      href: '/explora/tokenizacion',
+                      title: 'Preguntas Frecuentes',
+                      href: '/preguntas-frecuentes',
+                      label: 'soon',
                     },
-                    { title: 'ADEX', href: '/explora/adex' },
                   ]}
                 />
                 <FooterGroup
@@ -169,6 +160,10 @@ function Footer() {
                     {
                       title: 'Intro',
                       href: '/intro',
+                    },
+                    {
+                      title: 'AGOD Key',
+                      href: '/agodkey',
                     },
                     {
                       title: 'Blog',
@@ -187,8 +182,26 @@ function Footer() {
                   title="Ecosistema"
                   links={[
                     {
-                      title: 'Dreamhub',
-                      href: 'https://dreamhub.art',
+                      title: 'Pandora\'s',
+                      href: '/',
+                      isInternal: false,
+                      label: 'soon',
+                    },
+                    {
+                      title: 'Ra Wallet',
+                      href: '/',
+                      isInternal: false,
+                      label: 'soon',
+                    },
+                    {
+                      title: 'ADEX',
+                      href: '/',
+                      isInternal: false,
+                      label: 'soon',
+                    },
+                    {
+                      title: 'DACCESS',
+                      href: '/',
                       isInternal: false,
                       label: 'soon',
                     },
@@ -196,12 +209,6 @@ function Footer() {
                       title: 'Tokenization Agency',
                       href: 'https://dreamhub.agency',
                       isInternal: false,
-                    },
-                    {
-                      title: 'Pandora\'s',
-                      href: '',
-                      isInternal: false,
-                      label: 'soon',
                     },
                   ]}
                 />

@@ -51,6 +51,9 @@ function Navbar() {
                 <NavLink title="Intro" href="/intro" />
               </li>
               <li>
+                <NavLink title="AGOD Key" href="/agodkey" />
+              </li>
+              <li>
                 <NavLink title="Blog" href="/blog" />
               </li>
               <li>
