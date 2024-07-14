@@ -30,6 +30,18 @@ function ObtenAshares() {
               Invierte en ASHARES
               <HeartIcon className={clsx('h-5 w-5 ml-2')} />
             </a>
+            <br />
+            <div style={{ marginTop: '30px' }}></div>
+            <span style={{ fontSize: '30px', fontWeight: 'bold'}}>¿Tienes dudas de cómo adquirir AGOD Key?</span>
+            <a
+              href="/blog/agodkey"
+              rel="noopener noreferrer"
+              className={clsx(
+                'flex items-center text-red-400 hover:underline'
+              )}
+            >
+              Revisa este blog post
+            </a>
           </>
         }
       />

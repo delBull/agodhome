@@ -143,13 +143,12 @@ function Footer() {
                   title="Explora"
                   links={[
                     {
-                      title: 'Servicios',
-                      href: '/servicios',
-                      label: 'soon',
+                      title: 'Preguntas Frecuentes',
+                      href: '/blog/preguntasfrecuentes',
                     },
                     {
-                      title: 'Preguntas Frecuentes',
-                      href: '/preguntas-frecuentes',
+                      title: 'Servicios',
+                      href: '/servicios',
                       label: 'soon',
                     },
                   ]}
