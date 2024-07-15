@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 
-import AGODPass from '@/assets/images/post2.png';
+import AGODPass from '@/assets/images/akey.jpg';
 
 import type { TodoItemState } from '@/contents/index/Cards/TodoItem';
 
@@ -46,7 +46,7 @@ function PrettyOptimized() {
                             alt={item.title}
                             layout="cover"
                             objectFit="cover"
-                            className={clsx('rounded-lg fade-up-on-hover')}
+                            className={clsx('rounded-lg fade-up-on-hover w-1/2 opacity-70')}
                           />                     
                       </Link>
               </div>
