@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { CodeIcon, HeartIcon } from '@/components/Icons';
 
 import agodworld from '@/assets/images/agodworld.png';
-import theImage from '@/assets/images/onlybox.png';
+import theImage from '@/assets/images/connector.png';
 import myImage from '@/assets/images/portal.png';
 import CleanIntuitive from '@/contents/index/CleanIntuitive';
 import DetailOriented from '@/contents/index/DetailOriented';
@@ -24,7 +24,7 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
+                'rgb(var(--tw-ta-accent-500) rounded-full p-3.5',
                 'dark:rgb(var(--tw-ta-accent-500)'
               )}
             >
@@ -39,13 +39,24 @@ function FeaturedCardSection() {
           ¿Te unes a la evolución o te quedas atrás?"
           additionalDesc={
             <>
-              <span style={{ fontSize: '30px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)'}}>
+              <span
+                style={{
+                  fontSize: '30px',
+                  fontWeight: 'bold',
+                  color: 'rgb(var(--tw-ta-accent-500)',
+                }}
+              >
                 LAS FINANZAS TRADICIONALES ESTÁN OBSOLETAS.
               </span>{' '}
-              <p>En el mundo actual, la tecnología ha mejorado muchos aspectos de nuestras vidas, pero aún 
-              no ha encontrado una solución eficiente y accesible para los problemas financieros de la persona promedio. 
-              La mayoría de los sistemas financieros son complicados, costosos y poco accesibles para todos. 
-              Además, la economía global enfrenta problemas de sostenibilidad y falta de equidad.</p>
+              <p>
+                En el mundo actual, la tecnología ha mejorado muchos aspectos de
+                nuestras vidas, pero aún no ha encontrado una solución eficiente
+                y accesible para los problemas financieros de la persona
+                promedio. La mayoría de los sistemas financieros son
+                complicados, costosos y poco accesibles para todos. Además, la
+                economía global enfrenta problemas de sostenibilidad y falta de
+                equidad.
+              </p>
             </>
           }
         />
@@ -73,7 +84,7 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
+                'rgb(var(--tw-ta-accent-500) rounded-full p-3.5',
                 'dark:rgb(var(--tw-ta-accent-500)'
               )}
             >
@@ -90,15 +101,26 @@ function FeaturedCardSection() {
           mejoras tu estilo de vida."
           additionalDesc={
             <>
-            <p><span style={{ fontSize: '35px'}}>Es como usar tu dinero</span></p>
-          <span style={{ fontSize: '40px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)', lineHeight: '1.5' }}>
-           PARA HACER MAGIA
+              <p>
+                <span style={{ fontSize: '35px' }}>Es como usar tu dinero</span>
+              </p>
+              <span
+                style={{
+                  fontSize: '40px',
+                  fontWeight: 'bold',
+                  color: 'rgb(var(--tw-ta-accent-500)',
+                  lineHeight: '1.5',
+                }}
+              >
+                PARA HACER MAGIA
               </span>{' '}
-              <p><span style={{ fontSize: '35px'}}>Positiva en el mundo.</span></p>
+              <p>
+                <span style={{ fontSize: '35px' }}>Positiva en el mundo.</span>
+              </p>
             </>
           }
         />
-        <div style={{ position: 'absolute', left: '0', marginTop: '200px'}}>
+        <div style={{ position: 'absolute', left: '0', marginTop: '200px' }}>
           <Image src={theImage} alt="AGOD Ecosystem" width={500} height={300} />
         </div>
       </div>
@@ -121,12 +143,12 @@ function IndexContents() {
     <>
       <Header />
       <Image
-          src={agodworld}
-          alt="Intro HD"
-          width={600}
-          height={300}
-          className={clsx(styles['floating-image'], ['agodworld'])}
-        />
+        src={agodworld}
+        alt="Intro HD"
+        width={600}
+        height={300}
+        className={clsx(styles['floating-image'], ['agodworld'])}
+      />
       <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>
         <FeaturedCardSection />
       </div>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { CodeIcon, InfoIcon, QuickAccessIcon } from '@/components/Icons';
 
-import theImage from '@/assets/images/onlybox.png';
+import theImage from '@/assets/images/connector2.png';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 
 import AshareQuote from './AshareQuote';
@@ -53,7 +53,7 @@ function AgodkeyContents() {
           }
         />
 
-        <div style={{ position: 'absolute', left: '0', marginTop: '100px'}}>
+        <div style={{ position: 'absolute', left: '0', marginTop: '260px'}}>
           <Image src={theImage} alt="AGOD Ecosystem" width={500} height={300} />
         </div>
 
