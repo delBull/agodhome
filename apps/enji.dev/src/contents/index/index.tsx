@@ -34,7 +34,8 @@ function FeaturedCardSection() {
           title="Nuestro BIG Why"
           desc="Estamos a la vanguardia de la descentralización. 
           ¿Por qué? Porque creemos en el poder de todos para hacer realidad sus aspiraciones digitales. 
-          Soñamos con un futuro donde las finanzas no solo sostienen, sino que regeneran la economía. 
+          Integrando inteligencia artificial, dApps innovadoras, y una economía sostenible. Creemos 
+          en un futuro donde las finanzas no solo sostienen, sino regeneran la economía global. 
           ¿Te unes a la evolución o te quedas atrás?"
           additionalDesc={
             <>
@@ -80,12 +81,13 @@ function FeaturedCardSection() {
             </div>
           }
           title="Descubre AGOD"
-          desc="AGOD Ecosystem es un tipo de centro donde podemos hacer de todo usando la tecnología. 
-          Imagina un juego donde cada vez que haces algo bueno, como ahorrar o invertir, te recompensan y 
-          además ayudas a que el mundo sea un lugar mejor. Usamos blockchain, que es como el internet donde 
-          lo usamos para muchas cosas en la red, pero en esta nueva red llamada blockchain, tienes control 
-          completo sobre lo que haces, es más segura y sobre todo muy eficiente. Además, cada acción que realizas 
-          ayuda a cuidar el planeta y a los animales."
+          desc="AGOD Ecosystem es tu centro integral para aprovechar la tecnología de manera innovadora. 
+          Imagina un entorno donde cada vez que ahorras o inviertes, eres recompensado mientras contribuyes a un mundo mejor. 
+          Usamos blockchain y AI, una red avanzada que te da control total, mayor seguridad y eficiencia en todas tus acciones. 
+          Además, cada actividad que realizas en AGOD ayuda a proteger el planeta y a sus habitantes. 
+          Más allá de las finanzas es un estilo de vida, podrás gestionar tus finanzas, ganar recompensas y disfrutar de 
+          beneficios exclusivos. Únete a nosotros y descubre cómo puedes ser parte de un cambio positivo y sostenible mientras 
+          mejoras tu estilo de vida."
           additionalDesc={
             <>
             <p><span style={{ fontSize: '35px'}}>Es como usar tu dinero</span></p>

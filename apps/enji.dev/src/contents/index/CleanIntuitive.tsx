@@ -57,12 +57,12 @@ function CleanIntuitive() {
       <header className={clsx('mb-8')}>
         <SectionTitle
           title="¿Por qué AGOD?"
-          caption="Nuestra Visión de las Finazas Descentralizadas"
-          description="Al utilizar blockchain, resuelve problemáticas en diversos nichos de mercado. 
-          Con transacciones rápidas, seguras y de bajo costo, AGOD no solo mejora la eficiencia financiera, 
-          sino que también promueve un impacto positivo en el medio ambiente y la sociedad. 
-          Nuestra plataforma es flexible y se adapta a las necesidades de sectores como el estilo de vida, 
-          iniciativas de economía colaborativa, y cualquier otra área donde la creatividad es el único límite"
+          caption="Nuestra Visión al siguiente Nivel de Descentralización"
+          description="Al utilizar blockchain en combinación con IA, llevamos a todos los usuarios del ecosistema al siguiente 
+          nivel. Con transacciones rápidas, seguras y de bajo costo, AGOD no solo mejora la eficiencia colectiva, sino que 
+          también promueve un impacto positivo en el medio ambiente y la sociedad. Nuestra plataforma es flexible y se adapta 
+          a las necesidades de sectores como el estilo de vida, la economía colaborativa y más, donde la creatividad define 
+          nuevos límites."
         />
       </header>
       <SectionContent>
