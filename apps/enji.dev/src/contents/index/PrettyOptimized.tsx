@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 
-import AGODPass from '@/assets/images/akey.jpg';
+import AGODPass from '@/assets/images/AGODKey.jpg';
 
 import type { TodoItemState } from '@/contents/index/Cards/TodoItem';
 
