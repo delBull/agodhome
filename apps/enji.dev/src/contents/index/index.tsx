@@ -39,7 +39,7 @@ function FeaturedCardSection() {
           ¿Te unes a la evolución o te quedas atrás?"
           additionalDesc={
             <>
-              <span style={{ fontSize: '40px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)'}}>
+              <span style={{ fontSize: '30px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)'}}>
                 LAS FINANZAS TRADICIONALES ESTÁN OBSOLETAS.
               </span>{' '}
               <p>En el mundo actual, la tecnología ha mejorado muchos aspectos de nuestras vidas, pero aún 
