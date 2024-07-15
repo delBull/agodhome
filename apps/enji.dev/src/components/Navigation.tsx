@@ -14,7 +14,7 @@ const workLinks = [
   { title: 'Ra Wallet', href: '/explora/rawallet' },
   { title: 'ADEX', href: '/explora/adex' },
   { title: 'DACCESS', href: '/explora/daccess' },
-  { title: 'Pandora\'s', href: '/explora/pandoras' },
+  { title: "Pandora's", href: '/explora/pandoras' },
 ];
 
 function Navbar() {
@@ -51,19 +51,16 @@ function Navbar() {
                 <NavLink title="Intro" href="/intro" />
               </li>
               <li>
-                <NavLink title="AKey" href="/agodkey" />
-              </li>
-              <li>
-                <NavLink title="Blog" href="/blog" />
+                <NavLink title="AGODKey" href="/agodkey" />
               </li>
               <li>
                 <NavLink title="Roadmap" href="/roadmap" />
               </li>
               <li className={clsx('lg:hidden')} data-accent="blue">
-                <NavLinkDropdown title="Explora" items={workLinks} />
+                <NavLinkDropdown title="dApps" items={workLinks} />
               </li>
               <li className={clsx('hidden lg:block')} data-accent="blue">
-                <NavLinkExpanded title="Explora" items={workLinks} />
+                <NavLinkExpanded title="dApps" items={workLinks} />
               </li>
             </ul>
           </nav>

@@ -10,12 +10,12 @@ import dayjs from '@/utils/dayjs';
 function LastUpdate() {
   return (
     <a
-      href="/privacy"
+      href="/politica-privacidad"
       target="_blank"
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
     >
-      <span>Privacy Policy</span>
+      <span>Privacidad</span>
     </a>
   );
 }
@@ -139,7 +139,7 @@ function Footer() {
               )}
             >
               <div className={clsx('flex', 'sm:gap-16')}>
-                <FooterGroup
+             {/*   <FooterGroup
                   title="Explora"
                   links={[
                     {
@@ -153,6 +153,7 @@ function Footer() {
                     },
                   ]}
                 />
+                */}
                 <FooterGroup
                   title="Learn"
                   links={[
@@ -172,6 +173,10 @@ function Footer() {
                       title: 'Roadmap',
                       href: '/roadmap',
                       label: 'new',
+                    },
+                    {
+                      title: 'Preguntas Frecuentes',
+                      href: '/blog/preguntasfrecuentes',
                     },
                   ]}
                 />
