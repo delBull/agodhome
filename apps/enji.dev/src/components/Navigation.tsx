@@ -17,6 +17,13 @@ const workLinks = [
   { title: "Pandora's", href: '/explora/pandoras' },
 ];
 
+const learnLinks = [
+  { title: 'Intro', href: '/intro' },
+  { title: 'AGOD Key', href: '/agodkey' },
+  { title: 'Roadmap', href: '/roadmap' },
+  { title: "Blog", href: '/blog' },
+];
+
 function Navbar() {
   const isScrolled = useOnScroll(0);
 
@@ -44,17 +51,23 @@ function Navbar() {
             'md:px-4'
           )}
         >
-          <nav className={clsx('flex', 'md:gap-0')} data-accent="violet">
+          <nav className={clsx('flex', 'md:gap-2')} data-accent="violet">
             <NavLogo href="/" title="Home" />
             <ul className={clsx('flex items-center', 'md:gap-1')}>
-              <li>
+              <li className={clsx('hidden lg:block')} data-accent="blue">
                 <NavLink title="Intro" href="/intro" />
               </li>
-              <li>
-                <NavLink title="AGODKey" href="/agodkey" />
+              <li className={clsx('hidden lg:block')} data-accent="blue">
+                <NavLink title="AGOD Key" href="/agodkey" />
               </li>
-              <li>
+              <li className={clsx('hidden lg:block')} data-accent="blue">
                 <NavLink title="Roadmap" href="/roadmap" />
+              </li>
+              <li className={clsx('hidden lg:block')} data-accent="blue">
+                <NavLink title="Blog" href="/blog" />
+              </li>
+              <li className={clsx('lg:hidden')} data-accent="blue">
+                <NavLinkDropdown title="Learn" items={learnLinks} />
               </li>
               <li className={clsx('lg:hidden')} data-accent="blue">
                 <NavLinkDropdown title="dApps" items={workLinks} />
