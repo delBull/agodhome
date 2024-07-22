@@ -84,22 +84,23 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-          <span className={clsx('block')}>¿Te gustaría ser parte de una industria que sacudirá el mundo?</span>{' '}
-          <p className={clsx('block')}>Un <span><strong
+          <span className={clsx('block')}>Es un ecosistema digital que integra</span>{' '}
+          <p className={clsx('block')}> <span><strong
             className={clsx(
               'font-bold lowercase text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            Ecosistema Sostenible
+            blockchain, DeFi, IA, lifestyle y más!
           </strong>{' '}</span></p>
-          <p className={clsx('block')}>Construido sobre inversiones seguras en <span><strong
+          <p className={clsx('block')}>maximiza tu experiencia en cada </p>
+          <p className={clsx('block')}>aspecto de tu  <span><strong
             className={clsx(
               'font-bold text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            Activos Físicos y Digitales
+            vida digital
           </strong>{' '}</span></p>
         </m.h1>
       </span>
