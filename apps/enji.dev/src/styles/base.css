@@ -117,6 +117,10 @@ a.button.button--soft {
   margin-top: 100px;
 }
 
+.bus {
+  z-index: -1;
+}
+
 @media screen and (max-width: 768px) {
   .agodworld {
     width: 100%;

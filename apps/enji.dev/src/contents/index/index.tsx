@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { m, } from 'framer-motion';
 import Image from 'next/image';
 
-import { CodeIcon, InfoIcon, QuoteIcon } from '@/components/Icons';
+import { CodeIcon, EyeIcon, InfoIcon, QuoteIcon, SparklesIcon, WarningIcon } from '@/components/Icons';
 
 import agodworld from '@/assets/images/agodworld.png';
 import myImage from '@/assets/images/portal.png';
@@ -12,6 +12,7 @@ import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
 
+import BackgroundCard from './BackgroundCard';
 import CustomCard from './CustomCard';
 import LinkCard from './LinkCard';
 
@@ -73,8 +74,8 @@ function FeaturedCardSection() {
             >
             </div>
           }
-          title="Estamos a la vanguardia de la descentralización."
-          desc="¿Por qué? Porque creemos en el poder de todos para hacer realidad sus aspiraciones digitales."
+          title="Pioneros de la descentralización."
+          desc="Creemos en el poder de todos para hacer realidad sus aspiraciones digitales, en retomar control propio de tu dinero."
           additionalDesc=""
         />
         <LinkCard
@@ -92,7 +93,7 @@ function FeaturedCardSection() {
           en un futuro donde las finanzas no solo sostienen, sino regeneran la economía global. 
           ¿Te unes a la evolución o te quedas atrás?"
           additionalDesc=""
-          buttonText='quiero saber más!'
+          buttonText='¡quiero saber más!'
           infoIcon={<InfoIcon className={clsx('h-5 w-5 text-white')}/>}
         />
         </div>
@@ -181,7 +182,7 @@ function FeaturedCardSection() {
                     </li>
                     <li className="mt-6 lg:mt-0">
                         <div className="flex">
-                        <CodeIcon className={clsx('h-5 w-5 text-white')} />
+                        <EyeIcon className={clsx('h-5 w-5 text-white')} />
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
                                 Inteligencia Artificial
                             </span>
@@ -189,7 +190,7 @@ function FeaturedCardSection() {
                     </li>
                     <li className="mt-6 lg:mt-0">
                         <div className="flex">
-                        <CodeIcon className={clsx('h-5 w-5 text-white')} />
+                        <WarningIcon className={clsx('h-5 w-5 text-white')} />
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
                                 Seguridad
                             </span>
@@ -197,7 +198,7 @@ function FeaturedCardSection() {
                     </li>
                     <li className="mt-6 lg:mt-0">
                         <div className="flex">
-                        <CodeIcon className={clsx('h-5 w-5 text-white')} />
+                        <SparklesIcon className={clsx('h-5 w-5 text-white')} />
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
                                 Recompensas
                             </span>
@@ -209,7 +210,6 @@ function FeaturedCardSection() {
     </div>
 </div>
 
-
           <Image
             src={myImage}
             alt="AGOD Ecosystem"
@@ -219,12 +219,12 @@ function FeaturedCardSection() {
           /> 
         
         <div className='pt-20'>
-        <CustomCard
+        <BackgroundCard
           icon={
             <div
               className={clsx(
-                'rgb(var(--tw-ta-accent-500) rounded-full p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500) pt-0'
+                'rgb(var(--tw-ta-accent-500) rounded-full',
+                'dark:rgb(var(--tw-ta-accent-500)'
               )}
             >
               <QuoteIcon className={clsx('h-5 w-5 text-white')} />
@@ -235,7 +235,7 @@ function FeaturedCardSection() {
           additionalDesc={
             <>
               <p>
-                <span style={{ fontSize: '35px' }}>Es como usar tu dinero</span>
+                <span style={{ fontSize: '35px'}}>Es como usar tu dinero</span>
               </p>
               <span
                 style={{
@@ -283,7 +283,7 @@ function IndexContents() {
       <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>
         <FeaturedCardSection />
       </div>
-      <section className={clsx('mb-12', 'lg:mb-24')}>
+      <section className={clsx('mb-12', 'lg:mb-24', 'mt-20')}>
         <CleanIntuitive />
       </section>
       <section className={clsx('mb-12', 'lg:mb-24')}>
