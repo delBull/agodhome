@@ -1,20 +1,16 @@
 import clsx from 'clsx';
 import React from 'react';
-import Link from 'next/link';
+
 import styles from '@/styles/CustomCard.module.css';
-import { InfoIcon } from '@/components/Icons';
 
 type CustomCardProps = {
   icon: React.ReactNode;
   title: string;
   desc: string;
-  additionalDesc: React.ReactNode; // Accepts JSX elements
-  buttonText: string; // Texto del botón
-  buttonLink: string;
-  infoIcon: React.ReactNode;
+  additionalDesc: React.ReactNode;
 };
 
-function CustomCard({ icon, title, desc, additionalDesc, buttonText, buttonLink, infoIcon }: CustomCardProps) {
+function CustomCard({ icon, title, desc, additionalDesc }: CustomCardProps) {
   return (
     <div
       className={clsx(
@@ -69,21 +65,6 @@ function CustomCard({ icon, title, desc, additionalDesc, buttonText, buttonLink,
         )} style={{ fontSize: '18px', lineHeight: '1.2'}}
       >
         {additionalDesc}
-      </div>
-      <div className={clsx('absolute right-0 bottom-0 mr-10 mb-4')}>
-      <Link href={buttonLink} legacyBehavior>
-        <a
-          className={clsx(
-            'rounded-lg bg-opacity-0 text-sm text-slate-600 ml-1', 'dark:text-slate-200',
-            'hover:bg-opacity-0 transition-colors duration-300'
-          )}
-        >
-          {buttonText}
-          </a>
-          </Link>
-          <div className={clsx('-m-9 flex items-center space-x-4 p-4 rounded-full -mb-4',
-                'bg-rgb(var(--tw-ta-accent-500))',
-                'dark:bg-rgb(var(--tw-ta-accent-500))')}>{infoIcon}</div>
       </div>
     </div>
   );

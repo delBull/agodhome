@@ -22,6 +22,7 @@ import Quote from '@/contents/index/Quote';
 
 import styles from '@/styles/FloatingImage.module.css';
 import CustomCard from './CustomCard';
+import LinkCard from './LinkCard';
 
 function FeaturedCardSection() {
 
@@ -74,19 +75,8 @@ function FeaturedCardSection() {
           title="Estamos a la vanguardia de la descentralización."
           desc="¿Por qué? Porque creemos en el poder de todos para hacer realidad sus aspiraciones digitales."
           additionalDesc=""
-          buttonText=""
-          buttonLink="" // Enlace interno
-          infoIcon={
-            <div
-              className={clsx(
-                'rgb(var(--tw-ta-accent-500) rounded-full p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500)'
-              )}
-            >
-            </div>
-          }
         />
-        <CustomCard
+        <LinkCard
           icon={
             <div
               className={clsx(
@@ -101,13 +91,8 @@ function FeaturedCardSection() {
           en un futuro donde las finanzas no solo sostienen, sino regeneran la economía global. 
           ¿Te unes a la evolución o te quedas atrás?"
           additionalDesc=""
-          buttonText="quiero saber más"
-          buttonLink="/intro"
-          infoIcon={
-            <div>
-              <InfoIcon className={clsx('h-5 w-5 text-white')} />
-            </div>
-          }
+          buttonText='quiero saber más!'
+          infoIcon={<InfoIcon className={clsx('h-5 w-5 text-white')}/>}
         />
         </div>
         <CustomCard
@@ -124,17 +109,6 @@ function FeaturedCardSection() {
           title="La tecnogloía ha avanzado.."
           desc="Pero aún no ha resuelto de manera accesible y eficiente los problemas financieros comunes. Los sistemas financieros actuales son complicados, costosos y poco accesibles, y la economía global enfrenta desafíos de sostenibilidad y equidad."
           additionalDesc=""
-          buttonText=""
-          buttonLink=""
-          infoIcon={
-            <div
-              className={clsx(
-                'rgb(var(--tw-ta-accent-500) rounded-full p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500)'
-              )}
-            >
-            </div>
-          }
         />
         <div
           className={clsx(
@@ -276,17 +250,6 @@ function FeaturedCardSection() {
                 <span style={{ fontSize: '35px' }}>Positiva en el mundo.</span>
               </p>
             </>
-          }
-          buttonText=""
-          buttonLink=""
-          infoIcon={
-            <div
-              className={clsx(
-                'rgb(var(--tw-ta-accent-500) rounded-full p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500)'
-              )}
-            >        
-            </div>
           }
         />
         </div> 
