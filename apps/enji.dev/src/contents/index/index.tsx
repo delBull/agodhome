@@ -1,14 +1,6 @@
 import clsx from 'clsx';
-import Image from 'next/image';
 import { m, } from 'framer-motion';
-
-const animation = {
-  hide: { x: -32, opacity: 0 },
-  show: {
-    x: 0,
-    opacity: 1,
-  },
-};
+import Image from 'next/image';
 
 import { CodeIcon, InfoIcon, QuoteIcon } from '@/components/Icons';
 
@@ -20,9 +12,18 @@ import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
 
-import styles from '@/styles/FloatingImage.module.css';
 import CustomCard from './CustomCard';
 import LinkCard from './LinkCard';
+
+import styles from '@/styles/FloatingImage.module.css';
+
+const animation = {
+  hide: { x: -32, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+  },
+};
 
 function FeaturedCardSection() {
 
