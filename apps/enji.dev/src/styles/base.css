@@ -78,7 +78,7 @@ a.button.button--soft {
 
 @media screen and (max-width: 768px) {
   .tierraLateral {
-    height: 100%;
+    opacity: 50%;
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;

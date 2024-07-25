@@ -56,9 +56,10 @@ function PrettyOptimized() {
                       <video
                         src={item.video}
                         autoPlay
+                        playsInline
                         loop
                         muted
-                        className={clsx('rounded-lg fade-up-on-hover w-1/2 md:w-1/3')}
+                        className={clsx('rounded-lg fade-up-on-hover w-2/3 md:w-1/3')}
                         style={{ objectFit: 'cover' }}
                       >
                         <track kind="captions" /> {/* Pista de subtítulos vacía para accesibilidad */}
