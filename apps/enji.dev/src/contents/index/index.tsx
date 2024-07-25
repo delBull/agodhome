@@ -227,7 +227,6 @@ function FeaturedCardSection() {
                 'dark:rgb(var(--tw-ta-accent-500)'
               )}
             >
-              <QuoteIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
           title=""

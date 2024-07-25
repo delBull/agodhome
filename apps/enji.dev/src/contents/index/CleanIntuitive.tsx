@@ -21,32 +21,32 @@ const content: Array<Content> = [
   {
     state: 'dreamhub',
     title: 'Sostenibilidad',
-    description: 'Cada transacción contribuye a iniciativas regenerativas.',
+    description: 'La integración tecnológica no solo optimiza procesos, sino que también minimiza el uso de recursos, promoviendo un impacto ambiental positivo al reducir la huella de carbono.',
     },
   {
     state: 'pandoras',
     title: 'Seguridad',
-    description: 'Transacciones protegidas por tecnología de vanguardia.',
+    description: 'Todas tus transacciones están respaldadas por estrategías que fueron pensadas desde su concepción para proteger tu integridad cibernética por tecnología de vanguardia.',
     },
   {
     state: 'daccess',
     title: 'Accesibilidad',
-    description: 'Servicios financieros disponibles para todos, sin importar su conocimiento previo.',
+    description: ' Al diseñar plataformas intuitivas y amigables, incluso aquellos sin experiencia previa en finanzas pueden participar en la economía digital. Esto es crucial para incluir a más personas en la economía global.',
     },
   {
     state: 'adex',
     title: 'Innovación',
-    description: 'Plataformas avanzadas que integra lo mejor de las finanzas tradicionales y descentralizadas.',
+    description: 'AGOD combina elementos de las finanzas tradicionales (TradFi) y descentralizadas (DeFi) para ofrecer una gama de servicios que maximizan eficiencia y seguridad. Esto incluye tecnologías avanzadas como blockchain e inteligencia artificial, que optimizan la gestión de activos, mejoran la transparencia y reducen los costos operativos, creando un sistema financiero más robusto y moderno.',
     },
   {
     state: 'rabbitty',
     title: 'Flexibilidad',
-    description: 'Adaptabilidad a diferentes nichos de mercado, permitiendo soluciones específicas para cada uno',
+    description: 'El ecosistema está diseñado para ser adaptable a diversos sectores de mercado, desde el estilo de vida hasta la economía colaborativa. Esto permite que las soluciones se personalicen según las necesidades específicas de cada nicho.',
     },
   {
     state: 'tokenizacion',
     title: 'Tokenización',
-    description: 'Transformando activos inmobiliarios en oportunidades digitales',
+    description: 'Al transformar activos físicos y tradicionales en formatos digitales, AGOD facilita el acceso, la transferencia y la gestión de estos activos. Esto no solo simplifica la inversión y la participación en la economía digital, sino que también abre nuevas oportunidades de mercado, permitiendo que más personas y negocios capitalicen en la digitalización.',
     },
 ];
 
@@ -57,12 +57,10 @@ function CleanIntuitive() {
       <header className={clsx('mb-8')}>
         <SectionTitle
           title="¿Por qué AGOD?"
-          caption="Nuestra Visión al siguiente Nivel de Descentralización"
-          description="Al utilizar blockchain en combinación con IA, llevamos a todos los usuarios del ecosistema al siguiente 
-          nivel. Con transacciones rápidas, seguras y de bajo costo, AGOD no solo mejora la eficiencia colectiva, sino que 
-          también promueve un impacto positivo en el medio ambiente y la sociedad. Nuestra plataforma es flexible y se adapta 
-          a las necesidades de sectores como el estilo de vida, la economía colaborativa y más, donde la creatividad define 
-          nuevos límites."
+          caption="Nuestra Visión al Siguiente Nivel de Descentralización"
+          description="Con AGOD, blockchain e inteligencia artificial se combinan para llevarte a una nueva era de 
+          eficiencia y conveniencia. Con respaldo en sectores diversos, desde el estilo de vida hasta la economía colaborativa, 
+          fomentando la innovación y la creatividad en cada interacción."
         />
       </header>
       <SectionContent>

@@ -28,7 +28,7 @@ function BackgroundCard({ icon, title, desc, additionalDesc }: CustomCardProps) 
             alt="AGOD Ecosystem"
             width={600}
             height={300}
-            className={clsx(styles['floating-image'], ['bus w-full h-full md:h-auto absolute opacity-50'])}
+            className={clsx(styles['floating-image'], ['bus w-full h-full md:-auto absolute opacity-40'])}
           /> 
       <div
         className={clsx(
@@ -45,7 +45,7 @@ function BackgroundCard({ icon, title, desc, additionalDesc }: CustomCardProps) 
       <div className={clsx('-mt-0.5')}>
         <div
           className={clsx(
-            'mt-4 mr-2 ml-4 flex items-center gap-6 rounded-full bg-slate-100',
+            'mt-4 mr-2 ml-4 flex items-center gap-6 rounded-full bg-slate-0',
             'dark:bg-opacity-0'
           )}
         >
@@ -70,8 +70,8 @@ function BackgroundCard({ icon, title, desc, additionalDesc }: CustomCardProps) 
       </div>
       <div
         className={clsx(
-          'p-4 pl-12 text-sm text-slate-600',
-          'dark:text-slate-300'
+          'p-4 pl-12 text-sm text-slate-800',
+          'dark:text-slate-100'
         )} style={{ fontSize: '18px', lineHeight: '1.2'}}
       >
         {additionalDesc}
