@@ -30,6 +30,7 @@ function DetailOriented() {
             </a>
           </>
         }
+        altdesc=""
       />
     </header>
   );
