@@ -24,6 +24,7 @@ function Privacidad() {
 Dirección de correo electrónico, 
 Información de contacto, 
 Identificación personal (para verificación de identidad)."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -33,6 +34,7 @@ Identificación personal (para verificación de identidad)."
 Tipo de navegador y sistema operativo, 
 Páginas visitadas en nuestro sitio web, 
 Duración y frecuencia de visitas."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -40,6 +42,7 @@ Duración y frecuencia de visitas."
         caption=""
         description="Información de pago, 
 Historial de transacciones."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -47,6 +50,7 @@ Historial de transacciones."
         caption=""
         description="Actividad dentro de nuestras plataformas, 
 Participación en eventos, Uso de tokens."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -55,6 +59,7 @@ Participación en eventos, Uso de tokens."
         description="Procesar sus transacciones y gestionar su cuenta, 
 Facilitar la autenticación y el acceso seguro mediante AGOD Key, 
 Mejorar la funcionalidad de nuestras plataformas y personalizar su experiencia."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -63,6 +68,7 @@ Mejorar la funcionalidad de nuestras plataformas y personalizar su experiencia."
         description="Enviar notificaciones importantes sobre su cuenta y nuestras plataformas, 
 Proporcionar actualizaciones y noticias sobre el AGOD Ecosystem, 
 Responder a sus consultas y proporcionar soporte al cliente."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -70,6 +76,7 @@ Responder a sus consultas y proporcionar soporte al cliente."
         caption=""
         description="Verificar su identidad y prevenir fraudes, 
 Cumplir con obligaciones legales y regulatorias."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -77,6 +84,7 @@ Cumplir con obligaciones legales y regulatorias."
         caption=""
         description="Analizar el uso de nuestras plataformas para mejorar nuestros servicios, 
 Desarrollar nuevas funcionalidades y productos basados en el feedback y el comportamiento de los usuarios."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -84,66 +92,77 @@ Desarrollar nuevas funcionalidades y productos basados en el feedback y el compo
         caption="Cómo Compartimos su Información"
         description="Proveedores de servicios que nos ayudan a operar y mejorar nuestras plataformas (proveedores de pagos, servicios de hosting, etc.), 
 socios comerciales y afiliados para mejorar la interoperabilidad y la experiencia del usuario."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title="Por Obligación Legal"
         caption=""
         description="Autoridades gubernamentales y reguladoras cuando sea requerido por ley."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title="Con su Consentimiento"
         caption=""
         description="Otros terceros con su consentimiento explícito para fines específicos."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title=""
         caption="Seguridad de su Información"
         description="Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra el acceso no autorizado, la divulgación, alteración o destrucción. Estas medidas incluyen encriptación, firewalls y controles de acceso seguros."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title=""
         caption="Retención de Datos"
         description="Retenemos su información personal solo durante el tiempo necesario para cumplir con los propósitos descritos en esta Política de Privacidad, a menos que se requiera o permita un período de retención más largo por ley."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title="Acceso y Correción"
         caption="Sus Derechos"
         description="Puede acceder y actualizar su información personal en cualquier momento a través de su cuenta en nuestra plataforma."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title="Eliminación y Restricción"
         caption=""
         description="Puede solicitar la eliminación o restricción del procesamiento de su información personal, sujeto a ciertas condiciones legales y contractuales."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title="Portabilidad de Datos"
         caption=""
         description="Tiene derecho a recibir una copia de su información personal en un formato estructurado y de uso común."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title="Objeción"
         caption=""
         description="Puede oponerse al procesamiento de su información personal para fines específicos, como marketing directo."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title=""
         caption="Cookies y Tecnologías Similares"
         description="Utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestras plataformas. Estas tecnologías nos permiten recordar sus preferencias, analizar el tráfico del sitio y personalizar contenido. Puede gestionar sus preferencias de cookies a través de la configuración de su navegador."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
         title=""
         caption="Cambos a esta Política de Privacidad"
         description="Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas de información. Publicaremos cualquier actualización en esta página y, si los cambios son significativos, le notificaremos a través de nuestras plataformas o por correo electrónico."
+        altdesc
       />
       <div style={{marginTop: '30px'}} />
       <SectionTitle
@@ -151,6 +170,7 @@ socios comerciales y afiliados para mejorar la interoperabilidad y la experienci
         caption="Contacvto"
         description="Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, por favor contacte a nuestro equipo de privacidad en: 
 privacidad@agodecosystem.com"
+        altdesc
       />
      </>
   );
