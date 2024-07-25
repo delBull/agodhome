@@ -10,6 +10,7 @@ interface SectionTitleProps {
   title: string;
   caption: string;
   description: string | ReactNode;
+  altdesc: string | ReactNode;
   button?: {
     title: string;
     href: string;
@@ -21,6 +22,7 @@ function SectionTitle({
   title,
   caption,
   description,
+  altdesc,
   button = null,
 }: SectionTitleProps) {
   const Heading = as;
@@ -45,8 +47,11 @@ function SectionTitle({
       >
         {title}
       </p>
-      <p className={clsx('max-w-lg text-slate-600', 'dark:text-slate-400')}>
+      <p className={clsx('max-w-lg text-slate-800', 'dark:text-slate-100')}>
         {description}
+      </p>
+      <p className={clsx('max-w-lg text-slate-600', 'dark:text-slate-400')}>
+        {altdesc}
       </p>
       {button && (
         <div className={clsx('mt-4', 'md:mt-6')}>

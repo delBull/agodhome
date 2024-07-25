@@ -61,6 +61,7 @@ function CleanIntuitive() {
           description="Con AGOD, blockchain e inteligencia artificial se combinan para llevarte a una nueva era de 
           eficiencia y conveniencia. Con respaldo en sectores diversos, desde el estilo de vida hasta la economía colaborativa, 
           fomentando la innovación y la creatividad en cada interacción."
+          altdesc=""
         />
       </header>
       <SectionContent>
