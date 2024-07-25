@@ -56,6 +56,8 @@ function Dapps() {
           description="Construimos un ecosistema donde la seguridad, la autenticación y la participación son pilares 
           inquebrantables. Donde cada miembro tiene un papel crucial y puede influir en un futuro más transparente y 
           próspero para todos"
+
+        altdesc=""
         />
       </header>
       <SectionContent>

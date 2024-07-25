@@ -100,6 +100,7 @@ function ProjectsContents() {
         description="Es un sistema de recompensas que fomenta la participación y la interacción dentro del ecosistema. 
         Los usuarios pueden ganar bunz (moneda de cambio del ecosistema) por completar tareas, realizar transacciones y 
         contribuir al crecimiento de la comunidad."
+        altdesc=""
       />
       {/* Firts Winwdow */}
       <div

@@ -44,6 +44,7 @@ function ObtenAshares() {
             </a>
           </>
         }
+        altdesc=""
       />
     </header>
   );

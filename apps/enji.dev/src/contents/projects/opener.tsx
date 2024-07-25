@@ -31,6 +31,7 @@ function Opener() {
             </a>
           </>
         }
+        altdesc=""
       />
     </header>
   );
