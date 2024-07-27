@@ -19,7 +19,7 @@ type Content = {
 
 const content: Array<Content> = [
   {
-    state: 'dreamhub',
+    state: 'rabbitty',
     title: 'AGOD Pass',
     description: 'Incluye beneficios exclusivos, bunz, AGOD token y más',
     altdesc: '',

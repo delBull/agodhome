@@ -19,7 +19,7 @@ type Content = {
 
 const content: Array<Content> = [
   {
-    state: 'dreamhub',
+    state: 'rabbitty',
     title: 'Pandoras',
     description: 'Una Incubadora de Innovación. Plataforma principal que impulsa y desarrolla todas las demás iniciativas del AGOD Ecosystem + Desarrolladora de Proyectos que facilita la creación y lanzamiento de nuevas aplicaciones y servicios dentro del ecosistema.',
     },
