@@ -8,6 +8,7 @@ interface SectionButtonProps {
   icon?: ReactNode;
   active?: boolean;
   onClick?: () => void;
+  className?: string; // Agrega className aquí
 }
 
 export function SectionButton({
@@ -16,6 +17,7 @@ export function SectionButton({
   icon = null,
   active = false,
   onClick = () => {},
+  className = '', // Asegúrate de inicializarlo como un string vacío por defecto
 }: SectionButtonProps) {
   return (
     <button
@@ -25,7 +27,8 @@ export function SectionButton({
         'dark:bg-slate-900',
         active
           ? ['border-accent-400', 'dark:border-accent-400']
-          : ['border-divider-light ', 'dark:border-divider-dark']
+          : ['border-divider-light', 'dark:border-divider-dark'],
+        className // Aplica className aquí
       )}
       onClick={onClick}
     >
@@ -36,16 +39,16 @@ export function SectionButton({
             'xl:flex',
             active
               ? ['text-accent-600', 'dark:text-accent-400']
-              : ['text-slate-400', 'dark:text-slate-600']
+              : ['text-slate-200', 'dark:text-slate-800']
           )}
         >
           {icon}
         </span>
       )}
-      <span className={clsx('flex-1')}>
+      <span className="flex-1">
         <span
           className={clsx(
-            'block font-bold',
+            'block font-bold text-xl',
             active
               ? ['text-accent-600', 'dark:text-accent-400']
               : ['text-slate-700', 'dark:text-slate-200']
@@ -73,15 +76,18 @@ export function SectionButtonSmall({
   icon = null,
   active = false,
   onClick = () => {},
+  className = '', // Agrega className aquí
 }: Omit<SectionButtonProps, 'description'>) {
   return (
     <button
       type="button"
-      className={clsx('flex flex-col items-center rounded-xl p-2 text-sm', [
+      className={clsx(
+        'flex flex-col items-center rounded-xl p-2 text-sm',
         active
           ? ['text-accent-600', 'dark:text-accent-400']
           : ['text-slate-400', 'dark:text-slate-600'],
-      ])}
+        className // Aplica className aquí
+      )}
       onClick={onClick}
     >
       <span className={clsx('text-4xl font-black')}>{icon}</span>

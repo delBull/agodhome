@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import bgcard from '@/assets/images/bus.jpg';
+import bgcardmobile from '@/assets/images/bus_sq.jpg';
 
 import styles from '@/styles/CustomCard.module.css';
 
@@ -23,13 +24,20 @@ function BackgroundCard({ icon, title, desc, additionalDesc }: CustomCardProps) 
         styles.card // Aplica la clase CSS personalizada
       )}
     >
-      <Image
+          <Image
             src={bgcard}
             alt="AGOD Ecosystem"
             width={600}
             height={300}
-            className={clsx(styles['floating-image'], ['bus w-full h-full md:-auto absolute opacity-40'])}
-          /> 
+            className={clsx(styles['floating-image'], ['bus w-full h-full absolute opacity-40'])}
+          />
+          <Image
+            src={bgcardmobile}
+            alt="AGOD Ecosystem"
+            width={600}
+            height={300}
+            className={clsx(styles['floating-image'], ['bus-mobile w-full h-full absolute opacity-40'])}
+          />
       <div
         className={clsx(
           'border-divider-light absolute inset-x-0 inset-y-8 z-[-1] border-t',

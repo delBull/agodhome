@@ -1,4 +1,4 @@
-export type TodoItemState = 'dreamhub' | 'pandoras' | 'daccess' | 'adex' | 'rabbitty' | 'tokenizacion';
+export type TodoItemState = 'rabbitty' | 'pandoras' | 'daccess' | 'adex' | 'raWallet' | 'tokenizacion';
 
 
 function TodoItem () {

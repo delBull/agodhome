@@ -122,6 +122,22 @@ a.button.button--soft {
 }
 
 @media screen and (max-width: 768px) {
+  .bus {
+    display: none;
+  }
+}
+
+.bus-mobile {
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .bus-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .agodworld {
     width: 100%;
     z-index: -1;
