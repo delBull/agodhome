@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { m, useReducedMotion } from 'framer-motion';
 
 import { DocumentIcon } from '@/components/Icons';
+import ObtenAGODKey from '@/components/ObtenAGODKey';
 
 const animation = {
   hide: {
@@ -23,6 +24,7 @@ interface HeaderCtaProps {
 
 function ButtonResume() {
   return (
+    <div>
     <a
       target="_blank"
       rel="noreferrer nofollow"
@@ -32,6 +34,10 @@ function ButtonResume() {
       <DocumentIcon className={clsx('h-5 w-5')} />
         WHITE PAPERS
     </a>
+    <div>
+    <ObtenAGODKey />
+    </div>
+    </div>
   );
 }
 
@@ -43,7 +49,7 @@ function AvailableForHire() {
         'md:button--big md:px-2.5',
         'dark:text-accent-400'
       )}
-    >
+    > 
       <span className={clsx('relative flex h-2 w-2')}>
         <span
           className={clsx(

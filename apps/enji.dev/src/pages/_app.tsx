@@ -1,4 +1,7 @@
+// _app.tsx
+
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { NextUIProvider } from '@nextui-org/react';
 import { useEffect } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
@@ -53,13 +56,15 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
   }, []);
 
   return (
-    <Provider>
-      <RootLayout>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        {getLayout(<Component {...pageProps} />)}
-        <GoogleAnalytics gaId="G-FB9QLDNKNN" />
-      </RootLayout>
-    </Provider>
+    <NextUIProvider> {/* Envuelve tu aplicación con NextUIProvider */}
+      <Provider>
+        <RootLayout>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          {getLayout(<Component {...pageProps} />)}
+          <GoogleAnalytics gaId="G-FB9QLDNKNN" />
+        </RootLayout>
+      </Provider>
+    </NextUIProvider>
   );
 }
 
