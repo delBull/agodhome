@@ -175,8 +175,8 @@ importers:
         specifier: ^2.1.2
         version: 2.1.2(tailwindcss@3.4.6)
       use-local-storage-state:
-        specifier: ^18.1.2
-        version: 18.3.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^19.0.0
+        version: 19.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       zod:
         specifier: ^3.20.2
         version: 3.23.8
@@ -5026,9 +5026,9 @@ packages:
       '@types/react':
         optional: true
 
-  use-local-storage-state@18.3.3:
-    resolution: {integrity: sha512-SwwW6LPbxf3q5XimJyYE2jBefpvEJTjAgBO47wCs0+ZkL/Hx8heF/0wtBJ7Df0SiSwyfNDIPHo+8Z3q569jlow==}
-    engines: {node: '>=12'}
+  use-local-storage-state@19.3.1:
+    resolution: {integrity: sha512-y3Z1dODXvZXZB4qtLDNN8iuXbsYD6TAxz61K58GWB9/yKwrNG9ynI0GzCTHi/Je1rMiyOwMimz0oyFsZn+Kj7Q==}
+    engines: {node: '>=14'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -11099,7 +11099,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
 
-  use-local-storage-state@18.3.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  use-local-storage-state@19.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
