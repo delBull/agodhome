@@ -102,7 +102,7 @@ export function InstagramIcon(props: ComponentProps<'svg'>) {
 
 export function YoutubeIcon(props: ComponentProps<'svg'>) {
   const handleExternalLinkClick = () => {
-    window.open('https://www.youtube.com/channel/UCW5c3tsFzZXJ99EpHEBqL-w', '_blank', 'noopener noreferrer');
+    window.open('https://www.youtube.com/@agodecosystem', '_blank', 'noopener noreferrer');
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {

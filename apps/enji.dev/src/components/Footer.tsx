@@ -187,9 +187,8 @@ function Footer() {
                   links={[
                     {
                       title: 'Pandora\'s',
-                      href: '/',
+                      href: 'https://pandoras.foundation',
                       isInternal: false,
-                      label: 'soon',
                     },
                     {
                       title: 'Ra Wallet',
