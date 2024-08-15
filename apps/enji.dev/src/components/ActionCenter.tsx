@@ -78,7 +78,7 @@ function ActionCenter() {
         <m.div className={clsx('flex h-24 gap-4')} variants={animation}>
           <ActionCenterButton
             active={theme === 'dark'}
-            title={theme === 'dark' ? 'Dark Mode: On' : 'Dark Mode: Off'}
+            title={theme === 'dark' ? 'Light Mode: On' : 'Dark Mode: On'}
             onClick={handleThemeChange}
             icon={
               <m.div

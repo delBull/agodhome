@@ -27,7 +27,7 @@ function HeaderTitle() {
       >
         <Image
             className={clsx('w-7 md:w-10')}
-            alt="Love-you Gesture"
+            alt="Gesture"
             src="/assets/emojis/love-you-gesture.png"
             width={48}
             height={48}
@@ -38,7 +38,6 @@ function HeaderTitle() {
                 rotate: 0,
               });
             }}
-            priority
           />
         desbloquea el potencial blockchain
         <m.div

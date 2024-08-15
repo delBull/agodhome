@@ -1,6 +1,7 @@
 import AgodKey from '@/contents/projects/agod-key';
 import HeaderImage from '@/contents/projects/HeaderImage';
 import Page from '@/contents-layouts/Page';
+import INOComponent from '../components/INOComponent';
 
 function Agodkey() {
   return (
