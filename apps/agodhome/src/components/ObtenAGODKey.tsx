@@ -19,12 +19,12 @@ export default function App() {
 
   if (!session) {
     return (
-      <Button className="text-red-400" onPress={() => signIn('google', { callbackUrl: "/" })}>Enlístate para el AGOD Key</Button>
+      <Button className="text-red-400" onPress={() => signIn('google', { callbackUrl: "/api/waitlist" })}>Enlístate para el AGOD Key</Button>
     );
   }
   return (
     <>
-      <button onClick={() => signOut()}>Sign out</button>
+      <button onClick={() => signOut()}>Cerrar sesión</button>
     </>
   );
 }
