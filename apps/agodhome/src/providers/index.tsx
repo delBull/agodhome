@@ -8,22 +8,35 @@ import FramerMotionProvider from '@/providers/FramerMotionProvider';
 import GlobalStateProvider from '@/providers/GlobalStateProvider';
 
 import type { PropsWithChildren } from 'react';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 function Provider({ children = null }: PropsWithChildren) {
   return (
-    <FramerMotionProvider>
-      <ThemeProvider attribute="class" disableTransitionOnChange>
-        <FocusModeProvider>
-          <ColorAccentProvider defaultScheme="violet">
-            <GlobalStateProvider>
-              <MDXProvider components={mdxCustomComponents}>
-                {children}
-              </MDXProvider>
-            </GlobalStateProvider>
-          </ColorAccentProvider>
-        </FocusModeProvider>
-      </ThemeProvider>
-    </FramerMotionProvider>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      container={
+        {
+          parameters: {
+            badge: "bottomleft",
+            theme: "dark"
+          }
+        }
+      }
+    >
+      <FramerMotionProvider>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
+          <FocusModeProvider>
+            <ColorAccentProvider defaultScheme="violet">
+              <GlobalStateProvider>
+                <MDXProvider components={mdxCustomComponents}>
+                  {children}
+                </MDXProvider>
+              </GlobalStateProvider>
+            </ColorAccentProvider>
+          </FocusModeProvider>
+        </ThemeProvider>
+      </FramerMotionProvider>
+    </GoogleReCaptchaProvider>
   );
 }
 
