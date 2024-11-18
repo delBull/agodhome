@@ -26,8 +26,29 @@ async function isInWaitlist(email: string) {
   return result == null;
 }
 
+async function validateRecaptcha(recaptchaToken:string) {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  const formData = `secret=${secret}&response=${recaptchaToken}`;
+
+  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: formData
+  });
+  
+  const data = await response.json();
+  console.log(data);
+  return data.success;
+}
+
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
-  const { email } = request.body;
+  const { email, recaptchaToken } = request.body;
+  
+  if (await validateRecaptcha(recaptchaToken) == false) {
+    return response.status(400);
+  }
 
   if (!isInWaitlist(email)) {
     addToWaitlist(email);
