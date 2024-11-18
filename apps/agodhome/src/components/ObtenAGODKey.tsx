@@ -3,7 +3,7 @@ import { Button, Input, Modal, ModalContent, ModalFooter, ModalHeader, useDisclo
 import clsx from 'clsx';
 import { m, } from 'framer-motion';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { FormEvent, useRef, useState } from "react";
+import React, { FormEvent, useState } from "react";
 
 import { MailIcon } from '@/components/MailIcon.jsx';
 
@@ -19,8 +19,20 @@ export default function App() {
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const submitWaitlistForm = function (recaptchaToken) {
+  const submitWaitlistForm = function (recaptchaToken: string) { 
+    if (!email) {
+      return;
+    }
 
+    fetch("/api/waitlist", {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        recaptchaToken
+      })
+    }).then(res => res.json()).then(data => {
+      console.log(data);
+    });
   }
 
   const handleFormSubmit = function (e: FormEvent) {
@@ -65,7 +77,7 @@ export default function App() {
           }
         }}
         placement="bottom-center"
-        className="bg-gray-950 max-h-[30rem] absolute bottom-0 inline-flex flex-col flex-direction gap-3"
+        className="bg-slate-200/[.95] dark:bg-slate-900/[.98] max-h-[30rem] absolute bottom-0 inline-flex flex-col flex-direction gap-3"
       >
         <ModalContent className="p-10">
           {(onClose) => (

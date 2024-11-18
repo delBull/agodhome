@@ -189,6 +189,9 @@ importers:
       remark-plugins:
         specifier: workspace:*
         version: link:../../packages/remark-plugins
+      resend:
+        specifier: ^3.5.0
+        version: 3.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       slug:
         specifier: ^8.2.2
         version: 8.2.3
