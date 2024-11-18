@@ -1,7 +1,7 @@
 import { prisma } from '@/utils/prisma';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Resend } from "resend";
-import { enlistadoAGODKey } from "../../../../../packages/transactional/emails/enlistadoAGODKey";
+import { enlistadoAGODKey } from "@/components/emails/emailAGODKey";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -31,9 +31,9 @@ export default async function handler(request: NextApiRequest, response: NextApi
 
   if (!isInWaitlist(email)) {
     addToWaitlist(email);
-    resend.emails.send({
-      from: "AGOD Ecosystem <noreply@agodecosystem.com",
-      to: [email],
+    const { data, error } = await resend.emails.send({
+      from: "AGOD Ecosystem <noreply@agodecosystem.com>",
+      to: email,
       subject: "Desbloquea el potencial Blockchain",
       react: enlistadoAGODKey({
         username: email,
@@ -41,6 +41,12 @@ export default async function handler(request: NextApiRequest, response: NextApi
         invitedByUsername: "AGOD Ecosystem"
       })
     });
+
+    if (error) {
+      return response.status(400).json(error);
+    }
+
+    response.status(200).json(data);
 
     response.send({
       content:

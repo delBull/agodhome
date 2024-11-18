@@ -26,6 +26,9 @@ export default function App() {
 
     fetch("/api/waitlist", {
       method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
       body: JSON.stringify({
         email,
         recaptchaToken
