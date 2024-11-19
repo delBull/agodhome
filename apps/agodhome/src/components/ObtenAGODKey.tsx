@@ -42,9 +42,9 @@ export default function App() {
       } else {
         toast.error("Ha ocurrido un error, inténtalo más tarde.")
       }
+      setCanSubmit(true);
       return res.json();
     }).then(data => {
-      setCanSubmit(true);
       console.log(data);
     });
   }
