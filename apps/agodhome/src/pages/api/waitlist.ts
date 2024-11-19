@@ -50,8 +50,8 @@ export default async function handler(request: NextApiRequest, response: NextApi
     return response.status(400);
   }
 
-  if (!isInWaitlist(email)) {
-    addToWaitlist(email);
+  if (isInWaitlist(email)) {
+    //addToWaitlist(email);
     const { data, error } = await resend.emails.send({
       from: "AGOD Ecosystem <noreply@agodecosystem.com>",
       to: email,
@@ -66,8 +66,6 @@ export default async function handler(request: NextApiRequest, response: NextApi
     if (error) {
       return response.status(400).json(error);
     }
-
-    response.status(200).json(data);
 
     response.send({
       content:
