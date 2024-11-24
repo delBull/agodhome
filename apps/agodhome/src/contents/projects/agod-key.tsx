@@ -39,8 +39,7 @@ function AgodkeyContents() {
               <p><span style={{ fontSize: '30px'}}>Participa en decisiones cruciales y da forma al futuro del ecosistema</span></p>
               <br />
             <a
-              href="/legalshares"
-              target="_blank"
+              href="/blog/ashares"
               rel="noopener noreferrer"
               className={clsx(
                 'mt-2 flex items-center text-red-400 hover:underline text-sm'
