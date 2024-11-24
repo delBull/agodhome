@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import HeaderCta from '@/contents/index/Header/HeaderCta';
 import HeaderTechStack from '@/contents/index/Header/HeaderTechStack';
 import HeaderTitle from '@/contents/index/Header/HeaderTitle';
+import { CountdownTimer } from '@/components/countdown-timer';
 
 function Header() {
   return (
@@ -13,6 +14,7 @@ function Header() {
         'lg:pb-28 lg:pt-52'
       )}
     >
+      <CountdownTimer />
       <div className={clsx('content-wrapper')}>
         <div className={clsx('relative')}>
           <div className={clsx('relative z-10')}>
