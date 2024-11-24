@@ -1,10 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 
-import {
-  ExternalLink,
-} from '@/components/Icons';
-
+import { ExternalLink } from '@/components/Icons';
 import dayjs from '@/utils/dayjs';
 
 function LastUpdate() {
@@ -82,8 +79,8 @@ function FooterGroup({ title, links }: FooterGroupProps) {
         {title}
       </div>
       <ul className={clsx('flex flex-col')}>
-        {links.map(({ title: linkTitle, href, label, isInternal }) => (
-          <li key={href}>
+        {links.map(({ title: linkTitle, href, label, isInternal }, index) => (
+          <li key={`${title}-${href}-${index}`}>
             <FooterLink
               title={linkTitle}
               href={href}
@@ -139,21 +136,6 @@ function Footer() {
               )}
             >
               <div className={clsx('flex', 'sm:gap-16')}>
-             {/*   <FooterGroup
-                  title="Explora"
-                  links={[
-                    {
-                      title: 'Preguntas Frecuentes',
-                      href: '/blog/preguntasfrecuentes',
-                    },
-                    {
-                      title: 'Servicios',
-                      href: '/servicios',
-                      label: 'soon',
-                    },
-                  ]}
-                />
-                */}
                 <FooterGroup
                   title="Learn"
                   links={[
@@ -192,19 +174,19 @@ function Footer() {
                     },
                     {
                       title: 'Ra Wallet',
-                      href: '/',
+                      href: '/ra-wallet',
                       isInternal: false,
                       label: 'soon',
                     },
                     {
                       title: 'ADEX',
-                      href: '/',
+                      href: '/adex',
                       isInternal: false,
                       label: 'soon',
                     },
                     {
                       title: 'DACCESS',
-                      href: '/',
+                      href: '/daccess',
                       isInternal: false,
                       label: 'soon',
                     },
