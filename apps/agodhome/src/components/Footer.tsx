@@ -198,6 +198,29 @@ function Footer() {
                   ]}
                 />
               </div>
+              <div className={clsx('flex', 'sm:gap-16')}>
+                <FooterGroup
+                  title="Docs"
+                  links={[
+                    {
+                      title: 'ASHARES',
+                      href: '/blog/ashares',
+                      isInternal: true,
+                    },
+                    {
+                      title: 'Whitepaper',
+                      href: 'https://agod-ecosystem.gitbook.io/agod-docs/transparencia',
+                      isInternal: false,
+                    },
+                    {
+                      title: 'Tokenomics',
+                      href: '/',
+                      isInternal: true,
+                      label: 'soon',
+                    },
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>
