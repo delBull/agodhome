@@ -17,7 +17,7 @@ export function CountdownTimer() {
 
     useEffect(() => {
         const calculateTimeLeft = () => {
-            const targetDate = new Date('2024-11-25T22:15:00').getTime();
+            const targetDate = new Date('2024-11-29T22:19:00').getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 
@@ -82,7 +82,7 @@ export function CountdownTimer() {
                           {/* Columna derecha (2/3) */}
                           <div className="w-2/3">
                               <div className="text-base text-zinc-400 mb-2">
-                                  Lanzamiento en
+                                  Lanzamiento de Black Friday
                               </div>
                               <div className="flex justify-start items-center gap-4 text-white font-mono">
                                   <div className="flex flex-col items-center">
