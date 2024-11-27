@@ -1,5 +1,6 @@
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'next-themes';
+import { ThirdwebProvider } from "thirdweb/react";
 
 import mdxCustomComponents from '@/components/mdx/custom-components';
 import ColorAccentProvider from '@/providers/ColorAccentProvider';
@@ -23,6 +24,7 @@ function Provider({ children = null }: PropsWithChildren) {
         }
       }
     >
+      <ThirdwebProvider>
       <FramerMotionProvider>
         <ThemeProvider attribute="class" disableTransitionOnChange>
           <FocusModeProvider>
@@ -36,6 +38,7 @@ function Provider({ children = null }: PropsWithChildren) {
           </FocusModeProvider>
         </ThemeProvider>
       </FramerMotionProvider>
+      </ThirdwebProvider>
     </GoogleReCaptchaProvider>
   );
 }

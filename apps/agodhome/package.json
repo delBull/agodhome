@@ -46,6 +46,7 @@
     "slug": "^8.2.2",
     "swr": "^2.0.0",
     "tailwindcss-accent": "^2.1.2",
+    "thirdweb": "^5.71.0",
     "use-local-storage-state": "^18.1.2",
     "zod": "^3.20.2"
   },

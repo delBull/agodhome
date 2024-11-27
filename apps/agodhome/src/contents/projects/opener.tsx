@@ -27,7 +27,7 @@ function Opener() {
               className={clsx('mt-2 flex items-center text-red-400 hover:underline')}
               onClick={onOpen}
             >
-              Invierte en ASHARES aquí
+              Obten tu AGOD Key aquí
               <HeartIcon className={clsx('h-5 w-5 ml-2')} />
             </a>
           </>
