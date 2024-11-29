@@ -28,7 +28,7 @@ function ButtonResume() {
     <a
       target="_blank"
       rel="noreferrer nofollow"
-      href="https://agod-ecosystem.gitbook.io/agod-docs/v/transparencia"
+      href="https://docs.agodecosystem.com"
       className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
     >
       <DocumentIcon className={clsx('h-5 w-5')} />
