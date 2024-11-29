@@ -13,14 +13,18 @@ import {
   useActiveAccount,
   useSendTransaction  
 } from "thirdweb/react";
-import { client } from "@/lib/client";
-import { getContract, prepareContractCall } from "thirdweb";
-import { base, sepolia } from "thirdweb/chains";
+import { getContract, prepareContractCall, createThirdwebClient } from "thirdweb";
+import { base } from "thirdweb/chains";
 import { inAppWallet, createWallet } from "thirdweb/wallets";
  
+const client = createThirdwebClient({
+  clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID
+});
+
+// Luego crea el contrato
 const contract = getContract({
   client,
-  address: "0xC6325Ffaa07F7361D05b928b4Fd7241e9e15868e",
+  address: "0xC6325Ffaa07F7241d05b928b4Fd7241e9e15868e",
   chain: base,
 });
 

@@ -1,12 +1,17 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  root: true,
-  extends: ['next', 'next/core-web-vitals', 'next-typescript'],
+  extends: ["next/core-web-vitals"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   parserOptions: {
+    project: "./tsconfig.json",
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    sourceType: "module",
+    ecmaVersion: 2020
   },
   rules: {
-    'react/self-closing-comp': 'off'
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 };
