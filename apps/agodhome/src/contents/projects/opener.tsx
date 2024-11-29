@@ -5,7 +5,7 @@ import { HeartIcon } from '@/components/Icons';
 import AsharesModal from '@/components/AsharesModal';
 
 function Opener() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpenChange } = useDisclosure();
 
   return (
     <header className={clsx('mb-8 mt-10')}>
@@ -24,11 +24,14 @@ function Opener() {
             <a
               href="#"
               rel="noopener noreferrer"
-              className={clsx('mt-2 flex items-center text-red-400 hover:underline')}
-              onClick={onOpen}
+              className={clsx(
+                'mt-2 flex items-center text-gray-400 pointer-events-none opacity-50', // Cambiado de text-red-400 a text-gray-400
+                // 'hover:underline' // Removido el hover
+              )}
+              // disabled={true} // Eliminar esta línea
             >
-              Obten tu AGOD Key aquí
-              <HeartIcon className={clsx('h-5 w-5 ml-2')} />
+              ¡Muy Pronto! {/* Cambiado de "Obten tu AGOD Key aquí" */}
+            <HeartIcon className={clsx('h-5 w-5 ml-2')} />
             </a>
           </>
         }
