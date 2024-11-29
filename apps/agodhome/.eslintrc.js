@@ -12,6 +12,17 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/explicit-function-return-type": "off"
-  }
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/display-name": "off",
+    "import/no-anonymous-default-export": "off",
+    "jsx-a11y/alt-text": "warn"
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  ignorePatterns: ["*.js", "*.jsx"]
 };
