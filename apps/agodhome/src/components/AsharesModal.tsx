@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Button, Input, Modal, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/react';
+import { Button, Modal, ModalContent, ModalFooter, ModalHeader } from '@nextui-org/react';
 import { useEffect, useState } from 'react';
 import { m } from 'framer-motion';
 import Image from 'next/image';

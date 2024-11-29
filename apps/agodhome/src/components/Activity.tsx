@@ -16,10 +16,10 @@ function ActivityItem({
   data: {
     activityType,
     type,
-    slug,
+    //slug,
     contentTitle,
     contentType,
-    createdAt,
+    //createdAt,
     ...rest
   },
 }: ActivityItemProps) {
