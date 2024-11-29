@@ -84,33 +84,33 @@ export function CountdownTimer() {
                               <div className="text-base text-zinc-400 mb-2">
                                   Lanzamiento de Black Friday
                               </div>
-                              <div className="flex justify-start items-center gap-4 text-white font-mono">
+                              <div className="flex justify-start items-center gap-2 sm:gap-4 text-white font-mono">
                                   <div className="flex flex-col items-center">
-                                      <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                                      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                           {formatNumber(timeLeft.days)}
                                       </span>
                                       <span className="text-xs text-zinc-400">Días</span>
                                   </div>
-                                  <span className="text-2xl text-zinc-600">:</span>
+                                  <span className="text-xl sm:text-2xl text-zinc-600">:</span>
                                   <div className="flex flex-col items-center">
                                       <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                           {formatNumber(timeLeft.hours)}
                                       </span>
                                       <span className="text-xs text-zinc-400">Horas</span>
                                   </div>
-                                  <span className="text-2xl text-zinc-600">:</span>
+                                  <span className="text-xl sm:text-2xl text-zinc-600">:</span>
                                   <div className="flex flex-col items-center">
                                       <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                           {formatNumber(timeLeft.minutes)}
                                       </span>
                                       <span className="text-xs text-zinc-400">Min</span>
                                   </div>
-                                  <span className="text-2xl text-zinc-600">:</span>
+                                  <span className="text-xl sm:text-2xl text-zinc-600">:</span>
                                   <div className="flex flex-col items-center">
                                       <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse">
                                           {formatNumber(timeLeft.seconds)}
                                       </span>
-                                      <span className="text-xs text-zinc-400">Seg</span>
+                                      <span className="text-[10px] sm:text-xs text-zinc-400">Seg</span>
                                   </div>
                               </div>
                           </div>
