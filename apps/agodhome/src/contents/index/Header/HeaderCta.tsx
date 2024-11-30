@@ -32,7 +32,7 @@ function ButtonResume() {
       className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
     >
       <DocumentIcon className={clsx('h-5 w-5')} />
-        WHITE PAPERS
+        EXPLORA LOS DOCS
     </a>
     <div>
     <ObtenAGODKey />
