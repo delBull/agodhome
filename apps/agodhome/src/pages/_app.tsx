@@ -12,6 +12,7 @@ import Provider from '@/providers';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
+import FacebookPixel from '../components/FacebookPixel'
 
 import '@/styles/main.css';
 import '@/styles/globals.css';
@@ -60,6 +61,7 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
     <NextUIProvider> {/* Envuelve tu aplicación con NextUIProvider */}
       <Provider>
         <RootLayout>
+          <FacebookPixel />
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <SessionProvider session={session}>
             {getLayout(<Component {...pageProps} />)}

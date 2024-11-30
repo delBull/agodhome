@@ -2,7 +2,6 @@ import bundeAnalyzer from '@next/bundle-analyzer';
 import nextMDX from '@next/mdx';
 import rehypePlugins from 'rehype-plugins';
 import remarkPlugins from 'remark-plugins';
-import path from 'path'; // Importa el módulo path
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,7 +19,13 @@ const nextConfig = {
   ],
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
-  webpack(config, options) {
+
+    // Agregar esta configuración de images
+    images: {
+      domains: ['www.facebook.com'],
+    },
+
+  webpack(config) {
     // Añadir configuración para archivos de video
     config.module.rules.push({
       test: /\.(mp4)$/,
