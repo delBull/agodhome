@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'next-themes';
-import { ThirdwebProvider } from "thirdweb/react";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 
 import mdxCustomComponents from '@/components/mdx/custom-components';
 import ColorAccentProvider from '@/providers/ColorAccentProvider';

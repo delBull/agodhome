@@ -209,14 +209,14 @@ function Footer() {
                     },
                     {
                       title: 'Whitepaper',
-                      href: 'https://agod-ecosystem.gitbook.io/agod-docs/transparencia',
+                      href: 'https://whitepaper.agodecosystem.com/',
                       isInternal: false,
                     },
                     {
                       title: 'Tokenomics',
-                      href: '/',
-                      isInternal: true,
-                      label: 'soon',
+                      href: 'https://docs.agodecosystem.com/tokenomics',
+                      isInternal: false,
+                      //label: 'soon',
                     },
                   ]}
                 />

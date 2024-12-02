@@ -1,6 +1,6 @@
 import clsx from 'clsx';
+import { FaDiscord } from 'react-icons/fa';
 
-import { DiscordIcon } from '@/components/Icons';
 import NavIcon from '@/components/navigations/NavIcon';
 import NavIconQuickAccess from '@/components/navigations/NavIconQuickAccess';
 import NavLink from '@/components/navigations/NavLink';
@@ -81,7 +81,7 @@ function Navbar() {
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
                 href="https://discord.gg/WVqQtqT7xa"
-                icon={<DiscordIcon className={clsx('h-7 w-7')} />}
+                icon={<FaDiscord className={clsx('h-5 w-5 hover:scale-110 transition-transform duration-200')} />}
                 title="Discord"
               />
             </li>
