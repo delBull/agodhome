@@ -7,6 +7,8 @@ export type TApiResponse = {
 export type TTableOfContentsItem = {
   title: string;
   url: string;
+  depth?: number;
+  slug?: string;
   items?: TTableOfContentsItem[];
 };
 

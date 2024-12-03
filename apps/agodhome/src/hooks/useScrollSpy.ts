@@ -1,52 +1,33 @@
 import { useEffect, useState } from 'react';
 
-export default function useScrollSpy(): {
-  currentVisibles: Record<string, boolean>;
-  currentSection: string;
-} {
-  const [currentSection, setCurrentSection] = useState<string>(undefined);
-  const [currentVisibles, setCurrentVisibles] = useState<
-    Record<string, boolean>
-  >({});
+export default function useScrollSpy() {
+  const [currentSection, setCurrentSection] = useState<string | null>(null);
 
   useEffect(() => {
-    const itemElements = document.querySelectorAll<HTMLElement>('[data-ss]');
-    if (!itemElements.length) return () => {};
+    const handleScroll = () => {
+      const headings = Array.from(document.querySelectorAll('h2, h3'));
+      
+      // Encontrar el heading actual basado en la posición de scroll
+      const current = headings.find((heading) => {
+        const { top, bottom } = heading.getBoundingClientRect();
+        // Considerar un heading como "activo" cuando está cerca del top de la ventana
+        return top <= 100 && bottom > 100;
+      });
 
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      const { target, isIntersecting } = entries[0];
-      const slug = target.getAttribute('data-ss') as string;
-
-      setCurrentVisibles((prev) => ({
-        ...prev,
-        [slug]: isIntersecting,
-      }));
-
-      if (isIntersecting) {
-        setCurrentSection(slug);
+      if (current?.id) {
+        setCurrentSection(current.id);
       }
     };
 
-    const observers: Array<IntersectionObserver> = [];
-
-    itemElements.forEach((item) => {
-      const threshold: number = Number(item.dataset.ssMt) || 0;
-
-      const observer = new IntersectionObserver(observerCallback, {
-        rootMargin: `-${threshold}px 0px 0px 0px`,
-      });
-
-      observers.push(observer);
-      observer.observe(item);
-    });
+    // Observar los cambios de scroll
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Verificar la posición inicial
+    handleScroll();
 
     return () => {
-      observers.forEach((observer) => observer.disconnect);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  return {
-    currentSection,
-    currentVisibles,
-  };
+  return { currentSection };
 }
