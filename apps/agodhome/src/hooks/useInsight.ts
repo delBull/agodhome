@@ -1,123 +1,105 @@
-import { ContentType, ReactionType, ShareType } from '@prisma/client';
-import { useEffect, useRef } from 'react';
-import useSWR from 'swr';
+import { useCallback, useState, useEffect } from 'react';
+import { ContentType } from '@prisma/client';
 
-import fetcher from '@/utils/fetcher';
-import { postReaction, postShare, postView } from '@/helpers/api';
-
-import type { TContentMetaDetail } from '@/types';
-
-const INITIAL_VALUE: TContentMetaDetail = {
-  meta: {
-    views: 0,
-    shares: 0,
-    reactions: 0,
-    reactionsDetail: {
-      CLAPPING: 0,
-      THINKING: 0,
-      AMAZED: 0,
-    },
-  },
-  metaUser: {
-    reactionsDetail: {
-      CLAPPING: 0,
-      THINKING: 0,
-      AMAZED: 0,
-    },
-  },
-  metaSection: {},
-};
-
-export default function useInsight({
-  slug,
-  contentType,
-  contentTitle,
-  countView = true,
-}: {
+interface InsightProps {
   slug: string;
   contentType: ContentType;
   contentTitle: string;
   countView?: boolean;
-}) {
-  const timer = useRef<Record<ReactionType, NodeJS.Timeout>>({
-    CLAPPING: null,
-    THINKING: null,
-    AMAZED: null,
-  });
-  const count = useRef<Record<ReactionType, number>>({
-    CLAPPING: 0,
-    THINKING: 0,
-    AMAZED: 0,
+}
+
+export default function useInsight({ slug, contentType, contentTitle, countView = true }: InsightProps) {
+  const [data, setData] = useState(() => {
+    // Intentar cargar datos del localStorage
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem(`insight-${slug}`);
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    }
+    
+    // Estado inicial si no hay datos guardados
+    return {
+      meta: {
+        views: 0,
+        shares: 0,
+        reactions: 0,
+        reactionsDetail: {
+          CLAPPING: 0,
+          AMAZED: 0,
+          THINKING: 0
+        }
+      },
+      metaUser: {
+        reactionsDetail: {
+          CLAPPING: 0,
+          AMAZED: 0,
+          THINKING: 0
+        }
+      }
+    };
   });
 
-  const { isLoading, data, mutate } = useSWR<TContentMetaDetail>(
-    `/api/content/${slug}`,
-    fetcher,
-    {
-      fallbackData: INITIAL_VALUE,
+  // Guardar cambios en localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(`insight-${slug}`, JSON.stringify(data));
     }
+  }, [data, slug]);
+
+  const addReaction = useCallback(
+    ({ type, section }: { type: string; section?: string }) => {
+      try {
+        setData(prevData => ({
+          ...prevData,
+          meta: {
+            ...prevData.meta,
+            reactions: (prevData.meta.reactions || 0) + 1,
+            reactionsDetail: {
+              ...prevData.meta.reactionsDetail,
+              [type]: (prevData.meta.reactionsDetail[type] || 0) + 1
+            }
+          }
+        }));
+      } catch (error) {
+        console.error('Error al añadir reacción:', error);
+      }
+    },
+    []
   );
 
-  useEffect(() => {
-    if (countView) {
-      postView({ slug, contentType, contentTitle });
-    }
-  }, [slug, contentType, contentTitle, countView]);
+  const addShare = useCallback(
+    ({ type }: { type: string }) => {
+      try {
+        if (!data?.meta) {
+          console.error('No hay datos de meta disponibles');
+          return;
+        }
 
-  const updateMeta = (newMeta: Partial<TContentMetaDetail['meta']>) => {
-    mutate(
-      {
-        ...data,
-        meta: {
-          ...data.meta,
-          ...newMeta,
-        },
-      },
-      false
-    );
-  };
+        const currentShares = data.meta.shares || 0;
 
-  const addShare = ({ type }: { type: ShareType }) => {
-    updateMeta({ shares: data.meta.shares + 1 });
-    postShare({ slug, contentType, contentTitle, type });
-  };
+        const updatedData = {
+          ...data,
+          meta: {
+            ...data.meta,
+            shares: currentShares + 1
+          }
+        };
 
-  const addReaction = ({
-    type,
-    section,
-  }: {
-    type: ReactionType;
-    section?: string;
-  }) => {
-    updateMeta({
-      reactions: data.meta.reactions + 1,
-      reactionsDetail: {
-        ...data.meta.reactionsDetail,
-        [type]: data.meta.reactionsDetail[type] + 1,
-      },
-    });
+        console.log('Actualizando shares:', { type, updatedData });
 
-    count.current[type] += 1;
-    clearTimeout(timer.current[type]);
-    timer.current[type] = setTimeout(() => {
-      postReaction({
-        slug,
-        contentType,
-        contentTitle,
-        type,
-        count: count.current[type],
-        section,
-      }).finally(() => {
-        count.current[type] = 0;
-      });
-    }, 500);
-  };
+      } catch (error) {
+        console.error('Error al añadir share:', error);
+      }
+    },
+    [data]
+  );
 
   return {
-    isLoading,
+    isLoading: false,
     data,
-    addShare,
     addReaction,
+    addShare
   };
 }
 

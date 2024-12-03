@@ -1,11 +1,9 @@
 // components/INOComponent.tsx
 import React from 'react';
-import web3 from 'web3';
 import { useWeb3React } from '@web3-react/core';
-import { ethers } from 'ethers';
 
 const INOComponent = () => {
-  const { account, library } = useWeb3React();
+  const { } = useWeb3React();
 
   const handleConnectWallet = async () => {
     // Conectar con la billetera

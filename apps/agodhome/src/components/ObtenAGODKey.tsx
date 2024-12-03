@@ -64,6 +64,10 @@ export default function App() {
 
   }
 
+  const handleClose = () => {
+    onOpenChange();
+  };
+
   return (
     <>
       <Button className="text-red-400" onPress={onOpen}>Enlístate para el AGOD Key</Button>
@@ -98,7 +102,7 @@ export default function App() {
         }}
       >
         <ModalContent>
-          {(onClose) => (
+          {() => (
             <>
               <ModalBody>
                 <m.div
@@ -144,6 +148,12 @@ export default function App() {
                   height={300}
                 />
               </m.div>
+              <button 
+                onClick={handleClose}
+                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                Cerrar
+              </button>
             </>
           )}
         </ModalContent>

@@ -63,6 +63,10 @@ export default async function handler(request: NextApiRequest, response: NextApi
       })
     });
 
+    if (data) {
+      console.log('Email sent successfully:', data);
+    }
+
     if (error) {
       return response.status(400).json(error);
     }
