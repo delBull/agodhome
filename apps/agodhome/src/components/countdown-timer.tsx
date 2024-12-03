@@ -23,11 +23,26 @@ export function CountdownTimer() {
                             <X size={20} />
                         </button>
 
-                        <div className="flex">
+                        <div className="flex text-center">
                             {/* Columna izquierda (1/3) */}
-                            <div className="w-1/3 pr-4">
-                                <div className="text-xl font-semibold text-white mb-2">
-                                    AGOD Token Minter
+                            <div className="absolute left-0 w-1/3 pr-4 overflow-hidden">
+                                <div className="text-[4rem] md:text-[5rem] leading-none font-black font-mono text-white opacity-20 mb-2 rotate-[-15deg] whitespace-nowrap transform -translate-x-1/5">
+                                    AGOD
+                                </div>
+                            </div>
+
+                            {/* Columna derecha (2/3) */}
+                            <div className="w-full">
+                                {/* <div className="text-base text-zinc-400 mb-2">
+                                    Black Friday - ¡Preventa Iniciada!
+                                </div> */}  
+                                <div className="flex flex-col">
+                                    <span className="mt-2 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse">
+                                        ¡La preventa ya comenzó!
+                                    </span>
+                                    <span className="text-sm text-zinc-400 mt-2">
+                                        No te pierdas esta oportunidad única
+                                    </span>
                                 </div>
                                 <a 
                                     href="https://minter.agodecosystem.com" 
@@ -37,21 +52,6 @@ export function CountdownTimer() {
                                 >
                                     ¡Llévame allá!
                                 </a>
-                            </div>
-
-                            {/* Columna derecha (2/3) */}
-                            <div className="w-2/3">
-                                <div className="text-base text-zinc-400 mb-2">
-                                    Black Friday - ¡Preventa Iniciada!
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse">
-                                        ¡La preventa ya comenzó!
-                                    </span>
-                                    <span className="text-sm text-zinc-400 mt-2">
-                                        No te pierdas esta oportunidad única
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
