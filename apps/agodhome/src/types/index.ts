@@ -6,8 +6,8 @@ export type TApiResponse = {
 
 export type TTableOfContentsItem = {
   title: string;
-  depth: number;
-  slug: string;
+  url: string;
+  items?: TTableOfContentsItem[];
 };
 
 export type TTableOfContents = Array<TTableOfContentsItem>;
@@ -24,12 +24,15 @@ export type TPageOgImage = Partial<
   Pick<TPageFrontMatter, 'caption' | 'title' | 'description'>
 >;
 
-export type TPostFrontMatter = TBaseFrontMatter & {
+export interface TPostFrontMatter {
+  title: string;
+  description: string;
   date: string;
   lang: 'id' | 'en' | 'spa';
-  tags: Array<string>;
+  tags: string[];
   category: string;
-};
+  caption?: string;
+}
 
 export type TPostOgImage = Partial<
   Pick<TPostFrontMatter, 'category' | 'title' | 'date' | 'lang' | 'tags'>

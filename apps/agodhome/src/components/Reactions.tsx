@@ -110,7 +110,7 @@ function Reactions({
     } = {},
     addShare,
     addReaction,
-  } = useInsight({ slug, contentType, contentTitle, countView: withCountView });
+  } = useInsight({ slug });
 
   const CLAPPING_QUOTA = MAX_REACTIONS_PER_SESSION - (userReactions.CLAPPING ?? 0);
   const THINKING_QUOTA = MAX_REACTIONS_PER_SESSION - (userReactions.THINKING ?? 0);

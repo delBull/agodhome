@@ -16,13 +16,11 @@ import type { TPostFrontMatter, TTableOfContents } from '@/types';
 interface PostProps {
   frontMatter: TPostFrontMatter;
   tableOfContents: TTableOfContents;
-  slug: string;
 }
 
 function Post({
   frontMatter: { title, description, caption, category, date, lang, tags },
   tableOfContents,
-  slug,
   children = null,
 }: PropsWithChildren<PostProps>) {
   // get og image urls
@@ -55,7 +53,7 @@ function Post({
       <PostMeta date={date} lang={lang} />
       <WithTableOfContents tableOfContents={tableOfContents}>
         {children}
-        <PostFooter tags={tags} category={category} postId={slug} />
+        <PostFooter tags={tags} category={category} />
       </WithTableOfContents>
       <WithReactions contentTitle={title} contentType="POST" />
     </>

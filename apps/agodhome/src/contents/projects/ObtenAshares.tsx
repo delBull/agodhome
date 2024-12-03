@@ -4,6 +4,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon } from '@/components/Icons';
 import { useDisclosure } from '@nextui-org/react';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 const AsharesModal = dynamic(() => import('@/components/AsharesModal'), { ssr: false });
 
@@ -59,13 +60,13 @@ function ObtenAshares() {
             <br />
             <div style={{ marginTop: '30px' }}></div>
             <span style={{ fontSize: '30px', fontWeight: 'bold'}}>¿Tienes dudas de cómo adquirir AGOD Key?</span>
-            <a
+            <Link
               href="/blog/agodkey"
               rel="noopener noreferrer"
               className={clsx('flex items-center text-red-400 hover:underline')}
             >
               Revisa este blog post
-            </a>
+            </Link>
           </>
         }
         altdesc=""

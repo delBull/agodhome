@@ -1,6 +1,5 @@
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'next-themes';
-import { ThirdwebProvider } from "@thirdweb-dev/react";
 
 import mdxCustomComponents from '@/components/mdx/custom-components';
 import ColorAccentProvider from '@/providers/ColorAccentProvider';
@@ -15,16 +14,13 @@ function Provider({ children = null }: PropsWithChildren) {
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-      container={
-        {
-          parameters: {
-            badge: "bottomleft",
-            theme: "dark"
-          }
+      container={{
+        parameters: {
+          badge: "bottomleft",
+          theme: "dark"
         }
-      }
+      }}
     >
-      <ThirdwebProvider>
       <FramerMotionProvider>
         <ThemeProvider attribute="class" disableTransitionOnChange>
           <FocusModeProvider>
@@ -38,7 +34,6 @@ function Provider({ children = null }: PropsWithChildren) {
           </FocusModeProvider>
         </ThemeProvider>
       </FramerMotionProvider>
-      </ThirdwebProvider>
     </GoogleReCaptchaProvider>
   );
 }

@@ -35,6 +35,7 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.460.0",
     "next": "^13.1.1",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -46,7 +47,7 @@
     "slug": "^8.2.2",
     "swr": "^2.0.0",
     "tailwindcss-accent": "^2.1.2",
-    "thirdweb": "^5.71.0",
+    "thirdweb": "^5.72.0",
     "use-local-storage-state": "^18.1.2",
     "zod": "^3.20.2"
   },
@@ -71,9 +72,16 @@
     "prettier": "^2.8.1",
     "prisma": "^4.8.1",
     "react-email": "2.1.6",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-external-links": "^3.0.0",
+    "rehype-slug": "^6.0.0",
+    "remark-directive": "^3.0.0",
+    "remark-external-links": "^10.0.0",
+    "remark-gfm": "^3.0.1",
     "tailwindcss": "^3.2.4",
     "tsconfig": "workspace:*",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "unist-util-visit": "^4.1.1"
   },
   "engines": {
     "node": "^18.0.0"

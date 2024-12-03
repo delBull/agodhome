@@ -1,15 +1,53 @@
 import frontMatter from 'front-matter';
 import fs from 'fs';
 import path from 'path';
-
+import { serialize } from 'next-mdx-remote/serialize';
 import type { TPostFrontMatter } from '@/types';
 
 const postsDirectory = path.join(process.cwd(), 'src/pages/blog');
 
 export const getPostSlugs = () => {
-  const fileNames = fs.readdirSync(postsDirectory);
+  try {
+    console.log('Reading directory:', postsDirectory);
+    const fileNames = fs.readdirSync(postsDirectory);
+    console.log('Found files:', fileNames);
+    return fileNames
+      .filter(fileName => fileName.endsWith('.mdx'))
+      .map(fileName => fileName.replace(/\.mdx$/, ''));
+  } catch (error) {
+    console.error('Error reading posts directory:', error);
+    return [];
+  }
+};
 
-  return fileNames.map((fileName) => fileName.replace(/\.mdx$/, ''));
+export const getPostData = async (slug: string) => {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.mdx`);
+    console.log('Reading file:', fullPath);
+    
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    const { attributes, body } = frontMatter(fileContents);
+    console.log('Front matter:', attributes);
+
+    const mdxSource = await serialize(body, {
+      parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [],
+        rehypePlugins: [],
+        format: 'mdx'
+      }
+    });
+
+    return {
+      frontMatter: attributes as TPostFrontMatter,
+      content: mdxSource,
+      tableOfContents: [],
+    };
+  } catch (error) {
+    console.error('Error in getPostData:', error);
+    throw error;
+  }
 };
 
 export const getPostFrontMatter = (slug: string): TPostFrontMatter => {

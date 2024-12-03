@@ -1,14 +1,15 @@
 import { useCallback, useState, useEffect } from 'react';
-import { ContentType } from '@prisma/client';
 
 interface InsightProps {
   slug: string;
-  contentType: ContentType;
-  contentTitle: string;
-  countView?: boolean;
 }
 
-export default function useInsight({ slug, contentType, contentTitle, countView = true }: InsightProps) {
+interface ReactionParams {
+  type: string;
+  section?: string;
+}
+
+export default function useInsight({ slug }: InsightProps) {
   const [data, setData] = useState(() => {
     // Intentar cargar datos del localStorage
     if (typeof window !== 'undefined') {
@@ -48,7 +49,7 @@ export default function useInsight({ slug, contentType, contentTitle, countView 
   }, [data, slug]);
 
   const addReaction = useCallback(
-    ({ type, section }: { type: string; section?: string }) => {
+    ({ type, section }: ReactionParams) => {
       try {
         setData(prevData => ({
           ...prevData,
@@ -58,6 +59,15 @@ export default function useInsight({ slug, contentType, contentTitle, countView 
             reactionsDetail: {
               ...prevData.meta.reactionsDetail,
               [type]: (prevData.meta.reactionsDetail[type] || 0) + 1
+            }
+          },
+          metaSection: {
+            ...prevData.metaSection,
+            [section || 'default']: {
+              reactionsDetail: {
+                ...((prevData.metaSection?.[section || 'default']?.reactionsDetail) || {}),
+                [type]: ((prevData.metaSection?.[section || 'default']?.reactionsDetail?.[type]) || 0) + 1
+              }
             }
           }
         }));

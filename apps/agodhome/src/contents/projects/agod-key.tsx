@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { CodeIcon, InfoIcon, QuickAccessIcon } from '@/components/Icons';
 
@@ -38,8 +39,8 @@ function AgodkeyContents() {
               </span>{' '}
               <p><span style={{ fontSize: '30px'}}>Participa en decisiones cruciales y da forma al futuro del ecosistema</span></p>
               <br />
-            <a
-              href="/blog/ashares"
+            <Link
+              href="/blog/ashares/"
               rel="noopener noreferrer"
               className={clsx(
                 'mt-2 flex items-center text-red-400 hover:underline text-sm'
@@ -47,7 +48,7 @@ function AgodkeyContents() {
             >
               <InfoIcon className={clsx('h-5 w-5 mr-2')} />
               Quiero saber más sobre la legalidad de ASHARES
-            </a>
+            </Link>
             </>
           }
         />

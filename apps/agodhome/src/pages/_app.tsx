@@ -41,18 +41,18 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
   }
 
   useEffect(() => {
-    // Importar el archivo disableActions.js
+    // Actualizar la ruta del script
     const script = document.createElement('script');
-    script.src = '/disableActions.js';
+    script.src = '/js/disableActions.js';
     script.async = true;
     document.body.appendChild(script);
 
-    // Aplicar la clase no-select al body
     document.body.classList.add('no-select');
 
-    // Eliminar el script y la clase cuando el componente se desmonte
     return () => {
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
       document.body.classList.remove('no-select');
     };
   }, []);

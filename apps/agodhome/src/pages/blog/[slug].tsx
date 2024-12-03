@@ -2,20 +2,21 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { getPostData, getSortedPosts } from '@/lib/posts';
 import Page from '@/contents-layouts/Page';
 import PostLayout from '@/contents-layouts/Post';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import type { TPostFrontMatter, TTableOfContents } from '@/types';
 
 interface BlogPostProps {
-  frontMatter: any;
-  content: string;
+  frontMatter: TPostFrontMatter;
+  content: MDXRemoteSerializeResult;
   slug: string;
-  tableOfContents: any;
+  tableOfContents: TTableOfContents;
 }
 
 function BlogPost({ frontMatter, content, slug, tableOfContents }: BlogPostProps) {
   return (
     <Page
       frontMatter={frontMatter}
-      showHeaderTitle={false}
-      structuredData={{
+      structuredData={JSON.stringify({
         type: 'Article',
         data: {
           title: frontMatter.title,
@@ -24,20 +25,22 @@ function BlogPost({ frontMatter, content, slug, tableOfContents }: BlogPostProps
           publishDate: frontMatter.date,
           slug: slug,
         },
-      }}
+      })}
     >
       <PostLayout 
-        content={content} 
         frontMatter={frontMatter}
-        slug={slug}
         tableOfContents={tableOfContents}
-      />
+      >
+        <MDXRemote {...content} />
+      </PostLayout>
     </Page>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getSortedPosts();
+  console.log('Available paths:', posts.map(p => p.slug));
+  
   const paths = posts.map(({ slug }) => ({
     params: { slug },
   }));
@@ -59,4 +62,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default BlogPost; 
+export default BlogPost;

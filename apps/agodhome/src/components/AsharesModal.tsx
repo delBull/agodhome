@@ -5,20 +5,7 @@ import { m } from 'framer-motion';
 import Image from 'next/image';
 import modalImage from '@/assets/images/quetza.png';
 
-// Thirdweb imports
-import {
-  ConnectWallet,
-  useContract,
-  useContractRead,
-  useAddress,
-} from "@thirdweb-dev/react";
-
 function AsharesModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: () => void }) {
-  // thirdweb hooks
-  const address = useAddress();
-  const { contract } = useContract("0xC6325Ffaa07F7241d05b928b4Fd7241e9e15868e");
-  const { data: ownedNFTs, isLoading } = useContractRead(contract, "balanceOf", [address]);
-
   // state vars
   const [isClient, setIsClient] = useState(false);
   const [isMinting, setIsMinting] = useState(false);
@@ -27,19 +14,9 @@ function AsharesModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange:
     setIsClient(true);
   }, []);
 
+  // Función temporal desactivada
   const handleMint = async () => {
-    if (!address || !contract) return;
-    
-    try {
-      setIsMinting(true);
-      await contract.erc721.mint({
-        to: address,
-      });
-    } catch (error) {
-      console.error("Error al mintear:", error);
-    } finally {
-      setIsMinting(false);
-    }
+    console.log('Función de mint temporalmente desactivada');
   };
 
   return (
@@ -75,36 +52,12 @@ function AsharesModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange:
             </p>
             <div className={clsx('mt-5')} />
             <div>
-              <ConnectWallet
-                theme="dark"
-                btnTitle="Haz tu Conexión"
-                modalTitle="Conecta tu Wallet"
-                switchToActiveChain={true}
-                modalSize="wide"
-                welcomeScreen={{
-                  title: "Bienvenido a AGOD Ecosystem",
-                  subtitle: "Conecta tu wallet para comenzar",
-                }}
-                modalTitleIconUrl="/assets/images/quetza.png"
-              />
-              
-              {address && (
-                <>
-                  {isLoading ? (
-                    <p>Cargando...</p>
-                  ) : ownedNFTs && Number(ownedNFTs) > 0 ? (
-                    <p>Ya cuentas con AGOD Key ✅</p>
-                  ) : (
-                    <button 
-                      onClick={handleMint}
-                      disabled={isMinting}
-                      className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                    >
-                      {isMinting ? "Minteando..." : "Obtener AGOD Key"}
-                    </button>
-                  )}
-                </>
-              )}
+              <button 
+                onClick={() => console.log('Conexión temporalmente desactivada')}
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              >
+                Conectar Wallet (Desactivado)
+              </button>
             </div>
           </m.div>
         </ModalHeader>

@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import type { PropsWithChildren } from 'react';
 import { TPostFrontMatter } from '@/types';
-import EmojiReaction from '@/components/EmojiReaction';
 
 type ChipProps = {
   href: string;
@@ -26,14 +25,17 @@ function Chip({ href, children = null }: PropsWithChildren<ChipProps>) {
 interface PostFooterProps {
   tags: TPostFrontMatter['tags'];
   category: TPostFrontMatter['category'];
-  postId: string;
 }
 
-function PostFooter({ tags, category, postId }: PostFooterProps) {
-  console.log('PostFooter recibió postId:', postId);
-
+function PostFooter({ tags, category }: PostFooterProps) {
   return (
-    <div className={clsx('mt-24 flex flex-col gap-6')}>
+    <div
+      className={clsx(
+        'mt-24 flex flex-col gap-6 text-sm text-slate-600',
+        'md:flex-row md:items-center md:justify-between',
+        'dark:text-slate-400'
+      )}
+    >
       <div className={clsx('flex flex-wrap gap-x-1 gap-y-2')}>
         Posted on
         <Link
@@ -50,42 +52,6 @@ function PostFooter({ tags, category, postId }: PostFooterProps) {
             </Chip>
           ))}
         </div>
-      </div>
-      
-      <div className="flex justify-center gap-4">
-        <EmojiReaction
-          title="Claps"
-          disabled={false}
-          defaultImage="/assets/emojis/clapping-hands.png"
-          animatedImage="/assets/emojis/clapping-hands-animated.png"
-          disabledImage="/assets/emojis/love-you-gesture.png"
-          reactionType="CLAPPING"
-          onClick={() => {
-            console.log('Clap reaction');
-          }}
-        />
-        <EmojiReaction
-          title="Wow"
-          disabled={false}
-          defaultImage="/assets/emojis/astonished-face.png"
-          animatedImage="/assets/emojis/astonished-face-animated.png"
-          disabledImage="/assets/emojis/star-struck.png"
-          reactionType="AMAZED"
-          onClick={() => {
-            console.log('Wow reaction');
-          }}
-        />
-        <EmojiReaction
-          title="Hmm"
-          disabled={false}
-          defaultImage="/assets/emojis/face-with-monocle.png"
-          animatedImage="/assets/emojis/face-with-monocle-animated.png"
-          disabledImage="/assets/emojis/nerd-face.png"
-          reactionType="THINKING"
-          onClick={() => {
-            console.log('Hmm reaction');
-          }}
-        />
       </div>
     </div>
   );
