@@ -2,6 +2,9 @@ import { useCallback, useState, useEffect } from 'react';
 
 interface InsightProps {
   slug: string;
+  contentType?: 'POST' | 'PAGE' | 'PROJECT';
+  contentTitle?: string;
+  countView?: boolean;
 }
 
 interface ReactionParams {
@@ -9,9 +12,13 @@ interface ReactionParams {
   section?: string;
 }
 
-export default function useInsight({ slug }: InsightProps) {
+export default function useInsight({ 
+  slug, 
+  contentType = 'POST',
+  contentTitle,
+  countView = false 
+}: InsightProps) {
   const [data, setData] = useState(() => {
-    // Intentar cargar datos del localStorage
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem(`insight-${slug}`);
       if (stored) {
@@ -19,7 +26,6 @@ export default function useInsight({ slug }: InsightProps) {
       }
     }
     
-    // Estado inicial si no hay datos guardados
     return {
       meta: {
         views: 0,
