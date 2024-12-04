@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import '@n8n/chat/style.css';
+import '../styles/chat.css';
 import { createChat } from '@n8n/chat';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
@@ -45,7 +46,7 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
       try {
         console.log('Inicializando el chat...');
         await createChat({
-          webhookUrl: 'https://crm.agodecosystem.com/webhook/15e4d662-3f98-48d0-9f50-68838769ecac/chat'
+          webhookUrl: 'https://crm.agodecosystem.com/webhook/e3f435d5-80e1-4274-a591-2c403c8940e3/chat'
         });
         console.log('Chat inicializado correctamente!');
       } catch (error) {
