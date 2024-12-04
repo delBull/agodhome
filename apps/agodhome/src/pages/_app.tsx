@@ -1,5 +1,3 @@
-// _app.tsx
-
 import { useEffect } from 'react';
 import '@n8n/chat/style.css';
 import { createChat } from '@n8n/chat';
@@ -45,28 +43,41 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
   useEffect(() => {
     const initializeChat = async () => {
       try {
-        try {
-          await createChat({
-            webhookUrl: 'https://crm.agodecosystem.com/webhook/15e4d662-3f98-48d0-9f50-68838769ecac/chat'
-          });
-        } catch (innerError) {
-          console.error('Error interno al inicializar el chat:', innerError);
-        }
+        console.log('Inicializando el chat...');
+        await createChat({
+          webhookUrl: 'https://crm.agodecosystem.com/webhook/15e4d662-3f98-48d0-9f50-68838769ecac/chat'
+        });
+        console.log('Chat inicializado correctamente!');
       } catch (error) {
         console.error('Error al inicializar el chat:', error);
       }
     };
-  
+    
     initializeChat();
+  }, []);
 
-    // Actualizar la ruta del script
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.target && (e.target as HTMLElement).classList.contains('n8n-chat')) {
+        e.stopPropagation();
+      }
+    };
+  
+    document.addEventListener('keydown', handleKeyDown);
+  
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
     const script = document.createElement('script');
     script.src = '/js/disableActions.js';
     script.async = true;
     document.body.appendChild(script);
-
+  
     document.body.classList.add('no-select');
-
+  
     return () => {
       if (script.parentNode) {
         script.parentNode.removeChild(script);
