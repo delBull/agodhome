@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-import '@n8n/chat/style.css';
-import '../styles/chat.css';
 import { createChat } from '@n8n/chat';
+import '@n8n/chat/style.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
 import { SessionProvider } from "next-auth/react";
@@ -46,7 +45,32 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
       try {
         console.log('Inicializando el chat...');
         await createChat({
-          webhookUrl: 'https://crm.agodecosystem.com/webhook/e3f435d5-80e1-4274-a591-2c403c8940e3/chat'
+          webhookUrl: 'https://crm.agodecosystem.com/webhook/e3f435d5-80e1-4274-a591-2c403c8940e3/chat',
+          webhookConfig: {
+            method: 'POST',
+            headers: {}
+          },
+          target: '#n8n-chat',
+          mode: 'window',
+          chatInputKey: 'chatInput',
+          chatSessionKey: 'sessionId',
+          metadata: {},
+          showWelcomeScreen: false,
+	        defaultLanguage: 'en',
+          initialMessages: [
+            'Hola! 👋',
+            'Hola! mi nombre es Quetza!, ¿en qué te puedo ayudar el día de hoy?'
+          ],
+          i18n: {
+            en: {
+              title: 'Weep! 👋',
+              subtitle: "Soy tu asistente virtual y estoy aquí para ayudarte",
+              footer: '',
+              getStarted: 'Nueva Conversación',
+              inputPlaceholder: 'escribe tu consulta..',
+              closeButtonTooltip: 'Cerrar chat'
+            },
+          },
         });
         console.log('Chat inicializado correctamente!');
       } catch (error) {
@@ -97,6 +121,7 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
             {getLayout(<Component {...pageProps} />)}
           </SessionProvider>
           <GoogleAnalytics gaId="G-B4C9EBTKKF" />
+          <div id="n8n-chat" />
         </RootLayout>
       </Provider>
     </NextUIProvider>

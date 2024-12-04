@@ -170,7 +170,3 @@
   font-size: 18px;
   margin-bottom: 20px;
 }
-
-.n8n-chat-initial-message::before {
-  content: "Hola! mi nombre es Quetza!, ¿en qué te puedo ayudar el día de hoy?";
-}
