@@ -52,6 +52,13 @@
   }
 }
 
+#n8n-chat-container {
+  position: relative; /* O cualquier otro estilo que necesites */
+  width: 100%; /* Ajusta según sea necesario */
+  height: 600px; /* Ajusta según sea necesario */
+  overflow: hidden; /* Para evitar desbordamientos */
+}
+
 a.button.button--soft {
   display: none;
 }
