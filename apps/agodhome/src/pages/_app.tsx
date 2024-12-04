@@ -1,8 +1,10 @@
 // _app.tsx
 
+import { useEffect } from 'react';
+import '@n8n/chat/style.css';
+import { createChat } from '@n8n/chat';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
-import { useEffect } from 'react';
 import { SessionProvider } from "next-auth/react";
 
 import RootLayout from '@/components/layouts/Root';
@@ -41,6 +43,22 @@ function App({ Component, pageProps: { session, ...pageProps }, router }: AppPro
   }
 
   useEffect(() => {
+    const initializeChat = async () => {
+      try {
+        try {
+          await createChat({
+            webhookUrl: 'https://crm.agodecosystem.com/webhook/15e4d662-3f98-48d0-9f50-68838769ecac/chat'
+          });
+        } catch (innerError) {
+          console.error('Error interno al inicializar el chat:', innerError);
+        }
+      } catch (error) {
+        console.error('Error al inicializar el chat:', error);
+      }
+    };
+  
+    initializeChat();
+
     // Actualizar la ruta del script
     const script = document.createElement('script');
     script.src = '/js/disableActions.js';
