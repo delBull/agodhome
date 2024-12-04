@@ -2,7 +2,6 @@
 import { Button, Input, Modal, ModalContent, ModalBody, useDisclosure } from "@nextui-org/react";
 import clsx from 'clsx';
 import { m, } from 'framer-motion';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { FormEvent, useState } from "react";
 
 import { MailIcon } from '@/components/MailIcon.jsx';
@@ -36,16 +35,19 @@ export default function App() {
         recaptchaToken
       })
     }).then(res => {
-      if (res.status == 200) {
-        toast.success("Agregado correctamente a la lista de espera.")
+      if (res.status === 200) {
+        toast.success("Agregado correctamente a la lista de espera.");
         setEmail("");
       } else {
-        toast.error("Ha ocurrido un error, inténtalo más tarde.")
+        toast.error("Ha ocurrido un error, inténtalo más tarde.");
       }
       setCanSubmit(true);
       return res.json();
     }).then(data => {
       console.log(data);
+    }).catch(err => {
+      console.error("Error en la solicitud:", err);
+      toast.error("Error en la solicitud, revisa la consola.");
     });
   }
 
