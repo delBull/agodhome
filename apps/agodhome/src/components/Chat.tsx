@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { createChat } from '@n8n/chat';
-import '@n8n/chat/style.css';
 
-const Chat = () => {
+const Chat = ({ isOpen }) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
@@ -51,8 +50,9 @@ const Chat = () => {
   }, []);
 
   return (
-    <div id="n8n-chat-container">
+    <div id="n8n-chat-container" style={{ pointerEvents: isOpen ? 'auto' : 'none' }}>
       <div id="n8n-chat" />
+      {!isOpen && <div style={{ color: 'gray' }}>El chat está cerrado.</div>}
     </div>
   );
 };

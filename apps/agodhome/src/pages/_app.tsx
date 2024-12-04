@@ -18,6 +18,7 @@ import '@/styles/main.css';
 import '@/styles/globals.css';
 
 import '@n8n/chat/style.css';
+import '@/styles/chat.css';
 
 type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -32,7 +33,7 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   useEffect(() => {
-    if (router.pathname === '/pagina-con-chat') {
+    if (router.pathname === '/') {
       setIsChatOpen(true);
     } else {
       setIsChatOpen(false);
@@ -46,7 +47,7 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
           <FacebookPixel />
           <SessionProvider session={session}>
             <WithNavigationFooter>
-              <div className={isChatOpen ? 'overlay' : ''}>
+              <div>
                 <Component {...pageProps} />
                 <ChatContainer isChatOpen={isChatOpen} />
               </div>

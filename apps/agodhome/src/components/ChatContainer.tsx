@@ -1,20 +1,25 @@
 import { useEffect, useState } from 'react';
 import Chat from './Chat'; // Asegúrate de importar el componente Chat
 
-const ChatContainer = ({ isChatOpen }) => {
+// Definir las propiedades que acepta el componente
+interface ChatContainerProps {
+  isChatOpen: boolean; // Propiedad para controlar si el chat está abierto
+}
+
+const ChatContainer: React.FC<ChatContainerProps> = ({ isChatOpen }) => {
   const [chatInitialized, setChatInitialized] = useState(false);
 
   useEffect(() => {
-    if (isChatOpen && !chatInitialized) {
+    if (!chatInitialized) {
       // Aquí puedes inicializar el chat si es necesario
       setChatInitialized(true);
     }
-  }, [isChatOpen, chatInitialized]);
+  }, [chatInitialized]);
 
   return (
-    <>
-      {isChatOpen && <Chat />} {/* Renderizar el componente Chat solo si está abierto */}
-    </>
+    <div>
+      <Chat isOpen={isChatOpen} /> {/* Pasar el estado isChatOpen al componente Chat */}
+    </div>
   );
 };
 
