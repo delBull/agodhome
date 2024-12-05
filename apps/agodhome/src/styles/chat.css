@@ -8,10 +8,10 @@
 	--chat--color-light: theme(colors.slate.900);
 	--chat--color-light-shade-50: #e6e9f1;
 	--chat--color-light-shade-100: #c2c5cc;
-	--chat--color-medium: #d2d4d9;
-	--chat--color-dark: #101330;
+	--chat--color-medium: theme(colors.slate.900);
+	--chat--color-dark: theme(colors.slate.900);
 	--chat--color-disabled: #777980;
-	--chat--color-typing: #404040;
+	--chat--color-typing: theme(colors.slate.900);
 
 	--chat--spacing: 1rem;
 	--chat--border-radius: 0.5rem;
@@ -52,4 +52,13 @@
 	--chat--toggle--active--background: theme(colors.slate.900);
 	--chat--toggle--color: var(--chat--color-white);
 	--chat--toggle--size: 64px;
+}
+
+.chat-inputs textarea {
+  background-color: theme(colors.slate.900) !important;
+  color: white !important;
+}
+
+button.chat-input-send-button {
+  background-color: theme(colors.slate.900) !important;
 }

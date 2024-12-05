@@ -40,6 +40,22 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
     }
   }, [router.pathname]);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (isChatOpen) {
+        if (event.key === 'q' || event.key === 'Escape' || event.key === 'd' || event.key === 'f') {
+          event.preventDefault();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isChatOpen]);
+
   return (
     <NextUIProvider>
       <Provider>
