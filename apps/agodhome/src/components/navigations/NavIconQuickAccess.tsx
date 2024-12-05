@@ -31,8 +31,8 @@ function NavIconQuickAccess() {
           'dark:font-normal'
         )}
       >
-        Quick Access
-        <Kbd>Q</Kbd>
+        Navegación
+        <Kbd>ALT</Kbd>
       </div>
     </button>
   );

@@ -43,7 +43,7 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (isChatOpen) {
-        if (event.key === 'q' || event.key === 'Escape' || event.key === 'd' || event.key === 'f') {
+        if (event.key === 'd' || event.key === 'Escape' || event.key === 'd' || event.key === 'f') {
           event.preventDefault();
         }
       }
@@ -55,6 +55,20 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isChatOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.code === 'AltLeft' || event.code === 'AltRight' || event.code === 'OptionLeft' || event.code === 'OptionRight') {
+        setIsChatOpen(true);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <NextUIProvider>

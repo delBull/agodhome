@@ -18,11 +18,11 @@
 	--chat--transition-duration: 0.15s;
 
 	--chat--window--width: 400px;
-	--chat--window--height: 600px;
+	--chat--window--height: 650px;
 
 	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
-	--chat--header--background: theme('colors.accent.600');
+	--chat--header--background: theme('colors.accent.500');
 	--chat--header--color: theme('colors.accent.600');
 	--chat--header--border-top: none;
 	--chat--header--border-bottom: none;
@@ -31,14 +31,14 @@
 	--chat--heading--font-size: 2em;
 	--chat--header--color: var(--chat--color-light);
 	--chat--subtitle--font-size: inherit;
-	--chat--subtitle--line-height: 1.8;
+	--chat--subtitle--line-height: 0.1;
 
-	--chat--textarea--height: 50px;
+	--chat--textarea--height: 60px;
 
-	--chat--message--font-size: 1rem;
+	--chat--message--font-size: 0.8rem;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: var(--chat--border-radius);
-	--chat--message-line-height: 1.8;
+	--chat--message-line-height: 1.3;
 	--chat--message--bot--background: theme(colors.slate.800);
 	--chat--message--bot--color: theme(colors.slate.100);
 	--chat--message--bot--border: none;
@@ -51,7 +51,7 @@
 	--chat--toggle--hover--background: var(--chat--color-primary-shade-50);
 	--chat--toggle--active--background: theme(colors.slate.900);
 	--chat--toggle--color: var(--chat--color-white);
-	--chat--toggle--size: 64px;
+	--chat--toggle--size: 54px;
 }
 
 .chat-inputs textarea {

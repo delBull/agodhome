@@ -72,7 +72,7 @@ function ActionCenter() {
       transition={{ staggerChildren: 0.06 }}
     >
       <m.div className={clsx('px-2 text-xl font-bold')} variants={animation}>
-        Action Center
+        Centro de Acciones
       </m.div>
       <div className={clsx('flex flex-1 flex-col gap-8 p-2')}>
         <m.div className={clsx('flex h-24 gap-4')} variants={animation}>

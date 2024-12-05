@@ -117,7 +117,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps) {
           className={clsx('text-sm text-slate-700', 'dark:text-slate-400')}
           variants={animation}
         >
-          retrieving data..
+          recuperando la data..
         </m.div>
       );
     }
@@ -128,7 +128,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps) {
           className={clsx('text-sm text-slate-700', 'dark:text-slate-400')}
           variants={animation}
         >
-          nothing new at the moment.
+          no hay nada nuevo en este moemento.
         </m.div>
       );
     }
@@ -139,7 +139,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps) {
           className={clsx('text-sm text-slate-700', 'dark:text-slate-400')}
           variants={animation}
         >
-          an internal error occurred.
+          ups! ha ocurrido un error interno, estamos en ello.
         </m.div>
       );
     }
@@ -188,7 +188,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps) {
       className={clsx('flex flex-1 flex-col gap-2')}
     >
       <m.div variants={animation} className={clsx('px-2 text-xl font-bold')}>
-        Recent Activities
+        Actividad Reciente
       </m.div>
       <div
         className={clsx(
