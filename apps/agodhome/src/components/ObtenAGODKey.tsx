@@ -14,14 +14,14 @@ import { toast } from "react-hot-toast";
 
 
 export default function App() {
-  const { isOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [email, setEmail] = useState("");
   const [canSubmit, setCanSubmit] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const submitWaitlistForm = function (recaptchaToken: string) {
+  const submitWaitlistForm = function(recaptchaToken: string) {
     if (!email) {
       return;
     }
@@ -54,7 +54,7 @@ export default function App() {
     });
   }
 
-  const handleFormSubmit = function (e: FormEvent) {
+  const handleFormSubmit = function(e: FormEvent) {
     e.preventDefault();
     setCanSubmit(false);
     setIsButtonDisabled(true);
@@ -78,26 +78,11 @@ export default function App() {
   return (
     <>
       <Button
-        className="text-gray-600"
-        onPress={(onOpenChange)}
-        disabled={isButtonDisabled}
-        style={{ backgroundColor: isButtonDisabled ? '#d1d5db' : '', color: isButtonDisabled ? '#9ca3af' : '' }}
+        className="text-red-400"
+        onPress={(onOpen)}
       >
         Enlístate para el AGOD Key
       </Button>
-      <span
-        style={{
-          border: '1px solid white',
-          borderRadius: '4px',
-          padding: '5px 5px',
-          color: 'white',
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          font: 'mono',
-          fontSize: '9px'
-        }}
-      >
-        ¡Muy Pronto!
-      </span>
       <Modal
         backdrop="blur"
         isOpen={isOpen}

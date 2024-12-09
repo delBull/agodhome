@@ -5,12 +5,6 @@ import { enlistadoAGODKey } from "@/components/emails/emailAGODKey";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-async function purgeWaitlist() {
-  const result = await prisma.waitlist.deleteMany();
-  console.log(result);
-  return result;
-}
-
 async function addToWaitlist(email: string) {
   const result = await prisma.waitlist.create({
     data: {
@@ -57,7 +51,6 @@ export default async function handler(request: NextApiRequest, response: NextApi
   }
 
   try {
-    await purgeWaitlist();
     if (await isInWaitlist(email)) {
       await addToWaitlist(email);
       const { data, error } = await resend.emails.send({
