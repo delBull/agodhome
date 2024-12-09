@@ -5,6 +5,12 @@ import { enlistadoAGODKey } from "@/components/emails/emailAGODKey";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+async function purgeWaitlist() {
+  const result = await prisma.waitlist.deleteMany();
+  console.log(result);
+  return result;
+}
+
 async function addToWaitlist(email: string) {
   const result = await prisma.waitlist.create({
     data: {
@@ -26,7 +32,7 @@ async function isInWaitlist(email: string) {
   return result == null;
 }
 
-async function validateRecaptcha(recaptchaToken:string) {
+async function validateRecaptcha(recaptchaToken: string) {
   const secret = process.env.RECAPTCHA_SECRET_KEY;
   const formData = `secret=${secret}&response=${recaptchaToken}`;
 
@@ -37,7 +43,7 @@ async function validateRecaptcha(recaptchaToken:string) {
     },
     body: formData
   });
-  
+
   const data = await response.json();
   console.log(data);
   return data.success;
@@ -45,12 +51,13 @@ async function validateRecaptcha(recaptchaToken:string) {
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   const { email, recaptchaToken } = request.body;
-  
+
   if (await validateRecaptcha(recaptchaToken) == false) {
     return response.status(400).json({ error: "Invalid reCAPTCHA" });
   }
 
   try {
+    await purgeWaitlist();
     if (await isInWaitlist(email)) {
       await addToWaitlist(email);
       const { data, error } = await resend.emails.send({

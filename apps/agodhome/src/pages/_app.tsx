@@ -1,6 +1,5 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
-import { SessionProvider } from "next-auth/react";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -75,14 +74,12 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
       <Provider>
         <RootLayout>
           <FacebookPixel />
-          <SessionProvider session={session}>
-            <WithNavigationFooter>
-              <div>
-                <Component {...pageProps} />
-                <Chat isOpen={isChatOpen} />
-              </div>
-            </WithNavigationFooter>
-          </SessionProvider>
+          <WithNavigationFooter>
+            <div>
+              <Component {...pageProps} />
+              <Chat />
+            </div>
+          </WithNavigationFooter>
           <GoogleAnalytics gaId="G-B4C9EBTKKF" />
         </RootLayout>
       </Provider>
