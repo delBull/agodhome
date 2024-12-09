@@ -21,7 +21,7 @@ export default function App() {
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const submitWaitlistForm = function(recaptchaToken: string) {
+  const submitWaitlistForm = function (recaptchaToken: string) {
     if (!email) {
       return;
     }
@@ -54,7 +54,7 @@ export default function App() {
     });
   }
 
-  const handleFormSubmit = function(e: FormEvent) {
+  const handleFormSubmit = function (e: FormEvent) {
     e.preventDefault();
     setCanSubmit(false);
     setIsButtonDisabled(true);
@@ -77,19 +77,19 @@ export default function App() {
 
   return (
     <>
-      <Button 
-        className="text-gray-600" 
-        //onPress={onOpen} 
+      <Button
+        className="text-gray-600"
+        onPress={(onOpenChange)}
         disabled={isButtonDisabled}
         style={{ backgroundColor: isButtonDisabled ? '#d1d5db' : '', color: isButtonDisabled ? '#9ca3af' : '' }}
       >
         Enlístate para el AGOD Key
       </Button>
-      <span 
+      <span
         style={{
-          border: '1px solid white', 
-          borderRadius: '4px', 
-          padding: '5px 5px', 
+          border: '1px solid white',
+          borderRadius: '4px',
+          padding: '5px 5px',
           color: 'white',
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           font: 'mono',
@@ -175,7 +175,7 @@ export default function App() {
                   height={300}
                 />
               </m.div>
-              <button 
+              <button
                 onClick={handleClose}
                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
               >
