@@ -6,7 +6,7 @@ function Shortcuts() {
 
   useEffect(() => {
     const handleAltKey = (event: KeyboardEvent) => {
-      if (event.code === 'AltLeft' || event.code === 'AltRight' || event.code === 'OptionLeft' || event.code === 'OptionRight') {
+      if (event.code === 'AltLeft' || event.code === 'OptionLeft') {
         setQuickAccessOpen(!isQuickAccessOpen);
       }
     };
