@@ -50,10 +50,7 @@ const Chat = ({ isOpen }) => {
   }, []);
 
   return (
-    <div id="n8n-chat-container" style={{ pointerEvents: isOpen ? 'auto' : 'none' }}>
-      <div id="n8n-chat" />
-      {!isOpen && <div style={{ color: 'gray' }}>El chat está cerrado.</div>}
-    </div>
+    <div></div>
   );
 };
 

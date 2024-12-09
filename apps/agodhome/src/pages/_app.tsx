@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
 import { SessionProvider } from "next-auth/react";
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
@@ -12,11 +12,11 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import FacebookPixel from '../components/FacebookPixel';
-import ChatContainer from '@/components/ChatContainer';
 
-import '@/styles/main.css';
 import '@/styles/globals.css';
+import '@/styles/main.css';
 
+import Chat from '@/components/Chat';
 import '@n8n/chat/style.css';
 import '@/styles/chat.css';
 
@@ -79,7 +79,7 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
             <WithNavigationFooter>
               <div>
                 <Component {...pageProps} />
-                <ChatContainer isChatOpen={isChatOpen} />
+                <Chat isOpen={isChatOpen} />
               </div>
             </WithNavigationFooter>
           </SessionProvider>

@@ -46,24 +46,10 @@
 
   .extra_title {
     display: flex !important;
-    justify-content: center !important; 
+    justify-content: center !important;
     align-items: center !important;
-    left: 100 !important; 
+    left: 100 !important;
   }
-}
-
-#n8n-chat-container {
-  position: relative; /* O cualquier otro estilo que necesites */
-  width: 100%; /* Ajusta según sea necesario */
-  height: 600px; /* Ajusta según sea necesario */
-  overflow: hidden; /* Para evitar desbordamientos */
-  border: 1px solid red;
-  z-index: 1000;
-}
-
-#n8n-chat {
-  width: 100%; /* Asegúrate de que el chat ocupe todo el ancho */
-  height: 100%; /* Asegúrate de que el chat ocupe todo el alto */
 }
 
 a.button.button--soft {
@@ -107,7 +93,7 @@ a.button.button--soft {
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;
-}
+  }
 }
 
 .introhd {
@@ -125,7 +111,7 @@ a.button.button--soft {
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;
-}
+  }
 }
 
 .agodworld {
@@ -138,7 +124,7 @@ a.button.button--soft {
 
 .quetza {
   position: absolute;
-  left: 0; 
+  left: 0;
   margin-top: 100px;
 }
 
@@ -169,7 +155,7 @@ a.button.button--soft {
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;
-}
+  }
 }
 
 .redplanet {
@@ -188,7 +174,7 @@ a.button.button--soft {
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
     margin-bottom: 5px;
-}
+  }
 }
 
 footer.background-grid.background-grid--fade-in.border-divider-light.mt-24.pt-16.text-sm.text-slate-900.dark\:border-divider-dark.dark\:text-slate-200 {
@@ -216,6 +202,6 @@ input {
   padding: 11px !important;
 }
 
-.grecaptcha-badge { 
-    visibility: hidden;
+.grecaptcha-badge {
+  visibility: hidden;
 }
