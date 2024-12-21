@@ -12,6 +12,7 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
+    "middleware.ts",
     "next.config.mjs"
   ],
   "exclude": ["node_modules"]

@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function CountdownTimer() {
+  const t = useTranslations('home-page.CountdownTimer-card')
     const [isVisible, setIsVisible] = useState(true);
 
     if (!isVisible) {
@@ -38,10 +40,10 @@ export function CountdownTimer() {
                                 </div> */}  
                                 <div className="flex flex-col">
                                     <span className="mt-2 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse">
-                                        ¡La preventa ya comenzó!
+                                        {t('¡La preventa ya comenzó!')}
                                     </span>
                                     <span className="text-sm text-zinc-400 mt-2">
-                                        No te pierdas esta oportunidad única
+                                        {t('No te pierdas esta oportunidad única')}
                                     </span>
                                 </div>
                                 <a 
@@ -50,7 +52,7 @@ export function CountdownTimer() {
                                     rel="noopener noreferrer"
                                     className="text-sm text-purple-400 hover:text-pink-400 transition-colors duration-300"
                                 >
-                                    ¡Llévame allá!
+                                    {t('¡Llévame allá!')}
                                 </a>
                             </div>
                         </div>

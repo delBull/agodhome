@@ -7,6 +7,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 import tokenAGODVideo from '@/assets/videos/tokenAGOD.mp4';
 
 import type { TodoItemState } from '@/contents/index/Cards/TodoItem';
+import { useTranslations } from 'next-intl';
 
 type Content = {
   state: TodoItemState;
@@ -29,21 +30,19 @@ const content: Array<Content> = [
 ];
 
 function PrettyOptimized() {
+  const t = useTranslations('home-page.PrettyOptimized-section')
   return (
     <header >
       <SectionTitle
-        title="¿Quieres ser parte?"
-        caption="¡AGOD Key es tu llave al ecosistema!"
+        title={t('sectionTitle.title')}
+        caption={t('sectionTitle.caption')}
         description=""
         altdesc={
           <>
-            <span className={clsx('text-xl max-w-lg text-slate-800', 'dark:text-slate-100')}>
-              Estamos construyendo la próxima generación de soluciones digitales.
-            </span>
-            <span className={clsx('text-sm max-w-lg text-slate-600', 'dark:text-slate-400')}>
-              Con beneficios exclusivos, recompensas continuas, y un enfoque en la adopción y sostenibilidad. 
-              Dale click aquí abajito 👇 
-            </span>{' '}
+     {t.rich('sectionTitle.altDescription', {
+  firstpart: (chunks) => <span className={clsx('text-xl max-w-lg text-slate-800', 'dark:text-slate-100')}>{chunks}</span>,
+secondpart: (chunks) => <span className={clsx('text-sm max-w-lg text-slate-600', 'dark:text-slate-400')}>{chunks}</span>
+})}
           </>
         }
       />

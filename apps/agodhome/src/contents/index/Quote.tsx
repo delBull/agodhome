@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 
 import { QuoteIcon } from '@/components/Icons';
+import { useTranslations } from 'next-intl';
 
 function Quote() {
+  const t = useTranslations('home-page.quote-section')
   return (
     <blockquote
       className={clsx(
@@ -20,7 +22,7 @@ function Quote() {
       />
       <span className={clsx('flex flex-col')}>
         <span className={clsx('leading-[1.15]')}>
-          <em>En un mundo donde las finanzas se encuentran con la sostenibilidad, </em>{' '}
+          <em>{t('finance-intro')} </em>{' '}
         </span>
         <span
           className={clsx('flex items-center gap-2 leading-[1.15]', 'lg:gap-4')}
@@ -39,9 +41,9 @@ function Quote() {
                 'dark:text-slate-300'
               )}
             >
-              AGOD
+              {t('AGOD')}
             </strong>{' '}
-            emerge {' '}
+            {t('emerge')} {' '}
           </span>
           <span
             className={clsx(
@@ -52,7 +54,7 @@ function Quote() {
           />
         </span>
         <span className={clsx('leading-[1.15]')}>
-          como un faro{' '}
+          {t('como un faro')}{' '}
           <strong
             className={clsx(
               'relative font-extrabold text-slate-600',
@@ -66,7 +68,7 @@ function Quote() {
                 'dark:bg-slate-800'
               )}
             />
-            de cambio.
+            {t('de cambio')}
           </strong>
         </span>
       </span>

@@ -11,9 +11,11 @@ import modalImage from '@/assets/images/quetza.png';
 import Image from "./mdx/Image";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { toast } from "react-hot-toast";
+import { useTranslations } from "next-intl";
 
 
 export default function App() {
+  const t = useTranslations('home-page.HeaderCta')
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [email, setEmail] = useState("");
   const [canSubmit, setCanSubmit] = useState(true);
@@ -81,7 +83,7 @@ export default function App() {
         className="text-red-400"
         onPress={(onOpen)}
       >
-        Enlístate para el AGOD Key
+        {t('Enlístate para el AGOD Key')}
       </Button>
       <Modal
         backdrop="blur"

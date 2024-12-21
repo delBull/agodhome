@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { m, useAnimationControls } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 const animation = {
@@ -12,7 +13,7 @@ const animation = {
 
 function HeaderTitle() {
   const controls = useAnimationControls();
-
+const t = useTranslations('home-page.HeaderTitle')
   return (
     <div>
       <m.div
@@ -39,7 +40,7 @@ function HeaderTitle() {
               });
             }}
           />
-        desbloquea el potencial blockchain
+        {t('desbloquea el potencial blockchain')}
         <m.div
           initial={{
             opacity: 0,
@@ -83,17 +84,17 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-          <span className={clsx('block')}>Es un ecosistema digital que integra</span>{' '}
+          <span className={clsx('block')}>{t('Es un ecosistema digital que integra')}</span>{' '}
           <p className={clsx('block')}> <span><strong
             className={clsx(
               'font-bold lowercase text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            blockchain, DeFi, IA, lifestyle y más!
+            {t('blockchain, DeFi, IA, lifestyle y más!')}
           </strong>{' '}</span></p>
-          <p className={clsx('block')}>maximiza tu experiencia en cada </p>
-          <p className={clsx('block')}>aspecto de tu  <span><strong
+          <p className={clsx('block')}>{t('maximiza tu experiencia en cada')} </p>
+          <p className={clsx('block')}>{t('aspecto de tu')}  <span><strong
             className={clsx(
               'font-bold text-slate-700',
               'dark:text-slate-300'

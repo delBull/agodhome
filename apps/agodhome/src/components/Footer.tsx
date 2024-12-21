@@ -3,8 +3,21 @@ import Link from 'next/link';
 
 import { ExternalLink } from '@/components/Icons';
 import dayjs from '@/utils/dayjs';
+import { useTranslations  } from 'next-intl';
+interface TranslationObject {
+  (key: string): string;
+  has(key: string): boolean;
+}
 
-function LastUpdate() {
+interface FooterGroupProps {
+  title: string;
+  links: Array<FooterLinkProps>;
+  t: TranslationObject;
+}
+interface LastUpdateProps {
+  t: TranslationObject;
+}
+function LastUpdate({t} : LastUpdateProps) {
   return (
     <a
       href="/politica-privacidad"
@@ -12,7 +25,7 @@ function LastUpdate() {
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
     >
-      <span>Privacidad</span>
+      <span>{t('Privacidad')}</span>
     </a>
   );
 }
@@ -62,12 +75,9 @@ function FooterLink({
   );
 }
 
-interface FooterGroupProps {
-  title: string;
-  links: Array<FooterLinkProps>;
-}
 
-function FooterGroup({ title, links }: FooterGroupProps) {
+
+function FooterGroup({t, title, links }: FooterGroupProps) {
   return (
     <div className={clsx('flex-1')}>
       <div
@@ -76,13 +86,13 @@ function FooterGroup({ title, links }: FooterGroupProps) {
           'dark:text-slate-400'
         )}
       >
-        {title}
+        {t.has(`${title}`) ? t(`${title}`) : title}
       </div>
       <ul className={clsx('flex flex-col')}>
         {links.map(({ title: linkTitle, href, label, isInternal }, index) => (
           <li key={`${title}-${href}-${index}`}>
             <FooterLink
-              title={linkTitle}
+              title={t.has(linkTitle) ? t(linkTitle) : linkTitle}
               href={href}
               label={label}
               isInternal={isInternal}
@@ -94,7 +104,7 @@ function FooterGroup({ title, links }: FooterGroupProps) {
   );
 }
 
-function FooterDescription() {
+function FooterDescription({t}) {
   return (
     <div className={clsx('max-w-[348px]')}>
       <div
@@ -103,19 +113,17 @@ function FooterDescription() {
           'dark:text-slate-400'
         )}
       >
-        Construyendo con Pasión
+        {t('Construyendo con Pasión')}
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        AGOD está construyendo un ecosistema financiero revolucionario que
-        combina tecnología avanzada, sostenibilidad y oportunidades de inversión
-        en activos del mundo real. Únete a nosotros en este viaje hacia un
-        futuro financiero más justo y sostenible.
+       {t('ecosystem-description')}
       </p>
     </div>
   );
 }
 
 function Footer() {
+  const t : TranslationObject = useTranslations('footer')
   return (
     <footer
       className={clsx(
@@ -127,7 +135,7 @@ function Footer() {
         <div className={clsx('py-10 font-semibold')}>
           <div className={clsx('flex flex-col-reverse gap-16', 'lg:flex-row')}>
             <div className={clsx('flex-1')}>
-              <FooterDescription />
+              <FooterDescription t={t}/>
             </div>
             <div
               className={clsx(
@@ -137,6 +145,7 @@ function Footer() {
             >
               <div className={clsx('flex', 'sm:gap-16')}>
                 <FooterGroup
+                t={t}
                   title="Learn"
                   links={[
                     {
@@ -165,6 +174,7 @@ function Footer() {
               </div>
               <div className={clsx('flex', 'sm:gap-16')}>
                 <FooterGroup
+                t={t}
                   title="Ecosistema"
                   links={[
                     {
@@ -200,6 +210,7 @@ function Footer() {
               </div>
               <div className={clsx('flex', 'sm:gap-16')}>
                 <FooterGroup
+                t={t}
                   title="Docs"
                   links={[
                     {
@@ -235,7 +246,7 @@ function Footer() {
             Blockchain S.A. de C.V.
           </div>
           <div className={clsx('text-slate-500', 'dark:text-slate-400')}>
-            <LastUpdate />
+            <LastUpdate t={t} />
           </div>
         </div>
       </div>

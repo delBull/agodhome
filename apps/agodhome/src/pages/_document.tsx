@@ -1,8 +1,9 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
-function Document() {
+function Document({ locale }) {
+
   return (
-    <Html lang="en">
+    <Html lang={locale || 'es'}>
       <Head />
       <body>
         <div id="skip-navigation" />

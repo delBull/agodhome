@@ -25,11 +25,12 @@ function Blog({ posts }: BlogProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps<BlogProps> = async () => {
+export const getStaticProps: GetStaticProps<BlogProps> = async ({locale}) => {
   const allPostsData = getSortedPosts();
 
   return {
     props: {
+      messages: (await import(`../../messages/${locale}.json`)).default,
       posts: allPostsData,
     },
   };

@@ -2,19 +2,19 @@ import clsx from 'clsx';
 
 import { HeartIcon } from '@/components/Icons';
 import SectionTitle from '@/components/sections/SectionTitle';
+import { useTranslations } from 'next-intl';
 
 function DetailOriented() {
+  const t = useTranslations('home-page.DetailOriented-section')
   return (
     <header className={clsx('mb-8')}>
       <SectionTitle
-        title="Una experiencia digital completa"
-        caption="bunz HUB"
+         title={t('sectionTitle.title')}
+         caption={t('sectionTitle.caption')}
         description={
           <>
             <span>
-              Es la red que fusiona las capacidades de AGOD Ecosystem (centro
-              tecnológico) y Rabbitty (plataforma de estilo de vida y
-              recompensas).
+            {t('sectionTitle.description')}
             </span>
             <br />
             <a
@@ -26,7 +26,7 @@ function DetailOriented() {
               )}
             >
               <HeartIcon className={clsx('h-5 w-5')} />
-              Muy pronto podrás saber + de bunz
+              {t('sectionTitle.Muy pronto podrás saber + de bunz')}
             </a>
           </>
         }

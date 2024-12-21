@@ -23,8 +23,10 @@ import introhd from '@/assets/images/introhd.png';
 import redplanet from '@/assets/images/redplanet.png';
 
 import styles from '@/styles/FloatingImage.module.css';
+import { useTranslations } from 'next-intl';
 
 function ProjectsContents() {
+  const t = useTranslations('intro-page.ProjectsContents')
   const [currentState, setCurrentState] = useState<
     | 'centro'
     | 'interfaz'
@@ -46,34 +48,30 @@ function ProjectsContents() {
         <div className={clsx('flex', 'lg:gap-12')}>
           <div className={clsx('-mt-12 gap-3 lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
-              <SectionButton
-                title="Centro de aplicaciones blockchain"
-                icon={<PinIcon className={clsx('my-2 h-16 w-16')} />}
-                description="AGOD alberga una variedad de aplicaciones apalancadas por blockchain, que cubren 
-                aspectos como finanzas, redes sociales, juegos y más."
-                active={currentState === 'centro'}
-              />
-              <SectionButton
-                title="Interfaz fácil de usar"
-                icon={<CheckCircleIcon className={clsx('my-2 h-16 w-16')} />}
-                description="AGOD está diseñado para ser accesible y fácil de usar para personas de todos los 
-                niveles de experiencia técnica."
-                active={currentState === 'interfaz'}
-              />
-              <SectionButton
-                title="Seguridad y transparencia"
-                icon={<QuickAccessIcon className={clsx('my-2 h-16 w-16')} />}
-                description="La tecnología blockchain subyacente garantiza la seguridad y transparencia de todas las 
-                transacciones y actividades."
-                active={currentState === 'seguridad'}
-              />
-              <SectionButton
-                title="Innovación continua"
-                icon={<InfoIcon className={clsx('my-2 h-16 w-16')} />}
-                description="AGOD se compromete a impulsar la innovación en el espacio blockchain, desarrollando 
-                constantemente nuevas soluciones y funcionalidades."
-                active={currentState === 'innovación'}
-              />
+            <SectionButton
+        title={t('blockchain-application-center.title')}
+        icon={<PinIcon className={clsx('my-2 h-16 w-16')} />}
+        description={t('blockchain-application-center.description')}
+        active={currentState === 'centro'}
+      />
+      <SectionButton
+        title={t('user-friendly-interface.title')}
+        icon={<CheckCircleIcon className={clsx('my-2 h-16 w-16')} />}
+        description={t('user-friendly-interface.description')}
+        active={currentState === 'interfaz'}
+      />
+      <SectionButton
+        title={t('security-and-transparency.title')}
+        icon={<QuickAccessIcon className={clsx('my-2 h-16 w-16')} />}
+        description={t('security-and-transparency.description')}
+        active={currentState === 'seguridad'}
+      />
+      <SectionButton
+        title={t('continuous-innovation.title')}
+        icon={<InfoIcon className={clsx('my-2 h-16 w-16')} />}
+        description={t('continuous-innovation.description')}
+        active={currentState === 'innovación'}
+      />
             </div>
           </div>
           <div className={clsx('w-full', 'lg:w-auto')}>
@@ -95,13 +93,11 @@ function ProjectsContents() {
         </div>
       </SectionContent>
       <SectionTitle
-        title="Ecosistema de Plataformas Interconectadas"
-        caption="AGOD Ecosystem + Rabbitty = Complemento Perfecto"
-        description="Es un sistema de recompensas que fomenta la participación y la interacción dentro del ecosistema. 
-        Los usuarios pueden ganar bunz (moneda de cambio del ecosistema) por completar tareas, realizar transacciones y 
-        contribuir al crecimiento de la comunidad."
-        altdesc=""
-      />
+      title={t('interconnected-platform-ecosystem.title')}
+      caption={t('interconnected-platform-ecosystem.caption')}
+      description={t('interconnected-platform-ecosystem.description')}
+      altdesc={''}
+    />
       {/* Firts Winwdow */}
       <div
         className={clsx(
@@ -123,21 +119,21 @@ function ProjectsContents() {
           )}
         >
           <SectionButton
-            title="Sustentabilidad"
+            title={t("Sustentabilidad")}
             icon=""
             description=""
             active={currentState === 'complement'}
             onClick={() => setCurrentState('complement')}
           />
           <SectionButton
-            title="Economía"
+            title={t("Economía")}
             icon=""
             description=""
             active={currentState === 'bunz'}
             onClick={() => setCurrentState('bunz')}
           />
           <SectionButton
-            title="Interconexión"
+            title={t("Interconexión")}
             icon=""
             description=""
             active={currentState === 'interconexión'}
@@ -150,70 +146,56 @@ function ProjectsContents() {
           browserTabs={[
             {
               icon: <HeartIcon className="h-4 w-4" />,
-              title: 'Sustentabilidad',
+              title: t("Sustentabilidad"),
               isActive: currentState === 'complement',
             },
             {
               icon: <LightIcon className="h-4 w-4" />,
-              title: 'economía-círcular',
+              title: t("economía-círcular"),
               isActive: currentState === 'bunz',
             },
             {
               icon: <CodeIcon className="h-4 w-4" />,
-              title: 'interconexión',
+              title: t("Interconexión"),
               isActive: currentState === 'interconexión',
             },
             {
               icon: <ShareIcon className="h-4 w-4" />,
-              title: 'plataformas',
+              title: t("plataformas"),
               isActive: currentState === 'incentivos',
             },
             {
               icon: <InsightIcon className="h-4 w-4" />,
-              title: 'escalabilidad',
+              title: t("escalabilidad"),
               isActive: currentState === 'escalabilidad',
             },
           ]}
         >
           {currentState === 'complement' && (
             <GitHubWireframe
-              author="Sustentabilidad"
+              author={t("Sustentabilidad")}
               license=""
-              repository="Diversificación de Servicios"
-              description="La sustentabilidad de AGOD está estrechamente vinculada al concepto de Rabbitty, 
-                      ya que ambas iniciativas están diseñadas para funcionar de manera sinérgica y complementarse 
-                      mutuamente. AGOD Ecosystem es un enfoque integral que abarca una serie de proyectos y servicios 
-                      relacionados con la tecnología blockchain y las criptomonedas. Rabbitty, como parte de este 
-                      ecosistema, contribuye significativamente a su sostenibilidad de las siguientes maneras"
-              additionalDesc="Rabbitty actúa como un componente central al proporcionar una plataforma de 
-                      billetera todo en uno, simplificando la gestión de activos digitales y transacciones. 
-                      Esto diversifica la oferta de servicios dentro del ecosistema, lo que aumenta su atractivo y 
-                      utilidad para un público más amplio"
+              repository={t("Diversificación de Servicios")}
+              description={t("sustainability-description")}
+              additionalDesc={t("rabbitty-role")}
             />
           )}
           {currentState === 'bunz' && (
             <GitHubWireframe
               author="bunz"
               license=""
-              repository="Economía Circular"
-              description="La moneda de recompensas bunz de Rabbitty otorga sustentabilidad al ecosistema. 
-              Los negocios pueden crear bunz para recompensar a los clientes por consumir sus productos o servicios. 
-              A su vez, los negocios pueden crear bunz para ofertas dentro del ecosistema blockchain. Además, los bunz 
-              se pueden utilizar como moneda de cambio para cualquier tipo de incentivo futuro y/o actual."
-              additionalDesc="Rabbitty y su economía bunz crece a través de las tarifas de transacción, que se convierten 
-              directamente en inventario. Esto hace que sea más económico para las empresas operar dentro del ecosistema y 
-              genera un inventario en constante crecimiento que puede ser utilizado, reinvertido o colectado de diversas maneras."
+              repository={t("Economía Circular")}
+              description={t("bunz-rewards")}
+              additionalDesc={t("bunz-economy-growth")}
             />
           )}
           {currentState === 'interconexión' && (
             <GitHubWireframe
               author="Rabbitty"
               license=""
-              repository="Interconexión"
-              description="Rabbitty puede integrarse con otros proyectos/plataformas de AGOD, como intercambios 
-              descentralizados, servicios de tokenización y aplicaciones financieras basadas en blockchain."
-              additionalDesc="Esta interconexión facilita la sinergia entre los diferentes componentes del ecosistema, 
-              lo que mejora la experiencia del usuario y fortalece la sostenibilidad de todos los proyectos involucrados."
+              repository={t("Interconexión")}
+              description={t("rabbitty-integration")}
+              additionalDesc={t("interconnection-synergy")}
             />
           )}
         </AppWindow>
@@ -222,11 +204,9 @@ function ProjectsContents() {
       <SectionContent>
         <div className={clsx('-mt-6 flex h-60')}>
           <SectionButton
-            title="AGOD Ecosystem es un destino integral para todos los aspectos de la tecnología blockchain."
+            title={t("agod-ecosystem-destination")}
             icon={<HeartIcon className={clsx('my-2 h-16 w-16')} />}
-            description=" Como centro de innovación, AGOD proporciona a los usuarios las herramientas y los 
-                recursos necesarios para aprovechar al máximo el potencial de la tecnología blockchain y crear un 
-                futuro digital más empoderado y gratificante."
+            description={t('innovation-center')}
           />
         </div>
         <Image
