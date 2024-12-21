@@ -128,7 +128,7 @@ function HeaderCta({
             animate={{ x: 0, opacity: 1, pointerEvents: 'auto' }}
             transition={{ delay: isFreeAnimationDuration + 1.6, duration: 0.4 }}
           >
-            <ButtonResume />
+            <ButtonResume t={t} />
           </m.div>
         </m.div>
       ) : (
