@@ -7,8 +7,10 @@ import NavLink from '@/components/navigations/NavLink';
 import NavLinkDropdown from '@/components/navigations/NavLinkDropdown';
 import NavLinkExpanded from '@/components/navigations/NavLinkExpanded';
 import NavLogo from '@/components/navigations/NavLogo';
+import { useTranslations } from 'next-intl';
 
 import useOnScroll from '@/hooks/useOnScroll';
+import LanguageSwitcher from './languageSwitcher/LanguageSwitcher';
 
 const workLinks = [
   { title: 'Ra Wallet', href: '/explora/rawallet' },
@@ -17,14 +19,15 @@ const workLinks = [
   { title: "Pandora's", href: '/explora/pandoras' },
 ];
 
-const learnLinks = [
-  { title: 'Intro', href: '/intro' },
-  { title: 'AGOD Key', href: '/agodkey' },
-  { title: 'Roadmap', href: '/roadmap' },
-  { title: "Blog", href: '/blog' },
-];
 
 function Navbar() {
+  const t = useTranslations("Navigation")
+  const learnLinks = [
+    { title: t('Intro'), href: '/intro' },
+    { title: t('AGOD Key'), href: '/agodkey' },
+    { title: t('Roadmap'), href: '/roadmap' },
+    { title: t("Blog"), href: '/blog' },
+  ];
   const isScrolled = useOnScroll(0);
 
   return (
@@ -64,7 +67,7 @@ function Navbar() {
                 <NavLink title="Roadmap" href="/roadmap" />
               </li>
               <li className={clsx('hidden lg:block')} data-accent="blue">
-                <NavLink title="Blog" href="/blog" />
+                <NavLink title={t("Blog")} href="/blog" />
               </li>
               <li className={clsx('lg:hidden')} data-accent="blue">
                 <NavLinkDropdown title="Learn" items={learnLinks} />
@@ -85,6 +88,10 @@ function Navbar() {
                 title="Discord"
               />
             </li>
+            <li className={clsx('hidden', 'sm:block')}>
+             <LanguageSwitcher />
+            </li>
+       
             <li className={clsx('hidden', 'sm:block')}>
               <div
                 className={clsx(

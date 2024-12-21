@@ -3,6 +3,7 @@ import Head from '@/components/meta/Head';
 import { getBaseUrl } from '@/helpers/url';
 
 import IndexContents from '@/contents/index';
+import { GetStaticPropsContext } from 'next';
 
 function Index() {
   return (
@@ -19,3 +20,12 @@ function Index() {
 }
 
 export default Index;
+export async function getStaticProps({locale}: GetStaticPropsContext) {
+  
+  
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default
+    }
+  };
+}

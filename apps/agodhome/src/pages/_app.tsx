@@ -2,7 +2,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-
+import { NextIntlClientProvider } from 'next-intl';
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
 import Provider from '@/providers';
@@ -23,11 +23,16 @@ type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
+type PageProps = {
+  messages: IntlMessages;
+  now: number;
 };
 
-function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLayout) {
+type Props = Omit<AppProps<PageProps>, 'pageProps'> & {
+  pageProps: PageProps;
+};
+
+function App({ Component, pageProps }: Props) {
   const router = useRouter();
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -69,21 +74,30 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLa
     };
   }, []);
 
+  // Fallback for messages (ensure messages are passed if not static)
+  const { messages = {} } = pageProps;
+
   return (
-    <NextUIProvider>
-      <Provider>
-        <RootLayout>
-          <FacebookPixel />
-          <WithNavigationFooter>
-            <div>
-              <Component {...pageProps} />
-              <Chat />
-            </div>
-          </WithNavigationFooter>
-          <GoogleAnalytics gaId="G-B4C9EBTKKF" />
-        </RootLayout>
-      </Provider>
-    </NextUIProvider>
+    <NextIntlClientProvider
+      locale={router.locale || 'es'} // Fallback to 'en' if router.locale is undefined
+      messages={messages}
+      timeZone="Europe/Vienna"
+    >
+      <NextUIProvider>
+        <Provider>
+          <RootLayout>
+            <FacebookPixel />
+            <WithNavigationFooter>
+              <div>
+                <Component {...pageProps} />
+                <Chat />
+              </div>
+            </WithNavigationFooter>
+            <GoogleAnalytics gaId="G-B4C9EBTKKF" />
+          </RootLayout>
+        </Provider>
+      </NextUIProvider>
+    </NextIntlClientProvider>
   );
 }
 

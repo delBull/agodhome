@@ -4,10 +4,11 @@ import { QuickAccessIcon } from '@/components/Icons';
 import Kbd from '@/components/Kbd';
 
 import useGlobal from '@/hooks/useGlobal';
+import { useTranslations } from 'next-intl';
 
 function NavIconQuickAccess() {
   const { setQuickAccessOpen } = useGlobal();
-
+const t = useTranslations('Navigation')
   return (
     <button
       type="button"
@@ -31,7 +32,7 @@ function NavIconQuickAccess() {
           'dark:font-normal'
         )}
       >
-        Navegación
+        {t('Navegación')}
         <Kbd>ALT</Kbd>
       </div>
     </button>

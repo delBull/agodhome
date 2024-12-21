@@ -3,6 +3,7 @@ import { m, useReducedMotion } from 'framer-motion';
 
 import { DocumentIcon } from '@/components/Icons';
 import ObtenAGODKey from '@/components/ObtenAGODKey';
+import { useTranslations } from 'next-intl';
 
 const animation = {
   hide: {
@@ -22,7 +23,7 @@ interface HeaderCtaProps {
 
 
 
-function ButtonResume() {
+function ButtonResume({t}) {
   return (
     <div>
     <a
@@ -32,7 +33,7 @@ function ButtonResume() {
       className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
     >
       <DocumentIcon className={clsx('h-5 w-5')} />
-        EXPLORA LOS DOCS
+        {t('EXPLORA LOS DOCS')}
     </a>
     <div>
     <ObtenAGODKey />
@@ -72,14 +73,15 @@ function AvailableForHire() {
 function HeaderCta({
   isFree = true,
   isFreeAnimationDuration = 4,
-}: HeaderCtaProps) {
-  const shouldReduceMotion = useReducedMotion();
+  }: HeaderCtaProps) {
+    const shouldReduceMotion = useReducedMotion();
+    const t = useTranslations('home-page.HeaderCta')
 
-  let isFreeVariants = {
-    hide: {
-      x: 0,
-      opacity: 1,
-    },
+    let isFreeVariants = {
+      hide: {
+        x: 0,
+        opacity: 1,
+        },
     show: {
       x: -48,
       opacity: 0,
@@ -131,7 +133,7 @@ function HeaderCta({
         </m.div>
       ) : (
         <m.div variants={animation} transition={{ delay: 0.5 }}>
-          <ButtonResume />
+          <ButtonResume t={t} />
         </m.div>
       )}
     </m.div>

@@ -1,6 +1,7 @@
 import TILContents from '@/contents/TIL';
 import HeaderImage from '@/contents/TIL/HeaderImage';
 import Page from '@/contents-layouts/Page';
+import { GetStaticPropsContext } from 'next';
 
 function TIL() {
   return (
@@ -17,3 +18,12 @@ function TIL() {
 }
 
 export default TIL;
+export async function getStaticProps({locale}: GetStaticPropsContext) {
+  
+  
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default
+    }
+  };
+}

@@ -17,6 +17,7 @@ import CustomCard from './CustomCard';
 import LinkCard from './LinkCard';
 
 import styles from '@/styles/FloatingImage.module.css';
+import { useTranslations } from 'next-intl';
 
 const animation = {
   hide: { x: -32, opacity: 0 },
@@ -27,7 +28,7 @@ const animation = {
 };
 
 function FeaturedCardSection() {
-
+const t = useTranslations('home-page.FeaturedCardSection')
   return (
     <div className={clsx('content-wrapper')}>
       <div style={{ marginTop: '100px' }}></div>
@@ -41,7 +42,7 @@ function FeaturedCardSection() {
           animate={animation.show}
           transition={{ delay: 2.6 }}
         >
-          Nuestro{' '}
+          {t('Nuestro')}{' '}
           <strong className={clsx('text-accent-600', 'dark:text-accent-500')}>
             
           </strong>{' '}
@@ -74,8 +75,8 @@ function FeaturedCardSection() {
             >
             </div>
           }
-          title="Pioneros de la descentralización."
-          desc="Creemos en el poder de todos para hacer realidad sus aspiraciones digitales, en retomar control propio de tu dinero."
+          title={t('card-1.title')}
+          desc={t('card-1.description')}
           additionalDesc=""
         />
         <LinkCard
@@ -89,11 +90,9 @@ function FeaturedCardSection() {
             </div>
           }
           title=""
-          desc="Integramos inteligencia artificial, dApps innovadoras, y una economía sostenible. Creemos 
-          en un futuro donde las finanzas no solo sostienen, sino regeneran la economía global. 
-          ¿Te unes a la evolución o te quedas atrás?"
+          desc={t('card-2.description')}
           additionalDesc=""
-          buttonText='¡quiero saber más!'
+          buttonText={t('card-2.button-text')}
           infoIcon={<InfoIcon className={clsx('h-5 w-5 text-white')}/>}
         />
         </div>
@@ -108,8 +107,8 @@ function FeaturedCardSection() {
               <QuoteIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="La tecnogloía ha avanzado.."
-          desc="Pero aún no ha resuelto de manera accesible y eficiente los problemas financieros comunes. Los sistemas financieros actuales son complicados, costosos y poco accesibles, y la economía global enfrenta desafíos de sostenibilidad y equidad."
+          title={t('card-3.title')}
+          desc={t('card-3.description')}
           additionalDesc=""
         />
         <div
@@ -140,7 +139,7 @@ function FeaturedCardSection() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-         ¿Qué es {' '}
+         {t('¿Qué es')} {' '}
           <strong className={clsx('text-accent-600', 'dark:text-accent-500')}>
           
           </strong>{' '}
@@ -157,19 +156,17 @@ function FeaturedCardSection() {
         >
           {' '}
           <strong className={clsx('text-accent-600', 'dark:text-accent-500')}>
-          AGOD?
+          {t('AGOD?')}
           </strong>{' '}
         </m.span>
                     
                 <p className={clsx('text-sm text-slate-600','dark:text-slate-300', 'font-bold')} 
                    style={{ fontSize: '22px', lineHeight: '1.2'}}>
-                    Más allá de las finanzas es un estilo de vida, podrás gestionar tus inversiones, ganar recompensas por tus compras y disfrutar de 
-                    beneficios exclusivos.
+                   {t('Más allá de las finanzas es un estilo de vida, podrás gestionar tus inversiones, ganar recompensas por tus compras y disfrutar de beneficios exclusivos')}
                 </p>
                 <p className={clsx('pt-4 text-sm text-slate-600', 'dark:text-slate-300')}
                    style={{ fontSize: '16px', lineHeight: '1.2'}}>
-                AGOD Ecosystem es tu centro integral para aprovechar la tecnología de manera innovadora. 
-                Imagina un entorno donde cada vez que ahorras o inviertes, eres recompensado mientras contribuyes a un mundo mejor.
+                {t('agodecosystem-hub')}
                 </p>
                 <ul className="gap-6 mt-8 md:grid md:grid-cols-2">
                     <li className="mt-6 lg:mt-0">
@@ -234,7 +231,7 @@ function FeaturedCardSection() {
           additionalDesc={
             <>
               <p>
-                <span style={{ fontSize: '35px'}}>Es como usar tu dinero</span>
+                <span style={{ fontSize: '35px'}}>{t('Es como usar tu dinero')}</span>
               </p>
               <span
                 style={{
@@ -244,10 +241,10 @@ function FeaturedCardSection() {
                   lineHeight: '1.5',
                 }}
               >
-                PARA HACER MAGIA
+                {t('PARA HACER MAGIA')}
               </span>{' '}
               <p>
-                <span style={{ fontSize: '35px' }}>Positiva en el mundo.</span>
+                <span style={{ fontSize: '35px' }}>{t('Positiva en el mundo')}</span>
               </p>
             </>
           }

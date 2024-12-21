@@ -1,0 +1,180 @@
+{
+  "Navigation": {
+    "Intro": "Intro",
+    "AGOD Key": "AGOD Key",
+    "Roadmap": "Roadmap",
+    "Blog": "Blog",
+    "switchLocale": "Switch to {locale, select, es {spanish} en {English} other {Unknown}}",
+    "Navegación":"Navigation"
+  },
+  "home-page":{
+  "HeaderTitle":{
+    "desbloquea el potencial blockchain":"Unlock the blockchain potential",
+    "Es un ecosistema digital que integra": "It is a digital ecosystem that integrates",
+    "blockchain, DeFi, IA, lifestyle y más!":"blockchain, DeFi, AI, lifestyle, and more!",
+    "maximiza tu experiencia en cada": "maximize your experience in each",
+    "aspecto de tu": "aspect of your"
+ 
+  },
+  "HeaderCta":{
+   "EXPLORA LOS DOCS": "EXPLORE THE DOCS",
+    "Enlístate para el AGOD Key": "Sign up for the AGOD Key"
+  },
+  "HeaderTechStack":{
+    "Nuestras plataformas están diseñadas para innovar y transformar": "Our platforms are designed to innovate and transform."
+  },
+  "FeaturedCardSection": {
+    "Nuestro": "Our",
+    "card-1":{
+    "title": "Pioneers of decentralization.",
+    "description": "We believe in the power of everyone to realize their digital aspirations, in taking back control of your own money."
+    },
+    "card-2":{
+      "description": "We integrate artificial intelligence, innovative dApps, and a sustainable economy. We believe in a future where finance not only sustains but regenerates the global economy. Will you join the evolution or stay behind?",
+      "button-text": "I want to know more!"
+    },
+    "card-3": {
+    "title": "Technology has advanced...",
+    "description": "But it still hasn't solved common financial problems in an accessible and efficient way. Current financial systems are complicated, expensive, and inaccessible, and the global economy faces challenges of sustainability and equity."
+  },
+  "¿Qué es": "What is",
+  "AGOD?": "AGOD?",
+  "Más allá de las finanzas es un estilo de vida, podrás gestionar tus inversiones, ganar recompensas por tus compras y disfrutar de beneficios exclusivos": "Beyond finances, it is a lifestyle. You can manage your investments, earn rewards for your purchases, and enjoy exclusive benefits.",
+  "agodecosystem-hub": "AGOD Ecosystem is your all-in-one hub to leverage technology in an innovative way. Imagine an environment where every time you save or invest, you are rewarded while contributing to a better world.",
+  "Blockchain": "Blockchain",
+  "Inteligencia Artificial": "Artificial Intelligence",
+  "Seguridad": "Security",
+  "Recompensas": "Rewards",
+  "Es como usar tu dinero": "It's like using your money",
+  "PARA HACER MAGIA": "TO MAKE MAGIC",
+  "Positiva en el mundo": "Positive in the world."
+  },
+  "CleanIntuitive":{
+    "sectionTitle": {
+      "title": "Our Vision for the Next Level of Decentralization",
+      "caption": "Why AGOD?",
+      "description": "With AGOD, blockchain and artificial intelligence come together to take you into a new era of efficiency and convenience. Backed by diverse sectors, from lifestyle to the collaborative economy, fostering innovation and creativity in every interaction."
+    },
+      "sectionContent": {
+        "1": {
+          "state": "rabbitty",
+          "title": "Sustainability",
+          "description": "Technological integration not only optimizes processes but also minimizes resource use, promoting a positive environmental impact by reducing the carbon footprint."
+        },
+        "2": {
+          "state": "adex",
+          "title": "Security",
+          "description": "All your transactions are backed by strategies designed from the ground up to protect your cybersecurity using cutting-edge technology."
+        },
+        "3": {
+          "state": "pandoras",
+          "title": "Accessibility",
+          "description": "By designing intuitive and user-friendly platforms, even those without prior financial experience can participate in the digital economy. This is crucial for including more people in the global economy."
+        },
+        "4": {
+          "state": "daccess",
+          "title": "Innovation",
+          "description": "AGOD combines elements of traditional finance (TradFi) and decentralized finance (DeFi) to offer a range of services that maximize efficiency and security. This includes advanced technologies such as blockchain and artificial intelligence, which optimize asset management, enhance transparency, and reduce operational costs, creating a more robust and modern financial system."
+        },
+        "5": {
+          "state": "raWallet",
+          "title": "Flexibility",
+          "description": "The ecosystem is designed to be adaptable to various market sectors, from lifestyle to the collaborative economy. This allows solutions to be customized according to the specific needs of each niche."
+        },
+        "6": {
+          "state": "tokenizacion",
+          "title": "Tokenization",
+          "description": "By transforming physical and traditional assets into digital formats, AGOD facilitates the access, transfer, and management of these assets. This not only simplifies investment and participation in the digital economy but also opens new market opportunities, allowing more people and businesses to capitalize on digitization."
+        }
+      }
+  },
+  "PrettyOptimized-section": {
+    "sectionTitle": {
+      "title": "AGOD Key is your key to the ecosystem!",
+      "caption": "Want to be part of it?",
+      "altDescription": "<firstpart>We are building the next generation of digital solutions.</firstpart><secondpart>With exclusive benefits, continuous rewards, and a focus on adoption and sustainability. Click right below👇</secondpart>"
+    }
+  },
+  "DetailOriented-section": {
+    "sectionTitle": {
+      "title": "A complete digital experience",
+      "caption": "bunz HUB",
+      "description": "It is the network that merges the capabilities of AGOD Ecosystem (technology hub) and Rabbitty (lifestyle and rewards platform).",
+      "Muy pronto podrás saber + de bunz": "You’ll soon learn more about bunz"
+    }
+  },
+  "quote-section": {
+  "finance-intro": "In a world where finance meets sustainability,",
+  "AGOD": "AGOD",
+  "emerge": "emerges",
+  "como un faro": "as a beacon",
+  "de cambio": "of change."
+},
+"CountdownTimer-card": {
+  "¡La preventa ya comenzó!": "The presale has already started!",
+  "No te pierdas esta oportunidad única": "Don't miss this unique opportunity",
+  "¡Llévame allá!": "Take me there!"
+}
+  },
+"intro-page": {
+  "main-section": {
+    "title": "The Center of Blockchain Technology",
+    "description": "The AGOD Ecosystem is a comprehensive technology hub that leverages the power of blockchain technology to empower individuals and businesses. As the core of a highly scalable ecosystem, AGOD offers a wide range of applications and services designed to simplify and enhance digital interactions."
+  },
+  "ProjectsContents": {
+    "blockchain-application-center": {
+      "title": "Blockchain Application Center",
+      "description": "AGOD hosts a variety of blockchain-powered applications, covering areas such as finance, social media, gaming, and more."
+    },
+    "user-friendly-interface": {
+      "title": "User-Friendly Interface",
+      "description": "AGOD is designed to be accessible and easy to use for individuals of all technical experience levels."
+    },
+    "security-and-transparency": {
+      "title": "Security and Transparency",
+      "description": "The underlying blockchain technology ensures the security and transparency of all transactions and activities."
+    },
+    "continuous-innovation": {
+      "title": "Continuous Innovation",
+      "description": "AGOD is committed to driving innovation in the blockchain space, constantly developing new solutions and features."
+    },
+    "interconnected-platform-ecosystem": {
+      "title": "Interconnected Platform Ecosystem",
+      "caption": "AGOD Ecosystem + Rabbitty = Perfect Match",
+      "description": "It is a reward system that encourages participation and interaction within the ecosystem. Users can earn bunz (the ecosystem’s currency) by completing tasks, making transactions, and contributing to the community’s growth."
+    },
+    "Sustentabilidad": "Sustainability",
+  "Economía": "Economy",
+  "Interconexión": "Interconnection",
+  "economía-círcular": "circular-economy",
+  "plataformas": "Platforms",
+  "escalabilidad": "scalability",
+  "Economía Circular": "Circular Economy",
+  "Diversificación de Servicios": "Service Diversification",
+  "sustainability-description": "The sustainability of AGOD is closely linked to the concept of Rabbitty, as both initiatives are designed to work synergistically and complement each other. AGOD Ecosystem is a holistic approach that encompasses a range of projects and services related to blockchain technology and cryptocurrencies. Rabbitty, as part of this ecosystem, significantly contributes to its sustainability in the following ways.",
+  "rabbitty-role": "Rabbitty acts as a central component by providing an all-in-one wallet platform, simplifying the management of digital assets and transactions. This diversifies the service offering within the ecosystem, increasing its appeal and usefulness to a wider audience.",
+  "bunz-rewards": "Rabbitty's bunz reward currency provides sustainability to the ecosystem. Businesses can create bunz to reward customers for consuming their products or services. Additionally, businesses can create bunz for offers within the blockchain ecosystem. Furthermore, bunz can be used as a currency for any future or current incentives.",
+  "bunz-economy-growth": "Rabbitty and its bunz economy grow through transaction fees, which are directly converted into inventory. This makes it more economical for businesses to operate within the ecosystem and generates a constantly growing inventory that can be used, reinvested, or collected in various ways.",
+  "rabbitty-integration": "Rabbitty can integrate with other AGOD projects/platforms, such as decentralized exchanges, tokenization services, and blockchain-based financial applications.",
+  "interconnection-synergy": "This interconnection facilitates synergy between the different components of the ecosystem, enhancing the user experience and strengthening the sustainability of all the projects involved.",
+  "agod-ecosystem-destination": "AGOD Ecosystem is a comprehensive destination for all aspects of blockchain technology.",
+  "innovation-center": "As a center of innovation, AGOD provides users with the tools and resources necessary to fully harness the potential of blockchain technology and create a more empowered and rewarding digital future."
+
+
+
+  }
+},
+"footer": {
+  "Construyendo con Pasión": "Building with Passion",
+  "ecosystem-description": "AGOD is building a revolutionary financial ecosystem that combines advanced technology, sustainability, and investment opportunities in real-world assets. Join us on this journey towards a fairer and more sustainable financial future.",
+  "Preguntas Frecuentes": "Frequently Asked Questions",
+  "Ecosistema": "Ecosystem",
+  "Pandora's": "Pandora's",
+  "Ra Wallet": "Ra Wallet",
+  "ADEX": "ADEX",
+  "DACCESS": "DACCESS",
+  "soon": "soon",
+  "Tokenization Agency": "Tokenization Agency",
+  "Privacidad":"Privacy"
+}
+}

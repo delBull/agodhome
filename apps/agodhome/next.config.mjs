@@ -43,6 +43,13 @@ const nextConfig = {
 
     return config;
   },
+  i18n: {
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+    localeDetection: false,
+  },
+  
+
 };
 
 const withBundleAnalyzer = bundeAnalyzer({

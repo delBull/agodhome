@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { m } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { 
   FaTwitter, 
   FaInstagram, 
@@ -18,6 +19,7 @@ const animation = {
 };
 
 function HeaderTechStack() {
+  const t = useTranslations('home-page.HeaderTechStack')
   return (
     <div>
       <m.p
@@ -27,7 +29,7 @@ function HeaderTechStack() {
         transition={{ delay: 0.6 }}
         style={{ fontSize: '16px'}}
       >
-        Nuestras plataformas están diseñadas para innovar y transformar.
+        {t('Nuestras plataformas están diseñadas para innovar y transformar')}
       </m.p>
       <m.div
         className={clsx(
