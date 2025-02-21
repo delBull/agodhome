@@ -159,22 +159,118 @@
   "interconnection-synergy": "This interconnection facilitates synergy between the different components of the ecosystem, enhancing the user experience and strengthening the sustainability of all the projects involved.",
   "agod-ecosystem-destination": "AGOD Ecosystem is a comprehensive destination for all aspects of blockchain technology.",
   "innovation-center": "As a center of innovation, AGOD provides users with the tools and resources necessary to fully harness the potential of blockchain technology and create a more empowered and rewarding digital future."
-
-
-
   }
 },
-"footer": {
-  "Construyendo con Pasión": "Building with Passion",
-  "ecosystem-description": "AGOD is building a revolutionary financial ecosystem that combines advanced technology, sustainability, and investment opportunities in real-world assets. Join us on this journey towards a fairer and more sustainable financial future.",
-  "Preguntas Frecuentes": "Frequently Asked Questions",
-  "Ecosistema": "Ecosystem",
-  "Pandora's": "Pandora's",
-  "Ra Wallet": "Ra Wallet",
-  "ADEX": "ADEX",
-  "DACCESS": "DACCESS",
-  "soon": "soon",
-  "Tokenization Agency": "Tokenization Agency",
-  "Privacidad":"Privacy"
-}
+
+  "agod-key-page": {
+    "header": {
+      "title": "AGOD Key & ASHARES",
+      "description": "Your Pillars of the Future in AGOD Ecosystem! AGOD Key and ASHARES are the essential components that will redefine your experience within AGOD Ecosystem."
+    },
+    "features": {
+      "voice-power": {
+        "title": "Your Voice, Your Power",
+        "description": "",
+        "additional": "Each ASHARE is legally backed and registered via smart contracts, ensuring transparency and trust.",
+        "ownership": "Own a part of the ecosystem.",
+        "participation": "Participate in key decisions and shape the ecosystem's future",
+        "learn-more": "Learn more about the legality of ASHARES"
+      },
+      "agod-key": {
+        "title": "AGOD Key: Your Master Key to the Future",
+        "description": "AGOD Key is not just an authentication tool; it’s your exclusive pass to a revolutionary ecosystem.",
+        "features": {
+          "title": "Key Features",
+          "list": [
+            "Identity Verification: Robust and secure process.",
+            "Secure Access: State-of-the-art protection.",
+            "No Cost: It's your entry pass."
+          ]
+        }
+      },
+      "actions": {
+        "title": "What You Can Do with AGOD Key",
+        "description": "",
+        "list": [
+          "Access to ASHARES",
+          "Asset Storage",
+          "Participation in Exclusive Events",
+          "Secure Transactions",
+          "Voice and Vote"
+        ]
+      }
+    },
+    "quote": {
+    "part1": "Don't just buy ASHARES;",
+    "part2": "be part of the change.",
+    "part3": "Secure your place in the AGOD Ecosystem revolution",
+    "part4": "and transform",
+    "part5": "your investment."
+  },
+    "opener": {
+      "title": "Your Investment Opportunity in the Future of Decentralized Finance",
+      "description": "Investing in AGOD Shares means being part of a cutting-edge ecosystem, securing your place in a community that values transparency, innovation, and sustainable growth.",
+      "coming-soon": "Coming Soon!"
+    },
+    "dapps": {
+      "title": "Why Should You Acquire AGOD Shares?",
+      "caption": "Our Vision",
+      "description": "We build an ecosystem where security, authentication, and participation are unshakable pillars.",
+      "image-alt": "AGOD Land",
+      "pandoras": {
+        "title": "Pandoras",
+        "description": "An Innovation Incubator that drives and develops initiatives within the AGOD Ecosystem."
+      },
+      "tokenizacion": {
+        "title": "Tokenization",
+        "description": "Transform physical assets into digital ones, making them more liquid, accessible, and easy to trade on blockchain."
+      },
+      "ra-wallet": {
+        "title": "Ra Wallet",
+        "description": "Securely stores cryptocurrencies and digital assets with a user-friendly interface."
+      },
+      "adex": {
+        "title": "ADEX",
+        "description": "Descentralized exchange with advanced features and AI-based recommendations."
+      },
+      "daccess": {
+        "title": "DACCESS",
+        "description": "Revolutionizing NFT access and passes with incentives for creators and attendees."
+      },
+      "future-dapps": {
+        "title": "Future dApps",
+        "description": "More platforms will integrate into the ecosystem, fostering a circular economy."
+      }
+    },
+    
+    "get-ashares": {
+      "title": "Do You Want to Be Part of It?",
+      "caption": "Get Your ASHARES!",
+      "link": "Very Soon",
+      "description": "Investing in ASHARES will reflect in earnings thanks to our deflationary model.",
+      "additional": "Still have quastions about AGOD Key?",
+      "learn-more": "Check this Blog post"
+    }
+  },
+
+  "roadmap-page": {
+    "header": {
+      "title": "Roadmap",
+      "description": "2024 is traced and growing"
+    }
+  },
+
+  "footer": {
+    "Construyendo con Pasión": "Building with Passion",
+    "ecosystem-description": "AGOD is building a revolutionary financial ecosystem that combines advanced technology, sustainability, and investment opportunities in real-world assets. Join us on this journey towards a fairer and more sustainable financial future.",
+    "Preguntas Frecuentes": "Frequently Asked Questions",
+    "Ecosistema": "Ecosystem",
+    "Pandora's": "Pandora's",
+    "Ra Wallet": "Ra Wallet",
+    "ADEX": "ADEX",
+    "DACCESS": "DACCESS",
+    "soon": "soon",
+    "Tokenization Agency": "Tokenization Agency",
+    "Privacidad": "Privacy"
+  }
 }

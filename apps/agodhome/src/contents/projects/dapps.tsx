@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
@@ -17,57 +18,60 @@ type Content = {
   description: string;
 };
 
-const content: Array<Content> = [
-  {
-    state: 'rabbitty',
-    title: 'Pandoras',
-    description: 'Una Incubadora de Innovación. Plataforma principal que impulsa y desarrolla todas las demás iniciativas del AGOD Ecosystem + Desarrolladora de Proyectos que facilita la creación y lanzamiento de nuevas aplicaciones y servicios dentro del ecosistema.',
-    },
-  {
-    state: 'pandoras',
-    title: 'Ra Wallet',
-    description: 'Almacena de forma segura tus criptomonedas y otros activos digitales. Con Interfaz amigable y accesible para todos los niveles de usuarios + Sistema de incentivos globalizado del ecosistema.',
-    },
-  {
-    state: 'daccess',
-    title: 'ADEX',
-    description: 'Intercambio de criptomonedas con funciones avanzadas. Recomendaciones personalizadas basadas en AI y machine learning.',
-    },
-  {
-    state: 'adex',
-    title: 'DACCESS',
-    description: 'Revolucinando el futuro de los accesos, tickets y pases NFT para todo tipo de eventos. Sistema de incentivos con bunz para creadores y asistentes.',
-    },
-  {
-    state: 'rabbitty',
-    title: 'dApps en camino',
-    description: 'Más plataformas se integrarán al ecosistema de forma nativa, así como de terceros que conforman y sustentan la economía círcular del protocolo.',
-    },
-];
-
 function Dapps() {
+  const t = useTranslations('agod-key-page');
+
+  const content: Array<Content> = [
+    {
+      state: 'pandoras',
+      title: t('dapps.pandoras.title'),
+      description: t('dapps.pandoras.description'),
+    },
+    {
+      state: 'tokenizacion',
+      title: t('dapps.tokenizacion.title'),
+      description: t('dapps.tokenizacion.description'),
+    },
+    {
+      state: 'raWallet',
+      title: t('dapps.ra-wallet.title'),
+      description: t('dapps.ra-wallet.description'),
+    },
+    {
+      state: 'adex',
+      title: t('dapps.adex.title'),
+      description: t('dapps.adex.description'),
+    },
+    {
+      state: 'daccess',
+      title: t('dapps.daccess.title'),
+      description: t('dapps.daccess.description'),
+    },
+    {
+      state: 'future-dapps',
+      title: t('dapps.future-dapps.title'),
+      description: t('dapps.future-dapps.description'),
+    },
+  ];
 
   return (
     <>
       <header className={clsx('mb-8')}>
         <SectionTitle
-          title="¿Por qué deberías adquirir AGOD Shares?"
-          caption="Nuestra Visión"
-          description="Construimos un ecosistema donde la seguridad, la autenticación y la participación son pilares 
-          inquebrantables. Donde cada miembro tiene un papel crucial y puede influir en un futuro más transparente y 
-          próspero para todos"
-
-        altdesc=""
+          title={t('dapps.title')}
+          caption={t('dapps.caption')}
+          description={t('dapps.description')}
+          altdesc=""
         />
       </header>
       <SectionContent>
-      <div className="styles.imageContainer">
-              <Image 
-                src={tierraLateral} 
-                alt="Tierra AGOD" 
-                className={clsx(styles['floating-image'], ['tierraLateral'])}
-              />
-              </div>
+        <div className="styles.imageContainer">
+          <Image
+            src={tierraLateral}
+            alt={t('dapps.image-alt')}
+            className={clsx(styles['floating-image'], ['tierraLateral'])}
+          />
+        </div>
         <div className={clsx('flex', 'lg:gap-12')}>
           <div
             className={clsx('-mt-8 flex-1 flex-col gap-3', 'lg:flex')}
@@ -86,8 +90,7 @@ function Dapps() {
           >
             <div
               className={clsx('-mt-8 flex gap-4', 'md:gap-6 lg:top-8 lg:mt-0')}
-            >
-            </div>
+            />
           </div>
         </div>
       </SectionContent>

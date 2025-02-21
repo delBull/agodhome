@@ -2,46 +2,51 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {m} from 'framer-motion'
+import clsx from 'clsx';
+
 type Props = {
-  currentLocale: string,
-  allLocales: string[],
-  isOpenDropdown: Boolean,
-  setisOpenDropdown: React.Dispatch<React.SetStateAction<boolean>>,
-  languages: object
+  currentLocale: string;
+  allLocales: string[];
+  isOpenDropdown?: boolean;  // Hacemos que sea opcional
+  setisOpenDropdown?: React.Dispatch<React.SetStateAction<boolean>>;  // Opcional
 };
 
 export default function LanguageSwitcherSelect({
   currentLocale,
-  allLocales,
-}: Readonly<Props>) {
-  const {pathname, query, asPath } = useRouter();
+  allLocales = ['en', 'es'],
+}: Props) {
+  const { pathname, query, asPath } = useRouter();
+
+  console.log('currentLocale:', currentLocale); // Añade este log
+  console.log('allLocales:', allLocales); // Añade este log
+
   return (
-  <div className='flex justify-center items-center hover:bg-[#b8b6b6]   bg-[#ddd] text-slate-800 size-7 dark:bg-slate-800/50 dark:text-slate-100 dark:hover:bg-slate-700/50 rounded-full overflow-hidden'>
-  {allLocales.map(locale => 
-  
-  {
-    if(locale === currentLocale) return 
-    return (
-      <m.div
+    <div className="flex justify-center items-center p-1 rounded-full bg-gray-300 dark:bg-gray-700">
+      {allLocales && allLocales.length > 0 ? (
+      allLocales.map((locale) => (
+        <Link
           key={locale}
-      initial={{ x: '100%' }} // Starts off to the right
-      animate={{ x: 0 }} // Moves to the center (default position)
-      exit={{ x: '-100%' }} // Moves off to the left when it exits
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }} // Smooth animation
-      >
-    <Link
-        className=''
-            href={{ pathname, query }}
-            as={asPath}
-            locale={locale}
-            legacyBehavior
-    >
-     
-      {currentLocale}
-    </Link>
-      </m.div>
-  )})}
-  </div>
+          href={{ pathname, query }}
+          as={asPath}
+          locale={locale}
+          legacyBehavior
+        >
+          <div
+            className={clsx(
+              'cursor-pointer px-4 py-1 rounded-full transition-all duration-300',
+              {
+                'bg-white text-black shadow-lg': locale === currentLocale,
+                'bg-transparent text-gray-500': locale !== currentLocale,
+              }
+            )}
+          >
+            {locale.toUpperCase()}
+          </div>
+        </Link>
+     ))
+    ) : (
+      <div>Not available</div> // Mensaje opcional si no hay locales
+    )}
+    </div>
   );
 }

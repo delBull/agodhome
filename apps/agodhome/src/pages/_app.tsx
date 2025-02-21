@@ -10,12 +10,10 @@ import Provider from '@/providers';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
-import FacebookPixel from '../components/FacebookPixel';
 
 import '@/styles/globals.css';
 import '@/styles/main.css';
 
-import Chat from '@/components/Chat';
 import '@n8n/chat/style.css';
 import '@/styles/chat.css';
 
@@ -86,11 +84,9 @@ function App({ Component, pageProps }: Props) {
       <NextUIProvider>
         <Provider>
           <RootLayout>
-            <FacebookPixel />
             <WithNavigationFooter>
               <div>
                 <Component {...pageProps} />
-                <Chat />
               </div>
             </WithNavigationFooter>
             <GoogleAnalytics gaId="G-B4C9EBTKKF" />
@@ -102,3 +98,15 @@ function App({ Component, pageProps }: Props) {
 }
 
 export default App;
+
+export async function getStaticProps() {
+  const currentLocale = 'es'; // Asegúrate de tener un valor para currentLocale
+  const allLocales = ['en', 'es']; // Asegúrate de tener un array con todas las lenguas disponibles
+
+  return {
+    props: {
+      currentLocale,
+      allLocales,
+    },
+  };
+}

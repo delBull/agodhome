@@ -1,135 +1,132 @@
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { CodeIcon, InfoIcon, QuickAccessIcon } from '@/components/Icons';
-
-import theImage from '@/assets/images/connector2.png';
 import FeaturedCard from '@/contents/index/FeaturedCard';
-
 import AshareQuote from './AshareQuote';
 import Dapps from './dapps';
 import ObtenAshares from './ObtenAshares';
 import Opener from './opener';
-
+import theImage from '@/assets/images/connector2.png';
 import styles from '@/styles/FloatingImage.module.css';
 
 function AgodkeyContents() {
+  const t = useTranslations('agod-key-page');
+  const actionsT = useTranslations('agod-key-page.features.actions');
+
   return (
     <div className={clsx('content-wrapper')}>
       <div className={clsx('flex flex-col gap-4', 'lg:gap-8')}>
+        {/* Card 1: Tu Voz, Tu Poder */}
         <FeaturedCard
           icon={
-            <div
-              className={clsx(
-                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500)'
-              )}
-            >
+            <div className={clsx('rounded-full rgb(var(--tw-ta-accent-500) p-3.5)')}>
               <CodeIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Tu Voz, Tu Poder"
-          desc=""
+          title={t('features.voice-power.title')}
+          desc={t('features.voice-power.description')}
           additionalDesc={
             <>
-            <p><span style={{ fontSize: '30px'}}>Cada ASHARE está legalmente respaldada y registrada mediante contratos inteligentes, asegurando transparencia y confianza.</span></p>
-          <span style={{ fontSize: '30px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)', lineHeight: '1.5' }}>
-          Posee una parte del ecosistema.
-              </span>{' '}
-              <p><span style={{ fontSize: '30px'}}>Participa en decisiones cruciales y da forma al futuro del ecosistema</span></p>
+              <p>
+                <span style={{ fontSize: '30px' }}>{t('features.voice-power.additional')}</span>
+              </p>
+              <span
+                style={{
+                  fontSize: '30px',
+                  fontWeight: 'bold',
+                  color: 'rgb(var(--tw-ta-accent-500))',
+                  lineHeight: '1.5',
+                }}
+              >
+                {t('features.voice-power.ownership')}
+              </span>
+              <p>
+                <span style={{ fontSize: '30px' }}>{t('features.voice-power.participation')}</span>
+              </p>
               <br />
-            <Link
-              href="/blog/ashares/"
-              rel="noopener noreferrer"
-              className={clsx(
-                'mt-2 flex items-center text-red-400 hover:underline text-sm'
-              )}
-            >
-              <InfoIcon className={clsx('h-5 w-5 mr-2')} />
-              Quiero saber más sobre la legalidad de ASHARES
-            </Link>
+              <Link
+                href="/blog/ashares/"
+                rel="noopener noreferrer"
+                className={clsx('mt-2 flex items-center text-red-400 hover:underline text-sm')}
+              >
+                <InfoIcon className={clsx('h-5 w-5 mr-2')} />
+                {t('features.voice-power.learn-more')}
+              </Link>
             </>
           }
         />
-
-        <div style={{ position: 'absolute', left: '0', marginTop: '260px'}}>
+        <div style={{ position: 'absolute', left: '0', marginTop: '260px' }}>
           <Image src={theImage} alt="AGOD Ecosystem" width={500} height={300} />
         </div>
 
-      <div style={{ marginTop: '150px' }}></div>
-      <div className={clsx('flex flex-col gap-4', 'lg:flex-row lg:gap-8')}>
+        {/* Card 2: AGOD Key */}
+        <div style={{ marginTop: '10px' }}></div>
+        <div className={clsx('grid grid-cols-1 lg:grid-cols-2 gap-4', 'lg:flex-row lg:gap-8')}>
+          <FeaturedCard
+            icon={
+              <div className={clsx('rounded-full rgb(var(--tw-ta-accent-500) p-3.5)')}>
+                <QuickAccessIcon className={clsx('h-5 w-5 text-white')} />
+              </div>
+            }
+            title={t('features.agod-key.title')}
+            desc={t('features.agod-key.description')}
+            additionalDesc={
+              <>
+                <span
+                  style={{
+                    fontSize: '30px',
+                    fontWeight: 'bold',
+                    color: 'rgb(var(--tw-ta-accent-500))',
+                  }}
+                >
+                  {t('features.agod-key.features.title')}
+                </span>
+                <ul style={{ marginTop: '10px' }}>
+                  {
+                    Array.isArray(t.raw('features.agod-key.features.list')) ? (
+                      t.raw('features.agod-key.features.list').map((feature: string, index: number) => (
+                        <li key={index}>→ {feature}</li>
+                      ))
+                    ) : (
+                      <li>→ {t.raw('features.agod-key.features.list')}</li>
+                    )
+                  }
+                </ul>
+              </>
+            }
+          />
+        {/* Card 3: Lo que puedes hacer */}
         <FeaturedCard
           icon={
-            <div
-              className={clsx(
-                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500)'
-              )}
-            >
+            <div className={clsx('rounded-full rgb(var(--tw-ta-accent-500) p-3.5)')}>
               <QuickAccessIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="AGOD Key: Tu Llave Maestra al Futuro"
-          desc="AGOD Key no es solo una herramienta de autenticación, es tu pase exclusivo a un ecosistema revolucionario."
+          title={actionsT('title')}
+          desc={actionsT('description')}
           additionalDesc={
             <>
-              <span style={{ fontSize: '30px', fontWeight: 'bold', color: 'rgb(var(--tw-ta-accent-500)'}}>
-              Características Clave
-              </span>{' '}
-              <div style={{ marginTop: '10px' }}></div>
-              <p> → Verificación de Identidad:
-                 Un proceso de autenticación robusto y ultraseguro para que solo los verdaderos pioneros accedan a nuestras plataformas.
-                  <br/>
-                  <div style={{ marginTop: '10px' }}></div>
-                  → Acceso Seguro:
-                 Protección de última generación para tus activos digitales y participación en el ecosistema.
-                 <br/>
-                  <div style={{ marginTop: '10px' }}></div>
-                  → No tiene costo:
-                 Es tu pase de entrada y como tal no tiene costos adjuntos.
-              </p>
+              <ul>
+                {
+                  Array.isArray(actionsT.raw('list')) ? (
+                    actionsT.raw('list').map((action: string, index: number) => (
+                      <li key={index}>→ {action}</li>
+                    ))
+                  ) : (
+                    <li>→ {actionsT.raw('list')}</li>
+                  )
+                }
+              </ul>
             </>
           }
         />
-         <FeaturedCard
-          icon={
-            <div
-              className={clsx(
-                'rounded-full rgb(var(--tw-ta-accent-500) p-3.5',
-                'dark:rgb(var(--tw-ta-accent-500)'
-              )}
-            >
-              <QuickAccessIcon className={clsx('h-5 w-5 text-white')} />
-            </div>
-          }
-          title="Lo Que Puedes Hacer con AGOD Key"
-          desc=""
-          additionalDesc={
-            <>
-              <div style={{ marginTop: '10px' }}></div>
-              <p> → Acceso a ASHARES:
-                    La única manera de comprar AGOD Shares es a través de tu AGOD Key.
-                  <br/>
-                  <div style={{ marginTop: '10px' }}></div>
-                  → Resguardo de Activos:
-                    Guarda tus tokens, NFTs y otros activos digitales de manera segura.
-                  <br/>
-                  <div style={{ marginTop: '10px' }}></div>
-                  → Participación en Eventos Exclusivos:
-                    Acceso a eventos únicos y promociones especiales dentro del ecosistema.
-                  <br/>
-                  <div style={{ marginTop: '10px' }}></div>
-                  → Transacciones Seguras:
-                    La máxima seguridad para que puedas operar con total tranquilidad.
-                    <br/>
-                  <div style={{ marginTop: '10px' }}></div>
-                  → Voz y Voto:
-                    Accede a las decisiones importantes del ecosistema, formando parte del crecimiento y dirección futura.
-              </p>
-            </>
-          }
-        />
+      </div>
+     </div>
+    </div>
+  );
+}
 
         <div
           className={clsx(
@@ -140,12 +137,6 @@ function AgodkeyContents() {
         >
       
         </div>
-      </div>
-
-      </div>
-    </div>
-  );
-}
 
 function QuoteSection() {
   return (
@@ -167,7 +158,7 @@ function IndexContents() {
         <AgodkeyContents />
       </div>
       <div
-        className={clsx('-mt-12 mb-12', 'md:mb-24 md:mt-0')}
+        className={clsx('-mt-12 mb-12', 'md:mb-40 md:mt-0')}
         style={{ marginTop: '200px' }}
       >
         <QuoteSection />

@@ -1,26 +1,42 @@
-'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/router';
-import LanguageSwitcherSelect from './LanguageSwitcherSelect'
+'use client';
 
-export default function LanguageSwitcher() {
-  const languages = {
-    en: "English",
-    es: "Spanish",
-  };
-  const {locale : activeLocale, locales} = useRouter();
-  const [isOpenDropdown, setisOpenDropdown] = useState(false)
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import clsx from 'clsx';
+
+type LanguageSwitcherProps = {
+  currentLocale: string;
+  allLocales: string[];
+  isOpenDropdown?: boolean;  // Hacemos que sea opcional
+  setisOpenDropdown?: React.Dispatch<React.SetStateAction<boolean>>;  // Opcional
+};
+
+export default function LanguageSwitcher({
+  currentLocale,
+  allLocales = ['en', 'es'],
+}: LanguageSwitcherProps) {
+  const { pathname, query, asPath } = useRouter();
+
+  // Estado para controlar el idioma
+  console.log('currentLocale:', currentLocale); // Añade este log
+  console.log('allLocales:', allLocales); // Añade este log
+
   return (
-    <div className="px-4 py-3">
-        <div className="">
-          <LanguageSwitcherSelect
-            currentLocale={activeLocale}
-            allLocales={Array.from(locales)}
-            isOpenDropdown={isOpenDropdown}
-            setisOpenDropdown={setisOpenDropdown}
-            languages={languages}
-            />
-            </div>
-      </div>
-  )
+    <div className="flex justify-center items-center bg-gray-300 dark:bg-gray-800 rounded-full p-1 shadow-md">
+      {allLocales.map((locale) => (
+        <Link key={locale} href={{ pathname, query }} as={asPath} locale={locale} legacyBehavior>
+          <div
+            className={clsx(
+              'cursor-pointer px-4 py-1 rounded-full transition-all duration-300 font-medium text-sm',
+              locale === currentLocale
+                ? 'bg-blue-500 text-white shadow-md dark:bg-blue-400 dark:text-gray-900' // 🔹 Activo: Azul sólido y destacado
+                : 'bg-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-600 dark:hover:bg-gray-700' // 🔸 Inactivo: Más tenue
+            )}
+          >
+            {locale.toLowerCase()}
+          </div>
+        </Link>
+     ))}
+    </div>
+  );
 }

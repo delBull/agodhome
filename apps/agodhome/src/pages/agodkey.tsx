@@ -1,19 +1,32 @@
-import AgodKey from '@/contents/projects/agod-key';
+import { useTranslations } from 'next-intl';
+import { GetStaticProps } from 'next';
+import AgodKeyContents from '@/contents/projects/agod-key';
 import HeaderImage from '@/contents/projects/HeaderImage';
 import Page from '@/contents-layouts/Page';
 
-function Agodkey() {
+function AgodKeyPage() {
+  const t = useTranslations('agod-key-page.header');
+
   return (
     <Page
       frontMatter={{
-        title: 'AGOD Key y ASHARES',
-        description: '¡Tus Pilares del Futuro en AGOD Ecosystem! AGOD Key y ASHARES son los componentes esenciales que re-definirán tu experiencia dentro de AGOD Ecosystem.',
+        title: t('title'),
+        description: t('description'),
       }}
       headerImage={<HeaderImage />}
     >
-      <AgodKey />
+      <AgodKeyContents />
     </Page>
   );
 }
 
-export default Agodkey;
+export default AgodKeyPage;
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
+  };
+};
+

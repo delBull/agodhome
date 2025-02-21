@@ -1,8 +1,10 @@
 import clsx from 'clsx';
-
+import { useTranslations } from 'next-intl';
 import { QuoteIcon } from '@/components/Icons';
 
 function AshareQuote() {
+  const t = useTranslations('agod-key-page');
+
   return (
     <blockquote
       className={clsx(
@@ -20,7 +22,7 @@ function AshareQuote() {
       />
       <span className={clsx('flex flex-col')}>
         <span className={clsx('leading-[1.15]')}>
-          <em>No solo compres ASHARES; </em>{' '}
+          <em>{t('quote.part1')}</em>{' '}
         </span>
         <span
           className={clsx('flex items-center gap-2 leading-[1.15]', 'lg:gap-4')}
@@ -39,9 +41,9 @@ function AshareQuote() {
                 'dark:text-slate-300'
               )}
             >
-              sé parte del cambio.
+              {t('quote.part2')}
             </strong>{' '}
-            Asegura tu lugar en la revolución de AGOD Ecosystem {' '}
+            {t('quote.part3')}
           </span>
           <span
             className={clsx(
@@ -52,7 +54,7 @@ function AshareQuote() {
           />
         </span>
         <span className={clsx('leading-[1.15]')}>
-        y transforma{' '}
+          {t('quote.part4')}{' '}
           <strong
             className={clsx(
               'relative font-extrabold text-slate-600',
@@ -66,7 +68,7 @@ function AshareQuote() {
                 'dark:bg-slate-800'
               )}
             />
-            tu inversión.
+            {t('quote.part5')}
           </strong>
         </span>
       </span>

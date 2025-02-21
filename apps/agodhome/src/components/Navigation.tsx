@@ -19,8 +19,7 @@ const workLinks = [
   { title: "Pandora's", href: '/explora/pandoras' },
 ];
 
-
-function Navbar() {
+function Navbar({ currentLocale, allLocales }) {
   const t = useTranslations("Navigation")
   const learnLinks = [
     { title: t('Intro'), href: '/intro' },
@@ -89,7 +88,7 @@ function Navbar() {
               />
             </li>
             <li className={clsx('hidden', 'sm:block')}>
-             <LanguageSwitcher />
+             <LanguageSwitcher currentLocale={currentLocale} allLocales={allLocales} />
             </li>
        
             <li className={clsx('hidden', 'sm:block')}>

@@ -20,8 +20,8 @@ function Intro() {
 }
 
 export default Intro;
-export const getStaticProps: GetStaticProps = async ({locale}) => {
 
+export const getStaticProps: GetStaticProps = async ({locale}) => {
   return {
     props: {
       messages: (await import(`../../messages/${locale}.json`)).default,

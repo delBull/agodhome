@@ -1,14 +1,17 @@
+import { useTranslations } from 'next-intl';
 import TILContents from '@/contents/TIL';
 import HeaderImage from '@/contents/TIL/HeaderImage';
 import Page from '@/contents-layouts/Page';
 import { GetStaticPropsContext } from 'next';
 
 function TIL() {
+  const t = useTranslations('roadmap-page.header');
+
   return (
     <Page
       frontMatter={{
-          title: 'Roadmap',
-          description: `El camino 2024 está trazado y en proceso`,
+        title: t('title'),
+        description: t('description'),
       }}
       headerImage={<HeaderImage />}
     >
