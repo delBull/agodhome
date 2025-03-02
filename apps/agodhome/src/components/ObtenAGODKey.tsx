@@ -10,6 +10,7 @@ import modalImage from '@/assets/images/quetza.png';
 
 import Image from "./mdx/Image";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+// @ts-ignore
 import { toast } from "react-hot-toast";
 import { useTranslations } from "next-intl";
 
@@ -18,7 +19,6 @@ export default function App() {
   const t = useTranslations('home-page.HeaderCta')
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [email, setEmail] = useState("");
-  const [canSubmit, setCanSubmit] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -44,7 +44,6 @@ export default function App() {
       } else {
         toast.error("Ha ocurrido un error, inténtalo más tarde.");
       }
-      setCanSubmit(true);
       setIsButtonDisabled(false);
       return res.json();
     }).then(data => {
@@ -58,7 +57,6 @@ export default function App() {
 
   const handleFormSubmit = function(e: FormEvent) {
     e.preventDefault();
-    setCanSubmit(false);
     setIsButtonDisabled(true);
     toast("¡Muy Pronto!");
 
@@ -144,7 +142,7 @@ export default function App() {
                     <button
                       className="block mx-auto mb-3 border-solid border-1 border-gray-300 rounded-md p-2 bg-red-500 text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
                       type="submit"
-                      disabled={!canSubmit}
+                      disabled={isButtonDisabled}
                     >
                       Unirme a la lista de espera
                     </button>

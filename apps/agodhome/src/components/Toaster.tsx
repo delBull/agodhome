@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+// @ts-ignore
 import { ToastBar, Toaster } from 'react-hot-toast';
 
 function Toast(): JSX.Element {
