@@ -8,8 +8,6 @@ import SectionTitle from '@/components/sections/SectionTitle';
 
 import tierraLateral from '@/assets/images/tierralateral.png';
 
-import type { TodoItemState } from '@/contents/index/Cards/TodoItem';
-
 import styles from '@/styles/FloatingImage.module.css';
 import { useMessages, useTranslations } from 'next-intl';
 
@@ -78,7 +76,7 @@ type CleanIntuitiveMessages = {
 //   },
 // ];
 
-function CleanIntuitive() {
+function CleanIntuitive(): JSX.Element {
   const messages = useMessages() as CleanIntuitiveMessages
   const t = useTranslations('home-page.CleanIntuitive')
   const content = Object.keys(messages['home-page'].CleanIntuitive.sectionContent) as SectionContentKeys[];

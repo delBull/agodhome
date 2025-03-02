@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-export function CountdownTimer() {
+export function CountdownTimer(): JSX.Element {
   const t = useTranslations('home-page.CountdownTimer-card')
     const [isVisible, setIsVisible] = useState(true);
 

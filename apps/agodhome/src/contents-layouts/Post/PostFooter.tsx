@@ -27,7 +27,7 @@ interface PostFooterProps {
   category: TPostFrontMatter['category'];
 }
 
-function PostFooter({ tags, category }: PostFooterProps) {
+function PostFooter({ tags, category }: PostFooterProps): JSX.Element {
   return (
     <div
       className={clsx(

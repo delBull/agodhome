@@ -6,7 +6,7 @@ interface CountUpProps {
   to: number;
 }
 
-function CountUp({ from, to }: CountUpProps) {
+function CountUp({ from, to }: CountUpProps): JSX.Element {
   const nodeRef = useRef(null);
 
   useEffect(() => {

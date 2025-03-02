@@ -4,7 +4,7 @@ interface LogoProps {
   active?: boolean;
 }
 
-function Logo({ active = false }: LogoProps) {
+function Logo({ active = false }: LogoProps): JSX.Element {
   return (
     <div className={clsx('flex items-center gap-1.5 font-[1000] leading-none')}>
       <div

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 
-function Error404Contents() {
+function Error404Contents(): JSX.Element {
   return (
     <div
       className={clsx(

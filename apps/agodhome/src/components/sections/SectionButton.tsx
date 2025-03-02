@@ -18,7 +18,7 @@ export function SectionButton({
   active = false,
   onClick = () => {},
   className = '', // Asegúrate de inicializarlo como un string vacío por defecto
-}: SectionButtonProps) {
+}: SectionButtonProps): JSX.Element {
   return (
     <button
       type="button"
@@ -77,7 +77,7 @@ export function SectionButtonSmall({
   active = false,
   onClick = () => {},
   className = '', // Agrega className aquí
-}: Omit<SectionButtonProps, 'description'>) {
+}: Omit<SectionButtonProps, 'description'>): JSX.Element {
   return (
     <button
       type="button"

@@ -56,7 +56,7 @@ function ActionCenterButton({
   );
 }
 
-function ActionCenter() {
+function ActionCenter(): JSX.Element {
   const { theme, setTheme } = useTheme();
   const { focusMode, setFocusMode } = useFocusMode();
 

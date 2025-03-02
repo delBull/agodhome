@@ -4,7 +4,7 @@ import AgodKeyContents from '@/contents/projects/agod-key';
 import HeaderImage from '@/contents/projects/HeaderImage';
 import Page from '@/contents-layouts/Page';
 
-function AgodKeyPage() {
+function AgodKeyPage(): JSX.Element {
   const t = useTranslations('agod-key-page.header');
 
   return (

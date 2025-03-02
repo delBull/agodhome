@@ -1,7 +1,7 @@
 export type TodoItemState = 'rabbitty' | 'pandoras' | 'daccess' | 'adex' | 'raWallet' | 'tokenizacion' | 'future-dapps';
 
 
-function TodoItem () {
+function TodoItem (): JSX.Element {
 
   return (
     <>

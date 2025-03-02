@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { QuoteIcon } from '@/components/Icons';
 
-function AshareQuote() {
+function AshareQuote(): JSX.Element {
   const t = useTranslations('agod-key-page');
 
   return (

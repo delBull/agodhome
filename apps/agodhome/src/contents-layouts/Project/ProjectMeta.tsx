@@ -9,7 +9,7 @@ interface ProjectMetaProps {
   npmUrl?: TProjectFrontMatter['npmUrl'];
 }
 
-function ProjectMeta({ githubUrl = '', npmUrl = '' }: ProjectMetaProps) {
+function ProjectMeta({ githubUrl = '', npmUrl = '' }: ProjectMetaProps): JSX.Element {
   if (!githubUrl && !npmUrl) return null;
 
   return (

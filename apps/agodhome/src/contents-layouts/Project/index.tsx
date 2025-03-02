@@ -21,7 +21,7 @@ function ProjectLayout({
   frontMatter: { title, description, caption, githubUrl, npmUrl },
   tableOfContents,
   children = null,
-}: PropsWithChildren<ProjectLayoutProps>) {
+}: PropsWithChildren<ProjectLayoutProps>): JSX.Element {
   // get og image urls
   const image = getPageOgImageUrl({
     caption,

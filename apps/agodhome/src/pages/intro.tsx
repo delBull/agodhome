@@ -4,7 +4,7 @@ import Page from '@/contents-layouts/Page';
 import { useTranslations } from 'next-intl';
 import { GetStaticProps } from 'next';
 
-function Intro() {
+function Intro(): JSX.Element {
   const t = useTranslations('intro-page.main-section')
   return (
     <Page

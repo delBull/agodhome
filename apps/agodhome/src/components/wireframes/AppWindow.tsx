@@ -40,7 +40,7 @@ function AppWindow({
   children = null,
   type = 'app',
   browserTabs = [],
-}: PropsWithChildren<AppWindowProps>) {
+}: PropsWithChildren<AppWindowProps>): JSX.Element {
   const isWithBrowserTabs = type === 'browser' && browserTabs;
 
   return (

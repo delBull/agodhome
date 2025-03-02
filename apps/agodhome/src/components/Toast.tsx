@@ -12,7 +12,7 @@ interface ToastProps {
   t: TToast;
 }
 
-function Toast({ title, message, t }: ToastProps) {
+function Toast({ title, message, t }: ToastProps): JSX.Element {
   return (
     <m.div
       animate={{ opacity: [0, 1], x: [16, 0] }}

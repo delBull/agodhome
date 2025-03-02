@@ -6,7 +6,7 @@ import Kbd from '@/components/Kbd';
 import useGlobal from '@/hooks/useGlobal';
 import { useTranslations } from 'next-intl';
 
-function NavIconQuickAccess() {
+function NavIconQuickAccess(): JSX.Element {
   const { setQuickAccessOpen } = useGlobal();
 const t = useTranslations('Navigation')
   return (

@@ -16,7 +16,7 @@ const animation = {
   show: { opacity: 1, transition: { duration: 0.18 } },
 };
 
-function QuickAccess() {
+function QuickAccess(): JSX.Element {
   const closeButtonRef = useRef(null);
   const { isQuickAccessOpen, setQuickAccessOpen } = useGlobal();
 

@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
-function Document({ locale }) {
+function Document({ locale }): JSX.Element {
 
   return (
     <Html lang={locale || 'es'}>

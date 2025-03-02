@@ -12,7 +12,7 @@ interface PageWithMDXProps {
 function PageWithMDX({
   tableOfContents,
   children = null,
-}: PropsWithChildren<PageWithMDXProps>) {
+}: PropsWithChildren<PageWithMDXProps>): JSX.Element {
   return (
     <div
       className={clsx(

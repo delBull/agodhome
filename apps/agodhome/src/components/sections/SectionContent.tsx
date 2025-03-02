@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import type { PropsWithChildren } from 'react';
 
-function SectionContent({ children }: PropsWithChildren) {
+function SectionContent({ children }: PropsWithChildren): JSX.Element {
   return (
     <div
       className={clsx(

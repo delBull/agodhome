@@ -113,7 +113,7 @@ export function PostOgImage({
   tags = [],
   date = '',
   lang,
-}: PostOgImageProps) {
+}: PostOgImageProps): JSX.Element {
   return (
     <div style={styles.container}>
       {category && (
@@ -178,7 +178,7 @@ export function PageOgImage({
   caption = '',
   title = '',
   description = '',
-}: PageOgImageProps) {
+}: PageOgImageProps): JSX.Element {
   return (
     <div style={styles.container}>
       {caption && (

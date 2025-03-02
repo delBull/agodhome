@@ -21,7 +21,7 @@ type TPostPreview = TPostFrontMatter & {
   views: number;
 };
 
-function BlogContents({ posts }: BlogContentsProps) {
+function BlogContents({ posts }: BlogContentsProps): JSX.Element {
   const { data } = useContentMeta();
 
   let pinnedPost: TPostPreview;

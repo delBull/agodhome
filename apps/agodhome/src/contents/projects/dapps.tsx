@@ -18,7 +18,7 @@ type Content = {
   description: string;
 };
 
-function Dapps() {
+function Dapps(): JSX.Element {
   const t = useTranslations('agod-key-page');
 
   const content: Array<Content> = [

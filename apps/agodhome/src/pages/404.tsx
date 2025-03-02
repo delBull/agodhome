@@ -4,7 +4,7 @@ import Error404Contents from '@/contents/404';
 
 import type { ReactElement } from 'react';
 
-function Error404() {
+function Error404(): JSX.Element {
   return (
     <>
       <Head>

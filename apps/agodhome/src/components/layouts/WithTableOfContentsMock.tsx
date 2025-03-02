@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import type { PropsWithChildren } from 'react';
 
-function WithTableOfContentsMock({ children = null }: PropsWithChildren) {
+function WithTableOfContentsMock({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <div className={clsx('content-wrapper')}>
       <div className={clsx('flex flex-row-reverse gap-8', 'xl:gap-24')}>

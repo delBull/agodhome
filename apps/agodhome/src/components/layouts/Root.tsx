@@ -15,7 +15,7 @@ const plusJakartaSans = PlusJakartaSans({
   variable: '--font-sans',
 });
 
-function Root({ children }: PropsWithChildren) {
+function Root({ children }: PropsWithChildren): JSX.Element {
   useEffect(() => {
     document.documentElement.classList.add(
       jetbrainsMono.variable,

@@ -29,7 +29,7 @@ const content: Array<Content> = [
   },
 ];
 
-function PrettyOptimized() {
+function PrettyOptimized(): JSX.Element {
   const t = useTranslations('home-page.PrettyOptimized-section')
   return (
     <header >

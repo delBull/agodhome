@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 
-function AccentDemo() {
+function AccentDemo(): JSX.Element {
   const accents = ['violet', 'red', 'blue', 'orange', 'green', 'pink'] as const;
 
   const [accent, setAccent] = useState<typeof accents[number]>('violet');

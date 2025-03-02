@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { createChat } from '@n8n/chat';
 
 
-const Chat = () => {
+const Chat = (): JSX.Element => {
   useEffect(() => {
     createChat({
       webhookUrl: 'https://crm.agodecosystem.com/webhook/e3f435d5-80e1-4274-a591-2c403c8940e3/chat',

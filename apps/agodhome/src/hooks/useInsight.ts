@@ -14,9 +14,9 @@ interface ReactionParams {
 
 export default function useInsight({ 
   slug, 
-  contentType = 'POST',
-  contentTitle,
-  countView = false 
+  //contentType = 'POST',
+  //contentTitle,
+  //countView = false 
 }: InsightProps) {
   const [data, setData] = useState(() => {
     if (typeof window !== 'undefined') {

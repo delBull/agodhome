@@ -86,10 +86,10 @@ export type ReactionsProps = {
 };
 
 function Reactions({
-  contentType,
-  contentTitle,
-  withCountView = true,
-}: ReactionsProps) {
+  //contentType,
+  //contentTitle,
+  //withCountView = true,
+}: ReactionsProps): JSX.Element {
   // currently, there is no way to get the 'slug' via a component property.
   const { pathname } = useRouter();
   const slug = pathname.split('/').reverse()[0];

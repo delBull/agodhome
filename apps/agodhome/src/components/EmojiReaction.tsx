@@ -17,22 +17,18 @@ function randomBetween(min: number, max: number) {
 }
 
 /**
- * function to generate animation values, which will be
+ * Function to generate animation values, which will be
  * mapped and animated as a framer-motion component.
  */
 function getRandomAnimationValue(): AnimationValue {
   // create a random value for the component key
   const key = randomBetween(0, 1000);
-
   // random to x points (left and right)
   const x = randomBetween(-40, 40);
-
   // random to y points (top length)
   const y = randomBetween(-230, -170);
-
   // random duration, but calculated using the top length
   const duration = randomBetween(1.6, 1.9) + y / 1000;
-
   return {
     // additional: move element in the middle of the animation
     x: [0, x - randomBetween(-10, 10), x],
@@ -64,7 +60,7 @@ interface EmojiReactionProps {
   reactionType?: 'CLAPPING' | 'AMAZED' | 'THINKING';
 }
 
-function EmojiReaction({
+const EmojiReaction: React.FC<EmojiReactionProps> = ({
   title,
   disabled = false,
   defaultImage,
@@ -72,7 +68,7 @@ function EmojiReaction({
   disabledImage,
   onClick,
   reactionType = 'CLAPPING',
-}: EmojiReactionProps) {
+}) => {
   const [history, setHistory] = useState<Array<AnimationValue>>([]);
   const [src, setSrc] = useState<string>(disabled ? disabledImage : defaultImage);
   const { count, hasReacted, handleReaction } = useReactions(title, reactionType);
@@ -88,15 +84,12 @@ function EmojiReaction({
   const handleClick = () => {
     console.log('Click en reacción:', { title });
     if (disabled || hasReacted) return;
-
     // set history
     setHistory((current) => [...current, getRandomAnimationValue()]);
-
     // Guardar la reacción si tenemos postId y reactionType
     if (title) {
       handleReaction();
     }
-
     // Llamar al onClick si existe
     onClick?.();
   };
@@ -160,7 +153,6 @@ function EmojiReaction({
               />
             </m.div>
           ))}
-
           <m.div className={clsx('h-10 w-10')} variants={emojiMotion}>
             <Image
               className={clsx('pointer-events-none h-full w-full')}
@@ -179,6 +171,6 @@ function EmojiReaction({
       </div>
     </>
   );
-}
+};
 
 export default EmojiReaction;

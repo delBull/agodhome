@@ -11,7 +11,7 @@ interface PostMetaProps {
   lang: TPostFrontMatter['lang'];
 }
 
-function PostMeta({ date, lang }: PostMetaProps) {
+function PostMeta({ date, lang }: PostMetaProps): JSX.Element {
   return (
     <div className={clsx('content-wrapper mb-10')}>
       <div

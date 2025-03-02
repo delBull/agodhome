@@ -10,7 +10,7 @@ import GlobalStateProvider from '@/providers/GlobalStateProvider';
 import type { PropsWithChildren } from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-function Provider({ children = null }: PropsWithChildren) {
+function Provider({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}

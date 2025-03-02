@@ -4,7 +4,7 @@ import Page from '@/contents-layouts/Page';
 
 
 
-function PoliticaPrivacidad() {
+function PoliticaPrivacidad(): JSX.Element {
   return (
     <Page
       frontMatter={{

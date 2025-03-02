@@ -23,7 +23,7 @@ interface HeaderCtaProps {
 
 
 
-function ButtonResume({t}) {
+function ButtonResume({ t }: { t: (key: string) => string }): JSX.Element {
   return (
     <div>
     <a
@@ -42,7 +42,7 @@ function ButtonResume({t}) {
   );
 }
 
-function AvailableForHire() {
+function AvailableForHire(): JSX.Element {
   return (
     <div
       className={clsx(
@@ -73,7 +73,7 @@ function AvailableForHire() {
 function HeaderCta({
   isFree = true,
   isFreeAnimationDuration = 4,
-  }: HeaderCtaProps) {
+  }: HeaderCtaProps): JSX.Element {
     const shouldReduceMotion = useReducedMotion();
     const t = useTranslations('home-page.HeaderCta')
 

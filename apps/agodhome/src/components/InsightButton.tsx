@@ -17,7 +17,7 @@ interface InsightButtonProps {
   reactions: number;
 }
 
-function InsightButton({ views, shares, reactions }: InsightButtonProps) {
+function InsightButton({ views, shares, reactions }: InsightButtonProps): JSX.Element {
   return (
     <Popover>
       {({ open }) => (

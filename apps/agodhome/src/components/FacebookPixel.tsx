@@ -1,7 +1,7 @@
 import Script from 'next/script'
 import Image from 'next/image'
 
-const FacebookPixel = () => {
+const FacebookPixel = (): JSX.Element => {
   return (
     <>
       <Script id="fb-pixel" strategy="afterInteractive">

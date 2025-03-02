@@ -14,7 +14,7 @@ export default function Image({
   className,
   src,
   ...props
-}: ImageProps) {
+}: ImageProps): JSX.Element {
   const [image, setImage] = useState<string>('');
 
   return (

@@ -5,7 +5,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon } from '@/components/Icons';
 import AsharesModal from '@/components/AsharesModal';
 
-function Opener() {
+function Opener(): JSX.Element {
   const { isOpen, onOpenChange } = useDisclosure();
   const t = useTranslations('agod-key-page.opener');
 

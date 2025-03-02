@@ -107,7 +107,7 @@ interface ActivityProps {
   onItemClick?: () => void;
 }
 
-function Activity({ onItemClick = () => {} }: ActivityProps) {
+function Activity({ onItemClick = () => {} }: ActivityProps): JSX.Element {
   const { data, isLoading } = useContentActivity();
 
   const renderData = () => {

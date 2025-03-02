@@ -12,7 +12,7 @@ interface SkeletonProps {
 export function SkeletonSm({
   w = 16,
   children = null,
-}: PropsWithChildren<SkeletonProps>) {
+}: PropsWithChildren<SkeletonProps>): JSX.Element {
   return (
     <div
       className={clsx(
@@ -29,7 +29,7 @@ export function SkeletonSm({
 export function SkeletonMd({
   w = 24,
   children = null,
-}: PropsWithChildren<SkeletonProps>) {
+}: PropsWithChildren<SkeletonProps>): JSX.Element {
   return (
     <div
       className={clsx(

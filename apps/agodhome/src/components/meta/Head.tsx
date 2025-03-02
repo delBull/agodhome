@@ -16,7 +16,7 @@ function Head({
   ogImage,
   overrideTitle = false,
   structuredData = '',
-}: HeadProps) {
+}: HeadProps): JSX.Element {
   const currentUrl = useCurrentUrl();
 
   const htmlTitle = overrideTitle

@@ -148,7 +148,7 @@ function QuoteSection() {
   );
 }
 
-function IndexContents() {
+function IndexContents(): JSX.Element {
   return (
     <>
       <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>

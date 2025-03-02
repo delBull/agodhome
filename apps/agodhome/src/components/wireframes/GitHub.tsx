@@ -16,7 +16,7 @@ function GitHubWireframe({
   repository,
   description,
   additionalDesc,
-}: GithubWireframeProps) {
+}: GithubWireframeProps): JSX.Element {
   return (
     <div
       className={clsx(

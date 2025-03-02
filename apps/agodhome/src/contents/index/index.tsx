@@ -265,7 +265,7 @@ function QuoteSection() {
   );
 }
 
-function IndexContents() {
+function IndexContents(): JSX.Element {
   return (
     <>
       <Header />

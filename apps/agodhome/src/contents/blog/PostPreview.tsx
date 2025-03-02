@@ -25,7 +25,7 @@ function PostPreview({
   views,
   shares,
   pinned = false,
-}: PostPreviewProps) {
+}: PostPreviewProps): JSX.Element {
   return (
     <article lang={lang}>
       <Link

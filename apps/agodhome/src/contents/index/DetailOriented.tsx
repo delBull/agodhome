@@ -4,7 +4,7 @@ import { HeartIcon } from '@/components/Icons';
 import SectionTitle from '@/components/sections/SectionTitle';
 import { useTranslations } from 'next-intl';
 
-function DetailOriented() {
+function DetailOriented(): JSX.Element {
   const t = useTranslations('home-page.DetailOriented-section')
   return (
     <header className={clsx('mb-8')}>

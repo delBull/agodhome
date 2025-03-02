@@ -9,7 +9,7 @@ interface StackProps {
 export function VStack({
   spacing,
   children = null,
-}: PropsWithChildren<StackProps>) {
+}: PropsWithChildren<StackProps>): JSX.Element {
   return (
     <div className={clsx('flex flex-col flex-wrap')} style={{ gap: spacing }}>
       {children}
@@ -20,7 +20,7 @@ export function VStack({
 export function HStack({
   spacing,
   children = null,
-}: PropsWithChildren<StackProps>) {
+}: PropsWithChildren<StackProps>): JSX.Element {
   return (
     <div className={clsx('flex flex-row flex-wrap')} style={{ gap: spacing }}>
       {children}

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { QuoteIcon } from '@/components/Icons';
 import { useTranslations } from 'next-intl';
 
-function Quote() {
+function Quote(): JSX.Element {
   const t = useTranslations('home-page.quote-section')
   return (
     <blockquote

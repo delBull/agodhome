@@ -11,7 +11,7 @@ type BlogProps = {
   posts: BlogContentsProps['posts'];
 };
 
-function Blog({ posts }: BlogProps) {
+function Blog({ posts }: BlogProps): JSX.Element {
   return (
     <Page
       frontMatter={{

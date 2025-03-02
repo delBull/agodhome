@@ -58,7 +58,7 @@ function TableOfContentsLink({ title, depth = 0, slug, active }: TableOfContents
   );
 }
 
-function TableOfContents({ items }: { items: TTableOfContentsItem[] }) {
+function TableOfContents({ items }: { items: TTableOfContentsItem[] }): JSX.Element {
   const { currentSection } = useScrollSpy();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isSticky, setIsSticky] = useState(false);

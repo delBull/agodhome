@@ -4,7 +4,7 @@ import HeaderImage from '@/contents/TIL/HeaderImage';
 import Page from '@/contents-layouts/Page';
 import { GetStaticPropsContext } from 'next';
 
-function TIL() {
+function TIL(): JSX.Element {
   const t = useTranslations('roadmap-page.header');
 
   return (

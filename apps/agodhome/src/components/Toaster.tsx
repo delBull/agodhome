@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ToastBar, Toaster } from 'react-hot-toast';
 
-function Toast() {
+function Toast(): JSX.Element {
   return (
     <div
       className={clsx(

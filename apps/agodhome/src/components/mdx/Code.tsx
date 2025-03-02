@@ -46,7 +46,7 @@ function Code({
   withCopyButton = true,
   withFooter = true,
   children = null,
-}: PropsWithChildren<CodeProps>) {
+}: PropsWithChildren<CodeProps>): JSX.Element {
   const codeRef = useRef<HTMLPreElement>(null);
   const [isCopied, setCopied] = useState<boolean>(false);
 

@@ -5,7 +5,7 @@ import HeaderTechStack from '@/contents/index/Header/HeaderTechStack';
 import HeaderTitle from '@/contents/index/Header/HeaderTitle';
 import { CountdownTimer } from '@/components/countdown-timer';
 
-function Header() {
+function Header(): JSX.Element {
   return (
     <header
       id="page-header"

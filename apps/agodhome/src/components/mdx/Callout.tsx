@@ -11,7 +11,7 @@ interface CalloutProps {
 function Callout({
   variant = 'neutral',
   children = null,
-}: PropsWithChildren<CalloutProps>) {
+}: PropsWithChildren<CalloutProps>): JSX.Element {
   let data: {
     title: string;
     icon: ReactElement;

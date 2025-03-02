@@ -5,7 +5,7 @@ import { getBaseUrl } from '@/helpers/url';
 import IndexContents from '@/contents/index';
 import { GetStaticPropsContext } from 'next';
 
-function Index() {
+function Index(): JSX.Element {
   return (
     <>
       <Head

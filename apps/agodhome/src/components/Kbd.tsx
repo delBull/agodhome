@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import type { PropsWithChildren } from 'react';
 
-function Kbd({ children }: PropsWithChildren) {
+function Kbd({ children }: PropsWithChildren): JSX.Element {
   return (
     <kbd
       className={clsx(

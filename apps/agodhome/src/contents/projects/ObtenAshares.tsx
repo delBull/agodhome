@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
 import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon } from '@/components/Icons';
 import { useDisclosure } from '@nextui-org/react';
@@ -9,57 +8,64 @@ import Link from 'next/link';
 
 const AsharesModal = dynamic(() => import('@/components/AsharesModal'), { ssr: false });
 
-function ObtenAshares() {
+function ObtenAshares(): JSX.Element {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isClient, setIsClient] = useState(false);
   const sectionRef = useRef(null);
-  const t = useTranslations('agod-key-page.get-ashares');
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  // Función para manejar el click en el enlace
   const handleClick = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Previene el comportamiento por defecto del enlace
+
     if (sectionRef.current) {
+      // Desplaza la página hacia el elemento referenciado
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
+    // Abre el modal
     onOpen();
   };
 
   if (!isClient) {
-    return null;
+    return null; // O un loader si deseas
   }
 
   return (
     <header ref={sectionRef}>
       <SectionTitle
-        title={t('title')}
-        caption={t('caption')}
+        title="¿Quieres ser parte?"
+        caption="¡Obtén tus ASHARES!"
         description={
           <>
-            <span>{t('description')}</span>
+            <span>
+              Rápida reflección de utilidades: La inversión en ASHARES se verá reflejada en utilidades en corto 
+              tiempo, gracias a nuestro modelo deflacionario y estrategias de crecimiento. También recibirás tus 
+              ganancias tangibles adheridas a tus tokens ASHARES que estarán alojados en tu AGOD Key. Por lo que 
+              serás poseedor de una parte del ecosistema, tendrás propiedad e influencia, y participación en el 
+              desarrollo continuo. Dale click aquí abajito 👇.
+            </span>
             <br />
             <a
               href="#"
               rel="noopener noreferrer"
-              className={clsx('mt-2 flex items-center text-gray-400 pointer-events-none opacity-50')}
+              className={clsx('mt-2 flex items-center text-red-400 hover:underline')}
               onClick={handleClick}
             >
-              {t('link')}
+              Invierte en ASHARES
               <HeartIcon className={clsx('h-5 w-5 ml-2')} />
             </a>
             <br />
             <div style={{ marginTop: '30px' }}></div>
-            <span style={{ fontSize: '30px', fontWeight: 'bold'}}>
-              {t('additional')}
-            </span>
+            <span style={{ fontSize: '30px', fontWeight: 'bold'}}>¿Tienes dudas de cómo adquirir AGOD Key?</span>
             <Link
               href="/blog/agodkey"
               rel="noopener noreferrer"
               className={clsx('flex items-center text-red-400 hover:underline')}
             >
-              {t('learn-more')}
+              Revisa este blog post
             </Link>
           </>
         }

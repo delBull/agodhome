@@ -1,4 +1,6 @@
-const YouTube = ({ videoId }) => {
+import type { FC } from 'react';
+
+const YouTube: FC<{ videoId: string }> = ({ videoId }): JSX.Element => {
   return (
     <div className="relative pb-[56.25%] h-0 overflow-hidden max-w-full my-4">
       <iframe

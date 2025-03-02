@@ -5,7 +5,7 @@ import Reactions from '@/components/Reactions';
 
 import type { ReactionsProps } from '@/components/Reactions';
 
-function WithReactions(props: ReactionsProps) {
+function WithReactions(props: ReactionsProps): JSX.Element {
   return (
     <div
       className={clsx(

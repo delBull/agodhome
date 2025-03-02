@@ -9,7 +9,7 @@ interface NavIconProps {
   label?: string;
 }
 
-function NavIcon({ href, icon, title, label = '' }: NavIconProps) {
+function NavIcon({ href, icon, title, label = '' }: NavIconProps): JSX.Element {
   return (
     <a
       href={href}

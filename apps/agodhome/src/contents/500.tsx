@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-function Error500Contents() {
+function Error500Contents(): JSX.Element {
   return (
     <div
       className={clsx(

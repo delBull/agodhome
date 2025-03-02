@@ -8,7 +8,7 @@ import type { LinkProps } from 'next/link';
 
 type QuickViewProps = LinkProps & PropsWithChildren;
 
-export function QuickView({ href, children }: QuickViewProps) {
+export function QuickView({ href, children }: QuickViewProps): JSX.Element {
   const handleQuickView = () => {
     const title = 'Quick Preview';
     const width = 480;

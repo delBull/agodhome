@@ -37,7 +37,7 @@ interface CodeGroupProps {
   variant?: 'tab' | 'files';
 }
 
-function CodeGroup({ variant = 'tab', children }: CodeGroupProps) {
+function CodeGroup({ variant = 'tab', children }: CodeGroupProps): JSX.Element {
   const tab: Array<{
     icon: ReactElement;
     title: string;

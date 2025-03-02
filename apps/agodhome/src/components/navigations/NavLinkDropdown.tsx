@@ -39,7 +39,7 @@ interface NavLinkDropdownProps {
   items: Array<NavLink>;
 }
 
-function NavLinkDropdown({ title, items }: NavLinkDropdownProps) {
+function NavLinkDropdown({ title, items }: NavLinkDropdownProps): JSX.Element {
   return (
     <div className="relative">
       <Menu>

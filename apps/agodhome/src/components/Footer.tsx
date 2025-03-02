@@ -122,7 +122,7 @@ function FooterDescription({t}) {
   );
 }
 
-function Footer() {
+function Footer(): JSX.Element {
   const t : TranslationObject = useTranslations('footer')
   return (
     <footer

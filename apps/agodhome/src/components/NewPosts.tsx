@@ -22,7 +22,7 @@ interface NewPostsProps {
   onItemClick?: () => void;
 }
 
-function NewPosts({ onItemClick = () => {} }: NewPostsProps) {
+function NewPosts({ onItemClick = () => {} }: NewPostsProps): JSX.Element {
   const { data } = useNewPosts();
 
   if (data.length === 0) return null;

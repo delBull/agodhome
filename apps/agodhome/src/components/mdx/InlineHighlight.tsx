@@ -9,7 +9,7 @@ interface InlineHighlightProps {
 export function InlineHighlight({
   color = 'accent',
   children = null,
-}: PropsWithChildren<InlineHighlightProps>) {
+}: PropsWithChildren<InlineHighlightProps>): JSX.Element {
   return (
     <span
       className={clsx('mdx-inline-highlight', [

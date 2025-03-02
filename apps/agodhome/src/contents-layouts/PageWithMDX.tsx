@@ -17,7 +17,7 @@ function PageWithMDX({
   frontMatter: { title, description, caption },
   tableOfContents,
   children = null,
-}: PropsWithChildren<PageWithMDXProps>) {
+}: PropsWithChildren<PageWithMDXProps>): JSX.Element {
   const image = getPageOgImageUrl({
     caption,
     title,

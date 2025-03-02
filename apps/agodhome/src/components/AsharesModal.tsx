@@ -5,19 +5,19 @@ import { m } from 'framer-motion';
 import Image from 'next/image';
 import modalImage from '@/assets/images/quetza.png';
 
-function AsharesModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: () => void }) {
-  // state vars
+// Definir la interfaz de props
+interface AsharesModalProps {
+  isOpen: boolean;
+  onOpenChange: () => void;
+}
+
+const ASharesModal: React.FC<AsharesModalProps> = ({ isOpen, onOpenChange }) => {
+  // State vars
   const [isClient, setIsClient] = useState(false);
-  const [isMinting, setIsMinting] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
-
-  // Función temporal desactivada
-  const handleMint = async () => {
-    console.log('Función de mint temporalmente desactivada');
-  };
 
   return (
     <Modal
@@ -78,4 +78,4 @@ function AsharesModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange:
   );
 }
 
-export default AsharesModal;
+export default ASharesModal;

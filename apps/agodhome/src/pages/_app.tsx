@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
 import Provider from '@/providers';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
@@ -31,7 +31,7 @@ type Props = Omit<AppProps<PageProps>, 'pageProps'> & {
   pageProps: PageProps;
 };
 
-function App({ Component, pageProps }: Props) {
+function App({ Component, pageProps }: Props): JSX.Element {
   const router = useRouter();
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -85,10 +85,10 @@ function App({ Component, pageProps }: Props) {
       <NextUIProvider>
         <Provider>
           <RootLayout>
-          <SpeedInsights/>
             <WithNavigationFooter>
               <div>
                 <Component {...pageProps} />
+                <SpeedInsights/>
               </div>
             </WithNavigationFooter>
             <GoogleAnalytics gaId="G-B4C9EBTKKF" />

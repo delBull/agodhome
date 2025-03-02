@@ -23,7 +23,7 @@ function PageHeader({
   description,
   caption = '',
   headerImage = null,
-}: PageHeaderProps) {
+}: PageHeaderProps): JSX.Element {
   return (
     <header
       id="page-header"

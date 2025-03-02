@@ -6,7 +6,7 @@ import { formatDate } from '@/helpers/post';
 
 import type { PropsWithChildren, ReactElement } from 'react';
 
-export function Done({ children = null }: PropsWithChildren) {
+export function Done({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <div className={clsx('mdx-do', 'md:min-w-0 md:flex-1')}>
       <div
@@ -33,7 +33,7 @@ export function Done({ children = null }: PropsWithChildren) {
   );
 }
 
-export function Missing({ children = null }: PropsWithChildren) {
+export function Missing({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <div className={clsx('mdx-dont', 'md:min-w-0 md:flex-1')}>
       <div
@@ -60,7 +60,7 @@ export function Missing({ children = null }: PropsWithChildren) {
   );
 }
 
-export function DnD({ children = null }: PropsWithChildren) {
+export function DnD({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <div
       className={clsx(
@@ -74,11 +74,11 @@ export function DnD({ children = null }: PropsWithChildren) {
   );
 }
 
-export function ItemTags({ children = null }: PropsWithChildren) {
+export function ItemTags({ children = null }: PropsWithChildren): JSX.Element {
   return <div className={clsx('-mt-1 mb-4 flex gap-2')}>{children}</div>;
 }
 
-export function ItemTag({ children = null }: PropsWithChildren) {
+export function ItemTag({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <div
       className={clsx(
@@ -91,7 +91,7 @@ export function ItemTag({ children = null }: PropsWithChildren) {
   );
 }
 
-export function Item({ children = null }: PropsWithChildren) {
+export function Item({ children = null }: PropsWithChildren): JSX.Element {
   return (
     <article className={clsx('', 'md:pb-16')}>
       <div
@@ -129,7 +129,7 @@ interface ItemsProps {
 export function Items({
   date,
   children = null,
-}: PropsWithChildren<ItemsProps>) {
+}: PropsWithChildren<ItemsProps>): JSX.Element {
   return (
     <div className={clsx('flex flex-row gap-6', 'md:gap-12 lg:gap-24')}>
       <div className={clsx('hidden', 'md:block md:pb-24')}>

@@ -19,7 +19,7 @@ const workLinks = [
   { title: "Pandora's", href: '/explora/pandoras' },
 ];
 
-function Navbar({ currentLocale, allLocales }) {
+function Navbar({ currentLocale, allLocales }): JSX.Element {
   const t = useTranslations("Navigation")
   const learnLinks = [
     { title: t('Intro'), href: '/intro' },

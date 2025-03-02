@@ -29,7 +29,7 @@ interface SkipNavigationProps {
   skipTableOfContents?: boolean;
 }
 
-function SkipNavigation({ skipTableOfContents = true }: SkipNavigationProps) {
+function SkipNavigation({ skipTableOfContents = true }: SkipNavigationProps): JSX.Element {
   return (
     <Portal selector="#skip-navigation">
       <div

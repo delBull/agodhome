@@ -15,7 +15,7 @@ function NpmWireframe({
   description,
   additionalDesc,
   isWithTypeScript = false,
-}: NpmWireframeProps) {
+}: NpmWireframeProps): JSX.Element {
   return (
     <div
       className={clsx(

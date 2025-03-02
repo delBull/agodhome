@@ -6,7 +6,7 @@ import Toaster from '@/components/Toaster';
 
 import type { PropsWithChildren } from 'react';
 
-function WithNavigationFooter({ children }: PropsWithChildren) {
+function WithNavigationFooter({ children }: PropsWithChildren): JSX.Element {
   return (
     <>
       <QuickAccess />

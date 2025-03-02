@@ -25,7 +25,7 @@ import redplanet from '@/assets/images/redplanet.png';
 import styles from '@/styles/FloatingImage.module.css';
 import { useTranslations } from 'next-intl';
 
-function ProjectsContents() {
+function ProjectsContents(): JSX.Element {
   const t = useTranslations('intro-page.ProjectsContents')
   const [currentState, setCurrentState] = useState<
     | 'centro'

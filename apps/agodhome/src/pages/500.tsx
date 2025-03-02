@@ -4,7 +4,7 @@ import Error500Contents from '@/contents/500';
 
 import type { ReactElement } from 'react';
 
-function Error500() {
+function Error500(): JSX.Element {
   return (
     <>
       <Head>

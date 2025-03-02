@@ -22,7 +22,7 @@ function Post({
   frontMatter: { title, description, caption, category, date, lang, tags },
   tableOfContents,
   children = null,
-}: PropsWithChildren<PostProps>) {
+}: PropsWithChildren<PostProps>): JSX.Element {
   // get og image urls
   const postOgImages = getPostOgImageUrl({
     category: caption || category,

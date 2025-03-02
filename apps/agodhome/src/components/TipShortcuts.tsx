@@ -31,7 +31,7 @@ const animation = {
   },
 };
 
-function TipShortcuts() {
+function TipShortcuts(): JSX.Element {
   return (
     <m.div
       initial="hide"

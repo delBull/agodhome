@@ -11,7 +11,7 @@ const animation = {
   },
 };
 
-function HeaderTitle() {
+function HeaderTitle(): JSX.Element {
   const controls = useAnimationControls();
 const t = useTranslations('home-page.HeaderTitle')
   return (

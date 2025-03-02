@@ -15,7 +15,7 @@ type ImageSensitiveProps = ImageProps & {
 export default function ImageSensitive({
   message = '',
   ...props
-}: ImageSensitiveProps) {
+}: ImageSensitiveProps): JSX.Element {
   const [isShown, setShown] = useState<boolean>(false);
 
   return (

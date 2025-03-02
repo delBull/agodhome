@@ -9,7 +9,7 @@ interface LabelProps {
 export function Label({
   indicator,
   children = null,
-}: PropsWithChildren<LabelProps>) {
+}: PropsWithChildren<LabelProps>): JSX.Element {
   const percentage = Math.min(100, Math.max(0, indicator));
 
   return (
@@ -28,7 +28,7 @@ interface LabelsProps {
   children: ReactElement<LabelProps> | ReactElement<LabelProps>[];
 }
 
-function Labels({ title, children }: LabelsProps) {
+function Labels({ title, children }: LabelsProps): JSX.Element {
   return (
     <div
       className={clsx(

@@ -18,7 +18,7 @@ function Page({
   frontMatter: { title, description, caption },
   children = null,
   headerImage = null,
-}: PropsWithChildren<PageProps>) {
+}: PropsWithChildren<PageProps>): JSX.Element {
   const image = getPageOgImageUrl({
     caption,
     title,

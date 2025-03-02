@@ -24,7 +24,7 @@ function SectionTitle({
   description,
   altdesc,
   button = null,
-}: SectionTitleProps) {
+}: SectionTitleProps): JSX.Element {
   const Heading = as;
 
   return (

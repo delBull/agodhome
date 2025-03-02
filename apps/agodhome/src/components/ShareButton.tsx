@@ -79,7 +79,7 @@ interface ShareButtonProps {
   onItemClick?: (type: ShareType) => void;
 }
 
-function ShareButton({ onItemClick = () => {} }: ShareButtonProps) {
+function ShareButton({ onItemClick = () => {} }: ShareButtonProps): JSX.Element {
   const currentUrl = useCurrentUrl();
 
   const handleCopy = async () => {

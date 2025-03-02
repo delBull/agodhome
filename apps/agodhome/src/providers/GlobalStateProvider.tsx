@@ -12,7 +12,7 @@ const DEFAULT_VALUE: GlobalContext = {
 
 export const GlobalStateContext = createContext<GlobalContext>(DEFAULT_VALUE);
 
-function GlobalStateProvider({ children }: { children: React.ReactNode }) {
+function GlobalStateProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [isQuickAccessOpen, setQuickAccessOpen] = useState<boolean>(
     DEFAULT_VALUE.isQuickAccessOpen
   );

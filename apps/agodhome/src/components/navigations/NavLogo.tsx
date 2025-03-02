@@ -9,7 +9,7 @@ interface NavLogoProps {
   title: string;
 }
 
-function NavLogo({ href, title }: NavLogoProps) {
+function NavLogo({ href, title }: NavLogoProps): JSX.Element {
   const router = useRouter();
   const isActive = router.pathname === href;
 

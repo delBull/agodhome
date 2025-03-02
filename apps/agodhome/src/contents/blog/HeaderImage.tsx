@@ -14,7 +14,7 @@ const animation = {
   },
 };
 
-function Blog() {
+function Blog(): JSX.Element {
   return (
     <m.svg
       xmlns="http://www.w3.org/2000/svg"

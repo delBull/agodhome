@@ -18,7 +18,7 @@ const animation = {
   },
 };
 
-function HeaderTechStack() {
+function HeaderTechStack(): JSX.Element {
   const t = useTranslations('home-page.HeaderTechStack')
   return (
     <div>

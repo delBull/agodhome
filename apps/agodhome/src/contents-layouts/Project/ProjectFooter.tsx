@@ -6,7 +6,7 @@ interface ProjectFooterProps {
   githubUrl?: TProjectFrontMatter['githubUrl'];
 }
 
-function ProjectFooter({ githubUrl = '' }: ProjectFooterProps) {
+function ProjectFooter({ githubUrl = '' }: ProjectFooterProps): JSX.Element {
   if (!githubUrl) return null;
 
   return (

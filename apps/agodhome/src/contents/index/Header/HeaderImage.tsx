@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import HeaderImageAnimation from './HeaderImageAnimation';
 
-function HeaderImage() {
+const HeaderImage: React.FC = () => {
   const controlsHeaderImage = useAnimationControls();
   const controlsHeaderOutline = useAnimationControls();
 
@@ -37,7 +37,6 @@ function HeaderImage() {
                     delay: 0.15,
                   },
                 });
-
                 controlsHeaderImage.start({
                   opacity: 1,
                   transition: {
@@ -70,6 +69,6 @@ function HeaderImage() {
       </div>
     </div>
   );
-}
+};
 
 export default HeaderImage;

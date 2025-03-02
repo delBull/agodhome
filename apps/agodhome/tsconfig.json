@@ -2,8 +2,10 @@
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
     "baseUrl": "./src",
+    "moduleResolution": "node",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["*"],
+      "@vercel/speed-insights/next": ["node_modules/@vercel/speed-insights/next/index"]
     }
   },
   "include": [

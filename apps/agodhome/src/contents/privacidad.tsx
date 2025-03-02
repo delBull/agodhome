@@ -3,7 +3,7 @@ import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 
-function Privacidad() {
+function Privacidad(): JSX.Element {
   return (
     <>
       <SectionContent>
