@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import { m } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
-import { DarkIcon, EyeIcon, EyeSlash, LightIcon } from '@/components/Icons';
+import { DarkIcon, LightIcon } from '@/components/Icons';
 
-import useFocusMode from '@/hooks/useFocusMode';
+//import useFocusMode from '@/hooks/useFocusMode';
 
 import type { PropsWithChildren, ReactElement } from 'react';
 
@@ -56,9 +56,16 @@ function ActionCenterButton({
   );
 }
 
+//interface FocusMode {
+//  focusMode: boolean;
+//  setFocusMode: (mode: boolean) => void;
+//}
+
 function ActionCenter(): JSX.Element {
   const { theme, setTheme } = useTheme();
-  const { focusMode, setFocusMode } = useFocusMode();
+//  const { focusMode, setFocusMode } = (useFocusMode() as unknown) as FocusMode;
+//  const focusMode = false;
+//  const setFocusMode = () => {};
 
   const handleThemeChange = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -123,10 +130,10 @@ function ActionCenter(): JSX.Element {
               </m.div>
             }
           />
-          <ActionCenterButton
+          {/*<ActionCenterButton
             title={focusMode ? 'Focus: On' : 'Focus: Off'}
             onClick={() => {
-              setFocusMode(!focusMode);
+              setFocusMode();
             }}
             active={focusMode}
             icon={
@@ -139,7 +146,7 @@ function ActionCenter(): JSX.Element {
                 </div>
               </>
             }
-          />
+          />*/}
         </m.div>
       </div>
     </m.div>
