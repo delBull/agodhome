@@ -3,7 +3,8 @@
 import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import clsx from 'clsx';
 
 type LanguageSwitcherProps = {
@@ -13,12 +14,70 @@ type LanguageSwitcherProps = {
   setisOpenDropdown?: React.Dispatch<React.SetStateAction<boolean>>;  // Opcional
 };
 
+const spanishSpeakingCountries = [
+  'Argentina',
+  'Bolivia',
+  'Chile',
+  'Colombia',
+  'Costa Rica',
+  'Cuba',
+  'Ecuador',
+  'El Salvador',
+  'España',
+  'Guatemala',
+  'Guinea Ecuatorial',
+  'Honduras',
+  'México',
+  'Nicaragua',
+  'Panamá',
+  'Paraguay',
+  'Perú',
+  'Puerto Rico',
+  'República Dominicana',
+  'Uruguay',
+  'Venezuela',
+  'Aruba',
+  'Bonaire',
+  'Curaçao',
+  'Islas Turcas y Caicos',
+  'San Martín',
+  'Sint Eustatius',
+  'Saba',
+  'Surinam',
+  'Belice',
+];
+
+const getGeolocation = async () => {
+  try {
+    const response = await axios.get('https://ipapi.co/json/');
+    const data = response.data;
+    const country = data.country_name;
+
+    if (spanishSpeakingCountries.includes(country)) {
+      return 'es';
+    } else {
+      return 'en';
+    }
+  } catch (error) {
+    console.error(error);
+    return 'en';
+  }
+};
+
 export default function LanguageSwitcher({
-  currentLocale,
   allLocales = ['en', 'es'],
 }: LanguageSwitcherProps): JSX.Element {
   const { pathname, query, asPath } = useRouter();
-  const [selectedLocale, setSelectedLocale] = useState(currentLocale);
+  const [selectedLocale, setSelectedLocale] = useState('');
+
+  useEffect(() => {
+    const getLocale = async () => {
+      const locale = await getGeolocation();
+      setSelectedLocale(locale);
+    };
+
+    getLocale();
+  }, []);
 
   const handleLocaleChange = (locale: string) => {
     setSelectedLocale(locale);
