@@ -7,6 +7,7 @@ import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
 import Provider from '@/providers';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
@@ -88,6 +89,7 @@ function App({ Component, pageProps }: Props): JSX.Element {
             <WithNavigationFooter>
               <div>
                 <Component {...pageProps} />
+                <Analytics />
                 <SpeedInsights/>
               </div>
             </WithNavigationFooter>
