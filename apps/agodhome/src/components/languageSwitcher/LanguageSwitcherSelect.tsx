@@ -14,7 +14,7 @@ type Props = {
 export default function LanguageSwitcherSelect({
   currentLocale,
   allLocales = ['en', 'es'],
-}: Props) {
+}: Props): JSX.Element {
   const { pathname, query, asPath } = useRouter();
 
   console.log('currentLocale:', currentLocale); // Añade este log
@@ -30,6 +30,7 @@ export default function LanguageSwitcherSelect({
           as={asPath}
           locale={locale}
           legacyBehavior
+          scroll={false}
         >
           <div
             className={clsx(

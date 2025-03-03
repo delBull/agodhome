@@ -173,7 +173,7 @@ const t = useTranslations('home-page.FeaturedCardSection')
                         <div className="flex"> 
                           <CodeIcon className={clsx('h-5 w-5 text-white')} />  
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                Blockchain
+                                {t('Blockchain')}
                             </span>
                         </div>
                     </li>
@@ -181,7 +181,7 @@ const t = useTranslations('home-page.FeaturedCardSection')
                         <div className="flex">
                         <EyeIcon className={clsx('h-5 w-5 text-white')} />
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                Inteligencia Artificial
+                                {t('Inteligencia Artificial')}
                             </span>
                         </div>
                     </li>
@@ -189,7 +189,7 @@ const t = useTranslations('home-page.FeaturedCardSection')
                         <div className="flex">
                         <WarningIcon className={clsx('h-5 w-5 text-white')} />
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                Seguridad
+                                {t('Seguridad')}
                             </span>
                         </div>
                     </li>
@@ -197,7 +197,7 @@ const t = useTranslations('home-page.FeaturedCardSection')
                         <div className="flex">
                         <SparklesIcon className={clsx('h-5 w-5 text-white')} />
                             <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                Recompensas
+                                {t('Recompensas')}
                             </span>
                         </div>
                     </li>

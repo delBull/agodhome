@@ -27,7 +27,7 @@ export default function LanguageSwitcher({
   return (
     <div className="flex justify-center items-center bg-gray-300 dark:bg-gray-800 rounded-full p-1 shadow-md">
       {allLocales.map((locale) => (
-        <Link key={locale} href={{ pathname, query }} as={asPath} locale={locale} legacyBehavior>
+        <Link key={locale} href={{ pathname, query }} as={asPath} locale={locale} legacyBehavior scroll={false}>
           <m.div
             className={clsx(
               'cursor-pointer px-4 py-1 rounded-full transition-all duration-300 font-medium text-sm',

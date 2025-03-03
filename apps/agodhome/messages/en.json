@@ -43,10 +43,10 @@
   "agodecosystem-hub": "AGOD Ecosystem is your all-in-one hub to leverage technology in an innovative way. Imagine an environment where every time you save or invest, you are rewarded while contributing to a better world.",
   "Blockchain": "Blockchain",
   "Inteligencia Artificial": "Artificial Intelligence",
-  "Seguridad": "Security",
+  "Seguridad": "Safety",
   "Recompensas": "Rewards",
   "Es como usar tu dinero": "It's like using your money",
-  "PARA HACER MAGIA": "TO MAKE MAGIC",
+  "PARA HACER MAGIA": "TO CREATE MAGIC",
   "Positiva en el mundo": "Positive in the world."
   },
   "CleanIntuitive":{
@@ -241,15 +241,6 @@
         "title": "Future dApps",
         "description": "More platforms will integrate into the ecosystem, fostering a circular economy."
       }
-    },
-    
-    "get-ashares": {
-      "title": "Do You Want to Be Part of It?",
-      "caption": "Get Your ASHARES!",
-      "link": "Very Soon",
-      "description": "Investing in ASHARES will reflect in earnings thanks to our deflationary model.",
-      "additional": "Still have quastions about AGOD Key?",
-      "learn-more": "Check this Blog post"
     }
   },
 

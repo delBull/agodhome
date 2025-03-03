@@ -240,17 +240,8 @@
         "title": "dApps en camino",
         "description": "Más plataformas se integrarán al ecosistema, fomentando una economía circular."
       }
-    },
-
-    "get-ashares": {
-      "title": "¿Quieres ser parte?",
-      "caption": "¡Obtén tus ASHARES!",
-      "link": "Muy Pronto",
-      "description": "La inversión en ASHARES se verá reflejada en utilidades gracias a nuestro modelo deflacionario.",
-      "additional": "¿Tienes dudas de cómo adquirir AGOD Key?",
-      "learn-more": "Revisa este Blog post"
     }
-  },
+   },
 
   "roadmap-page": {
     "header": {
