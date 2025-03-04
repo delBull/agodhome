@@ -1,3 +1,4 @@
+import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'next-themes';
 
@@ -10,7 +11,7 @@ import GlobalStateProvider from '@/providers/GlobalStateProvider';
 import type { PropsWithChildren } from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-function Provider({ children = null }: PropsWithChildren): JSX.Element {
+function Provider({ children = null }: PropsWithChildren) {
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
@@ -27,7 +28,7 @@ function Provider({ children = null }: PropsWithChildren): JSX.Element {
             <ColorAccentProvider defaultScheme="violet">
               <GlobalStateProvider>
                 <MDXProvider components={mdxCustomComponents}>
-                  {children}
+                <React.Fragment>{children}</React.Fragment>
                 </MDXProvider>
               </GlobalStateProvider>
             </ColorAccentProvider>
