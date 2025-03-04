@@ -1,0 +1,20 @@
+{
+  "es": {
+    "agodPrep": {
+      "title": "AGOD Prep",
+      "description": "Preparar el ecosistema con las plataformas existentes para la salida al mercado.",
+      "pandoraDescription": "Colaboración y Partnership con los pioneros de tokenización inmobiliaria en México.",
+      "daccessDescription": "Experimenta la verdadera libertad en acceoss y tickets.",
+      "raWalletDescription": "La \"Wallet\" web2.5 del ecosistema con super poderes."
+    }
+  },
+  "en": {
+    "agodPrep": {
+      "title": "AGOD Prep",
+      "description": "Prepare the ecosystem with existing platforms for market launch.",
+      "pandoraDescription": "Collaboration and Partnership with pioneers of real estate tokenization in Mexico.",
+      "daccessDescription": "Experience true freedom in access and tickets.",
+      "raWalletDescription": "The web2.5 \"Wallet\" of the ecosystem with super powers."
+    }
+  }
+}

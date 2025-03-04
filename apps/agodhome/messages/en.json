@@ -263,5 +263,10 @@
     "soon": "soon",
     "Tokenization Agency": "Tokenization Agency",
     "Privacidad": "Privacy"
+  },
+
+  "politica-privacidad": {
+    "title": "Privacy Policy",
+    "description": "Enter the world of Blockchain."
   }
 }

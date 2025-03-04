@@ -262,5 +262,10 @@
     "soon": "Pronto",
     "Tokenization Agency": "Tokenización Agencia",
     "Privacidad": "Privacidad"
-  }
+  },
+
+    "politica-privacidad": {
+      "title": "Política de Privacidad",
+      "description": "Adéntrate en el mundo Blockchain."
+    }
 }
