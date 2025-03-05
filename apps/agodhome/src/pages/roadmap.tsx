@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import TILContents from '@/contents/TIL';
+import Contents from '@/contents/TIL/Contents.mdx';
 import HeaderImage from '@/contents/TIL/HeaderImage';
 import Page from '@/contents-layouts/Page';
 import { GetStaticPropsContext } from 'next';
@@ -15,7 +15,7 @@ function TIL(): JSX.Element {
       }}
       headerImage={<HeaderImage />}
     >
-      <TILContents />
+      <Contents />
     </Page>
   );
 }
