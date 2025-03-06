@@ -251,6 +251,13 @@
     }
   },
 
+  "blog": {
+    "header": {
+      "title": "Blog",
+      "description": "Enter the world of Blockchain"
+    }
+  },
+
   "footer": {
     "Construyendo con Pasión": "Building with Passion",
     "ecosystem-description": "AGOD is building a revolutionary financial ecosystem that combines advanced technology, sustainability, and investment opportunities in real-world assets. Join us on this journey towards a fairer and more sustainable financial future.",

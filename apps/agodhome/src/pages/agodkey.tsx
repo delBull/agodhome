@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { GetStaticProps } from 'next';
 import AgodKeyContents from '@/contents/projects/agod-key';
 import HeaderImage from '@/contents/projects/HeaderImage';
-import Page from '@/contents-layouts/Page';
+import Page from '@/contents-layouts/Page'; 
 
 function AgodKeyPage(): JSX.Element {
   const t = useTranslations('agod-key-page.header');

@@ -1,5 +1,5 @@
 import { getSortedPosts } from '@/lib/posts';
-
+import { useTranslations } from 'next-intl';
 import BlogContents from '@/contents/blog';
 import HeaderImage from '@/contents/blog/HeaderImage';
 import Page from '@/contents-layouts/Page';
@@ -12,11 +12,13 @@ type BlogProps = {
 };
 
 function Blog({ posts }: BlogProps): JSX.Element {
+  const t = useTranslations('blog.header');
+
   return (
     <Page
       frontMatter={{
-        title: 'Blog',
-        description: 'Adéntrate en el mundo Blockchain.',
+        title: t('title'),
+        description: t('description'),
       }}
       headerImage={<HeaderImage />}
     >
