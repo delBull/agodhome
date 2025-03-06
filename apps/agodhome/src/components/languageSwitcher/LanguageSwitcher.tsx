@@ -67,8 +67,8 @@ const getGeolocation = async () => {
 export default function LanguageSwitcher({
   allLocales = ['en', 'es'],
 }: LanguageSwitcherProps): JSX.Element {
-  const { pathname, query, asPath } = useRouter();
-  const [selectedLocale, setSelectedLocale] = useState('');
+  const { pathname, query, asPath, locale } = useRouter();
+  const [selectedLocale, setSelectedLocale] = useState(locale);
 
   useEffect(() => {
     const getLocale = async () => {

@@ -25,7 +25,7 @@ export default function LanguageSwitcherSelect({
       {allLocales && allLocales.length > 0 ? (
       allLocales.map((locale) => (
         <Link
-          key={locale}
+          key={locale} 
           href={{ pathname, query }}
           as={asPath}
           locale={locale}
