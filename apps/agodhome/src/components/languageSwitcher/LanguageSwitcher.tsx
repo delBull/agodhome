@@ -71,13 +71,15 @@ export default function LanguageSwitcher({
   const [selectedLocale, setSelectedLocale] = useState(locale);
 
   useEffect(() => {
-    const getLocale = async () => {
-      const locale = await getGeolocation();
-      setSelectedLocale(locale);
-    };
-
-    getLocale();
-  }, []);
+    if (!selectedLocale) {
+      const getLocale = async () => {
+        const locale = await getGeolocation();
+        setSelectedLocale(locale);
+      };
+  
+      getLocale();
+    }
+  }, [selectedLocale]);
 
   const handleLocaleChange = (locale: string) => {
     setSelectedLocale(locale);
