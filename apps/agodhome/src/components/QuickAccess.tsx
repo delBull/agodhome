@@ -16,7 +16,7 @@ const animation = {
   show: { opacity: 1, transition: { duration: 0.18 } },
 };
 
-function QuickAccess(): JSX.Element {
+function QuickAccess({ currentLocale, allLocales }): JSX.Element {
   const closeButtonRef = useRef(null);
   const { isQuickAccessOpen, setQuickAccessOpen } = useGlobal();
 
@@ -69,7 +69,7 @@ function QuickAccess(): JSX.Element {
             )}
           >
             <div className={clsx('')}>
-              <ActionCenter />
+              <ActionCenter currentLocale={currentLocale} allLocales={allLocales}  />
             </div>
             <div className={clsx('')}>
               <NewPosts onItemClick={() => setQuickAccessOpen(false)} />
