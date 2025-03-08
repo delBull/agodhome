@@ -62,7 +62,7 @@ function ActionCenterButton({
 //  setFocusMode: (mode: boolean) => void;
 //}
 
-function ActionCenter(): JSX.Element {
+function ActionCenter({ currentLocale, allLocales }): JSX.Element {
   const { theme, setTheme } = useTheme();
 //  const { focusMode, setFocusMode } = (useFocusMode() as unknown) as FocusMode;
 //  const focusMode = false;
@@ -149,7 +149,7 @@ function ActionCenter(): JSX.Element {
             }
           />*/}
         </m.div>
-        <LanguageSwitcher_nav />
+        <LanguageSwitcher_nav currentLocale={currentLocale} allLocales={allLocales} />
       </div>
     </m.div>
   );
