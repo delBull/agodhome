@@ -16,7 +16,7 @@ const workLinks = [
   { title: "PANDORA'S", href: '/pandoras' },
   { title: 'DACCESS', href: '/daccess' },
   { title: 'RA WALLET', href: '/rawallet' },
-  { title: "ADEX", href: '/adex' },
+  { title: "ADEX", href: '/adex' }, 
 ];
 
 function Navbar({ currentLocale, allLocales }): JSX.Element {

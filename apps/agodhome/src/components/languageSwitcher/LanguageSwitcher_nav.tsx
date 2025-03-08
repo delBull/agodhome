@@ -6,7 +6,8 @@ import clsx from 'clsx';
 import { useLanguage } from './LanguageContext';
 
 type LanguageSwitcherProps = {
-  allLocales?: string[];
+  currentLocale: string;
+  allLocales: string[];
 };
 
 export default function LanguageSwitcher({
