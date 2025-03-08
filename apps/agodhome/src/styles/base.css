@@ -158,6 +158,27 @@ a.button.button--soft {
   }
 }
 
+.adex {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  margin-right: 50px;
+  z-index: -10;
+}
+
+@media screen and (max-width: 768px) {
+  .adex {
+    width: 100%;
+    top: 65vh;
+    opacity: 0.5;
+  }
+  button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
+    margin-bottom: 5px;
+  }
+}
+
 .redplanet {
   position: absolute;
   width: 50%;

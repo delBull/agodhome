@@ -327,6 +327,78 @@
       "additionalInfo": ""
     },
 
+    "daccess-page": {
+      "header": {
+        "title": "DACCESS",
+        "caption": "Redefiniendo el acceso, ¡una nueva era!",
+        "description": "DACCESS es el futuro de la emisión de boletos NFT y estamos entusiasmados de estar a la vanguardia de esta tecnología revolucionaria",
+        "coming-soon": ""
+      },
+        "what": {
+          "title": "¿Qué es DACCESS?",
+          "caption": "Tu puerta de entrada a boletos NFT",
+          "description": "Nuestra aplicación está diseñada para ser la próxima plataforma de boletería NFT impulsada por blockchain. Organiza eventos, compra entradas para conciertos y accede a áreas VIP con seguridad y exclusividad incomparables.",
+          "blockchain": "Construida sobre tecnología blockchain, cada entrada es un NFT único que garantiza autenticidad y transparencia con tarifas de transacción justas."
+        },
+        "tabs": {
+          "events": "Eventos",
+          "eventsDescription": "Organiza y asiste a una variedad de eventos sin complicaciones.",
+          "tickets": "Entradas",
+          "ticketsDescription": "Compra entradas NFT seguras y únicas para conciertos y más.",
+          "access": "Acceso",
+          "accessDescription": "Obtén entrada a hoteles, clubes y lugares exclusivos de forma sencilla.",
+          "vips": "VIP",
+          "vipsDescription": "Desbloquea experiencias VIP y acceso premium."
+        },
+        "quote": {
+          "part1": "DACCESS es el futuro",
+          "part2": "de la boletería NFT,",
+          "part3": "garantizando confianza y exclusividad.",
+          "part4": "Únete a nosotros en esta",
+          "part5": "revolución."
+        },
+        "why": {
+          "title": "¿Por qué DACCESS?",
+          "description": "Porque ofrecemos una solución simple, segura y transparente para todas tus necesidades de boletería. Experimenta el siguiente nivel de acceso a eventos con NFTs impulsados por blockchain."
+        }      
+    },
+    
+    "adex-page": {
+      "header": {
+        "title": "ADEX",
+        "caption": "Finanzas descentralizadas a un nuevo nivel",
+        "description": "",
+        "coming-soon": ""
+      },
+        "what": {
+          "title": "¿Qué es ADEX?",
+          "caption": "Exchange Descentralizado para Mayores Recompensas",
+          "description": "ADEX es el exchange descentralizado para aquellos que buscan mayores recompensas. Ofrece staking y farming de tokens, pools de liquidez y generación de ingresos pasivos. Disfruta de un control total sobre tus activos con nuestro propio token de gobernanza, sin intermediarios, en cualquier lugar y en cualquier momento.",
+          "blockchain": "Construido sobre tecnología blockchain, ADEX garantiza seguridad, transparencia y alto rendimiento."
+        },
+        "tabs": {
+          "community": "Comunidad Descentralizada",
+          "communityDescription": "Únete a una comunidad vibrante y descentralizada que te empodera con verdadero control.",
+          "exchange": "Exchange Descentralizado",
+          "exchangeDescription": "Opera e invierte directamente en nuestro exchange sin intermediarios.",
+          "staking": "Staking y Farming",
+          "stakingDescription": "Gana recompensas mediante staking y farming de tokens, aumentando tu liquidez.",
+          "income": "Ingresos Pasivos",
+          "incomeDescription": "Genera ingresos pasivos de manera sencilla a través de pools de liquidez."
+        },
+        "quote": {
+          "part1": "ADEX llegará pronto,",
+          "part2": "trayéndote",
+          "part3": "el poder de un verdadero exchange descentralizado.",
+          "part4": "Prepárate para",
+          "part5": "disfrutar de las recompensas."
+        },
+        "why": {
+          "title": "¿Por qué ADEX?",
+          "description": "Porque no es solo un exchange: es una revolución en la forma de gestionar y hacer crecer tus activos. Obtén liquidez, ingresos pasivos y control total, respaldado por tecnología blockchain de vanguardia."
+        }  
+  },
+
   "blog": {
     "header": {
       "title": "Blog",

@@ -14,9 +14,9 @@ import LanguageSwitcher from './languageSwitcher/LanguageSwitcher';
 
 const workLinks = [
   { title: "PANDORA'S", href: '/pandoras' },
-  { title: 'DACCESS', href: '/explora/daccess' },
+  { title: 'DACCESS', href: '/daccess' },
   { title: 'RA WALLET', href: '/rawallet' },
-  { title: "ADEX", href: '/explora/adex' },
+  { title: "ADEX", href: '/adex' },
 ];
 
 function Navbar({ currentLocale, allLocales }): JSX.Element {

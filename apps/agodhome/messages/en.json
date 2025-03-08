@@ -328,6 +328,78 @@
     "additionalInfo": "" 
   },
 
+  "daccess-page": {
+    "header": {
+      "title": "DACCESS",
+      "caption": "True Ownership, a new era!",
+      "description": "DACCESS is the future of NFT ticketing, and we're excited to be at the forefront of this revolutionary technology",
+      "coming-soon": ""
+    },
+      "what": {
+        "title": "What is DACCESS?",
+        "caption": "Your Gateway to NFT Ticketing",
+        "description": "Our app is designed to be the next NFT ticketing platform powered by blockchain. Organize events, buy tickets for concerts, and access VIP areas with unmatched security and exclusivity.",
+        "blockchain": "Built on blockchain technology, every ticket is a unique NFT that ensures authenticity and transparency with fair transaction fees."
+      },
+      "tabs": {
+        "events": "Events",
+        "eventsDescription": "Organize and attend a variety of events seamlessly.",
+        "tickets": "Tickets",
+        "ticketsDescription": "Purchase secure and unique NFT tickets for concerts and more.",
+        "access": "Access",
+        "accessDescription": "Gain entry to hotels, clubs, and exclusive venues effortlessly.",
+        "vips": "VIP",
+        "vipsDescription": "Unlock VIP experiences and premium access."
+      },
+      "quote": {
+        "part1": "DACCESS is the future",
+        "part2": "of NFT ticketing,",
+        "part3": "ensuring trust and exclusivity.",
+        "part4": "Join us on this",
+        "part5": "revolution."
+      },
+      "why": {
+        "title": "Why DACCESS?",
+        "description": "Because we provide a simple, secure, and transparent solution for all your ticketing needs. Experience the next level of event access with blockchain-powered NFTs."
+      }
+  },
+
+  "adex-page": {
+    "header": {
+      "title": "ADEX",
+      "caption": "Decentralized finance at a new level",
+      "description": "",
+      "coming-soon": ""
+    },
+      "what": {
+        "title": "What is ADEX?",
+        "caption": "Decentralized Exchange for Higher Rewards",
+        "description": "ADEX is the decentralized exchange for those who seek greater rewards. It offers staking and farming of tokens, liquidity pools, and passive income generation. Enjoy full control over your assets with our own governance token, all without intermediaries, anywhere, anytime.",
+        "blockchain": "Built on blockchain technology, ADEX ensures security, transparency, and high performance."
+      },
+      "tabs": {
+        "community": "Decentralized Community",
+        "communityDescription": "Join a thriving, decentralized community that empowers you with real control.",
+        "exchange": "Decentralized Exchange",
+        "exchangeDescription": "Trade and invest directly on our exchange with no middlemen.",
+        "staking": "Staking & Farming",
+        "stakingDescription": "Earn rewards through token staking and farming, boosting your liquidity.",
+        "income": "Passive Income",
+        "incomeDescription": "Generate passive income effortlessly through liquidity pools."
+      },
+      "quote": {
+        "part1": "ADEX is coming soon,",
+        "part2": "bringing you",
+        "part3": "the power of a true decentralized exchange.",
+        "part4": "Be ready to",
+        "part5": "reap the rewards."
+      },
+      "why": {
+        "title": "Why ADEX?",
+        "description": "Because it's not just an exchange—it's a revolution in how you manage and grow your assets. Get liquidity, passive income, and full control, all backed by cutting-edge blockchain technology."
+      }   
+  },
+
   "blog": {
     "header": {
       "title": "Blog",
