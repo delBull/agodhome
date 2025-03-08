@@ -268,7 +268,7 @@
       "coming-soon-2": "That's our competitive advantage!",
       "caption-3": "Lifestyle",
       "description-4": "Ra Wallet is a place where you can have and do everything you need in a beautiful, enjoyable, and simple way. In essence, a Bounty Program based on and supported by the economy of an ecosystem (bunz).",
-      "title-3": "The Have Exploted",
+      "title-3": "They Have Exploted",
       "caption-4": "Social Media",
       "description-5": "Each group has their favorite platform, the one that makes them feel like they belong. Rabbitty becomes your social media companion, encouraging you to be social in real life while enjoying the benefits of the digital age.",
       "title-4": "It has become a Challenge",
@@ -290,25 +290,42 @@
       "part3": "We`re launching a platform that will transform",
       "part4": "our lives",
       "part5": "for real."
-    },
-    "Tabs": {
-      "center": {
-        "title": "Blockchain Application Center",
-        "description": "AGOD hosts a variety of blockchain-powered applications, covering areas such as finance, social media, gaming, and more."
-      },
-      "interface": {
-        "title": "User-Friendly Interface",
-        "description": "AGOD is designed to be accessible and easy to use for individuals of all technical experience levels."
-      },
-      "security": {
-        "title": "Security and Transparency",
-        "description": "The underlying blockchain technology ensures the security and transparency of all transactions and activities."
-      },
-      "innovation": {
-        "title": "Continuous Innovation",
-        "description": "AGOD is committed to driving innovation in the blockchain space, constantly developing new solutions and features."
-      }
     }
+  },
+
+"pandoras-page": {
+    "header": {
+      "title": "Pandora's",
+      "caption": "Financial Crowdfunding Enhancer",
+      "description": "Using blockchain technology to collectively finance and support ideas, businesses, and new projects, as well as to develop real estate and property projects.",
+      "coming-soon": "Join the Waiting List"
+    },
+    "opener": {
+      "title": "Ideas and Projects",
+      "caption": "",
+      "description": "Offering everyone the power to choose which project to invest in that best suits their risk profile.",
+      "coming-soon": "",
+      "call-to-action": "Our users have the power of decision. Invest in real-world assets and enjoy their benefits. Anyone can invest in all categories and earn long-term returns."
+    },
+    "tabs": {
+        "nfts": "NFT’s as Memberships",
+        "nftsdescription": "Unlock exclusive benefits and premium access through our free-minted NFTs that act as digital memberships",
+        "power": "Desition-Making Power",
+        "powerdescription": "Empower yourself with voting rights embedded in our tokens, letting you help shape the future of the platform",
+        "invest": "Invest in Real-World Asssets (RWA)",
+        "investdescription": "Securely invest in tangible assets like real estate, unlocking stable returns and real-world value",
+        "anyone": "Adaptable & Scalable",
+        "anyonedescription": "Our platform is built to grow with you, easily adapting to new challenges and scaling with your investment needs"
+      },
+    "quote": {
+      "part1": "The power to choose",
+      "part2": "is in your hands.",
+      "part3": "",
+      "part4": "Invest in",
+      "part5": "the future today."
+    },
+    "porque": "Imagine managing everything that matters to you in one place. Imagine having your favorite companies at your fingertips, requesting services and earning benefits from your expenses.",
+    "additionalInfo": "" 
   },
 
   "blog": {

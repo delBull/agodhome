@@ -289,26 +289,43 @@
       "part3": "Lanzamos una plataforma que transformará",
       "part4": "nuestras vidas",
       "part5": "de verdad."
-    },
-    "Tabs": {
-      "center": {
-        "title": "Centro de aplicaciones blockchain",
-        "description": "AGOD alberga una variedad de aplicaciones apalancadas por blockchain, que cubren aspectos como finanzas, redes sociales, juegos y más."
-      },
-      "interface": {
-        "title": "Interfaz fácil de usar",
-        "description": "AGOD está diseñado para ser accesible y fácil de usar para personas de todos los niveles de experiencia técnica."
-      },
-      "security": {
-        "title": "Seguridad y transparencia",
-        "description": "La tecnología blockchain subyacente garantiza la seguridad y transparencia de todas las transacciones y actividades."
-      },
-      "innovation": {
-        "title": "Innovación continua",
-        "description": "AGOD se compromete a impulsar la innovación en el espacio blockchain, desarrollando constantemente nuevas soluciones y funcionalidades."
-      }
     }
   },
+
+    "pandoras-page": {
+      "header": {
+        "title": "Pandora's",
+        "caption": "Potenciador del crowdfunding financiero",
+        "description": "Utilizando la tecnología blockchain para financiar y apoyar colectivamente ideas, empresas, y nuevos proyectos, así como para desarrollar bienes raíces y proyectos inmobiliarios.",
+        "coming-soon": "Súmate a la 'Waiting List'"
+      },
+      "opener": {
+        "title": "Ideas y Proyectos",
+        "caption": "",
+        "description": "Ofreciendo a cualquier persona el poder de elegir en qué proyecto invertir, el cual se adapte mejor a su perfil de riesgo.",
+        "coming-soon": "",
+        "call-to-action": "Nuestros usuarios tienen el poder de decisión. Invierte en activos del mundo real y goza de sus beneficios. Cualquiera puede invertir en todas las categorías y obtener rendimientos a largo plazo."
+      },
+      "tabs": {
+        "nfts": "NFT’s como membresías",
+        "nftsdescription": "Desbloquea beneficios exclusivos y acceso premium mediante nuestros NFTs gratuitos que funcionan como membresías digitales.",
+        "power": "Poder de desición",
+        "powerdescription": "Empodérate con derechos de voto integrados en nuestros tokens, permitiéndote moldear el futuro de la plataforma",
+        "invest": "Invierte en Activos Reales",
+        "investdescription": "Invierte de forma segura en activos tangibles como bienes raíces, obteniendo rendimientos estables y valor real",
+        "anyone": "Adaptable y escalable",
+        "anyonedescription": "Nuestra plataforma está diseñada para crecer contigo, adaptándose fácilmente a nuevos desafíos y escalando según tus necesidades de inversión"
+      },
+      "quote": {
+        "part1": "El poder de elección",
+        "part2": "está en tus manos.",
+        "part3": "",
+        "part4": "Invierte en",
+        "part5": "el futuro hoy."
+      },
+      "porque": "Imagina gestionar todo lo que te importa en un solo lugar. Imagina tener tus empresas favoritas a tu alcance, solicitando servicios y obteniendo beneficios por tus gastos.",
+      "additionalInfo": ""
+    },
 
   "blog": {
     "header": {

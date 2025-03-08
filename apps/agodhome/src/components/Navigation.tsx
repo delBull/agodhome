@@ -13,10 +13,10 @@ import useOnScroll from '@/hooks/useOnScroll';
 import LanguageSwitcher from './languageSwitcher/LanguageSwitcher';
 
 const workLinks = [
-  { title: 'Ra Wallet', href: '/rawallet' },
-  { title: 'ADEX', href: '/explora/adex' },
+  { title: "PANDORA'S", href: '/pandoras' },
   { title: 'DACCESS', href: '/explora/daccess' },
-  { title: "Pandora's", href: '/explora/pandoras' },
+  { title: 'RA WALLET', href: '/rawallet' },
+  { title: "ADEX", href: '/explora/adex' },
 ];
 
 function Navbar({ currentLocale, allLocales }): JSX.Element {

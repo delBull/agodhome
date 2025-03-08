@@ -19,14 +19,14 @@ interface LastUpdateProps {
 }
 function LastUpdate({t} : LastUpdateProps) {
   return (
-    <a
+    <Link
       href="/politica-privacidad"
-      target="_blank"
+      target=""
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
     >
       <span>{t('Privacidad')}</span>
-    </a>
+    </Link>
   );
 }
 
