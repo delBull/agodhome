@@ -27,6 +27,8 @@ type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
 type PageProps = {
   messages: IntlMessages;
   now: number;
+  currentLocale: string;
+  allLocales: string[];
 };
 
 type Props = Omit<AppProps<PageProps>, 'pageProps'> & {
@@ -36,6 +38,7 @@ type Props = Omit<AppProps<PageProps>, 'pageProps'> & {
 function App({ Component, pageProps }: Props): JSX.Element {
   const router = useRouter();
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const { currentLocale, allLocales } = pageProps;
 
   useEffect(() => {
     if (router.pathname === '/') {
@@ -80,7 +83,7 @@ function App({ Component, pageProps }: Props): JSX.Element {
 
   return (
     <NextIntlClientProvider
-      locale={router.locale || 'es'} // Fallback to 'en' if router.locale is undefined
+      locale={router.locale || 'es'}
       messages={messages}
       timeZone="Europe/Vienna"
     >
@@ -88,7 +91,7 @@ function App({ Component, pageProps }: Props): JSX.Element {
         <Provider>
         <LanguageProvider>
           <RootLayout>
-            <WithNavigationFooter>
+            <WithNavigationFooter currentLocale={currentLocale} allLocales={allLocales}>
               <div>
                 <Component {...pageProps} />
                 <Analytics />
