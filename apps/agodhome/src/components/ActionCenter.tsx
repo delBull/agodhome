@@ -3,6 +3,7 @@ import { m } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
 import { DarkIcon, LightIcon } from '@/components/Icons';
+import LanguageSwitcher_nav from './languageSwitcher/LanguageSwitcher_nav';
 
 //import useFocusMode from '@/hooks/useFocusMode';
 
@@ -79,7 +80,7 @@ function ActionCenter(): JSX.Element {
       transition={{ staggerChildren: 0.06 }}
     >
       <m.div className={clsx('px-2 text-xl font-bold')} variants={animation}>
-        Centro de Acciones
+        Action Center
       </m.div>
       <div className={clsx('flex flex-1 flex-col gap-8 p-2')}>
         <m.div className={clsx('flex h-24 gap-4')} variants={animation}>
@@ -148,6 +149,7 @@ function ActionCenter(): JSX.Element {
             }
           />*/}
         </m.div>
+        <LanguageSwitcher_nav />
       </div>
     </m.div>
   );

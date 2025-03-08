@@ -21,10 +21,10 @@ export default function LanguageSwitcher({
         <Link key={loc} href={{ pathname, query }} as={asPath} locale={loc} legacyBehavior scroll={false}>
           <m.div
             className={clsx(
-              'cursor-pointer px-4 py-1 rounded-full transition-all duration-300 font-medium text-sm',
+              'w-full cursor-pointer px-4 py-1 rounded-full transition-all duration-300 font-medium text-sm',
               loc === selectedLocale
-                ? 'bg-red-500 text-white shadow-md dark:bg-red-500 dark:text-gray-900'
-                : 'bg-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-600 dark:hover:bg-gray-700'
+                ? 'bg-red-500 text-white shadow-md dark:bg-red-500 dark:text-gray-900 text-center'
+                : 'bg-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-600 dark:hover:bg-gray-700 text-center'
             )}
             onClick={() => changeLocale(loc)}
             layout

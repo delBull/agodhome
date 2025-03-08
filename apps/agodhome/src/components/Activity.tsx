@@ -117,7 +117,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps): JSX.Element {
           className={clsx('text-sm text-slate-700', 'dark:text-slate-400')}
           variants={animation}
         >
-          recuperando la data..
+          retreiving data..
         </m.div>
       );
     }
@@ -128,7 +128,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps): JSX.Element {
           className={clsx('text-sm text-slate-700', 'dark:text-slate-400')}
           variants={animation}
         >
-          no hay nada nuevo en este moemento.
+          nothing new at the moment.
         </m.div>
       );
     }
@@ -139,7 +139,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps): JSX.Element {
           className={clsx('text-sm text-slate-700', 'dark:text-slate-400')}
           variants={animation}
         >
-          ups! ha ocurrido un error interno, estamos en ello.
+          ups! somethig is wrong, we are working on it.
         </m.div>
       );
     }
@@ -188,7 +188,7 @@ function Activity({ onItemClick = () => {} }: ActivityProps): JSX.Element {
       className={clsx('flex flex-1 flex-col gap-2')}
     >
       <m.div variants={animation} className={clsx('px-2 text-xl font-bold')}>
-        Actividad Reciente
+        Recent Activity
       </m.div>
       <div
         className={clsx(

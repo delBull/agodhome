@@ -7,7 +7,8 @@ import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
 import Provider from '@/providers';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { LanguageProvider } from '@/components/languageSwitcher/LanguageContext';
 
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
@@ -85,6 +86,7 @@ function App({ Component, pageProps }: Props): JSX.Element {
     >
       <NextUIProvider>
         <Provider>
+        <LanguageProvider>
           <RootLayout>
             <WithNavigationFooter>
               <div>
@@ -95,6 +97,7 @@ function App({ Component, pageProps }: Props): JSX.Element {
             </WithNavigationFooter>
             <GoogleAnalytics gaId="G-B4C9EBTKKF" />
           </RootLayout>
+          </LanguageProvider>
         </Provider>
       </NextUIProvider>
     </NextIntlClientProvider>

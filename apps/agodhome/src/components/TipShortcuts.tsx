@@ -10,11 +10,11 @@ const shortcuts: Array<{
   keys: Array<string>;
 }> = [
   {
-    title: 'Accede a la Navegación',
+    title: 'Enter Quick Access',
     keys: ['ALT'],
   },
   {
-    title: 'Cierra el Panel',
+    title: 'Close Panel',
     keys: ['ALT', 'Esc'],
   },
 ];
@@ -41,10 +41,10 @@ function TipShortcuts(): JSX.Element {
     >
       <div className={clsx('mb-4 flex items-center gap-4 text-xl font-bold')}>
         <KeyboardIcon className={clsx('h-8 w-8')} />
-        Navegación Rápida
+        Quick Access
       </div>
       <p className={clsx('mb-4 text-sm text-slate-700', 'dark:text-slate-400')}>
-        Panel para navegar, recibir notifiaciones y noticias.
+        Navigation, notifications and news Panel.
       </p>
       <div className={clsx('flex flex-col text-[13px]')}>
         {shortcuts.map(({ title, keys }) => (
