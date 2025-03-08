@@ -10,7 +10,7 @@ async function addToWaitlist(email: string) {
     data: {
       email
     }
-  });
+  }); 
   console.log(result);
 
   return result;

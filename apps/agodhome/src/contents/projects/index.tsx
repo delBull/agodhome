@@ -209,7 +209,7 @@ function ProjectsContents(): JSX.Element {
             description={t('innovation-center')}
           />
         </div>
-        <Image
+        <Image 
           src={introhd}
           alt="Intro HD"
           width={600}

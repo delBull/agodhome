@@ -18,7 +18,7 @@
   },
   "HeaderCta":{
    "EXPLORA LOS DOCS": "EXPLORE THE DOCS",
-    "Enlístate para el AGOD Key": "Sign up for the AGOD Key"
+    "Enlístate para el AGOD Key": "Join AGOD"
   },
   "HeaderTechStack":{
     "Nuestras plataformas están diseñadas para innovar y transformar": "Our platforms are designed to innovate and transform."
@@ -209,7 +209,7 @@
   },
     "opener": {
       "title": "Your Investment Opportunity in the Future of Decentralized Finance",
-      "description": "Investing in AGOD Shares means being part of a cutting-edge ecosystem, securing your place in a community that values transparency, innovation, and sustainable growth.",
+      "description": "Being part of the ecosystem means being at the forefront, securing your place in a community that values transparency, innovation, and sustainable growth",
       "coming-soon": "Coming Soon!"
     },
     "dapps": {
@@ -248,6 +248,66 @@
     "header": {
       "title": "Roadmap",
       "description": "2024 is traced and growing"
+    }
+  },
+
+  "rawallet-page": {
+    "header": {
+      "title": "Ra Wallet",
+      "description": "Get The Most Out Of Life"
+    },
+    "opener": {
+      "title": "Everything you care about in one place",
+      "caption": "¡Hey future pioneers!",
+      "description": "Imagine a world where convenience is king. A world where simplifying the current market, products and experiences is not only possible, but within your reach!",
+      "coming-soon": "¡Soon!",
+      "caption-2": "Speed and Convenience",
+      "title-2": "We can see the future!",
+      "description-2": "In a few years, you'll remember when you used to spend your money without getting rewards!",
+      "description-3": "Today, we are all looking for an easier life. We want to save money and earn benefits in our daily lives. We focus on building lasting relationships, investing all our energy in branding and demonstrating how your life will change when you switch to using -bunz- with Rabbitty.",
+      "coming-soon-2": "That's our competitive advantage!",
+      "caption-3": "Lifestyle",
+      "description-4": "Ra Wallet is a place where you can have and do everything you need in a beautiful, enjoyable, and simple way. In essence, a Bounty Program based on and supported by the economy of an ecosystem (bunz).",
+      "title-3": "The Have Exploted",
+      "caption-4": "Social Media",
+      "description-5": "Each group has their favorite platform, the one that makes them feel like they belong. Rabbitty becomes your social media companion, encouraging you to be social in real life while enjoying the benefits of the digital age.",
+      "title-4": "It has become a Challenge",
+      "caption-5": "Mrketing",
+      "description-6": "Although we are in a digital age, many companies follow the crowd. But, affiliates will want to join Rabbitty! With the Ultimate Marketing Tool, your business will have everything it needs in one place.",
+      "quote": {
+        "part1": "Ra Wallet",
+        "part2": "turns every customer",
+        "part3": "",
+        "part4": "into a",
+        "part5": "long-term partner."
+      },
+      "porque": "Imagine managing everything that matters to you in one place. Imagine having your favorite businesses at your fingertips, ordering services and making a profit on your expenses. Be rewarded and use those rewards however you want, save yourself, or even exchange them for cash.",
+      "imagina": ""
+    },
+    "quote": {
+      "part1": "Legacy is more valuable",
+      "part2": "than money.",
+      "part3": "We`re launching a platform that will transform",
+      "part4": "our lives",
+      "part5": "for real."
+    },
+    "Tabs": {
+      "center": {
+        "title": "Blockchain Application Center",
+        "description": "AGOD hosts a variety of blockchain-powered applications, covering areas such as finance, social media, gaming, and more."
+      },
+      "interface": {
+        "title": "User-Friendly Interface",
+        "description": "AGOD is designed to be accessible and easy to use for individuals of all technical experience levels."
+      },
+      "security": {
+        "title": "Security and Transparency",
+        "description": "The underlying blockchain technology ensures the security and transparency of all transactions and activities."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "AGOD is committed to driving innovation in the blockchain space, constantly developing new solutions and features."
+      }
     }
   },
 

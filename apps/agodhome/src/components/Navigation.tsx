@@ -13,7 +13,7 @@ import useOnScroll from '@/hooks/useOnScroll';
 import LanguageSwitcher from './languageSwitcher/LanguageSwitcher';
 
 const workLinks = [
-  { title: 'Ra Wallet', href: '/explora/rawallet' },
+  { title: 'Ra Wallet', href: '/rawallet' },
   { title: 'ADEX', href: '/explora/adex' },
   { title: 'DACCESS', href: '/explora/daccess' },
   { title: "Pandora's", href: '/explora/pandoras' },
