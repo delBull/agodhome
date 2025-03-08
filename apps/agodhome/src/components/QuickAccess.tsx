@@ -69,7 +69,7 @@ function QuickAccess({ currentLocale, allLocales }): JSX.Element {
             )}
           >
             <div className={clsx('')}>
-              <ActionCenter currentLocale={currentLocale} allLocales={allLocales}  />
+              <ActionCenter currentLocale={currentLocale} allLocales={allLocales} />
             </div>
             <div className={clsx('')}>
               <NewPosts onItemClick={() => setQuickAccessOpen(false)} />

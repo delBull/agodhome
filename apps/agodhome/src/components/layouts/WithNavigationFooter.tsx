@@ -6,10 +6,11 @@ import Toaster from '@/components/Toaster';
 
 import type { PropsWithChildren } from 'react';
 
-function WithNavigationFooter({ children }: PropsWithChildren): JSX.Element {
+
+function WithNavigationFooter({ children, currentLocale, allLocales }: PropsWithChildren<{ currentLocale: string; allLocales: string[] }>): JSX.Element {
   return (
     <>
-      <QuickAccess />
+      <QuickAccess currentLocale={currentLocale} allLocales={allLocales} />
       <Shortcuts />
       <Navigation currentLocale="es" allLocales={['en', 'es']} />
       <main>{children}</main>
