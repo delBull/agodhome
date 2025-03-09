@@ -420,8 +420,13 @@
     "Privacidad": "Privacidad"
   },
 
-    "politica-privacidad": {
+  "politica-privacidad": {
       "title": "Política de Privacidad",
       "description": "Adéntrate en el mundo Blockchain."
-    }
+  },
+
+  "emailJoin": {
+    "header": "¡Ahora estas en la Lista de Espera de"
+  }
+
 }

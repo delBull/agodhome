@@ -1,7 +1,7 @@
 import { prisma } from '@/utils/prisma';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Resend } from "resend";
-import { enlistadoAGODKey } from "@/components/emails/emailAGODKey";
+import { Join } from "@/components/emails/join";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -57,9 +57,9 @@ export default async function handler(request: NextApiRequest, response: NextApi
         from: "AGOD Ecosystem <noreply@agodecosystem.com>",
         to: email,
         subject: "Desbloquea el potencial Blockchain",
-        react: enlistadoAGODKey({
+        react: Join({
           username: email,
-          teamName: "AGOD Key",
+          teamName: "Join AGOD",
           invitedByUsername: "AGOD Ecosystem"
         })
       });

@@ -74,6 +74,23 @@ export default function App() {
     en: 'from Google',
   };
 
+  const modalAlerts = {
+    es: {
+      success: "Agregado correctamente a la lista de espera",
+      error: "Ha ocurrido un error, inténtalo más tarde",
+      error2: "Error en la solicitud:",
+      error3: "Error en la solicitud, revisa la consola",
+      sent: "¡Enviado!"
+    },
+    en: {
+      success: "Welcome, You are in!",
+      error: "Something happened, please try again",
+      error2: "Something happened:",
+      error3: "Something happened, check the console",
+      sent: "Sent!"
+    }
+  };
+
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const submitWaitlistForm = function(recaptchaToken: string) {
@@ -92,18 +109,18 @@ export default function App() {
       })
     }).then(res => {
       if (res.status === 200) {
-        toast.success("Agregado correctamente a la lista de espera.");
+        toast.success(modalAlerts[locale].success);
         setEmail("");
       } else {
-        toast.error("Ha ocurrido un error, inténtalo más tarde.");
+        toast.error(modalAlerts[locale].error);
       }
       setIsButtonDisabled(false);
       return res.json();
     }).then(data => {
       console.log(data);
     }).catch(err => {
-      console.error("Error en la solicitud:", err);
-      toast.error("Error en la solicitud, revisa la consola.");
+      console.error(modalAlerts[locale].error2, err);
+      toast.error(modalAlerts[locale].error3);
       setIsButtonDisabled(false);
     });
   }
@@ -111,7 +128,7 @@ export default function App() {
   const handleFormSubmit = function(e: FormEvent) {
     e.preventDefault();
     setIsButtonDisabled(true);
-    toast("¡Muy Pronto!");
+    toast(modalAlerts[locale].sent);
 
     if (!executeRecaptcha) {
       console.log("Execute recaptcha not available yet");

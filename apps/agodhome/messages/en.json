@@ -424,5 +424,9 @@
   "politica-privacidad": {
     "title": "Privacy Policy",
     "description": "Enter the world of Blockchain."
+  },
+
+  "emailJoin": {
+    "header": "¡Ahora estas en la Lista de Espera de"
   }
 }
