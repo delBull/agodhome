@@ -24,6 +24,7 @@ import redplanet from '@/assets/images/redplanet.png';
 
 import styles from '@/styles/FloatingImage.module.css';
 import { useTranslations } from 'next-intl';
+import { SectionButtonTitle } from '@/components/sections/SectionButtonTitle';
 
 function ProjectsContents(): JSX.Element {
   const t = useTranslations('intro-page.ProjectsContents')
@@ -114,25 +115,24 @@ function ProjectsContents(): JSX.Element {
             'z-10',
             'mb-3',
             'lg:w-[100px]',
-            'lg:gap-3', // Gap en dispositivos grandes
-            'text-sm' // Tamaño de texto para dispositivos móviles
+            'lg:gap-3'
           )}
         >
-          <SectionButton
+          <SectionButtonTitle
             title={t("Sustentabilidad")}
             icon=""
             description=""
             active={currentState === 'complement'}
             onClick={() => setCurrentState('complement')}
           />
-          <SectionButton
+          <SectionButtonTitle
             title={t("Economía")}
             icon=""
             description=""
             active={currentState === 'bunz'}
             onClick={() => setCurrentState('bunz')}
           />
-          <SectionButton
+          <SectionButtonTitle
             title={t("Interconexión")}
             icon=""
             description=""
@@ -202,7 +202,7 @@ function ProjectsContents(): JSX.Element {
       </div>
 
       <SectionContent>
-        <div className={clsx('-mt-6 flex h-60')}>
+        <div className={clsx('-mt-6 flex md:h-60 h-80')}>
           <SectionButton
             title={t("agod-ecosystem-destination")}
             icon={<HeartIcon className={clsx('my-2 h-16 w-16')} />}
