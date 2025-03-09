@@ -29,7 +29,7 @@ function AdexContents(): JSX.Element {
           altdesc=""
         />
       </div>
-      <div className={clsx('w-full lg:w-auto hidden md:block')}>
+      <div className={clsx('w-full lg:w-auto')}>
         <div className={clsx(styles.imageContainer)}>
           <Image
             src={portaladex}

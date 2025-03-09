@@ -170,8 +170,29 @@ a.button.button--soft {
 
 @media screen and (max-width: 768px) {
   .adex {
-    width: 100%;
-    top: 65vh;
+    width: 50%;
+    display: none;
+    top: 15vh;
+    opacity: 0.5;
+  }
+  button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {
+    margin-bottom: 5px;
+  }
+}
+
+.daccess-mobile {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .daccess-mobile {
+    width: 50%;
+    right: 20vw;
+    top: 15vh;
     opacity: 0.5;
   }
   button.flex.flex-1.items-center.gap-4.rounded-2xl.border-2.bg-white.px-4.py-4.text-left.dark\:bg-slate-900.border-divider-light.dark\:border-divider-dark {

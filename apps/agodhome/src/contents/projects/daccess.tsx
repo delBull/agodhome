@@ -36,7 +36,7 @@ function DaccessContents(): JSX.Element {
             alt="DACCESS Mobile Background"
             width={600}
             height={300}
-            className={clsx(styles['floating-image'], 'redplanet')}
+            className={clsx(styles['floating-image'], 'daccess-mobile')}
           />
         </div>
       </div>
