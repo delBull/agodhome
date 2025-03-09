@@ -62,7 +62,7 @@ export default async function handler(request: NextApiRequest, response: NextApi
           teamName: "Join AGOD",
           invitedByUsername: "AGOD Ecosystem"
         })
-      });
+      }); 
 
       if (data) {
         console.log('Email sent successfully:', data);

@@ -1,7 +1,6 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NextUIProvider } from '@nextui-org/react';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
@@ -37,46 +36,7 @@ type Props = Omit<AppProps<PageProps>, 'pageProps'> & {
 
 function App({ Component, pageProps }: Props): JSX.Element {
   const router = useRouter();
-  const [isChatOpen, setIsChatOpen] = useState(false);
   const { currentLocale, allLocales } = pageProps;
-
-  useEffect(() => {
-    if (router.pathname === '/') {
-      setIsChatOpen(true);
-    } else {
-      setIsChatOpen(false);
-    }
-  }, [router.pathname]);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (isChatOpen) {
-        if (event.key === 'd' || event.key === 'Escape' || event.key === 'd' || event.key === 'f') {
-          event.preventDefault();
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isChatOpen]);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.code === 'AltLeft' || event.code === 'AltRight' || event.code === 'OptionLeft' || event.code === 'OptionRight') {
-        setIsChatOpen(true);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
 
   // Fallback for messages (ensure messages are passed if not static)
   const { messages = {} } = pageProps;
