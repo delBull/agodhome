@@ -32,7 +32,7 @@
     "axios": "^1.8.1",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.13",
-    "framer-motion": "12.4.7",
+    "framer-motion": "12.23.12",
     "front-matter": "^4.0.2",
     "jsonata": "^2.0.6",
     "lodash": "^4.17.21",
@@ -90,4 +90,3 @@
     "node": "^22.17.1"
   }
 }
-

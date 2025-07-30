@@ -1,32 +1,13 @@
 import clsx from 'clsx';
-import {
-  JetBrains_Mono as JetBrainsMono,
-  Plus_Jakarta_Sans as PlusJakartaSans,
-} from "next/font/google";
-import { PropsWithChildren, useEffect } from 'react';
-
-const jetbrainsMono = JetBrainsMono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-});
-
-const plusJakartaSans = PlusJakartaSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+import { PropsWithChildren } from 'react';
+import { jetbrainsMono } from '@/fonts/jetbrains-mono';
+import { plusJakartaSans } from '@/fonts/plus-jakarta';
 
 function Root({ children }: PropsWithChildren): JSX.Element {
-  useEffect(() => {
-    document.documentElement.classList.add(
-      jetbrainsMono.variable,
-      plusJakartaSans.variable
-    );
-  }, []);
-
   return (
     <div
       id="__root"
-      className={clsx([jetbrainsMono.variable, plusJakartaSans.variable])}
+      className={clsx(jetbrainsMono.variable, plusJakartaSans.variable)}
     >
       {children}
     </div>
