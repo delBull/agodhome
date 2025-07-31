@@ -32,7 +32,7 @@ const t = useTranslations('Navigation')
           'dark:font-normal'
         )}
       >
-        {t('Navegación')}
+        {t('Navigations')}
         <Kbd>ALT</Kbd>
       </div>
     </button>
