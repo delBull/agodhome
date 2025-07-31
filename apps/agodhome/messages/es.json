@@ -409,6 +409,11 @@
   "footer": {
     "Construyendo con Pasión": "Construyendo con Pasión",
     "ecosystem-description": "AGOD está construyendo un ecosistema financiero revolucionario que combina tecnología avanzada, sostenibilidad y oportunidades de inversión en activos del mundo real. Únete a nosotros en este viaje hacia un futuro financiero más justo y sostenible.",
+    "Learn": "Explora",
+    "Intro": "Intro",
+    "AGOD Key": "AGOD Key",
+    "Roadmap": "Roadmap",
+    "Blog": "Blog",
     "Preguntas Frecuentes": "Preguntas Frecuentes",
     "Ecosistema": "Ecosistema",
     "Pandora's": "Pandora's",
@@ -428,5 +433,4 @@
   "emailJoin": {
     "header": "¡Ahora estas en la Lista de Espera de"
   }
-
 }

@@ -19,9 +19,9 @@ import '@/styles/main.css';
 import '@n8n/chat/style.css';
 import '@/styles/chat.css';
 
-type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
-};
+//type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
+  //getLayout?: (page: ReactElement) => ReactNode;
+//};
 
 type PageProps = {
   messages: IntlMessages;
@@ -70,8 +70,8 @@ function App({ Component, pageProps }: Props): JSX.Element {
 export default App;
 
 export async function getStaticProps() {
-  const currentLocale = 'es'; // Asegúrate de tener un valor para currentLocale
-  const allLocales = ['en', 'es']; // Asegúrate de tener un array con todas las lenguas disponibles
+  const currentLocale = 'es';
+  const allLocales = ['en', 'es'];
 
   return {
     props: {

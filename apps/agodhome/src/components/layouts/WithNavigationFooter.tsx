@@ -12,7 +12,7 @@ function WithNavigationFooter({ children, currentLocale, allLocales }: PropsWith
     <>
       <QuickAccess currentLocale={currentLocale} allLocales={allLocales} />
       <Shortcuts />
-      <Navigation currentLocale="es" allLocales={['en', 'es']} />
+      <Navigation currentLocale={currentLocale} allLocales={allLocales} />
       <main>{children}</main>
       <Toaster />
       <Footer />

@@ -14,17 +14,17 @@ import LanguageSwitcher from './languageSwitcher/LanguageSwitcher';
 
 const workLinks = [
   { title: "PANDORA'S", href: '/pandoras' },
-  { title: 'DACCESS', href: '/daccess' },
-  { title: 'RA WALLET', href: '/rawallet' },
+  { title: "DACCESS", href: '/daccess' },
+  { title: "RA WALLET", href: '/rawallet' },
   { title: "ADEX", href: '/adex' }, 
 ];
 
 function Navbar({ currentLocale, allLocales }): JSX.Element {
-  const t = useTranslations("Navigation")
+  const t = useTranslations("Navigation");
   const learnLinks = [
-    { title: t('Intro'), href: '/intro' },
-    { title: t('AGOD Key'), href: '/agodkey' },
-    { title: t('Roadmap'), href: '/roadmap' },
+    { title: t("Intro"), href: '/intro' },
+    { title: t("AGOD Key"), href: '/agodkey' },
+    { title: t("Roadmap"), href: '/roadmap' },
     { title: t("Blog"), href: '/blog' },
   ];
   const isScrolled = useOnScroll(0);

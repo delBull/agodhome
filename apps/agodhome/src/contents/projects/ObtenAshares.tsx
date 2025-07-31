@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-//import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import SectionTitle from '@/components/sections/SectionTitle';
@@ -17,7 +16,6 @@ function ObtenAshares(): JSX.Element {
   const [isClient, setIsClient] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
   const { locale } = useRouter();
-  //const t = useTranslations();
 
   const titles = {
     es: '¿Quieres ser parte?',
