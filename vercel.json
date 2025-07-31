@@ -1,17 +1,6 @@
 {
-  "version": 2,
-  "build": {
-    "env": {
-      "NODE_VERSION": "22.17.1"
-    }
-  },
-  "builds": [
-    {
-      "src": "apps/agodhome/next.config.mjs",
-      "use": "@vercel/next"
-    }
-  ],
-  "installCommand": "pnpm install --frozen-lockfile",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm turbo run build --filter=agodhome",
-  "outputDirectory": "apps/agodhome/.next"
+  "outputDirectory": "apps/agodhome/.next",
+  "installCommand": "pnpm install --frozen-lockfile"
 }
