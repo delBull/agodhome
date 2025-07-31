@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react';
 import clsx from 'clsx';
-import { m } from 'framer-motion';
+import { m, easeOut } from 'framer-motion';
 import { useRef } from 'react';
 
 import ActionCenter from '@/components/ActionCenter';
@@ -87,7 +87,7 @@ function QuickAccess({ currentLocale, allLocales }): JSX.Element {
                 initial={{ x: -36, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
-                  ease: 'easeOut',
+                  ease: easeOut,
                   delay: 0.6,
                 }}
               >

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { m } from 'framer-motion';
+import { m, easeOut } from 'framer-motion';
 import { Fragment } from 'react';
 
 import { KeyboardIcon } from '@/components/Icons';
@@ -25,7 +25,7 @@ const animation = {
     x: 0,
     opacity: 1,
     transition: {
-      ease: 'easeOut',
+      ease: easeOut,
       duration: 0.12,
     },
   },

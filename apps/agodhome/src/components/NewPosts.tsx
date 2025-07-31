@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { m } from 'framer-motion';
+import { m, easeOut } from 'framer-motion';
 import Link from 'next/link';
 
 import useNewPosts from '@/hooks/useNewPosts';
@@ -12,7 +12,7 @@ const animation = {
     y: 0,
     opacity: 1,
     transition: {
-      ease: 'easeOut',
+      ease: easeOut,
       duration: 0.084,
     },
   },

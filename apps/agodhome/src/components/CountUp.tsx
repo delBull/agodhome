@@ -1,5 +1,6 @@
 import { animate } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { easeOut } from 'framer-motion';
 
 interface CountUpProps {
   from: number;
@@ -14,7 +15,7 @@ function CountUp({ from, to }: CountUpProps): JSX.Element {
 
     const controls = animate(from, to, {
       duration: 1.4,
-      ease: 'easeOut',
+      ease: easeOut,
       onUpdate(value) {
         node.textContent = value.toFixed(0);
       },

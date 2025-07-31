@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { m } from 'framer-motion';
+import { m, easeOut } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 
 import { InfoIcon, XCircleIcon } from '@/components/Icons';
@@ -16,7 +16,7 @@ function Toast({ title, message, t }: ToastProps): JSX.Element {
   return (
     <m.div
       animate={{ opacity: [0, 1], x: [16, 0] }}
-      transition={{ ease: 'easeOut', duration: 0.24 }}
+      transition={{ ease: easeOut, duration: 0.24 }}
       className={clsx(
         'border-divider-light flex w-full gap-2 rounded-xl border bg-white/60 p-4 text-[13px] backdrop-blur',
         'sm:max-w-[400px]',

@@ -4,9 +4,10 @@
     "baseUrl": ".",
     "moduleResolution": "node",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["./src/*"],
       "@vercel/speed-insights/next": ["node_modules/@vercel/speed-insights/next/index"]
-    }
+    },
+     "types": ["react", "node"]
   },
   "include": [
     "next-env.d.ts",

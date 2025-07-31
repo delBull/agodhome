@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { m } from 'framer-motion';
+import { m, easeOut } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -134,7 +134,7 @@ const EmojiReaction: React.FC<EmojiReactionProps> = ({
                 opacity: [1, 1, 0],
               }}
               transition={{
-                ease: 'easeOut',
+                ease: easeOut,
                 duration,
               }}
               onAnimationComplete={() => {

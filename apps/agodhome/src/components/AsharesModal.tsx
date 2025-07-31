@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { Button, Modal, ModalContent, ModalFooter, ModalHeader } from '@nextui-org/react';
 import { useEffect, useState } from 'react';
-import { m } from 'framer-motion';
+import { m, easeOut, easeIn } from 'framer-motion';
 import Image from 'next/image';
 import modalImage from '@/assets/images/quetza.png';
 
@@ -29,12 +29,12 @@ const ASharesModal: React.FC<AsharesModalProps> = ({ isOpen, onOpenChange }) => 
           enter: {
             y: 0,
             opacity: 1,
-            transition: { duration: 0.3, ease: "easeOut" },
+            transition: { duration: 0.3, ease: easeOut },
           },
           exit: {
             y: 20,
             opacity: 0,
-            transition: { duration: 0.2, ease: "easeIn" },
+            transition: { duration: 0.2, ease: easeIn },
           },
         },
       }}

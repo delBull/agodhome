@@ -1,7 +1,7 @@
 "use client";
 import { Button, Input, Modal, ModalContent, ModalBody, useDisclosure } from "@nextui-org/react";
 import clsx from 'clsx';
-import { m, } from 'framer-motion';
+import { m, easeOut, easeIn } from 'framer-motion';
 import React, { FormEvent, useState } from "react";
 import { useRouter } from 'next/router';
 
@@ -164,7 +164,7 @@ export default function App() {
               opacity: 1,
               transition: {
                 duration: 0.3,
-                ease: "easeOut",
+                ease: easeOut,
               },
             },
             exit: {
@@ -172,7 +172,7 @@ export default function App() {
               opacity: 0,
               transition: {
                 duration: 0.2,
-                ease: "easeIn",
+                ease: easeIn,
               },
             },
           }

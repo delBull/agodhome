@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { m } from 'framer-motion';
+import { m, easeOut } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
 import { DarkIcon, LightIcon } from '@/components/Icons';
@@ -15,7 +15,7 @@ const animation = {
     y: 0,
     opacity: 1,
     transition: {
-      ease: 'easeOut',
+      ease: easeOut,
       duration: 0.084,
     },
   },
@@ -95,7 +95,7 @@ function ActionCenter({ currentLocale, allLocales }): JSX.Element {
                     ? { rotate: [90, 0] }
                     : { rotate: [90.01, 0] }
                 }
-                transition={{ ease: 'easeOut', duration: 0.8 }}
+                transition={{ ease: easeOut, duration: 0.8 }}
                 className={clsx('absolute top-4 left-4 h-36 w-36 rounded-full')}
               >
                 <m.div
@@ -104,7 +104,7 @@ function ActionCenter({ currentLocale, allLocales }): JSX.Element {
                       ? { opacity: [0.01, 1], scale: [0.801, 1] }
                       : { opacity: [0, 1], scale: [0.8, 1] }
                   }
-                  transition={{ ease: 'easeOut', duration: 0.8 }}
+                  transition={{ ease: easeOut, duration: 0.8 }}
                   className={clsx('absolute top-0')}
                 >
                   {theme === 'dark' ? (
@@ -119,7 +119,7 @@ function ActionCenter({ currentLocale, allLocales }): JSX.Element {
                       ? { opacity: [1, 0], scale: [1, 0.801] }
                       : { opacity: [1, 0.01], scale: [1, 0.8] }
                   }
-                  transition={{ ease: 'easeOut', duration: 0.8 }}
+                  transition={{ ease: easeOut, duration: 0.8 }}
                   className={clsx('absolute bottom-0')}
                 >
                   {theme === 'dark' ? (
