@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { GetStaticProps } from 'next';
 import AdexContents from '@/contents/projects/adex';
 import Page from '@/contents-layouts/Page';
 
 function AdexPage(): JSX.Element {
-  const t = useTranslations('adex-page.header');
+  const t = useSimpleTranslations('adex-page.header');
 
   return (
     <Page

@@ -13,11 +13,11 @@ import Image from "./mdx/Image";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 // @ts-ignore
 import { toast } from "react-hot-toast";
-import { useTranslations } from "next-intl";
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 
 export default function App() {
-  const t = useTranslations('home-page.HeaderCta')
+  const t = useSimpleTranslations('home-page.HeaderCta')
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [email, setEmail] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);

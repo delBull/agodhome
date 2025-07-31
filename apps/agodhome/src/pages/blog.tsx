@@ -1,5 +1,5 @@
 import { getSortedPosts } from '@/lib/posts';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import BlogContents from '@/contents/blog';
 import HeaderImage from '@/contents/blog/HeaderImage';
 import Page from '@/contents-layouts/Page';
@@ -12,7 +12,7 @@ type BlogProps = {
 };
 
 function Blog({ posts }: BlogProps): JSX.Element {
-  const t = useTranslations('blog.header');
+  const t = useSimpleTranslations('blog.header');
 
   return (
     <Page

@@ -17,7 +17,7 @@ import CustomCard from './CustomCard';
 import LinkCard from './LinkCard';
 
 import styles from '@/styles/FloatingImage.module.css';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 const animation = {
   hide: { x: -32, opacity: 0 },
@@ -28,7 +28,7 @@ const animation = {
 };
 
 function FeaturedCardSection() {
-const t = useTranslations('home-page.FeaturedCardSection')
+const t = useSimpleTranslations('home-page.FeaturedCardSection')
   return (
     <div className={clsx('content-wrapper')}>
       <div style={{ marginTop: '100px' }}></div>

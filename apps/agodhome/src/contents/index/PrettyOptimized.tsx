@@ -7,7 +7,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 import tokenAGODVideo from '@/assets/videos/tokenAGOD.mp4';
 
 import type { TodoItemState } from '@/contents/index/Cards/TodoItem';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 type Content = {
   state: TodoItemState;
@@ -30,7 +30,7 @@ const content: Array<Content> = [
 ];
 
 function PrettyOptimized(): JSX.Element {
-  const t = useTranslations('home-page.PrettyOptimized-section')
+  const t = useSimpleTranslations('home-page.PrettyOptimized-section')
   return (
     <header >
       <SectionTitle

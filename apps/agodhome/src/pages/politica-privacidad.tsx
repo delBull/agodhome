@@ -2,6 +2,7 @@ import HeaderImage from '@/contents/blog/HeaderImage';
 import Privacidad from '@/contents/privacidad';
 import Page from '@/contents-layouts/Page';
 import { useRouter } from 'next/router';
+import { GetStaticProps } from 'next';
 
 function PoliticaPrivacidad(): JSX.Element {
   const { locale } = useRouter();
@@ -30,3 +31,11 @@ function PoliticaPrivacidad(): JSX.Element {
 }
 
 export default PoliticaPrivacidad;
+
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
+  };
+};

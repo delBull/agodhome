@@ -7,7 +7,7 @@ import NavLink from '@/components/navigations/NavLink';
 import NavLinkDropdown from '@/components/navigations/NavLinkDropdown';
 import NavLinkExpanded from '@/components/navigations/NavLinkExpanded';
 import NavLogo from '@/components/navigations/NavLogo';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 import useOnScroll from '@/hooks/useOnScroll';
 import LanguageSwitcher from './languageSwitcher/LanguageSwitcher';
@@ -20,7 +20,7 @@ const workLinks = [
 ];
 
 function Navbar({ currentLocale, allLocales }): JSX.Element {
-  const t = useTranslations("Navigation");
+  const t = useSimpleTranslations("Navigation");
   const learnLinks = [
     { title: t("Intro"), href: '/intro' },
     { title: t("AGOD Key"), href: '/agodkey' },

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { GetStaticProps } from 'next';
 import PandorasContents from '@/contents/projects/pandoras';
 //import HeaderImage from '@/contents/projects/HeaderImage';
@@ -7,7 +7,7 @@ import Page from '@/contents-layouts/Page';
 import { HeartIcon } from '@/components/Icons';
 
 function PandorasPage(): JSX.Element {
-  const t = useTranslations('pandoras-page.header');
+  const t = useSimpleTranslations('pandoras-page.header');
 
   return (
     <Page

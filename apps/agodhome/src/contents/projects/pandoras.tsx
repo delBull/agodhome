@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon, QuoteIcon, PinIcon, QuickAccessIcon, ShareIcon, CodeIcon } from '@/components/Icons';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import styles from '@/styles/FloatingImage.module.css';
 import introhd from '@/assets/images/introhd.png';
 
 function PandorasContents(): JSX.Element {
-  const t = useTranslations('pandoras-page');
+  const t = useSimpleTranslations('pandoras-page');
   return (
     <>
       <div className={clsx('content-wrapper', 'py-8')}>

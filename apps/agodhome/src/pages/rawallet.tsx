@@ -1,11 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { GetStaticProps } from 'next';
 import RaWalletContents from '@/contents/projects/ra-wallet';
 import HeaderImage from '@/contents/projects/HeaderImage';
 import Page from '@/contents-layouts/Page'; 
 
 function RaWalletPage(): JSX.Element {
-  const t = useTranslations('rawallet-page.header');
+  const t = useSimpleTranslations('rawallet-page.header');
 
   return (
     <Page

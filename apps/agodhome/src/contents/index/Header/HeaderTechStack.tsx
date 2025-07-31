@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { m } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { 
   FaTwitter, 
   FaInstagram, 
@@ -19,7 +19,7 @@ const animation = {
 };
 
 function HeaderTechStack(): JSX.Element {
-  const t = useTranslations('home-page.HeaderTechStack')
+  const t = useSimpleTranslations('home-page.HeaderTechStack')
   return (
     <div>
       <m.p

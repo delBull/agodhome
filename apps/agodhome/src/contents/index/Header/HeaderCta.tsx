@@ -3,7 +3,7 @@ import { m, useReducedMotion } from 'framer-motion';
 
 import { DocumentIcon } from '@/components/Icons';
 import ObtenAGODKey from '@/components/ObtenAGODKey';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 const animation = {
   hide: {
@@ -75,7 +75,7 @@ function HeaderCta({
   isFreeAnimationDuration = 4,
   }: HeaderCtaProps): JSX.Element {
     const shouldReduceMotion = useReducedMotion();
-    const t = useTranslations('home-page.HeaderCta')
+    const t = useSimpleTranslations('home-page.HeaderCta')
 
     let isFreeVariants = {
       hide: {

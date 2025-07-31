@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon, QuoteIcon, EyeIcon, CalendarIcon } from '@/components/Icons';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ import introhd from '@/assets/images/introhd.png';
 import { SparkleIcon } from 'lucide-react';
 
 function AdexContents(): JSX.Element {
-  const t = useTranslations('adex-page');
+  const t = useSimpleTranslations('adex-page');
   return (
     <>
       <div className={clsx('content-wrapper', 'py-8')}>

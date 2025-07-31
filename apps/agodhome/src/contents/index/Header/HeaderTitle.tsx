@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { m, useAnimationControls } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import Image from 'next/image';
 
 const animation = {
@@ -13,7 +13,7 @@ const animation = {
 
 function HeaderTitle(): JSX.Element {
   const controls = useAnimationControls();
-const t = useTranslations('home-page.HeaderTitle')
+const t = useSimpleTranslations('home-page.HeaderTitle')
   return (
     <div>
       <m.div

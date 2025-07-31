@@ -23,11 +23,11 @@ import introhd from '@/assets/images/introhd.png';
 import redplanet from '@/assets/images/redplanet.png';
 
 import styles from '@/styles/FloatingImage.module.css';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { SectionButtonTitle } from '@/components/sections/SectionButtonTitle';
 
 function ProjectsContents(): JSX.Element {
-  const t = useTranslations('intro-page.ProjectsContents')
+  const t = useSimpleTranslations('intro-page.ProjectsContents')
   const [currentState, setCurrentState] = useState<
     | 'centro'
     | 'interfaz'

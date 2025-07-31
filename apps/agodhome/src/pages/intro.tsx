@@ -1,11 +1,11 @@
 import ProjectsContents from '@/contents/projects';
 import HeaderImage from '@/contents/projects/HeaderImage';
 import Page from '@/contents-layouts/Page';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { GetStaticProps } from 'next';
 
 function Intro(): JSX.Element {
-  const t = useTranslations('intro-page.main-section')
+  const t = useSimpleTranslations('intro-page.main-section')
   return (
     <Page
       frontMatter={{

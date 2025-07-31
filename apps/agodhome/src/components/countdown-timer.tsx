@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 export function CountdownTimer(): JSX.Element {
-  const t = useTranslations('home-page.CountdownTimer-card')
+  const t = useSimpleTranslations('home-page.CountdownTimer-card')
     const [isVisible, setIsVisible] = useState(true);
 
     if (!isVisible) {

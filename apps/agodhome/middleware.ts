@@ -10,7 +10,7 @@ export async function middleware(req: NextRequest) {
   ) {
     return
   }
- console.log('here55')
+ 
   if (req.nextUrl.locale === 'default') {
     const locale = req.cookies.get('NEXT_LOCALE')?.value || 'es'
  

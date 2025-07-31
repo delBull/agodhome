@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 import { useDisclosure } from '@nextui-org/react';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon } from '@/components/Icons';
 import AsharesModal from '@/components/AsharesModal';
 
 function Opener(): JSX.Element {
   const { isOpen, onOpenChange } = useDisclosure();
-  const t = useTranslations('agod-key-page.opener');
+  const t = useSimpleTranslations('agod-key-page.opener');
 
   return (
     <header className={clsx('mb-8 mt-10')}>

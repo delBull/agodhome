@@ -4,11 +4,11 @@ import { QuickAccessIcon } from '@/components/Icons';
 import Kbd from '@/components/Kbd';
 
 import useGlobal from '@/hooks/useGlobal';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 function NavIconQuickAccess(): JSX.Element {
   const { setQuickAccessOpen } = useGlobal();
-const t = useTranslations('Navigation')
+  const t = useSimpleTranslations('Navigation')
   return (
     <button
       type="button"

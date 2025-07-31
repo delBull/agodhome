@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import SectionTitle from '@/components/sections/SectionTitle';
 import { HeartIcon } from '@/components/Icons';
 import { QuoteIcon } from '@/components/Icons';
@@ -12,7 +12,7 @@ import SectionContent from '@/components/sections/SectionContent';
 import introhd from '@/assets/images/introhd.png';
 
 function RaWalletContents() {
-  const t = useTranslations('rawallet-page');
+  const t = useSimpleTranslations('rawallet-page');
 
   return (
     <div className={clsx('content-wrapper')}>
@@ -90,7 +90,7 @@ function RaWalletContents() {
 }
 
 function IndexContents(): JSX.Element {
-  const t = useTranslations('rawallet-page.opener');
+  const t = useSimpleTranslations('rawallet-page.opener');
 
   return (
     <LazyMotion features={domAnimation}>

@@ -1,11 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import TILContents from '@/contents/TIL';
 import HeaderImage from '@/contents/TIL/HeaderImage';
 import Page from '@/contents-layouts/Page';
 import { GetStaticPropsContext } from 'next';
 
 function TIL(): JSX.Element {
-  const t = useTranslations('roadmap-page.header');
+  const t = useSimpleTranslations('roadmap-page.header');
 
   return (
     <Page

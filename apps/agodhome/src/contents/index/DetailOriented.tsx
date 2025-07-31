@@ -2,10 +2,10 @@ import clsx from 'clsx';
 
 import { HeartIcon } from '@/components/Icons';
 import SectionTitle from '@/components/sections/SectionTitle';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 function DetailOriented(): JSX.Element {
-  const t = useTranslations('home-page.DetailOriented-section')
+  const t = useSimpleTranslations('home-page.DetailOriented-section')
   return (
     <header className={clsx('mb-8')}>
       <SectionTitle

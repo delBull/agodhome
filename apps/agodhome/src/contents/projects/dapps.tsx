@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
@@ -19,7 +19,7 @@ type Content = {
 };
 
 function Dapps(): JSX.Element {
-  const t = useTranslations('agod-key-page');
+  const t = useSimpleTranslations('agod-key-page');
 
   const content: Array<Content> = [
     {

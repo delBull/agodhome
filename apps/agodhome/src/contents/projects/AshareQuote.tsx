@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { QuoteIcon } from '@/components/Icons';
 
 function AshareQuote(): JSX.Element {
-  const t = useTranslations('agod-key-page');
+  const t = useSimpleTranslations('agod-key-page');
 
   return (
     <blockquote

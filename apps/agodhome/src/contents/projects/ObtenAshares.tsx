@@ -86,8 +86,7 @@ function ObtenAshares(): JSX.Element {
               <HeartIcon className={clsx('h-5 w-5 ml-2')} />
             </a>
             <br />
-            <div style={{ marginTop: '30px' }} />
-            <span style={{ fontSize: '30px', fontWeight: 'bold' }}>
+            <span style={{ display: 'block', marginTop: '30px', fontSize: '30px', fontWeight: 'bold' }}>
               {faqTitles[locale]}
             </span>
             <Link

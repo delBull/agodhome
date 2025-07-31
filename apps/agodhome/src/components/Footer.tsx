@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { ExternalLink } from '@/components/Icons';
 import dayjs from '@/utils/dayjs';
-import { useTranslations  } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 interface TranslationObject {
   (key: string): string;
   has(key: string): boolean;
@@ -123,7 +123,7 @@ function FooterDescription({t}) {
 }
 
 function Footer(): JSX.Element {
-  const t : TranslationObject = useTranslations('footer')
+  const t = useSimpleTranslations('footer')
   return (
     <footer
       className={clsx(

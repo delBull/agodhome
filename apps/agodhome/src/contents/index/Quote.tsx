@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 
 import { QuoteIcon } from '@/components/Icons';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 
 function Quote(): JSX.Element {
-  const t = useTranslations('home-page.quote-section')
+  const t = useSimpleTranslations('home-page.quote-section')
   return (
     <blockquote
       className={clsx(

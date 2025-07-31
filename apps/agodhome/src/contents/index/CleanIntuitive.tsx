@@ -9,7 +9,8 @@ import SectionTitle from '@/components/sections/SectionTitle';
 import tierraLateral from '@/assets/images/tierralateral.png';
 
 import styles from '@/styles/FloatingImage.module.css';
-import { useMessages, useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
+import { useRouter } from 'next/router';
 
 type SectionContent = {
   [key: string]: {
@@ -77,9 +78,19 @@ type CleanIntuitiveMessages = {
 // ];
 
 function CleanIntuitive(): JSX.Element {
-  const messages = useMessages() as CleanIntuitiveMessages
-  const t = useTranslations('home-page.CleanIntuitive')
-  const content = Object.keys(messages['home-page'].CleanIntuitive.sectionContent) as SectionContentKeys[];
+  const t = useSimpleTranslations('home-page.CleanIntuitive')
+  
+  // Get messages directly from window object
+  const getMessages = () => {
+    if (typeof window !== 'undefined') {
+      return (window as any).__NEXT_INTL_MESSAGES__ || {};
+    }
+    return {};
+  };
+  
+  const messages = getMessages();
+  const sectionContent = messages['home-page']?.CleanIntuitive?.sectionContent || {};
+  const content = Object.keys(sectionContent) as SectionContentKeys[];
   const [expanded, setExpanded] = useState<string | null>(null);
 
   const handleToggle = (state: string) => {

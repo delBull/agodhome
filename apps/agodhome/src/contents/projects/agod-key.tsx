@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CodeIcon, InfoIcon, QuickAccessIcon } from '@/components/Icons';
@@ -12,8 +12,8 @@ import theImage from '@/assets/images/connector2.png';
 import styles from '@/styles/FloatingImage.module.css';
 
 function AgodkeyContents() {
-  const t = useTranslations('agod-key-page');
-  const actionsT = useTranslations('agod-key-page.features.actions');
+  const t = useSimpleTranslations('agod-key-page');
+  const actionsT = useSimpleTranslations('agod-key-page.features.actions');
 
   return (
     <div className={clsx('content-wrapper')}>

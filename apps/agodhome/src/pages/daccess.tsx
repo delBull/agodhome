@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
+import { useSimpleTranslations } from '@/hooks/useSimpleTranslations';
 import { GetStaticProps } from 'next';
 import DaccessContents from '@/contents/projects/daccess';
 import Page from '@/contents-layouts/Page';
 
 function DaccessPage(): JSX.Element {
-  const t = useTranslations('daccess-page.header');
+  const t = useSimpleTranslations('daccess-page.header');
 
   return (
     <Page
