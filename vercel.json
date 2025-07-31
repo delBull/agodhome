@@ -12,6 +12,6 @@
     }
   ],
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm turbo run build --filter=agodhome",
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm turbo run build --filter=agodhome",
   "outputDirectory": "apps/agodhome/.next"
 }

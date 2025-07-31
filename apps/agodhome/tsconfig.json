@@ -7,14 +7,16 @@
       "@/*": ["./src/*"],
       "@vercel/speed-insights/next": ["node_modules/@vercel/speed-insights/next/index"]
     },
-     "types": ["react", "node"]
+     "types": ["react", "node", "mdx"]
   },
   "include": [
     "next-env.d.ts",
+    "types",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
+    "**/*.mdx",
     "middleware.ts",
     "next.config.mjs"
   ],
