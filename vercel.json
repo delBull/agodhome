@@ -7,7 +7,7 @@
   },
   "builds": [
     {
-      "src": "apps/agodhome/next.config.js",
+      "src": "apps/agodhome/next.config.mjs",
       "use": "@vercel/next"
     }
   ],
