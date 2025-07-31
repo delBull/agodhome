@@ -18,7 +18,8 @@
     "**/*.jsx",
     "**/*.mdx",
     "middleware.ts",
-    "next.config.mjs"
+    "next.config.mjs",
+    "src/types"
   ],
   "exclude": ["node_modules"]
 }

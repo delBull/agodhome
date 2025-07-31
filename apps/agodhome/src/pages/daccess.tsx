@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { GetStaticProps } from 'next';
-import DaccessContents from 'contents/projects/daccess';
+import DaccessContents from '@/contents/projects/daccess';
 import Page from '@/contents-layouts/Page';
 
 function DaccessPage(): JSX.Element {
