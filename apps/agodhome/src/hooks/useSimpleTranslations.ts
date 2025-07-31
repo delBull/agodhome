@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import * as React from 'react';
 
 // Simple translation hook that doesn't cause hydration issues
 export function useSimpleTranslations(namespace?: string) {
