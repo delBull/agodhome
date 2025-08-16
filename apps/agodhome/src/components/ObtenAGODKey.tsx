@@ -250,7 +250,7 @@ export default function App() {
                       transition={{ duration: 2, ease: "easeInOut" }}
                       className="absolute inset-0 flex items-center justify-center"
                     >
-                      <PaperAirplaneIcon className="text-red-500 w-12 h-12" />
+                      <PaperAirplaneIcon className="text-red-500 w-10 h-8" />
                     </m.div>
                   )}
                 </AnimatePresence>
