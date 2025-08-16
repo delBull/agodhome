@@ -35,7 +35,7 @@ export const Join = ({
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] max-w-[465px]">
             <Section className="mt-[32px]">
               <Img
-                src="/assets/images/icon.png"
+                src={`${baseUrl}/assets/images/icon.png`}
                 width="40"
                 height="37"
                 alt="Vercel"
@@ -56,7 +56,7 @@ export const Join = ({
               <Row>
                 <Column align="center">
                   <Img
-                    src="/assets/images/icon.png"
+                    src={`${baseUrl}/assets/images/icon.png`}
                     width="12"
                     height="9"
                     alt="invited you to"
