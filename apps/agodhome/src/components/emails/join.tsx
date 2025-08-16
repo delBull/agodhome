@@ -20,7 +20,7 @@ const baseUrl = process.env.VERCEL_URL
   : "";
 
 export const Join = ({
-  username, 
+  username,
   invitedByUsername,
   teamName,
 }) => {
@@ -64,8 +64,8 @@ export const Join = ({
                 </Column>
               </Row>
               <Text className="text-black text-[14px] leading-[24px]">
-                Mantente al pendiente de nuestras actualizaciones y sé parte de este revolucionario <strong>cambio.</strong>, Muy pronto 
-                te mostraremos cómo AGOD Ecosystem está transformando la forma de invertir, haciendo realidad el futuro de las finanzas 
+                Mantente al pendiente de nuestras actualizaciones y sé parte de este revolucionario <strong>cambio.</strong>, Muy pronto
+                te mostraremos cómo AGOD Ecosystem está transformando la forma de invertir, haciendo realidad el futuro de las finanzas
                 respaldado por activos tangibles.
               </Text>
               <p className="text-center font-bold text-lg mt-10 mb-10">¡Prepárate para revolucionar tu experiencia digital!</p>

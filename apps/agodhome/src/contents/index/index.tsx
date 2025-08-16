@@ -212,6 +212,9 @@ const t = useSimpleTranslations('home-page.FeaturedCardSection')
             alt="AGOD Ecosystem"
             width={600}
             height={300}
+            priority
+            quality={75}
+            placeholder="blur"
             className={clsx(styles['floating-image'], ['quetza z-1 opacity-10 md:z-auto md:opacity-100'])}
           /> 
         
@@ -274,6 +277,9 @@ function IndexContents(): JSX.Element {
         alt="Intro HD"
         width={600}
         height={300}
+        priority
+        quality={75}
+        placeholder="blur"
         className={clsx(styles['floating-image'], ['agodworld'])}
       />
       <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>
