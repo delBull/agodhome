@@ -2,32 +2,34 @@
 import { createContext, useContext, ReactNode, useCallback } from 'react';
 import { useRouter } from 'next/router';
 
+type IntlMessages = Record<string, any>;
+
 type LanguageContextType = {
   selectedLocale: string;
   changeLocale: (locale: string) => void;
+  messages: IntlMessages;
 };
 
 const LanguageContext = createContext<LanguageContextType>({
   selectedLocale: 'en',
-  changeLocale: () => {}
+  changeLocale: () => {},
+  messages: {}
 });
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({ children, messages }: { children: ReactNode, messages?: IntlMessages }) {
   const router = useRouter();
   const { locale, push, pathname, query, asPath } = router;
   
-  // Use router locale directly - no need for separate state
   const selectedLocale = locale || 'es';
 
   const changeLocale = useCallback((newLocale: string) => {
     if (newLocale !== selectedLocale) {
-      // Use Next.js router to change locale
       push({ pathname, query }, asPath, { locale: newLocale, scroll: false });
     }
   }, [selectedLocale, push, pathname, query, asPath]);
 
   return (
-    <LanguageContext.Provider value={{ selectedLocale, changeLocale }}>
+    <LanguageContext.Provider value={{ selectedLocale, changeLocale, messages: messages || {} }}>
       {children}
     </LanguageContext.Provider>
   );

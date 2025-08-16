@@ -7,7 +7,7 @@ import Provider from '@/providers';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider } from '@/components/languageSwitcher/LanguageContext';
-import { useEffect, Suspense } from 'react';
+import { useEffect, Suspense, useState } from 'react';
 import type { AppProps } from 'next/app';
 
 // Type for internationalization messages
@@ -42,18 +42,22 @@ function App({ Component, pageProps }: Props): JSX.Element {
   // Fallback for messages (ensure messages are passed if not static)
   const { messages } = pageProps;
 
-  // Set messages globally for our simple translation hook
+  const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
-    if (typeof window !== 'undefined' && messages) {
-      (window as any).__NEXT_INTL_MESSAGES__ = messages;
-    }
-  }, [messages]);
+    setHydrated(true);
+  }, []);
+
+  if (!hydrated) {
+    // Returns null on first render, so the client and server match
+    return null;
+  }
+
 
   return (
     <>
       <NextUIProvider>
         <Provider>
-        <LanguageProvider>
+        <LanguageProvider messages={messages}>
           <RootLayout>
             <WithNavigationFooter currentLocale={currentLocale} allLocales={allLocales}>
               <Suspense fallback={<div>Loading...</div>}>

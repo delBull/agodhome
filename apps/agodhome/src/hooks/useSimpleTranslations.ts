@@ -1,15 +1,9 @@
-import { useRouter } from 'next/router';
+import { useLanguage } from '@/components/languageSwitcher/LanguageContext';
 import * as React from 'react';
 
 // Simple translation hook that doesn't cause hydration issues
 export function useSimpleTranslations(namespace?: string) {
-  const router = useRouter();
-  const locale = router.locale || 'es';
-
-  // Get messages from global window object (set by getStaticProps)
-  const messages = typeof window !== 'undefined' 
-    ? (window as any).__NEXT_INTL_MESSAGES__ || {}
-    : {};
+  const { messages } = useLanguage();
 
   const getNestedValue = (obj: any, path: string) => {
     return path.split('.').reduce((current, key) => {
