@@ -1,11 +1,12 @@
 "use client";
 import { Button, Input, Modal, ModalContent, ModalBody, useDisclosure } from "@nextui-org/react";
 import clsx from 'clsx';
-import { m, easeOut, easeIn } from 'framer-motion';
-import React, { FormEvent, useState } from "react";
+import { m, easeOut, easeIn, AnimatePresence } from 'framer-motion';
+import React, { FormEvent, useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 
 import { MailIcon } from '@/components/MailIcon.jsx';
+import { PaperAirplaneIcon } from '@/components/PaperAirplaneIcon';
 
 import modalImage from '@/assets/images/quetza.png';
 
@@ -20,7 +21,7 @@ export default function App() {
   const t = useSimpleTranslations('home-page.HeaderCta')
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [email, setEmail] = useState("");
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [submissionState, setSubmissionState] = useState('idle');
 
   const { locale } = useRouter();
 
@@ -30,7 +31,7 @@ export default function App() {
   };
 
   const modalCallToActions = {
-    es: 'Enlístate Aquí', 
+    es: 'Enlístate Aquí',
     en: 'Sign up here',
   };
 
@@ -110,29 +111,26 @@ export default function App() {
     }).then(res => {
       if (res.status === 200) {
         toast.success(modalAlerts[locale].success);
-        setEmail("");
       } else {
         toast.error(modalAlerts[locale].error);
       }
-      setIsButtonDisabled(false);
       return res.json();
     }).then(data => {
       console.log(data);
     }).catch(err => {
       console.error(modalAlerts[locale].error2, err);
       toast.error(modalAlerts[locale].error3);
-      setIsButtonDisabled(false);
     });
   }
 
   const handleFormSubmit = function(e: FormEvent) {
     e.preventDefault();
-    setIsButtonDisabled(true);
+    setSubmissionState('sending');
     toast(modalAlerts[locale].sent);
 
     if (!executeRecaptcha) {
       console.log("Execute recaptcha not available yet");
-      setIsButtonDisabled(false);
+      setSubmissionState('idle');
       return;
     }
 
@@ -140,6 +138,16 @@ export default function App() {
       submitWaitlistForm(recaptchaToken);
     });
   }
+
+  useEffect(() => {
+    if (submissionState === 'sending') {
+      const timer = setTimeout(() => {
+        setSubmissionState('idle');
+        setEmail('');
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [submissionState]);
 
   const handleClose = () => {
     onOpenChange();
@@ -192,36 +200,61 @@ export default function App() {
             >
               <p className="font-normal ml-3.5">{modalDescriptions[locale]}</p> 
               <p className="font-normal my-3 ml-3.5">{modalCallToActions[locale]}</p>
-              <form
-  onSubmit={handleFormSubmit}
-  className="flex flex-col md:flex-row md:items-center md:space-x-3"
->
-  <div className="flex-1">
-    <Input
-      autoFocus
-      endContent={
-        <MailIcon className="text-4xl text-default-400 pointer-events-none flex-shrink-0 absolute right-5" />
-      }
-      label={modalFormLabels[locale]}
-      placeholder={modalFormPlaceholders[locale]}
-      variant="flat"
-      className="mb-3 md:mb-0 w-full"
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      required
-    />
-  </div>
-  <div className="w-full md:w-auto">
-    <button
-      type="submit"
-      disabled={isButtonDisabled}
-      className="w-full md:w-auto mx-auto mb-3 mt-3 rounded-md p-3 bg-red-500 text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
-    >
-      {modalFormButtons[locale]}
-    </button>
-  </div>
-</form>
+              <div className="relative h-24">
+                <AnimatePresence>
+                  {submissionState !== 'sending' && (
+                    <m.form
+                      key="form"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                      onSubmit={handleFormSubmit}
+                      className="flex flex-col md:flex-row md:items-center md:space-x-3 absolute w-full"
+                    >
+                      <div className="flex-1">
+                        <Input
+                          autoFocus
+                          endContent={
+                            <MailIcon className="text-4xl text-default-400 pointer-events-none flex-shrink-0 absolute right-5" />
+                          }
+                          label={modalFormLabels[locale]}
+                          placeholder={modalFormPlaceholders[locale]}
+                          variant="flat"
+                          className="mb-3 md:mb-0 w-full"
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                        />
+                      </div>
+                      <div className="w-full md:w-auto">
+                        <button
+                          type="submit"
+                          disabled={submissionState === 'sending'}
+                          className="w-full md:w-auto mx-auto mb-3 mt-3 rounded-md p-3 bg-red-500 text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
+                        >
+                          {modalFormButtons[locale]}
+                        </button>
+                      </div>
+                    </m.form>
+                  )}
+                </AnimatePresence>
+                <AnimatePresence>
+                  {submissionState === 'sending' && (
+                    <m.div
+                      key="sending"
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1, x: [0, 100, 200], y: [0, -50, 0], rotate: [0, 15, 0] }}
+                      exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
+                      transition={{ duration: 2, ease: "easeInOut" }}
+                      className="absolute inset-0 flex items-center justify-center"
+                    >
+                      <PaperAirplaneIcon className="text-red-500 w-12 h-12" />
+                    </m.div>
+                  )}
+                </AnimatePresence>
+              </div>
 <small className="block text-xs ml-3.5 mb-3">
   {modalRecaptchaTexts[locale]}{' '}
   <a className="text-red-400" target="_blank" href="https://policies.google.com/privacy">
