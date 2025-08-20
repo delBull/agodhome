@@ -20,7 +20,7 @@ function PandorasPage(): JSX.Element {
     >
                   <div className={clsx('content-wrapper')}>
                   <a
-                    href="https://pandoras.foundation"
+                    href="https://pandoras.finance"
                     target="_blank"
                     className={clsx('flex items-center text-lg text-red-400 opacity-80 hover:text-red-400 hover:opacity-100')}
                   >

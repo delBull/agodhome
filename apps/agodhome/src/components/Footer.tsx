@@ -179,7 +179,7 @@ function Footer(): JSX.Element {
                   links={[
                     {
                       title: 'Pandora\'s',
-                      href: 'https://pandoras.foundation',
+                      href: 'https://pandoras.finance',
                       isInternal: false,
                     },
                     {
