@@ -296,36 +296,36 @@
 "pandoras-page": {
     "header": {
       "title": "Pandora's",
-      "caption": "Financial Crowdfunding Enhancer",
-      "description": "Using blockchain technology to collectively finance and support ideas, businesses, and new projects, as well as to develop real estate and property projects.",
-      "coming-soon": "Take me there!"
+      "caption": "Utility Protocols Platform",
+      "description": "Pandora's is a technological platform that allows creating, deploying and participating in digital ecosystems based on real utility, using blockchain technology to enable access, rewards, participation and active contribution within projects, communities and organizations.",
+      "coming-soon": "Explore Protocols"
     },
     "opener": {
-      "title": "Ideas and Projects",
+      "title": "Protocols and Communities",
       "caption": "",
-      "description": "Offering everyone the power to choose which project to invest in that best suits their risk profile.",
+      "description": "Pandora's allows anyone to actively participate in digital projects through utility protocols, where actions, contributions and participation generate functional benefits, access to experiences and recognition within each ecosystem.",
       "coming-soon": "",
-      "call-to-action": "Our users have the power of decision. Invest in real-world assets and enjoy their benefits. Anyone can invest in all categories and earn long-term returns."
+      "call-to-action": "Users don't invest: 👉 they participate, contribute and obtain concrete utilities. Each protocol clearly defines: What actions generate value, What benefits are unlocked, How participation is recognized."
     },
     "tabs": {
-        "nfts": "NFT’s as Memberships",
-        "nftsdescription": "Unlock exclusive benefits and premium access through our free-minted NFTs that act as digital memberships",
-        "power": "Desition-Making Power",
-        "powerdescription": "Empower yourself with voting rights embedded in our tokens, letting you help shape the future of the platform",
-        "invest": "Invest in Real-World Asssets (RWA)",
-        "investdescription": "Securely invest in tangible assets like real estate, unlocking stable returns and real-world value",
-        "anyone": "Adaptable & Scalable",
-        "anyonedescription": "Our platform is built to grow with you, easily adapting to new challenges and scaling with your investment needs"
+        "nfts": "NFTs as Access and Memberships",
+        "nftsdescription": "Unlock functional benefits, exclusive access and premium experiences through utility NFTs, which operate as digital memberships within each protocol. These NFTs can grant: Access to private spaces, Special permissions within the platform, Verifiable digital identity.",
+        "power": "Participation and Functional Governance",
+        "powerdescription": "Be an active part of ecosystems through participation and decision-making mechanisms, where users can: Vote operational proposals, Prioritize initiatives, Influence protocol development. Governance is designed as a functional tool, not financial.",
+        "invest": "Work-to-Earn (W2E)",
+        "investdescription": "Contribute actively and get real benefits. Protocols in Pandora's can enable Work-to-Earn dynamics, where users receive utility rewards in exchange for: Tasks, Collaborations, Creative contributions, Community activity. Rewards are oriented towards usage, access and functionalities.",
+        "anyone": "Utility in Real Assets and Services",
+        "anyonedescription": "Participate in protocols connected with real-world assets, services and experiences, where blockchain technology is used as infrastructure for control, access and traceability, not as a financial instrument. Examples of utility: Access to physical spaces, Use of specific services, Usage rights or priority."
       },
     "quote": {
-      "part1": "The power to choose",
+      "part1": "The power to participate",
       "part2": "is in your hands.",
-      "part3": "",
-      "part4": "Invest in",
-      "part5": "the future today."
+      "part3": "Connect, collaborate and be part of the ecosystems that matter to you.",
+      "part4": "Activate benefits for what you do,",
+      "part5": "not for what you promise."
     },
-    "porque": "Imagine managing everything that matters to you in one place. Imagine having your favorite companies at your fingertips, requesting services and earning benefits from your expenses.",
-    "additionalInfo": "" 
+    "porque": "All in one place. Imagine managing: Your digital memberships, Your access, Your contributions, Your benefits. All from the same panel, interacting with projects, brands and communities, requesting services, participating actively and receiving utilities for your activity.",
+    "additionalInfo": ""
   },
 
   "daccess-page": {

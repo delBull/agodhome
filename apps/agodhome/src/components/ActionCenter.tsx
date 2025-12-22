@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { m, easeOut } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 import { DarkIcon, LightIcon } from '@/components/Icons';
 import LanguageSwitcher_nav from './languageSwitcher/LanguageSwitcher_nav';
@@ -64,13 +65,23 @@ function ActionCenterButton({
 
 function ActionCenter({ currentLocale, allLocales }): JSX.Element {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
 //  const { focusMode, setFocusMode } = (useFocusMode() as unknown) as FocusMode;
 //  const focusMode = false;
 //  const setFocusMode = () => {};
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const handleThemeChange = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
+
+  if (!mounted) {
+    return null; // or a loading placeholder
+  }
 
   return (
     <m.div

@@ -295,35 +295,35 @@
     "pandoras-page": {
       "header": {
         "title": "Pandora's",
-        "caption": "Potenciador del crowdfunding financiero",
-        "description": "Utilizando la tecnología blockchain para financiar y apoyar colectivamente ideas, empresas, y nuevos proyectos, así como para desarrollar bienes raíces y proyectos inmobiliarios.",
-        "coming-soon": "Llévame alla!'"
+        "caption": "Plataforma de Protocolos de Utilidad",
+        "description": "Pandora's es una plataforma tecnológica que permite crear, desplegar y participar en ecosistemas digitales basados en utilidad real, utilizando tecnología blockchain para habilitar accesos, recompensas, participación y contribución activa dentro de proyectos, comunidades y organizaciones.",
+        "coming-soon": "Explorar Protocolos"
       },
       "opener": {
-        "title": "Ideas y Proyectos",
+        "title": "Protocolos y Comunidades",
         "caption": "",
-        "description": "Ofreciendo a cualquier persona el poder de elegir en qué proyecto invertir, el cual se adapte mejor a su perfil de riesgo.",
+        "description": "Pandora's permite a cualquier persona participar activamente en proyectos digitales a través de protocolos de utilidad, donde las acciones, contribuciones y participación generan beneficios funcionales, acceso a experiencias y reconocimiento dentro de cada ecosistema.",
         "coming-soon": "",
-        "call-to-action": "Nuestros usuarios tienen el poder de decisión. Invierte en activos del mundo real y goza de sus beneficios. Cualquiera puede invertir en todas las categorías y obtener rendimientos a largo plazo."
+        "call-to-action": "Los usuarios no invierten: 👉 participan, contribuyen y obtienen utilidades concretas. Cada protocolo define claramente: Qué acciones generan valor, Qué beneficios se desbloquean, Cómo se reconoce la participación."
       },
       "tabs": {
-        "nfts": "NFT’s como membresías",
-        "nftsdescription": "Desbloquea beneficios exclusivos y acceso premium mediante nuestros NFTs gratuitos que funcionan como membresías digitales.",
-        "power": "Poder de desición",
-        "powerdescription": "Empodérate con derechos de voto integrados en nuestros tokens, permitiéndote moldear el futuro de la plataforma",
-        "invest": "Invierte en Activos Reales",
-        "investdescription": "Invierte de forma segura en activos tangibles como bienes raíces, obteniendo rendimientos estables y valor real",
-        "anyone": "Adaptable y escalable",
-        "anyonedescription": "Nuestra plataforma está diseñada para crecer contigo, adaptándose fácilmente a nuevos desafíos y escalando según tus necesidades de inversión"
+        "nfts": "NFTs como Accesos y Membresías",
+        "nftsdescription": "Desbloquea beneficios funcionales, accesos exclusivos y experiencias premium mediante NFTs de utilidad, que operan como membresías digitales dentro de cada protocolo. Estos NFTs pueden otorgar: Acceso a espacios privados, Permisos especiales dentro de la plataforma, Identidad digital verificable.",
+        "power": "Participación y Gobernanza Funcional",
+        "powerdescription": "Forma parte activa de los ecosistemas mediante mecanismos de participación y toma de decisiones, donde los usuarios pueden: Votar propuestas operativas, Priorizar iniciativas, Influir en el desarrollo del protocolo. La gobernanza está diseñada como una herramienta funcional, no financiera.",
+        "invest": "Work-to-Earn (W2E)",
+        "investdescription": "Contribuye activamente y obtén beneficios reales. Los protocolos en Pandora's pueden habilitar dinámicas Work-to-Earn, donde los usuarios reciben recompensas de utilidad a cambio de: Tareas, Colaboraciones, Aportaciones creativas, Actividad comunitaria. Las recompensas están orientadas a uso, acceso y funcionalidades.",
+        "anyone": "Utilidad en Activos y Servicios Reales",
+        "anyonedescription": "Participa en protocolos conectados con activos, servicios y experiencias del mundo real, donde la tecnología blockchain se utiliza como infraestructura de control, acceso y trazabilidad, no como instrumento financiero. Ejemplos de utilidad: Acceso a espacios físicos, Uso de servicios específicos, Derechos de uso o prioridad."
       },
       "quote": {
-        "part1": "El poder de elección",
+        "part1": "El poder de participar",
         "part2": "está en tus manos.",
-        "part3": "",
-        "part4": "Invierte en",
-        "part5": "el futuro hoy."
+        "part3": "Conecta, colabora y forma parte de los ecosistemas que te importan.",
+        "part4": "Activa beneficios por lo que haces,",
+        "part5": "no por lo que prometes."
       },
-      "porque": "Imagina gestionar todo lo que te importa en un solo lugar. Imagina tener tus empresas favoritas a tu alcance, solicitando servicios y obteniendo beneficios por tus gastos.",
+      "porque": "Todo en un solo lugar. Imagina gestionar: Tus membresías digitales, Tus accesos, Tus contribuciones, Tus beneficios. Todo desde un mismo panel, interactuando con proyectos, marcas y comunidades, solicitando servicios, participando activamente y recibiendo utilidades por tu actividad.",
       "additionalInfo": ""
     },
 
