@@ -84,7 +84,7 @@
     "tailwindcss": "^3.4.17",
     "tsconfig": "workspace:*",
     "typescript": "^5.8.2",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^5.0.0"
   },
   "engines": {
     "node": "^22.17.1"
