@@ -30,7 +30,7 @@
     "@vercel/og": "^0.0.22",
     "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.8.1",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.13",
     "framer-motion": "12.23.12",
     "front-matter": "^4.0.2",
