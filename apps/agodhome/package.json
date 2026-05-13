@@ -51,7 +51,7 @@
     "swr": "^2.3.2",
     "tailwindcss-accent": "^2.1.2",
     "thirdweb": "^5.90.0",
-    "use-local-storage-state": "^18.3.3",
+    "use-local-storage-state": "^19.0.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
