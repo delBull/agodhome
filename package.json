@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@neuledge/tsconfig": "^3.2.0",
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^7.0.0",
     "@tsconfig/next": "^2.0.3",
     "@tsconfig/recommended": "^1.0.8",
     "eslint": "^8.57.1",
